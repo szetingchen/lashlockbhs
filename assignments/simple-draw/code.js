@@ -49,7 +49,7 @@ drawFilledRect(5, height - 23, 45, 15, 'purple');
 drawFilledRect(5, height - 24, 45, 15, 'purple');
 drawFilledRect(5, height - 25, 45, 15, 'purple');
 drawFilledRect(5, height - 26, 45, 15, 'purple');
-drawFilledRect(5, height - 27, 45, 15, 'purple');
+drawFilledRect(5, height - 27, 45, 15, 'red');
 drawFilledRect(5, height - 28, 45, 15, 'purple');
 drawFilledRect(5, height - 29, 45, 15, 'purple');
 drawFilledRect(5, height - 30, 45, 15, 'purple');
