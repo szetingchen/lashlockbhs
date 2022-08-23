@@ -28,5 +28,10 @@
     "name": "Having fun?",
     "answer": "done || !fun",
     "correct": true
+  },
+  {
+    "name": "Not feeling it?",
+    "answer": "!fun || tired",
+    "correct": true
   }
 ]
