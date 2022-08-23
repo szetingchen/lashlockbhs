@@ -18,5 +18,10 @@
     "name": "Area of a rectangle",
     "answer": "w*h",
     "correct": true
+  },
+  {
+    "name": "Area of a triangle",
+    "answer": "(b*h)/2",
+    "correct": true
   }
 ]
