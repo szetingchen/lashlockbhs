@@ -78,5 +78,10 @@
     "name": "The curved surface area of a cone from slant height",
     "answer": "Math.PI*r*s",
     "correct": true
+  },
+  {
+    "name": "Total surface area of a cone from slant height",
+    "answer": "Math.PI*r*s + Math.PI*(r**2)",
+    "correct": true
   }
 ]
