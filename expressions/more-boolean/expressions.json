@@ -38,5 +38,10 @@
     "name": "Lighting a fire?",
     "answer": "fireLit || !haveMatches",
     "correct": true
+  },
+  {
+    "name": "Can pay attention?",
+    "answer": "!hungry && interested",
+    "correct": true
   }
 ]
