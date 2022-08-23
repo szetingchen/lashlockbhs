@@ -18,5 +18,10 @@
     "name": "Super beat?",
     "answer": "!enoughSleep && !eatenEnough",
     "correct": true
+  },
+  {
+    "name": "Can go to prom?",
+    "answer": "isSenior || invitedBySenior",
+    "correct": true
   }
 ]
