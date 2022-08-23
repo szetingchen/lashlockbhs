@@ -23,5 +23,10 @@
     "name": "Area of a triangle",
     "answer": "(b*h)/2",
     "correct": true
+  },
+  {
+    "name": "Area of a trapezoid",
+    "answer": "(b1 + b2)*h",
+    "correct": false
   }
 ]
