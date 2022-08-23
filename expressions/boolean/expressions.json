@@ -13,5 +13,10 @@
     "name": "Dragging?",
     "answer": "!enoughSleep && lotsOfWork",
     "correct": true
+  },
+  {
+    "name": "Super beat?",
+    "answer": "!enoughSleep && !eatenEnough",
+    "correct": true
   }
 ]
