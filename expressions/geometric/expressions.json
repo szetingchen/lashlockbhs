@@ -43,5 +43,10 @@
     "name": "Circumference of a circle",
     "answer": "2*Math.PI*r",
     "correct": true
+  },
+  {
+    "name": "The curved surface area of a cylinder",
+    "answer": "(2*Math.PI*r)*h",
+    "correct": true
   }
 ]
