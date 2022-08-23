@@ -8,5 +8,10 @@
     "name": "Perimeter of a rectangle",
     "answer": "(w+h)*2",
     "correct": true
+  },
+  {
+    "name": "Area of a square",
+    "answer": "s**2",
+    "correct": true
   }
 ]
