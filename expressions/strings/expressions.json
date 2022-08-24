@@ -10,5 +10,11 @@
     "answer": "'foo' + 'ar'",
     "correct": false,
     "timestamp": 1661377425340
+  },
+  {
+    "name": "Concatenate (smoosh) strings",
+    "answer": "'foo' + 'bar'",
+    "correct": true,
+    "timestamp": 1661377427092
   }
 ]
