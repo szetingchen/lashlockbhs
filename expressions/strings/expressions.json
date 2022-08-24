@@ -10,5 +10,11 @@
     "answer": "\t'foo' + 'bar'",
     "correct": true,
     "timestamp": 1661378323982
+  },
+  {
+    "name": "Indexing",
+    "answer": "'f'\t",
+    "correct": true,
+    "timestamp": 1661378330150
   }
 ]
