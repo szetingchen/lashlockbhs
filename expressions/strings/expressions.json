@@ -94,5 +94,11 @@
     "answer": "s.substring(s.length-3)\t",
     "correct": true,
     "timestamp": 1661378413098
+  },
+  {
+    "name": "Capitalize",
+    "answer": "s[0].toUpperCase()+s.substring(1)\t",
+    "correct": true,
+    "timestamp": 1661378419458
   }
 ]
