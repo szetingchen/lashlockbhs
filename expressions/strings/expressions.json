@@ -100,5 +100,11 @@
     "answer": "s.subString(s.length - 1)",
     "correct": false,
     "timestamp": 1661377616827
+  },
+  {
+    "name": "All but first",
+    "answer": "s.subString(0)",
+    "correct": false,
+    "timestamp": 1661377631442
   }
 ]
