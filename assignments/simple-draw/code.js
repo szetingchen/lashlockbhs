@@ -54,12 +54,12 @@ function drawTriangle(x, y, size, color){
     drawLine(x, y, x-size/2, y+size, color)
    
 }
-var x1=125
 for(let i=0; i < 25; i++){
     for(let i=0; i < 25; i++){
-        drawTriangle(x1, y, size, 'red');
+        drawTriangle(x, y, size, 'red');
         var size=size-10
+        
         var y=y-14.6
     }
-    var x1=x1+10
+    var x=x+1
 }
