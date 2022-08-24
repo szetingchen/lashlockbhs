@@ -61,5 +61,5 @@ for(let i=0; i < 5; i++){
         
         var y=y-14.6
     }
-    var x=x+40
+    var x=x+50
 }
