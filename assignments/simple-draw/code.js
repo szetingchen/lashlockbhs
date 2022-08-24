@@ -54,7 +54,7 @@ function drawTriangle(x, y, size, color){
     drawLine(x, y, x-size/2, y+size, color)
    
 }
-for(let i=0; i < 6; i++){
+for(let i=0; i < 25; i++){
 
     for(let i=0; i < 25; i++){
         drawTriangle(x, y, size, 'red');
