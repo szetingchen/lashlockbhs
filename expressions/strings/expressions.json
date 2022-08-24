@@ -130,5 +130,11 @@
     "answer": "\ts.substring(2)",
     "correct": false,
     "timestamp": 1661377654228
+  },
+  {
+    "name": "First three",
+    "answer": "\ts.substring(4)",
+    "correct": false,
+    "timestamp": 1661377655373
   }
 ]
