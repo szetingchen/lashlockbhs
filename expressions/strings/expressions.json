@@ -106,5 +106,11 @@
     "answer": "s.subString(0)",
     "correct": false,
     "timestamp": 1661377631442
+  },
+  {
+    "name": "All but first",
+    "answer": "s.subString(1)",
+    "correct": false,
+    "timestamp": 1661377632467
   }
 ]
