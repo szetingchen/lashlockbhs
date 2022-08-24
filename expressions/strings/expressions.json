@@ -70,5 +70,11 @@
     "answer": "s.substring(0, 3)\t",
     "correct": true,
     "timestamp": 1661378377937
+  },
+  {
+    "name": "All but first and last",
+    "answer": "s1 + s2\t",
+    "correct": false,
+    "timestamp": 1661378384109
   }
 ]
