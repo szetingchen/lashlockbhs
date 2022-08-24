@@ -196,5 +196,11 @@
     "answer": "s.substring(3)",
     "correct": false,
     "timestamp": 1661377850169
+  },
+  {
+    "name": "Last three",
+    "answer": "s.substring(2)",
+    "correct": false,
+    "timestamp": 1661377851073
   }
 ]
