@@ -76,5 +76,11 @@
     "answer": "s1 + s2\t",
     "correct": false,
     "timestamp": 1661378384109
+  },
+  {
+    "name": "Concatenate (smoosh) strings",
+    "answer": "s1 + s2",
+    "correct": true,
+    "timestamp": 1661378397305
   }
 ]
