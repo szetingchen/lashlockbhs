@@ -52,5 +52,11 @@
     "answer": "'foo'\t",
     "correct": true,
     "timestamp": 1661378361407
+  },
+  {
+    "name": "First character",
+    "answer": "s[0]\t",
+    "correct": true,
+    "timestamp": 1661378366330
   }
 ]
