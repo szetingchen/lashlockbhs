@@ -46,7 +46,7 @@ function drawTriangle(x, y, size, color) {
 var x = -1000
 var y = 350
 var size = 250
-var color = 'black'
+var color = 'pink'
 drawTriangle(x, y, size, color)
 function drawTriangle(x, y, size, color){
     drawLine(x, y, x+size/2, y+size, color)
