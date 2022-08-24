@@ -55,11 +55,11 @@ function drawTriangle(x, y, size, color){
    
 }
 for(let i=0; i < 25; i++){
-
+    var x=x+10
     for(let i=0; i < 25; i++){
         drawTriangle(x, y, size, 'red');
         var size=size-10
-        var x=x
+        
         var y=y-14.6
     }
 }
