@@ -58,5 +58,5 @@ for(let i=0; i < 25; i++){
     drawTriangle(x, y, size, 'red');
     var size=size-10
     var x=x
-    var y=y+6
+    var y=y+7
 }
