@@ -65,5 +65,5 @@ for(let i=0; i < 250; i++){
     }
     var size = 250
     var y = 350
-    var x=x+10
+    var x=x+20
 }
