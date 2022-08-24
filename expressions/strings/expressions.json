@@ -208,5 +208,11 @@
     "answer": "s.substring(5)",
     "correct": false,
     "timestamp": 1661377858321
+  },
+  {
+    "name": "Last three",
+    "answer": "s.substring(4)",
+    "correct": false,
+    "timestamp": 1661377859274
   }
 ]
