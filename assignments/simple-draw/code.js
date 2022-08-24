@@ -43,7 +43,7 @@ function drawTriangle(x, y, size, color) {
 }
 */
 
-var x = 300
+var x = 250
 var y = 200
 var size = 100
 var color = 'black'
