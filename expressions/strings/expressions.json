@@ -94,5 +94,11 @@
     "answer": "s.sub",
     "correct": false,
     "timestamp": 1661377538234
+  },
+  {
+    "name": "All but first",
+    "answer": "s.subString(s.length - 1)",
+    "correct": false,
+    "timestamp": 1661377616827
   }
 ]
