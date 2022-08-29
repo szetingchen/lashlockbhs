@@ -21,8 +21,8 @@ const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
 
 
 function drawCube(size, x, y){
-    drawRect(x, y, size, size);
-}
+    drawRect(x, y, size, size, 'black')
+    }
 
 const drawFallingTriangle = (x, time) => {
   // Figure out the x values relative to the passed in x
