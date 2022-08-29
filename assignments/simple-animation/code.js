@@ -8,6 +8,8 @@ const drawFrame = (time) => {
   clear();
   drawFilledCircle((time *2) % width, height / 2, 2, 'blue');
   drawFallingTriangle(width / 3, time*2);
+  drawCube(20, 10, 10)
+
 };
 
 
@@ -17,7 +19,6 @@ const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
   drawLine(x3, y3, x1, y1, color, width);
 };
 
-drawCube(20, 10, 10)
 
 function drawCube(size, x, y){
     drawRect(x, y, size, size);
