@@ -23,6 +23,7 @@ const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
 function drawCube(size, x, y){
     drawRect(x, y, size, size, 'black')
     drawRect(x+size/3, y+size/3, size, size, 'black')
+    drawLine(x, y, x, y)
     }
 
 const drawFallingTriangle = (x, time) => {
