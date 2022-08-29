@@ -22,7 +22,7 @@ const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
 drawCube(20, 10, 10)
 
 function drawCube(size, x, y){
-    drawRect(x, y, 10, 10, color);
+    drawRect(x, y, 10, 10);
 }
 // This draws a falling trangle of a particular shape whose bottom point is
 // positioned at x and whose y is a function of time.
