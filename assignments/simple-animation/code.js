@@ -26,7 +26,7 @@ function drawCube(size, x, y){
     drawLine(x, y, x+size/3, y+size/3, 'black')
     drawLine(x+size, y, x+size*4/3, y+size/3, 'black')
     drawLine(x+size, y+size, x+size*4/3, y+size+size/3, 'black')
-    drawLine(x, y+size, x+size, y+size+size/3, 'black')
+    drawLine(x, y+size, x, y+size+size/3, 'black')
     }
 
 const drawFallingTriangle = (x, time) => {
