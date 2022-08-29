@@ -11,10 +11,10 @@ const drawFrame = (time) => {
     }
     if(time===234){
         var e1 = true
-        var 
+        
     }
     if(e1){
-        drawCube(234 - time, 10, 10) * 0
+        drawCube(234 - time, 10, 10)
     }
  
 
