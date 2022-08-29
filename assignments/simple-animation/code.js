@@ -2,7 +2,10 @@
 const drawFrame = (time) => {
   clear();
 
-  drawCube(234 % time, 10, 10)
+  drawCube(234 % -time, 10, 10)
+  if(time === 234){
+
+  }
 
 };
 function drawCube(size, x, y){
