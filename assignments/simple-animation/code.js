@@ -24,7 +24,7 @@ function drawCube(size, x, y){
     drawRect(x, y, size, size, 'black')
     drawRect(x+size/3, y+size/3, size, size, 'black')
     drawLine(x, y, x+size/3, y+size/3, 'black')
-    drawLine(x+size, y, x+size, y+size/3, 'black')
+    drawLine(x+size, y, x+size/3, y+size/3, 'black')
 
     }
 
