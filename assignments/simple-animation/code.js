@@ -9,7 +9,7 @@ const drawFrame = (time) => {
         }
            
     }
-    if(time===234){
+    if(time===466){
         var e1 = true
         
     }
