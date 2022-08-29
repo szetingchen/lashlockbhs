@@ -10,9 +10,7 @@ const drawFrame = (time) => {
   drawFallingTriangle(width / 3, time*2);
 };
 
-// This is a function that we define to make it easier to draw a triangle. You
-// may want to experiment with writing your own functions using this one as a
-// model to draw other shapes.
+
 const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
   drawLine(x1, y1, x2, y2, color, width);
   drawLine(x2, y2, x3, y3, color, width);
@@ -22,10 +20,9 @@ const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
 drawCube(20, 10, 10)
 
 function drawCube(size, x, y){
-    drawRect(x, y, 10, 10);
+    drawRect(x, y, size, size);
 }
-// This draws a falling trangle of a particular shape whose bottom point is
-// positioned at x and whose y is a function of time.
+
 const drawFallingTriangle = (x, time) => {
   // Figure out the x values relative to the passed in x
   let x1 = (time / 20) % height;
