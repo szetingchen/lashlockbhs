@@ -1,7 +1,7 @@
 
 const drawFrame = (time) => {
   clear();
-  drawCube(234, 10, 10)
+  drawCube(234 - time, 10, 10)
 
 };
 function drawCube(size, x, y){
