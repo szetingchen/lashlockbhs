@@ -4,7 +4,7 @@ const drawFrame = (time) => {
     clear();
     if(time<234*5){
         if(!e1){
-            drawCube(234 - time/5, 78, 98)
+            drawCube(234 - time/10, 78, 98)
 
         }
            
