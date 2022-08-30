@@ -173,5 +173,26 @@
     "answer": "!fun&&tired",
     "correct": false,
     "timestamp": 1661896343154
+  },
+  {
+    "name": "Not feeling it?",
+    "canonical": "!fun || tired",
+    "answer": "!fun&&tired",
+    "correct": false,
+    "timestamp": 1661896343322
+  },
+  {
+    "name": "Not feeling it?",
+    "canonical": "!fun || tired",
+    "answer": "!fun&&tired",
+    "correct": false,
+    "timestamp": 1661896343823
+  },
+  {
+    "name": "Not feeling it?",
+    "canonical": "!fun || tired",
+    "answer": "!fun&&tired",
+    "correct": false,
+    "timestamp": 1661896343907
   }
 ]
