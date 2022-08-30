@@ -47,5 +47,12 @@
     "answer": "1337*32",
     "correct": true,
     "timestamp": 1661896624327
+  },
+  {
+    "name": "Area of circle with radius 2",
+    "canonical": "Math.PI * 4",
+    "answer": "\tMath.PI*2**2",
+    "correct": true,
+    "timestamp": 1661896635631
   }
 ]
