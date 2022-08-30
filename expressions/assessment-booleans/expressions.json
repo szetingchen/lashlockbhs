@@ -12,5 +12,12 @@
     "answer": "!afraidOfTheDark&&!afraidOfSpiders",
     "correct": true,
     "timestamp": 1661896832283
+  },
+  {
+    "name": "Ready for some football?",
+    "canonical": "fast && strong",
+    "answer": "fast&&strong",
+    "correct": true,
+    "timestamp": 1661896844683
   }
 ]
