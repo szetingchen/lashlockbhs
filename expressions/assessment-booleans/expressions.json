@@ -68,5 +68,12 @@
     "answer": "!storeOpen||!isASale",
     "correct": true,
     "timestamp": 1661897111455
+  },
+  {
+    "name": "Lighting a fire?",
+    "canonical": "fireLit || !haveMatches",
+    "answer": "fireLit||!haveMatches",
+    "correct": true,
+    "timestamp": 1661897125416
   }
 ]
