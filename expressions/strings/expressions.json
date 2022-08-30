@@ -2,7 +2,7 @@
   {
     "name": "Concatenate (smoosh) strings",
     "answer": "\t'foo' + 'ar'",
-    "correct": false,
+    "correct": true,
     "timestamp": 1661378300031
   },
   {
