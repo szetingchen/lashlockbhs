@@ -61,5 +61,12 @@
     "answer": "enoughSleep&&!justWorkedOut",
     "correct": true,
     "timestamp": 1661896967085
+  },
+  {
+    "name": "Wait for a sale?",
+    "canonical": "!storeOpen || !isASale",
+    "answer": "!storeOpen||!isASale",
+    "correct": true,
+    "timestamp": 1661897111455
   }
 ]
