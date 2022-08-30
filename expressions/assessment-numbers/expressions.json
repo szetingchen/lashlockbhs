@@ -54,5 +54,12 @@
     "answer": "\tMath.PI*2**2",
     "correct": true,
     "timestamp": 1661896635631
+  },
+  {
+    "name": "Ratio",
+    "canonical": "a / b",
+    "answer": "a/b",
+    "correct": true,
+    "timestamp": 1661896640688
   }
 ]
