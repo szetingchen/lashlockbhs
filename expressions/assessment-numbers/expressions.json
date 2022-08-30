@@ -12,5 +12,12 @@
     "answer": "6432-4000",
     "correct": true,
     "timestamp": 1661896598496
+  },
+  {
+    "name": "Remainder",
+    "canonical": "a % b",
+    "answer": "a%b",
+    "correct": true,
+    "timestamp": 1661896603681
   }
 ]
