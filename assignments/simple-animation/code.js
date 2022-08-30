@@ -2,7 +2,7 @@ var e = 1
 var e1 = false
 const drawFrame = (time) => {
     clear();
-    if(time<466){
+    if(time<234*3){
         if(!e1){
             drawCube(234 - time/3, 78, 98)
 
