@@ -5,5 +5,12 @@
     "answer": "enoughSleep&&keepingUp",
     "correct": true,
     "timestamp": 1661896756306
+  },
+  {
+    "name": "Can go into creepy crawly cave?",
+    "canonical": "!afraidOfTheDark && !afraidOfSpiders",
+    "answer": "!afraidOfTheDark&&!afraidOfSpiders",
+    "correct": true,
+    "timestamp": 1661896832283
   }
 ]
