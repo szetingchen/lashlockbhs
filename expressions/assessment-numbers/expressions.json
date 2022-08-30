@@ -117,5 +117,12 @@
     "answer": "Math.PI*2**2",
     "correct": true,
     "timestamp": 1661896140662
+  },
+  {
+    "name": "Product",
+    "canonical": "a * b",
+    "answer": "a*b",
+    "correct": true,
+    "timestamp": 1661896146335
   }
 ]
