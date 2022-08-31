@@ -1,9 +1,9 @@
 [
   {
-    "name": "UPPER CASE",
-    "canonical": "s.toUpperCase()",
+    "name": "Concatenate (smoosh) strings",
+    "canonical": "s1 + s2",
     "answer": "s1 + s2",
-    "correct": false,
-    "timestamp": 1661930482124
+    "correct": true,
+    "timestamp": 1661930538177
   }
 ]
