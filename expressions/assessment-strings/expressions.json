@@ -1,23 +1,9 @@
 [
   {
-    "name": "Concatenate (smoosh) strings",
-    "canonical": "s1 + s2",
+    "name": "lower case",
+    "canonical": "s.toLowerCase()",
     "answer": "s1 + s2",
-    "correct": true,
-    "timestamp": 1661930610919
-  },
-  {
-    "name": "First three",
-    "canonical": "s.substring(0,3)",
-    "answer": "s[0]",
     "correct": false,
-    "timestamp": 1661930613152
-  },
-  {
-    "name": "First three",
-    "canonical": "s.substring(0,3)",
-    "answer": "s[s.length0]",
-    "correct": false,
-    "timestamp": 1661930615429
+    "timestamp": 1661930677196
   }
 ]
