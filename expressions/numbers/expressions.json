@@ -173,5 +173,12 @@
     "answer": "e",
     "correct": false,
     "timestamp": 1661906724221
+  },
+  {
+    "name": "Sally's even more apples",
+    "canonical": "6432 - 4000",
+    "answer": "e",
+    "correct": false,
+    "timestamp": 1661906762835
   }
 ]
