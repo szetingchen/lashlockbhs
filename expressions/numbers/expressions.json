@@ -299,5 +299,12 @@
     "answer": "Ten",
     "correct": false,
     "timestamp": 1661907058847
+  },
+  {
+    "name": "Ten",
+    "canonical": "10",
+    "answer": "10",
+    "correct": true,
+    "timestamp": 1661907073434
   }
 ]
