@@ -5,5 +5,12 @@
     "answer": "isSenior || invitedBySe",
     "correct": false,
     "timestamp": 1661960934698
+  },
+  {
+    "name": "Doing well?",
+    "canonical": "enoughSleep && keepingUp",
+    "answer": "done || !fun",
+    "correct": false,
+    "timestamp": 1661960936984
   }
 ]
