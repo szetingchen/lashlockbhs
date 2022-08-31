@@ -1,9 +1,16 @@
 [
   {
-    "name": "Concatenate (smoosh) strings",
-    "canonical": "s1 + s2",
+    "name": "UPPER CASE",
+    "canonical": "s.toUpperCase()",
     "answer": "s1 + s2",
-    "correct": true,
-    "timestamp": 1661930538177
+    "correct": false,
+    "timestamp": 1661930482124
+  },
+  {
+    "name": "First three",
+    "canonical": "s.substring(0,3)",
+    "answer": "s.length",
+    "correct": false,
+    "timestamp": 1661930542711
   }
 ]
