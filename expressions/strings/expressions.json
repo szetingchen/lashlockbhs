@@ -19,5 +19,12 @@
     "answer": "'37f'",
     "correct": false,
     "timestamp": 1661929695105
+  },
+  {
+    "name": "Concatenate (smoosh) strings",
+    "canonical": "'foobar'",
+    "answer": "'387f'",
+    "correct": false,
+    "timestamp": 1661929697351
   }
 ]
