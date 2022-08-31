@@ -12,5 +12,12 @@
     "answer": "done || !fun",
     "correct": false,
     "timestamp": 1661960936984
+  },
+  {
+    "name": "Doing well?",
+    "canonical": "enoughSleep && keepingUp",
+    "answer": "!fun || t",
+    "correct": false,
+    "timestamp": 1661960939227
   }
 ]
