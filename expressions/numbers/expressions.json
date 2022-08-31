@@ -327,5 +327,12 @@
     "answer": "1e6",
     "correct": true,
     "timestamp": 1661907093593
+  },
+  {
+    "name": "Sally's apples",
+    "canonical": "6 - 4",
+    "answer": "6 - 4",
+    "correct": true,
+    "timestamp": 1661907104649
   }
 ]
