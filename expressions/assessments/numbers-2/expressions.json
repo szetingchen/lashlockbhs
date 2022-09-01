@@ -5,5 +5,12 @@
     "answer": "Math.abs(x2-x1) + Math.abs(y2-y1)",
     "correct": true,
     "timestamp": 1662069586196
+  },
+  {
+    "name": "Seconds in a day",
+    "canonical": "24 * 60 * 60",
+    "answer": "24*60*60",
+    "correct": true,
+    "timestamp": 1662069595384
   }
 ]
