@@ -89,5 +89,12 @@
     "answer": "fireLit || !haveMatches",
     "correct": true,
     "timestamp": 1662069937344
+  },
+  {
+    "name": "In the room where it happens?",
+    "canonical": "inTheClass || isProctor",
+    "answer": "inTheClass || isProctor",
+    "correct": true,
+    "timestamp": 1662069942648
   }
 ]
