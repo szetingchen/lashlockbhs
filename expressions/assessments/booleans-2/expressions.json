@@ -5,5 +5,12 @@
     "answer": "!isASale && storeOpen",
     "correct": false,
     "timestamp": 1662069737396
+  },
+  {
+    "name": "Wait for a sale?",
+    "canonical": "!storeOpen || !isASale",
+    "answer": "!isASale || !storeOpen",
+    "correct": true,
+    "timestamp": 1662069748572
   }
 ]
