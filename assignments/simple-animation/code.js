@@ -2,11 +2,12 @@ var e = 1
 var e1 = false
 const drawFrame = (time) => {
   clear();
+  var x = (time/2) - 500
   if((time/2) - 500 === 0){
     drawCube(10, (-time/2) + 500, 10)
   }
   else{
-    drawCube(10, (time/2) - 500, 10)
+    drawCube(10, x, 10)
   }
     
 }
