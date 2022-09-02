@@ -3,15 +3,11 @@ var e1 = false
 const drawFrame = (time) => {
   clear();
   var x = (time/2) - 500
-  if(x === 400){
-    var back = true
-    drawCube(10, (-time/2) + 500, 10)
-  }
-  if(back){
-    drawCube(10, (-time/2) + 500, 10)
-  }
-  else{
-    drawCube(10, x, 10)
+  
+  drawCube(10, (-time/2) + 500, 10)
+  
+  
+  drawCube(10, x, 10)
   }
     
 }
