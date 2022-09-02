@@ -1,12 +1,9 @@
-var e = 1
-var e1 = false
-const drawFrame = (time) => {
-    clear();
-    if(time<234*10){
+var e = 1; var e1 = false; const drawFrame = (time) => {clear();if(time<234*10){if(time === 500){var start = -1}else{var start = 1}
         if(!e1){
-            drawCube(234 - time/10, time, 98)
+            drawCube(234 - time/10*start, time, 98)
 
         }
+        
            
     }
     if(time<234*5){
