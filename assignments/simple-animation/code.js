@@ -3,7 +3,7 @@ var e1 = false
 const drawFrame = (time) => {
   clear();
   var x = (time/2) - 500
-  if(x === 400){
+  if(x < 400){
     drawCube(10, (-time/2) + 500, 10)
   }
   else{
