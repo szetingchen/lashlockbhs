@@ -10,7 +10,7 @@ const drawFrame = (time) => {
   drawCube(10, x, 10)
   }
     
-}
+
 function drawCube(size, x, y){
     drawRect(x, y, size, size, 'black')
     drawRect(x+size/3, y+size/3, size, size, 'black')
