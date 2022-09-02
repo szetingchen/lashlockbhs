@@ -2,9 +2,12 @@ var e = 1
 var e1 = false
 const drawFrame = (time) => {
   clear();
+  while(True){
 
-  drawCube(10, (time/2) - 500, 10)
-  drawCube(10, (-time/2) + 500, 10)
+    drawCube(10, (time/2) - 500, 10)
+    drawCube(10, (-time/2) + 500, 10)
+  }
+   
   }
     
 
