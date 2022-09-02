@@ -3,9 +3,12 @@ var e1 = false
 const drawFrame = (time) => {
   clear();
   if((time/2) - 500 === 500){
+    drawCube(10, (-time/2) + 500, 10)
+  }
+  else{
     drawCube(10, (time/2) - 500, 10)
   }
-  drawCube(10, (-time/2) + 500, 10)
+    
 }
 function drawCube(size, x, y){
     drawRect(x, y, size, size, 'black')
