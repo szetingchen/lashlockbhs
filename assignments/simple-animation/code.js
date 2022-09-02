@@ -16,7 +16,8 @@ const drawFrame = (time) => {
 
         }
         
-    
+           
+    }
     if(time<234*5){
         var e1 = true
         
@@ -24,10 +25,10 @@ const drawFrame = (time) => {
     if(e1){
         drawCube(time/10, 10, 98)
     }
-}
+ 
 
 
-
+};
 function drawCube(size, x, y){
     drawRect(x, y, size, size, 'black')
     drawRect(x+size/3, y+size/3, size, size, 'black')
