@@ -40,3 +40,7 @@ function eatsWorms(b1, b2){
 function eatsNuts(b1, b2){
   return !isFlibbleBird(b1, b2)
 }
+
+function eatsFish(b1, b2){
+  return !isBloggyBird(b1, b2)
+}
