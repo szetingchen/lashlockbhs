@@ -75,3 +75,12 @@ function isNotRed(s1){
     return false
   }
 }
+
+function isNotSpotted(s1){
+  if (s1 === 'Globby' || s1 === 'Bloggy'){  
+    return true
+  }
+  else{
+    return false
+  }
+}
