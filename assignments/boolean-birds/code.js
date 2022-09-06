@@ -34,7 +34,7 @@ function isGlobbyBird(b1, b2){
 }
 
 function eatsWorms(b1, b2){
-  return !(!b1 && !b2)
+  return !isGlobbyBird(b1, b2)
 }
 
 function eatsNuts(b1, b2){
