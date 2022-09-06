@@ -57,3 +57,12 @@ function isRed(s1){
     return false
   }
 }
+
+function isSpotted(s1){
+  if (s1 === 'Flobby' || s1 === 'Flibble'){  
+    return true
+  }
+  else{
+    return false
+  }
+}
