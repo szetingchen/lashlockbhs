@@ -19,3 +19,6 @@ function averageOfTwo(x, y){
 function averageOfThree(x, y, z){
   return (x + y + z)/3
 }
+function distance(x, y){
+  return Math.abs(x-y)
+}
