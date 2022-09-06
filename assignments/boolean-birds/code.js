@@ -66,3 +66,12 @@ function isSpotted(s1){
     return false
   }
 }
+
+function isNotRed(s1){
+  if (s1 === 'Globby' || s1 === 'Flibble'){  
+    return true
+  }
+  else{
+    return false
+  }
+}
