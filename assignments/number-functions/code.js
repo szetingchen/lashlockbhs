@@ -8,8 +8,11 @@ function multiply(x, y){
   return x * y
 }
 function divide(x, y){
-  return x/y
+  return x / y
 }
 function mod(x, y){
-  return x%y
+  return x % y
+}
+function averageOfTwo(x, y){
+  return (x + y)/2
 }
