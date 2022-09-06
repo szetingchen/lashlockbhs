@@ -53,4 +53,7 @@ function isRed(s1){
   if (s1 === 'Flobby' || s1 === 'Bloggy'){
     return true
   }
+  else{
+    return false
+  }
 }
