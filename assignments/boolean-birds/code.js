@@ -38,5 +38,5 @@ function eatsWorms(b1, b2){
 }
 
 function eatsNuts(b1, b2){
-  return !(!b1 && b2)
+  return !isFlibbleBird(b1, b2)
 }
