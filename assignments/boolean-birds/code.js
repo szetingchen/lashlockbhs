@@ -48,3 +48,9 @@ function eatsFish(b1, b2){
 function eatsMice(b1, b2){
   return !isFlobbyBird(b1, b2)
 }
+
+function isRed(s1){
+  if (s1 === 'Flobby' || s1 === 'Bloggy'){
+    return true
+  }
+}
