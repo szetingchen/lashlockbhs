@@ -16,3 +16,6 @@ function mod(x, y){
 function averageOfTwo(x, y){
   return (x + y)/2
 }
+function averageOfThree(x, y, z){
+  return (x + y + z)/3
+}
