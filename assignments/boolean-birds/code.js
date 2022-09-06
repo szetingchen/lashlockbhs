@@ -44,3 +44,7 @@ function eatsNuts(b1, b2){
 function eatsFish(b1, b2){
   return !isBloggyBird(b1, b2)
 }
+
+function eatsMice(b1, b2){
+  return !isFlobbyBird(b1, b2)
+}
