@@ -50,12 +50,7 @@ function eatsMice(b1, b2){
 }
 
 function isRed(s1){
-  if (s1 === 'Flobby' || s1 === 'Bloggy'){
-    return true
-  }
-  else{
-    return false
-  }
+  return s1 === 'Flobby' || s1 === 'Bloggy'
 }
 
 function isSpotted(s1){
