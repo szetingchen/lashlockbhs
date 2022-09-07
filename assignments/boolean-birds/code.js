@@ -73,10 +73,6 @@ function isNotRed(s1){
 }
 
 function isNotSpotted(s1){
-  if (s1 === 'Globby' || s1 === 'Bloggy'){  
-    return true
-  }
-  else{
-    return false
-  }
+  return s1 === 'Globby' || s1 === 'Bloggy'
+  
 }
