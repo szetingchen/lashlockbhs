@@ -68,8 +68,8 @@ function isSpotted(s1){
 }
 
 function isNotRed(s1){
-  return s1 === 'Globby' || s1 === 'Flibble'){    
-  }
+  return s1 === 'Globby' || s1 === 'Flibble')
+  
 }
 
 function isNotSpotted(s1){
