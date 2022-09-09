@@ -31,3 +31,9 @@
 //
 // Feel free to play around in the REPL to make sure you understand how this
 // operator works.
+
+
+function pigLatin(str){
+  var volu1 = str.search(/[aeiou]/)
+  return str.subString(volu1) + str.subString(0, volu1-1) + "ay"
+}
