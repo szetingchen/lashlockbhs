@@ -42,7 +42,5 @@ function advancedPigLatin(str){
   if(volu1 === 0){
     return str.substring(volu1) + str.substring(0, volu1) + "way" 
   }
-  else{
-    return str.substring(volu1) + str.substring(0, volu1) + "ay" 
-  }
+  return str.substring(volu1) + str.substring(0, volu1) + "ay" 
 }
