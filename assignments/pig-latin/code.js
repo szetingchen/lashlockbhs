@@ -39,6 +39,6 @@ function pigLatin(str){
 }
 function advancedPigLatin(str){
   var volu1 = str.search(/[aeiou]/)
-  return str.substring(volu1) + str.substring(0, volu1) + String.fromCharCode(119*(volu1.toString().replace("2", "1"))).replace("\u0000", "") + "ay" 
+  return str.substring(volu1) + str.substring(0, volu1) + String.fromCharCode(119*(volu1.toString().replace("2", "1"))).replace("\u0000", "w") + "ay" 
   
 }
