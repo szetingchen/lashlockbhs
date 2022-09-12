@@ -39,6 +39,6 @@ var linesD = 0
 var num = 100
 while(linesD != num/2){
 
-    drawLine(0+500/num, 0, 0, 0, color, lineWidth)
+    drawLine(0+500/num, 0, 0, 0, "black", lineWidth)
     var linesD = linesD + 1
   }
