@@ -39,6 +39,6 @@ function pigLatin(str){
 }
 function advancedPigLatin(str){
   var volu1 = str.search(/[aeiou]/)
-  volu1 === 0? (str.substring(volu1) + str.substring(0, volu1) + "way") : (str.substring(volu1) + str.substring(0, volu1) + "ay")
+  volu1 === 0? str+"way" : (str.substring(volu1) + str.substring(0, volu1) + "ay")
   
 }
