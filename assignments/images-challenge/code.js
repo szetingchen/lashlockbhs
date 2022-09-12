@@ -22,4 +22,21 @@
  *  drawFilledTriangle(x1, y1, x2, y2, x3, y3, color)
  *
  *  clear()
+ * 
+ *
  */
+
+
+const notreallycurved =(num)=>{
+  const top = 0
+  const side = 500
+  while(linesD != num){
+    drawLine(0+500/num, 0, x2, y2, color, lineWidth)
+  }
+
+}
+
+var num = 100
+while(linesD != num/2){
+    drawLine(0+500/num, 0, 0, 0, color, lineWidth)
+  }
