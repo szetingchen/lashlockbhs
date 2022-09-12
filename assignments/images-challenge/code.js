@@ -35,8 +35,10 @@ const notreallycurved =(num)=>{
   }
 
 }
-
+var linesD = 0
 var num = 100
 while(linesD != num/2){
+
     drawLine(0+500/num, 0, 0, 0, color, lineWidth)
+    var linesD = linesD + 1
   }
