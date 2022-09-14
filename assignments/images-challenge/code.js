@@ -37,5 +37,5 @@ const notreallycurved =(num)=>{
   }
 
 }
-var num = 5
+var num = 23
 notreallycurved(num);
