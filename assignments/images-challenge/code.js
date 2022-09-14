@@ -37,10 +37,11 @@ const notreallycurved =(num)=>{
   }
 
 }
-var num = 30
+var num = 40
 notreallycurved(num);
 
 
 
-//20 = 1.348, 10
-//30 = 
+//20 = 1.348
+//30 = 1.179
+//40 = 
