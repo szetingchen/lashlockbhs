@@ -32,7 +32,7 @@ const notreallycurved =(num)=>{
   const side = 500
   let linesD = 0
   while(linesD != num){
-    drawLine(0+500/num, 0, x2, y2, color, lineWidth)
+    drawLine(0+500/num, 0, 0, 0, color, lineWidth)
     linesD+=1
   }
 
