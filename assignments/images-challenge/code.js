@@ -27,15 +27,15 @@
  */
 
 
-const notreallycurved =(num, height, width, bottom, color)=>{
+const notreallycurved =(num, bottom, top, sideL ,sideR color)=>{
   const top = 530
   const rside = 300
   let linesD = 0
   
   while(linesD != num+1){
-    drawLine((width/(num))*linesD, height, 0, height/num*linesD, color, 1)
+    drawLine((width/(num))*linesD, bottom, 0, bottom/num*linesD, color, 1)
     linesD+=1
   }
 
 }
-notreallycurved(23, 200, 500, 'red');
+notreallycurved(23, 530, 200, 'red');
