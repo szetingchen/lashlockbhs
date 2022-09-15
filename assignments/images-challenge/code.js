@@ -27,7 +27,7 @@
  */
 
 
-const notreallycurved =(num, bottom, top, sideL ,sideR color)=>{
+const notreallycurved =(num, bottom, top, sideL ,sideR, color)=>{
   const top = 530
   const rside = 300
   let linesD = 0
