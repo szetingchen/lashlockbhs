@@ -28,8 +28,8 @@
 
 
 const notreallycurved =(num)=>{
-  const top = 20
-  const rside = 200
+  const top = 530
+  const rside = 300
   let linesD = 0
   
   while(linesD != num+1){
