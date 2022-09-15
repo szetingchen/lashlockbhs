@@ -30,7 +30,7 @@
 const notreallycurved =(num, bottom, top, sideL ,sideR, color)=>{
   let linesD = 0
   while(linesD != num+1){
-    drawLine((Math.abs(sideL-sideR)/(num))*linesD + sideR, bottom, 0, top-top/num*linesD, color, 1)
+    drawLine((Math.abs(sideL-sideR)/(num))*linesD + sideR, bottom, 0, top/num*linesD, color, 1)
     linesD+=1
   }
 
