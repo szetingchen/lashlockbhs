@@ -27,7 +27,7 @@
  */
 
 
-const notreallycurved =(num, height, width, color)=>{
+const notreallycurved =(num, height, width, bottom, color)=>{
   const top = 530
   const rside = 300
   let linesD = 0
@@ -38,4 +38,4 @@ const notreallycurved =(num, height, width, color)=>{
   }
 
 }
-notreallycurved(23, 600, 500, 'red');
+notreallycurved(23, 200, 500, 'red');
