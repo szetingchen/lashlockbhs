@@ -30,7 +30,7 @@
 const notreallycurved =(num)=>{
   const top = 0
   const rside = 500
-  const length1 = 400
+  const length1 = 200
   let linesD = 0
   
   while(linesD != num+1){
