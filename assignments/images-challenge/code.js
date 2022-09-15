@@ -28,7 +28,7 @@
 
 
 const notreallycurved =(num)=>{
-  const top = 400
+  const top = 530
   const rside = 530
   let linesD = 0
   
