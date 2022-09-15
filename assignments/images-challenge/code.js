@@ -38,4 +38,4 @@ const notreallycurved =(num, height, width, color)=>{
   }
 
 }
-notreallycurved(20, 600, 500, 'red');
+notreallycurved(23, 600, 500, 'red');
