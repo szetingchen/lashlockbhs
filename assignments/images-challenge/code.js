@@ -32,12 +32,12 @@ const notreallycurved =(num)=>{
   const rside = 500
   let linesD = 0
   while(linesD != num){
-    drawLine((rside/(num-1))*linesD, 530, 0, num, "black", 1)
+    drawLine((rside/(num-1))*linesD, 530, 0, 10*linesD*1.348, "black", 1)
     linesD+=1
   }
 
 }
-var num = 10
+var num = 20
 notreallycurved(num);
 
 
