@@ -35,4 +35,4 @@ const notreallycurved =(num, bottom, top, sideL ,sideR, color)=>{
   }
 
 }
-notreallycurved(23, 530, 200, 'red');
+notreallycurved(23, 530, 200, 0, 200, 'red');
