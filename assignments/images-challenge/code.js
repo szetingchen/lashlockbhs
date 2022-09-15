@@ -38,7 +38,7 @@ const notreallycurved =(num, height, width)=>{
   }
 
 }
-notreallycurved(num, 600, 500);
+notreallycurved(20, 600, 500);
 
 
 
