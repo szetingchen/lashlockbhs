@@ -29,8 +29,8 @@
 
 const notreallycurved =(num, base)=>{
   const rside = 530
-  for(let lineseD = 0; lineseD+=1; num!=lineseD){
-    drawLine((rside/(num))*linesD, base, 0, base/num*linesD, "black", 0.5)
+  for(let linesD = 0; linesD!=num; linesD++){
+    drawLiner(rside/num*linesD, base, 0, base/num*linesD, "black", 0.5)
   }
 
 }
