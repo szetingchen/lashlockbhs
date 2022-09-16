@@ -33,7 +33,7 @@ const notreallycurved =(num, base, rside)=>{
   }
 
 }
-notreallycurved(50, 600, 530);
+notreallycurved(num = 50, base = 600, rside = 530);
 
 
 
