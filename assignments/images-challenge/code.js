@@ -30,9 +30,9 @@
 const notreallycurved =(num, base)=>{
   const rside = 530
   let linesD = 0
-  while(linesD != num+1){
+  for(let lineseD = 0, lineseD++, num!=lineseD)
     drawLine((rside/(num))*linesD, base, 0, base/num*linesD, "black", 0.5)
-    linesD+=1
+    linesD++
   }
 
 }
