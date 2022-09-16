@@ -27,15 +27,14 @@
  */
 
 
-const notreallycurved =(num, base)=>{
-  const rside = 530
+const notreallycurved =(num, base, rside)=>{
   for(let linesD = 0; linesD!=num; linesD++){
     drawLine(rside/num*linesD, base, 0, base/num*linesD, "black", 0.5)
   }
 
 }
 var num =20
-notreallycurved(num, 600);
+notreallycurved(num, 600, 530);
 
 
 
