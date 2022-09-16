@@ -34,7 +34,7 @@ const notreallycurved =(num, base)=>{
   }
 
 }
-var num =100
+var num =10
 notreallycurved(num, 600);
 
 
