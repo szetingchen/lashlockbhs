@@ -36,7 +36,7 @@ const notreallycurved =(num, base, rside)=>{
 const lineOfCircles = (size) =>{
   const num = (width-size)/4/size
   for(let i = 0; num!=i; i++){
-    drawFilledCircle(size*i*2, height/2, size)
+    drawFilledCircle(size, height/2, size)
   }
 
 }
