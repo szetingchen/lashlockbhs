@@ -40,7 +40,7 @@ const lineOfCircles = (size) =>{
   }
 
 }
-lineOfCircles(100)
+lineOfCircles(50)
 
 
 
