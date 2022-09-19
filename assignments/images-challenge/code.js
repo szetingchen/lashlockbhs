@@ -37,7 +37,7 @@ const lineOfCircles = (radius) =>{
   const cwidth = radius*2
   const num = width-cwidth/cwidth
   for (let i = 0; num!=i; i++){
-    drawFilledCircle(100+(cwidth*i), height/2, radius, 'black')
+    drawFilledCircle(90+(cwidth*i), height/2, radius, 'black')
   }
 
 }
