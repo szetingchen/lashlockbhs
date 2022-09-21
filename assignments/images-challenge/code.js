@@ -41,7 +41,7 @@ const lineOfCircles = (radius) =>{
   }
 
 }
-lineOfCircles(3)
+lineOfCircles(40)
 
 
 
