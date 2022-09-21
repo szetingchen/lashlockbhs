@@ -40,7 +40,7 @@ const lineOfCircles = (radius) =>{
     drawFilledCircle(radius+cwidth*i, height/2, radius, 'black')
   }
   for (let i = 0; num>=i; i++){
-    drawFilledCircle(radius+cwidth*i, height/2, 10, 'black')
+    drawFilledCircle(radius+cwidth*i, 100, 10, 'black')
   }
 
 }
