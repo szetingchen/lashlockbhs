@@ -44,8 +44,14 @@ const lineOfCirclesColor = (radius, color1, color2) =>{
   const cwidth = radius*2
   const num = Math.floor(width/cwidth)
   for (let i = 0; num>i; i++){
-    drawFilledCircle(radius + cwidth*i, height/2, radius, color1)
+    if(i%2===0){
+      drawFilledCircle(radius + cwidth*i, height/2, radius, color1)
+    }
+    else{
+      drawFilledCircle(radius + cwidth*i, height/2, radius, color2)
+    }
   }
 }
 //notreallycurved(234, 600, 530)
 //lineOfCircles(20)
+lineOfCirclesColor(20, 'red', 'blue')
