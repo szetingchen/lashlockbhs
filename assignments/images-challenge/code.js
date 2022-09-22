@@ -39,9 +39,6 @@ const lineOfCircles = (radius) =>{
   for (let i = 0; num>i; i++){
     drawFilledCircle(radius + cwidth*i, height/2, radius, 'black')
   }
-  for (let i = 0; num>i; i++){
-    drawFilledCircle(radius+20*i, 100, 10, 'black')
-  }
 
 }
 //notreallycurved(234, 600, 530)
