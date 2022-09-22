@@ -52,6 +52,7 @@ const lineOfCirclesColor = (radius, color1, color2) =>{
     }
   }
 }
+
 //notreallycurved(234, 600, 530)
 //lineOfCircles(20)
-lineOfCirclesColor(20, 'pink', 'blue')
+//lineOfCirclesColor(20, 'pink', 'blue')
