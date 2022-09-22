@@ -44,7 +44,7 @@ const lineOfCircles = (radius) =>{
   }
 
 }
-notreallycurved(100, 600, 530)
+notreallycurved(234, 600, 530)
 
 
 //20 = 1.348 
