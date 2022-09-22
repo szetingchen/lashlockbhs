@@ -53,7 +53,7 @@ const lineOfCirclesColor = (radius, color1, color2) =>{
   }
 }
 const concentricCircles = (num, color1, color2) =>{
-  const inc = width/num
+  const inc = (width/num)/2
   for (let i = 0; num>i; i++){
     if(i%2===0){
       drawCircle(width/2, height/2, inc+inc*i, color1, 100)
