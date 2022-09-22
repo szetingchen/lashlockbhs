@@ -59,7 +59,7 @@ const concentricCircles = (num, color1, color2) =>{
       drawCircle(width/2, height/2, inc+inc*i, color1, width/num)
     }
     else{
-      drawCircle(width/2, height/2, inc+inc*i, color2, width/num)
+      drawCircle(width/2, height/2, inc+inc*i, color2, )
     }
   }
 }
