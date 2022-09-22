@@ -56,10 +56,10 @@ const concentricCircles = (num, color1, color2) =>{
   const inc = width/num
   for (let i = 0; num>i; i++){
     if(i%2===0){
-      drawCircle(width/2, height/2, inc+inc*i, color1, 12)
+      drawCircle(width/2, height/2, inc+inc*i, color1, 100)
     }
     else{
-      drawCircle(width/2, height/2, inc+inc*i, color2, 12)
+      drawCircle(width/2, height/2, inc+inc*i, color2, 100)
     }
   }
 }
@@ -67,4 +67,4 @@ const concentricCircles = (num, color1, color2) =>{
 //notreallycurved(234, 600, 530)
 //lineOfCircles(20)
 //lineOfCirclesColor(20, 'pink', 'blue')
-concentricCircles(12, 'red', 'blue')
+concentricCircles(10, 'red', 'blue')
