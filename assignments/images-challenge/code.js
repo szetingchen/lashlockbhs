@@ -60,7 +60,7 @@ const concentricCircles = (num, color1, color2) =>{
     }
     else{
       drawFilledCircle(width/2, height/2, width/2, color2)
-    
+    }
   }
 }
 
