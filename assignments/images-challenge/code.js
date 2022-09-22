@@ -52,6 +52,17 @@ const lineOfCirclesColor = (radius, color1, color2) =>{
     }
   }
 }
+const concentricCircles = (num, color1, color2) =>{
+  const inc = width/num
+  for (let i = 0; num>i; i++){
+    if(i%2===0){
+      drawFilledCircle(width/2, height/2, inc+inc*i, color1)
+    }
+    else{
+      drawFilledCircle(width/2, height/2, inc+inc*i, color2)
+    }
+  }
+}
 
 //notreallycurved(234, 600, 530)
 //lineOfCircles(20)
