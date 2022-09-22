@@ -67,4 +67,4 @@ const concentricCircles = (num, color1, color2) =>{
 //notreallycurved(234, 600, 530)
 //lineOfCircles(20)
 //lineOfCirclesColor(20, 'pink', 'blue')
-concentricCircles(678, 'red', 'blue')
+concentricCircles(12, 'red', 'blue')
