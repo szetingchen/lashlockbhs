@@ -56,7 +56,7 @@ const concentricCircles = (num, color1, color2) =>{
   const inc = width/num/2
   for (let i = 0; num>i; i++){
     if(i%2===0){
-      drawFilledCircle(width/2, height/2, width/2, color1)
+      drawFilledCircle(width/2, height/2, width/2-inc*i, color1)
     }
     else{
       drawFilledCircle(width/2, height/2, width/2-inc*i, color2)
