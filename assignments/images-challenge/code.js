@@ -103,7 +103,7 @@ const fillWithCircles = (r) =>{
 
 //notreallycurved(56, 600, 530)
 //lineOfCircles(20)
-//lineOfCirclesColor(20, 'pink', 'teal')
+lineOfCirclesColor(20, 'pink', 'teal')
 //concentricCircles(11, 'blue', 'red')
 //checkerBoard(5, 'blue', 'red')
-fillWithCircles(23)
+//fillWithCircles(23)
