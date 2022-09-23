@@ -87,7 +87,7 @@ const fillWithCircles = (r) =>{
   const d = r*2
   const numx = Math.floor(width/d)
   const numy = Math.floor(height/d)
-  const y = r
+  let y = r;
   for (let a = 0; numy>a; a++){
     for (let i = 0; numx>i; i++){
       drawFilledCircle(r + d*i, y, r, 'black')
