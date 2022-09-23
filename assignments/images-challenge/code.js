@@ -46,7 +46,7 @@ const lineOfCirclesColor = (r, color1, color2) =>{
   const offset = (width-num*d)/2
   for (let i = 0; num>i; i++){
     if(i%2===0){
-      drawFilledCircle(offset + r + d*i, height/2, r, color1)
+      drawFilledCircle( + r + d*i, height/2, r, color1)
     }
     else{
       drawFilledCircle(r + d*i, height/2, r, color2)
