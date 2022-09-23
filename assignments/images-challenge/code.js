@@ -99,6 +99,20 @@ const fillWithCircles = (r) =>{
     y+=d
   }
 }
+const fillWithCirclesRandomlyFilled = (r, prob) =>{
+  const d = r*2
+  const numx = Math.floor(width/d)
+  const numy = Math.floor(height/d)
+  const offsetx = (width-(numx*d))/2
+  const offsety = (height-(numy*d))/2
+  let y = r;
+  for (let a = 0; numy>a; a++){
+    for (let i = 0; numx>i; i++){
+      drawCircle(offsetx + r + d*i, offsety + y, r, 'black')
+    }
+    y+=d
+  }
+}
 
 
 
@@ -107,4 +121,5 @@ const fillWithCircles = (r) =>{
 //lineOfCirclesColor(20, 'pink', 'teal')
 //concentricCircles(11, 'blue', 'red')
 //checkerBoard(5, 'blue', 'red')
-fillWithCircles(89)
+//fillWithCircles(89)
+fillWithCirclesRandomlyFilled(17, 23)
