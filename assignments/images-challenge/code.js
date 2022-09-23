@@ -88,4 +88,4 @@ const checkerBoard = (num, color1, color2) =>{
 //lineOfCircles(20)
 //lineOfCirclesColor(20, 'pink', 'teal')
 //concentricCircles(11, 'blue', 'red')
-checkerBoard(234, 'blue', 'red')
+checkerBoard(1, 'blue', 'red')
