@@ -67,7 +67,6 @@ const checkerBoard = (num, color1, color2) =>{
   const size = width/num
   let color11 = color1;
   let color22 = color2; 
-  
   let y = 0;
   for (let a = 0; num>a; a++){
     for (let i = 0; num>i; i++){
@@ -82,7 +81,6 @@ const checkerBoard = (num, color1, color2) =>{
     let temp = color11;
     color11 = color22; 
     color22 = temp 
-    
   }
 }
 
