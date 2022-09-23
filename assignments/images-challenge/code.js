@@ -33,22 +33,22 @@ const notreallycurved =(num, base, rside)=>{
   }
 
 }
-const lineOfCircles = (radius) =>{
-  const cwidth = radius*2
-  const num = Math.floor(width/cwidth)
+const lineOfCircles = (r) =>{
+  const d = r*2
+  const num = Math.floor(width/d)
   for (let i = 0; num>i; i++){
-    drawFilledCircle(radius + cwidth*i, height/2, radius, 'black')
+    drawFilledCircle(r + d*i, height/2, r, 'black')
   }
 }
-const lineOfCirclesColor = (radius, color1, color2) =>{
-  const cwidth = radius*2
-  const num = Math.floor(width/cwidth)
+const lineOfCirclesColor = (r, color1, color2) =>{
+  const d = r*2
+  const num = Math.floor(width/d)
   for (let i = 0; num>i; i++){
     if(i%2===0){
-      drawFilledCircle(radius + cwidth*i, height/2, radius, color1)
+      drawFilledCircle(r + d*i, height/2, r, color1)
     }
     else{
-      drawFilledCircle(radius + cwidth*i, height/2, radius, color2)
+      drawFilledCircle(r + d*i, height/2, r, color2)
     }
   }
 }
@@ -83,9 +83,16 @@ const checkerBoard = (num, color1, color2) =>{
     color22 = temp 
   }
 }
+const fillWithCircles = (r) =>{
+  const d = r*2
+
+}
+
+
 
 //notreallycurved(56, 600, 530)
 //lineOfCircles(20)
 //lineOfCirclesColor(20, 'pink', 'teal')
 //concentricCircles(11, 'blue', 'red')
-checkerBoard(5, 'blue', 'red')
+//checkerBoard(5, 'blue', 'red')
+fillWithCircles(20)
