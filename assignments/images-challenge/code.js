@@ -66,15 +66,16 @@ const concentricCircles = (num, color1, color2) =>{
 const checkerBoard = (num, color1, color2) =>{
   const size = width/num
   let y = 0
+
+  if(i%num===0){
+    y+=size
+  }
   for (let i = 0; num*num>i; i++){
     if(i%2===0){
       drawFilledRect(size*i, y, size, size, color1)
     }
     else{
       drawFilledRect(size*i, y, size, size, color2)
-    }
-    if(i%num===0){
-      y+=size
     }
   }
 }
