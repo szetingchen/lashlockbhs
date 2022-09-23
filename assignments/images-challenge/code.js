@@ -65,28 +65,20 @@ const concentricCircles = (num, color1, color2) =>{
 }
 const checkerBoard = (num, color1, color2) =>{
   const size = width/num
-  const area = num*num
-  let color11 = color1;
-  let color22 = color2;
-  let y = 0;
-
-  for (let i = 0; area>i; i++){
-
-    if(i%num+1===0){
-      y+=size
-      let temp = color11;
-      color11 = color22; 
-      color22 = temp  
+  let y = 0
+  for (let a = 0; num>a; a++){
+    for (let i = 0; num>i; i++){
+      if(i%2===0){
+        drawFilledRect(size*i, y, size, size, color1)
+      }
+      else{
+        drawFilledRect(size*i, y, size, size, color2)
+      }
     }
-    if(i%2===0){
-      drawFilledRect(size*i, y, size, size, color11)
-    }
-    else{
-      drawFilledRect(size*i, y, size, size, color22)
-    }
+    y+=size
+    
   }
 }
-
 
 //notreallycurved(56, 600, 530)
 //lineOfCircles(20)
