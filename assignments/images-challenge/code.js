@@ -107,4 +107,4 @@ const fillWithCircles = (r) =>{
 //lineOfCirclesColor(20, 'pink', 'teal')
 //concentricCircles(11, 'blue', 'red')
 //checkerBoard(5, 'blue', 'red')
-fillWithCircles(20)
+fillWithCircles(34)
