@@ -70,7 +70,7 @@ const checkerBoard = (num, color1, color2) =>{
 
   for (let i = 0; area>i; i++){
 
-    if(i%num===0){
+    if(i%num-1===0){
       y+=size
     }
     if(i%2===0){
