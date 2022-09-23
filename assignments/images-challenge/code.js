@@ -36,8 +36,9 @@ const notreallycurved =(num, base, rside)=>{
 const lineOfCircles = (r) =>{
   const d = r*2
   const num = Math.floor(width/d)
+  const offset = (width-num*d)/2
   for (let i = 0; num>i; i++){
-    drawFilledCircle(r + d*i, height/2, r, 'black')
+    drawFilledCircle(offset + r + d*i, height/2, r, 'black')
   }
 }
 const lineOfCirclesColor = (r, color1, color2) =>{
