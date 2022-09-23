@@ -65,9 +65,10 @@ const concentricCircles = (num, color1, color2) =>{
 }
 const checkerBoard = (num, color1, color2) =>{
   const size = width/num
+  const area = num*num
   let y = 0
 
-  for (let i = 0; num*num>i; i++){
+  for (let i = 0; area>i; i++){
 
     if(i%num===0){
       y+=size
