@@ -65,17 +65,23 @@ const concentricCircles = (num, color1, color2) =>{
 }
 const checkerBoard = (num, color1, color2) =>{
   const size = width/num
-  let y = 0
+  let color11 = color1;
+  let color22 = color2; 
+  
+  let y = 0;
   for (let a = 0; num>a; a++){
     for (let i = 0; num>i; i++){
       if(i%2===0){
-        drawFilledRect(size*i, y, size, size, color1)
+        drawFilledRect(size*i, y, size, size, color11)
       }
       else{
-        drawFilledRect(size*i, y, size, size, color2)
+        drawFilledRect(size*i, y, size, size, color22)
       }
     }
     y+=size
+    let temp = color11;
+    color11 = color22; 
+    color22 = temp 
     
   }
 }
