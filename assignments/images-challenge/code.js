@@ -76,22 +76,12 @@ const checkerBoard = (num, color1, color2) =>{
       }
     }
     y+=size
+    
   }
 }
-const testfunc = (num) =>{
-  const size = width/num
-  for (let i = 0; num>i; i++){
-    if(i%2===0){
-        drawFilledRect(size*i, y, size, size, color1)
-      }
-      else{
-        drawFilledRect(size*i, y, size, size, color2)
-      }
-  }
-}
+
 //notreallycurved(56, 600, 530)
 //lineOfCircles(20)
 //lineOfCirclesColor(20, 'pink', 'teal')
 //concentricCircles(11, 'blue', 'red')
-checkerBoard(5, 'blue', 'red')
-testfunc()
+checkerBoard(100, 'blue', 'red')
