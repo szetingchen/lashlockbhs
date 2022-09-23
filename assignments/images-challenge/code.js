@@ -92,7 +92,7 @@ const fillWithCircles = (r) =>{
     for (let i = 0; numx>i; i++){
       drawFilledCircle(r + d*i, y, r, 'black')
     }
-    y-=d
+    y+=d
   }
 }
 
