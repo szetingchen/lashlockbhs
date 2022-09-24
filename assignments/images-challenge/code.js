@@ -162,7 +162,7 @@ const isPixelInSet = (c, iterations) =>{
 }
 const drawmandel = (iterations) =>{
   const startx=width/2
-  const starty=hieght/2
+  const starty=height/2
   let xmath = 0
   let ymath = 0
   let x = 0
