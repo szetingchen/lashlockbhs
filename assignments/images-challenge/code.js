@@ -116,7 +116,7 @@ const fillWithCirclesRandomlyFilled = (r, prob) =>{
 
 
 
-notreallycurved(220, 530, 600)
+notreallycurved(220, 530, 530)
 //lineOfCircles(20)
 //lineOfCirclesColor(20, 'pink', 'teal')
 //concentricCircles(11, 'blue', 'red')
