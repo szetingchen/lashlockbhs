@@ -130,10 +130,11 @@ const squareOfCircles = (r, color) =>{
   const offset = (width-num*d)/2
   let cy = r
   for (let i = 0; i<num*2; i++){
-    drawCircle(offset + r + d*i, height-cy, r, color)
-    if(i%26===0){
+    if(i===26){
       cy=-r
     }
+    drawCircle(offset + r + d*i, height-cy, r, color)
+
   }
 }
 
