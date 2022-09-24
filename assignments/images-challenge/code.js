@@ -161,7 +161,8 @@ const isPixelInSet = (c, iterations) =>{
   
 }
 const drawmandel = (iterations) =>{
-  
+  centerx=width/2
+  centery=hieght/2
 }
 //notreallycurved(20, 530, 500)
 //lineOfCircles(23)
@@ -172,5 +173,4 @@ const drawmandel = (iterations) =>{
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
 
-console.log(isPixelInSet([0,0], 50))
 const c=[20, -1]
