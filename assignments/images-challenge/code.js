@@ -161,9 +161,23 @@ const isPixelInSet = (c, iterations) =>{
   
 }
 const drawmandel = (iterations) =>{
-  centerx=width/2
-  centery=hieght/2
-}
+  const startx=width/2
+  const starty=hieght/2
+  let xmath = 0
+  let ymath = 0
+  let x = 0
+  let y = 0
+  for(let a = 0; a<hieght; a++){
+    for(let i = 0; i<width; i++){
+      if(isPixelInSet([xmath, ymath], 50)){
+        drawFilledRect(x, y, 1, 1, 'black')
+      }
+      x++
+      pixelschecked++
+    }
+    y++
+  }
+  
 //notreallycurved(20, 530, 500)
 //lineOfCircles(23)
 //lineOfCirclesColor(12, 'pink', 'teal')
