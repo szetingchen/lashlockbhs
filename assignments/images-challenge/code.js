@@ -160,7 +160,7 @@ const isPixelInSet = (c, iterations) =>{
   }
   
 }
-const drawmandel = (c, 50) =>{
+const drawmandel = (c, iterations) =>{
 
 }
 notreallycurved(220, 530, 500)
