@@ -154,10 +154,10 @@ const isPixelInSet = (c, iterations) =>{
     console.log(z)
     if(z[1]===Infinity||z[0]===Infinity){
       return false
-      break
     }
     
   }
+  return true
   
 }
 const drawmandel = (iterations) =>{
