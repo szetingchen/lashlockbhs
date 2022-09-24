@@ -157,4 +157,5 @@ const f = (z) =>{
 //fillWithCircles(30, 'blue')
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
-console.log(z_sqr(-2,6) + "i")
+const z=[1, 2]
+f(z)
