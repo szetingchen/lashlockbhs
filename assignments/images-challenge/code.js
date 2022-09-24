@@ -163,12 +163,14 @@ const isPixelInSet = (c, iterations) =>{
 const drawmandel = (iterations) =>{
   const startx=width/2
   const starty=height/2
+  let pixelschecked = 0
   let xmath = 0
   let ymath = 0
   let x = 0
   let y = 0
   for(let a = 0; a<height; a++){
     for(let i = 0; i<width; i++){
+      console.log(isPixelInSet([xmath, ymath], iterations))
       if(isPixelInSet([xmath, ymath], iterations)){
         drawFilledRect(x, y, 1, 1, 'black')
       }
