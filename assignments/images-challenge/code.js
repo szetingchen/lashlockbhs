@@ -140,9 +140,11 @@ const squareOfCircles = (r, color) =>{
   }
 }
 
-const madnelBrotSet = (r, i) =>{
-  //still learning the math
+const z_sqr = (x,y) =>{
+  return [x**2 - y**2, 2*x*y]
 }
+
+
 
 //notreallycurved(220, 530, 500)
 //lineOfCircles(23)
@@ -150,6 +152,6 @@ const madnelBrotSet = (r, i) =>{
 //concentricCircles(11, 'teal', 'pink')
 //checkerBoard(5, 'black', 'red')
 //fillWithCircles(30, 'blue')
-fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
+//fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
-mandelBrotSet()
+console.log(z_sqr(1,2))
