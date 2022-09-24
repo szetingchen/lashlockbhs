@@ -116,4 +116,4 @@ const drawmandel = (iterations) =>{
     ymath+=2/200
   }
 }
-drawmandel(200)
+drawmandel(10)
