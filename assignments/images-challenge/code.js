@@ -161,9 +161,9 @@ const isPixelInSet = (c, iterations) =>{
   
 }
 const drawmandel = (c, iterations) =>{
-
+  
 }
-notreallycurved(20, 530, 500)
+//notreallycurved(20, 530, 500)
 //lineOfCircles(23)
 //lineOfCirclesColor(12, 'pink', 'teal')
 //concentricCircles(11, 'teal', 'pink')
