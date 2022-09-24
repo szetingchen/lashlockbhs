@@ -150,6 +150,6 @@ const madnelBrotSet = (r, i) =>{
 //concentricCircles(11, 'teal', 'pink')
 //checkerBoard(5, 'black', 'red')
 //fillWithCircles(30, 'blue')
-fillWithCirclesRandomlyFilled(30, 0.3, 'blue')
+fillWithCirclesRandomlyFilled(30, 0.50, 'blue')
 //squareOfCircles(10, 'blue') //not done 
 mandelBrotSet()
