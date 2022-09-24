@@ -171,4 +171,4 @@ const isPixelInSet = (c, iterations) =>{
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
 const c=[-1, -1]
-console.log(isPixelInSet(c, 20))
+console.log(isPixelInSet(c, 50))
