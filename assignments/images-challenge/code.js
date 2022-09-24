@@ -136,7 +136,7 @@ const squareOfCircles = (r, color) =>{
       e = 0
     }
     drawCircle(offset + r + d*i, e*height-cy, r, color)
-
+    //not done
   }
 }
 
@@ -151,5 +151,5 @@ const madnelBrotSet = (r, i) =>{
 //checkerBoard(5, 'black', 'red')
 //fillWithCircles(30, 'blue')
 fillWithCirclesRandomlyFilled(30, 0.3, 'blue')
-//squareOfCircles(10, 'blue') //not done
+//squareOfCircles(10, 'blue') //not done 
 mandelBrotSet()
