@@ -97,10 +97,10 @@ const drawmandel = (iterations) =>{
   let o = 1
   for(let a = 0; a<=200; a++){
     for(let i = 0; i<=200; i++){
-      console.log([x, y])
-      console.log(isPixelInSet([x, y], iterations))
+      console.log([xmath, ymath])
+      console.log(isPixelInSet([xmath, ymath], iterations))
       
-      if(isPixelInSet([x, y], iterations)){
+      if(isPixelInSet([xmath, ymath], iterations)){
         drawFilledRect(100+x, 100+y, 1, 1, 'black')
       }
       if(i===200){
@@ -108,12 +108,12 @@ const drawmandel = (iterations) =>{
         o*=-1
       }
       x+=1*o
-      
+      xmath+=2/200
       pixelschecked++
 
     }
     y++
-    
+    ymath+=2/200
   }
 }
-drawmandel(10)
+drawmandel(200)
