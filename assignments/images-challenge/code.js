@@ -122,4 +122,4 @@ const fillWithCirclesRandomlyFilled = (r, prob) =>{
 //concentricCircles(11, 'blue', 'red')
 //checkerBoard(5, 'blue', 'red')
 //fillWithCircles(89)
-fillWithCirclesRandomlyFilled(50, 23)
+fillWithCirclesRandomlyFilled(250, 23)
