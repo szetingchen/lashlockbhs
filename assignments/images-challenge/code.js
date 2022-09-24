@@ -123,3 +123,4 @@ const fillWithCirclesRandomlyFilled = (r, prob) =>{
 //checkerBoard(5, 'black', 'red')
 //fillWithCircles(3)
 fillWithCirclesRandomlyFilled(23, 0.23)
+//mandelBrotThing()
