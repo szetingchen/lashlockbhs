@@ -141,13 +141,19 @@ const squareOfCircles = (r, color) =>{
 }
 
 const z_sqr = (x,y) =>{
-  return [x**2 - y**2, 2*x*y]
+  return [x**2 - y**2, 2*x*y];
 }
 const f = (z) =>{
   const z_sqr1 = z_sqr(z[0], z[1])
-  return [z_sqr1[0]+z[0], z_sqr1[1]+z[1]]
+  return [z_sqr1[0]+z[0], z_sqr1[1]+z[1]];
 }
-
+const isPixelInSet = (c, iterations) =>{
+  let z = c;
+  for(let i=0; i<iterations; i++){
+    z=f(z);
+  }
+  return z
+}
 
 //notreallycurved(220, 530, 500)
 //lineOfCircles(23)
@@ -157,5 +163,5 @@ const f = (z) =>{
 //fillWithCircles(30, 'blue')
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
-const z=[1, 2]
-console.log(f(z))
+const c=[1, 2]
+console.log(isPixelInSet(c, 10))
