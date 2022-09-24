@@ -143,7 +143,10 @@ const squareOfCircles = (r, color) =>{
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y]
 }
+const f = (z) =>{
+  zsquared = z_sqr(z[0], z[1])
 
+}
 
 
 //notreallycurved(220, 530, 500)
@@ -154,4 +157,4 @@ const z_sqr = (x,y) =>{
 //fillWithCircles(30, 'blue')
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
-console.log(z_sqr(1,2) + "i")
+console.log(z_sqr(-2,6) + "i")
