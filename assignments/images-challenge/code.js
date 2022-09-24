@@ -108,7 +108,12 @@ const fillWithCirclesRandomlyFilled = (r, prob) =>{
   let y = r;
   for (let a = 0; numy>a; a++){
     for (let i = 0; numx>i; i++){
-      drawCircle(offsetx + r + d*i, offsety + y, r, 'black')
+      if (Math.random()<=0.29){
+        drawFilledCircle(offsetx + r + d*i, offsety + y, r, 'black')
+      }
+      else{ 
+        drawCircle(offsetx + r + d*i, offsety + y, r, 'black')
+      }
     }
     y+=d
   }
