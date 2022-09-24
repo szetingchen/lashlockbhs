@@ -124,6 +124,16 @@ const fillWithCirclesRandomlyFilled = (r, prob, color) =>{
   console.log("num filled:"+numfilled)
 }
 
+const squareOfCircles = (r, color) =>{
+  const d = r*2
+  const num = Math.floor(width/d)
+  const offset = (width-num*d)/2
+  let y = height+radius
+  for (let i = 0; i<num; i++){
+    drawCircle(offsetx + r + d*i, y, r, color)
+  }
+}
+
 
 
 //notreallycurved(220, 530, 500)
@@ -132,5 +142,6 @@ const fillWithCirclesRandomlyFilled = (r, prob, color) =>{
 //concentricCircles(11, 'teal', 'pink')
 //checkerBoard(5, 'black', 'red')
 //fillWithCircles(30, 'blue')
-fillWithCirclesRandomlyFilled(30, 0.50, 'blue')
+//fillWithCirclesRandomlyFilled(30, 0.50, 'blue')
+squareOfCircles(10, 'blue')
 //mandelBrotThing()
