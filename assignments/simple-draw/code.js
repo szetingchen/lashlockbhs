@@ -110,4 +110,4 @@ const drawmandel = (iterations) =>{
   }
   drawRect(0, 0, 200, 200, 'black')
 }
-drawmandel(10)
+drawmandel(11)
