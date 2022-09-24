@@ -140,7 +140,9 @@ const squareOfCircles = (r, color) =>{
   }
 }
 
-const madnelBrotSet()
+const madnelBrotSet = (r, i) =>{
+  
+}
 
 //notreallycurved(220, 530, 500)
 //lineOfCircles(23)
