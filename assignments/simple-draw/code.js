@@ -75,6 +75,7 @@ const f = (z) =>{
   const z_sqr1 = z_sqr(z[0], z[1])
   return [z_sqr1[0]+z[0], z_sqr1[1]+z[1]];
 }
+
 const isPixelInSet = (c, iterations) =>{
   let z = c;
   for(let i=0; i<iterations; i++){
@@ -86,6 +87,7 @@ const isPixelInSet = (c, iterations) =>{
   return true
   
 }
+
 const drawmandel = (iterations) =>{
   const startx=width/2
   const starty=height/2
