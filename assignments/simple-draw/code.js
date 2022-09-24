@@ -80,10 +80,11 @@ const isPixelInSet = (c, iterations) =>{
   let z = c;
   for(let i=0; i<iterations; i++){
     z=f(z);
-  }
-  if(z[0]===Infinity||z[1]===Infinity||z[0]===-Infinity||z[1]===-Infinity){
+    
+    if(z[0]===Infinity||z[1]===Infinity||z[0]===-Infinity||z[1]===-Infinity){
     //console.log("z: "+z)
     return false
+  }
   }
   if(Math.sqrt(z[0]**2+z[1]**2)>2){
     return false
