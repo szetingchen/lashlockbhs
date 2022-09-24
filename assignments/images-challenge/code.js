@@ -173,11 +173,13 @@ const drawmandel = (iterations) =>{
         drawFilledRect(x, y, 1, 1, 'black')
       }
       x++
+      xmath+=2/width
       pixelschecked++
     }
     y++
+    ymath+=2/height
   }
-  
+}
 //notreallycurved(20, 530, 500)
 //lineOfCircles(23)
 //lineOfCirclesColor(12, 'pink', 'teal')
@@ -187,5 +189,4 @@ const drawmandel = (iterations) =>{
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
 
-const c=[20, -1]
 drawmandel(50)
