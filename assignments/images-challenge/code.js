@@ -120,8 +120,8 @@ const fillWithCirclesRandomlyFilled = (r, prob) =>{
     }
     y+=d
   }
-  console.log(numx*numy)
-  console.log(numfilled)
+  console.log("num circles:"numx*numy)
+  console.log("num filled:"numfilled)
 }
 
 
