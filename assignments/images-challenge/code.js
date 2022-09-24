@@ -191,4 +191,4 @@ const drawmandel = (iterations) =>{
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
 
-drawmandel(50)
+drawmandel(10)
