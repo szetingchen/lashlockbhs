@@ -96,7 +96,7 @@ const isPixelInSet = (c, iterations) =>{
     return i
   }
   console.log("z: "+z)
-  return '0"
+  return 0
 }
 
 
