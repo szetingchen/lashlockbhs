@@ -167,7 +167,7 @@ const drawmandel = (iterations) =>{
   let ymath = 0
   let x = 0
   let y = 0
-  for(let a = 0; a<hieght; a++){
+  for(let a = 0; a<height; a++){
     for(let i = 0; i<width; i++){
       if(isPixelInSet([xmath, ymath], iterations)){
         drawFilledRect(x, y, 1, 1, 'black')
