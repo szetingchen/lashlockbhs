@@ -153,13 +153,12 @@ const isPixelInSet = (c, iterations) =>{
     z=f(z);
     console.log(z)
     if(z[1]===Infinity||z[0]===Infinity){
-      console.log(i)
       break
     }
     
   }
   
-  return z
+  return 
   
 }
 
@@ -171,5 +170,5 @@ const isPixelInSet = (c, iterations) =>{
 //fillWithCircles(30, 'blue')
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
-const c=[1, 2]
+const c=[0, 2]
 console.log(isPixelInSet(c, 10))
