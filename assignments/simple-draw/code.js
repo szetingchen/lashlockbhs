@@ -95,8 +95,8 @@ const drawmandel = (iterations) =>{
   let o = 1
   for(let y = 0; y<=200; y++){
     for(let x = 0; x<=200; x++){
-      xmath=x*(4/200)
-      ymath=y*(4/200)
+      xmath=-2+(4/200)
+      ymath=2-(4/200)
       let pixelinset = isPixelInSet([xmath, ymath], iterations)
       console.log([xmath, ymath] + ": " + pixelinset)
       if(pixelinset){
