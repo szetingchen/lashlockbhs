@@ -145,7 +145,7 @@ const z_sqr = (x,y) =>{
 }
 const f = (z) =>{
   const z_sqr1 = z_sqr(z[0], z[1])
-  return zqr1[0]+z[0], zqr1[1]+z[1]
+  return z_sqr1[0]+z[0], z_sqr1[1]+z[1]
 }
 
 
