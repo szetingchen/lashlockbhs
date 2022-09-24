@@ -153,11 +153,12 @@ const isPixelInSet = (c, iterations) =>{
     z=f(z);
     console.log(z)
     if(z[1]===Infinity||z[0]===Infinity){
+      console.log(i)
       break
     }
     
   }
-  console.log(i)
+  
   return z
   
 }
