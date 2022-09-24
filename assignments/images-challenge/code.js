@@ -128,12 +128,14 @@ const squareOfCircles = (r, color) =>{
   const d = r*2
   const num = Math.floor(width/d)
   const offset = (width-num*d)/2
-  let cy = r
+  let cy = r;
+  let e = 1;
   for (let i = 0; i<=num*2; i++){
     if(i===26){
       cy=-r
+      e = 0
     }
-    drawCircle(offset + r + d*i, cy, r, color)
+    drawCircle(offset + r + d*i, 0*height-cy, r, color)
 
   }
 }
