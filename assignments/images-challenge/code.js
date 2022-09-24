@@ -151,6 +151,7 @@ const isPixelInSet = (c, iterations) =>{
   let z = c;
   for(let i=0; i<iterations; i++){
     z=f(z);
+    console.log(z)
   }
   return z
 }
