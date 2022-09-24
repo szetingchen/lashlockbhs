@@ -154,4 +154,4 @@ const z_sqr = (x,y) =>{
 //fillWithCircles(30, 'blue')
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
-console.log(z_sqr(1,2))
+console.log(z_sqr(1,2) + "i")
