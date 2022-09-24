@@ -108,6 +108,6 @@ const drawmandel = (iterations) =>{
 
     }
   }
-  //drawRect(100)
+  drawRect(0, 0, 200, 200, 'black')
 }
 drawmandel(10)
