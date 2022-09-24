@@ -78,19 +78,20 @@ const f = (z) =>{
 
 const isPixelInSet = (c, iterations) =>{
   let z = c;
-  for(let i=0; i<iterations; i++){
+  let i=0
+  for(i; i<iterations; i++){
     z=f(z);
     
     if(z[0]===Infinity||z[1]===Infinity||z[0]===-Infinity||z[1]===-Infinity){
     //console.log("z: "+z)
-    return false
+    return i
     }
   }
   if(z[0]>2||z[1]>2){
-    return false
+    return i
   }
   //console.log("z: "+z)
-  return true
+  return 0
 }
 
 const drawmandel = (iterations, border) =>{
