@@ -40,3 +40,4 @@ const drawmandel = (iterations) =>{
     ymath+=2/height
   }
 }
+drawmandel(1)
