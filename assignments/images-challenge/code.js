@@ -188,4 +188,4 @@ const drawmandel = (iterations) =>{
 //squareOfCircles(10, 'blue') //not done 
 
 const c=[20, -1]
-draw
+drawmandel(50)
