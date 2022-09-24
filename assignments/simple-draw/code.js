@@ -82,10 +82,10 @@ const isPixelInSet = (c, iterations) =>{
     z=f(z);
   }
   if(Math.sqrt(z[0]**2+z[1]**2)>2||z[0]===Infinity||z[1]===Infinity||z[0]===-Infinity||z[1]===-Infinity){
-    console.log("z: "+z)
+    //console.log("z: "+z)
     return false
   }
-  console.log("z: "+z)
+  //console.log("z: "+z)
   return true
 }
 
@@ -100,7 +100,7 @@ const drawmandel = (iterations) =>{
       xmath=-2+(4/200)*x
       ymath=2-(4/200)*y
       let pixelinset = isPixelInSet([xmath, ymath], iterations)
-      console.log([xmath, ymath] + ": " + pixelinset)
+      //console.log([xmath, ymath] + ": " + pixelinset)
       if(pixelinset){
         drawFilledRect(x, y, 1, 1, 'black')
       }
