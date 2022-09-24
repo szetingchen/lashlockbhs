@@ -95,12 +95,12 @@ const drawmandel = (iterations) =>{
   let o = 1
   for(let y = 0; y<=200; y++){
     for(let x = 0; x<=200; x++){
-      xmath=-2+(4/200)
-      ymath=2-(4/200)
+      xmath=-2+(4/200)*x
+      ymath=2-(4/200)*y
       let pixelinset = isPixelInSet([xmath, ymath], iterations)
       console.log([xmath, ymath] + ": " + pixelinset)
       if(pixelinset){
-        drawFilledRect(x, y, 1, 1, 'black')
+        drawFilledRect(100+x, 100+y, 1, 1, 'black')
       }
       pixelschecked++
 
