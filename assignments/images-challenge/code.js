@@ -133,7 +133,7 @@ const squareOfCircles = (r, color) =>{
     if(i===26){
       cy=-r
     }
-    drawCircle(offset + r + d*i, -cy, r, color)
+    drawCircle(offset + r + d*i, cy, r, color)
 
   }
 }
