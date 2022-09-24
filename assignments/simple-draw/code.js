@@ -82,8 +82,10 @@ const isPixelInSet = (c, iterations) =>{
     z=f(z);
   }
   if(Math.sqrt(z[0]**2+z[1]**2)>2){
+    console.log("z: "+z)
     return false
   }
+  console.log("z: "+z)
   return true
 }
 
@@ -93,7 +95,6 @@ const drawmandel = (iterations) =>{
   let pixelschecked = 0
   let xmath = 0
   let ymath = 0
-  let o = 1
   for(let y = 0; y<=200; y++){
     for(let x = 0; x<=200; x++){
       xmath=-2+(4/200)*x
