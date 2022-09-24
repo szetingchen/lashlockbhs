@@ -99,7 +99,7 @@ const fillWithCircles = (r) =>{
     y+=d
   }
 }
-const fillWithCirclesRandomlyFilled = (r, prob) =>{
+const fillWithCirclesRandomlyFilled = (r, prob, color) =>{
   const d = r*2
   const numx = Math.floor(width/d)
   const numy = Math.floor(height/d)
@@ -110,11 +110,11 @@ const fillWithCirclesRandomlyFilled = (r, prob) =>{
   for (let a = 0; numy>a; a++){
     for (let i = 0; numx>i; i++){
       if (Math.random()<=prob){
-        drawFilledCircle(offsetx + r + d*i, offsety + y, r, 'black')
+        drawFilledCircle(offsetx + r + d*i, offsety + y, r, color)
         numfilled++
       }
       else{ 
-        drawCircle(offsetx + r + d*i, offsety + y, r, 'black')
+        drawCircle(offsetx + r + d*i, offsety + y, r, color)
         
       }
     }
@@ -131,6 +131,6 @@ const fillWithCirclesRandomlyFilled = (r, prob) =>{
 //lineOfCirclesColor(12, 'pink', 'teal')
 //concentricCircles(11, 'teal', 'pink')
 //checkerBoard(5, 'black', 'red')
-//fillWithCircles(3)
-fillWithCirclesRandomlyFilled(30, 0.50)
+//fillWithCircles(3, 'blue')
+fillWithCirclesRandomlyFilled(30, 0.50, 'blue')
 //mandelBrotThing()
