@@ -82,7 +82,6 @@ const isPixelInSet = (c, iterations) =>{
     if(z[1]===Infinity||z[0]===Infinity){
       return false
     }
-    
   }
   return true
   
@@ -109,4 +108,4 @@ const drawmandel = (iterations) =>{
     ymath+=2/height
   }
 }
-drawmandel(10)
+drawmandel(50)
