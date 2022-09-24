@@ -121,5 +121,5 @@ const fillWithCirclesRandomlyFilled = (r, prob) =>{
 //lineOfCirclesColor(12, 'pink', 'teal')
 //concentricCircles(11, 'teal', 'pink')
 //checkerBoard(5, 'black', 'red')
-fillWithCircles(10)
+fillWithCircles(23)
 //fillWithCirclesRandomlyFilled(23, 0.23)
