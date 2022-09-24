@@ -108,7 +108,7 @@ const fillWithCirclesRandomlyFilled = (r, prob) =>{
   let y = r;
   for (let a = 0; numy>a; a++){
     for (let i = 0; numx>i; i++){
-      if (Math.random()<=0.29){
+      if (Math.random()<=prob){
         drawFilledCircle(offsetx + r + d*i, offsety + y, r, 'black')
       }
       else{ 
@@ -127,5 +127,5 @@ const fillWithCirclesRandomlyFilled = (r, prob) =>{
 //concentricCircles(11, 'teal', 'pink')
 //checkerBoard(5, 'black', 'red')
 //fillWithCircles(3)
-fillWithCirclesRandomlyFilled(23, 0.23)
+fillWithCirclesRandomlyFilled(23, 1)
 //mandelBrotThing()
