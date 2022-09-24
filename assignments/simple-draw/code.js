@@ -109,4 +109,4 @@ const drawmandel = (iterations) =>{
     }
   }
 }
-drawmandel(200)
+drawmandel(10)
