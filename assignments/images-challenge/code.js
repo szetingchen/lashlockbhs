@@ -140,7 +140,7 @@ const squareOfCircles = (r, color) =>{
   }
 }
 
-const
+const madnelBrotSet()
 
 //notreallycurved(220, 530, 500)
 //lineOfCircles(23)
@@ -148,6 +148,6 @@ const
 //concentricCircles(11, 'teal', 'pink')
 //checkerBoard(5, 'black', 'red')
 //fillWithCircles(30, 'blue')
-//fillWithCirclesRandomlyFilled(30, 0.50, 'blue')
+fillWithCirclesRandomlyFilled(30, 0.50, 'blue')
 //squareOfCircles(10, 'blue') //not done
 mandelBrotSet()
