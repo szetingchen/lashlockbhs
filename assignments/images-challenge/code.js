@@ -169,7 +169,7 @@ const drawmandel = (iterations) =>{
   let y = 0
   for(let a = 0; a<hieght; a++){
     for(let i = 0; i<width; i++){
-      if(isPixelInSet([xmath, ymath], 50)){
+      if(isPixelInSet([xmath, ymath], iterations)){
         drawFilledRect(x, y, 1, 1, 'black')
       }
       x++
@@ -188,3 +188,4 @@ const drawmandel = (iterations) =>{
 //squareOfCircles(10, 'blue') //not done 
 
 const c=[20, -1]
+draw
