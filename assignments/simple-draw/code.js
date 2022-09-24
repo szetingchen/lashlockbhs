@@ -68,6 +68,11 @@ for(let i=0; i < 250; i++){
     var x=x+30
 }
 */
+
+function rgb(red, green, blue) {
+    return (red & 0xF0 ? '#' : '#0') + (red << 16 | green << 8 | blue).toString(16)
+}
+
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y];
 }
@@ -93,6 +98,8 @@ const isPixelInSet = (c, iterations) =>{
   //console.log("z: "+z)
   return 0
 }
+
+
 
 const drawmandel = (iterations, border) =>{
   const startx=width/2
