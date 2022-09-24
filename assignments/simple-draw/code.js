@@ -102,11 +102,12 @@ const drawmandel = (iterations) =>{
       let pixelinset = isPixelInSet([xmath, ymath], iterations)
       console.log([xmath, ymath] + ": " + pixelinset)
       if(pixelinset){
-        drawFilledRect(100+x, 100+y, 1, 1, 'black')
+        drawFilledRect(x, y, 1, 1, 'black')
       }
       pixelschecked++
 
     }
   }
+  //drawRect(100)
 }
 drawmandel(10)
