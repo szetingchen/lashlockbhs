@@ -141,7 +141,7 @@ const squareOfCircles = (r, color) =>{
 }
 
 const madnelBrotSet = (r, i) =>{
-  
+  //still learning the math
 }
 
 //notreallycurved(220, 530, 500)
