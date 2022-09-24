@@ -144,8 +144,8 @@ const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y]
 }
 const f = (z) =>{
-  zsquared = z_sqr(z[0], z[1])
-
+  z_sqr = z_sqr(z[0], z[1])
+  return zqr[0]+z[0], zqr[1]+z[1]
 }
 
 
