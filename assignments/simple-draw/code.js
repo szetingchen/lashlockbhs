@@ -102,7 +102,7 @@ const drawmandel = (iterations) =>{
       if(isPixelInSet([xmath, ymath], iterations)){
         drawFilledRect(x, y, 1, 1, 'black')
       }
-      if(i===20){
+      if(i===200){
         xmath = 0
         o*=-1
       }
