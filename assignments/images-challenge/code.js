@@ -85,7 +85,7 @@ const checkerBoard = (num, color1, color2) =>{
     color22 = temp 
   }
 }
-const fillWithCircles = (r) =>{
+const fillWithCircles = (r, color) =>{
   const d = r*2
   const numx = Math.floor(width/d)
   const numy = Math.floor(height/d)
@@ -94,7 +94,7 @@ const fillWithCircles = (r) =>{
   let y = r;
   for (let a = 0; numy>a; a++){
     for (let i = 0; numx>i; i++){
-      drawCircle(offsetx + r + d*i, offsety + y, r, 'black')
+      drawCircle(offsetx + r + d*i, offsety + y, r, color)
     }
     y+=d
   }
