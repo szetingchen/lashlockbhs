@@ -51,7 +51,7 @@ const drawmandel = (iterations, border) =>{
       }
     }
   }
-  var pause = flase
+  var pause = false
 }
 drawmandel(50, 6000)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
