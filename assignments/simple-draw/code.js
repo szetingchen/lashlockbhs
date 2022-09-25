@@ -119,7 +119,7 @@ const drawmandel = (iterations, border) =>{
           drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, color)
         }
         else if(pixelinset>0){
-          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, rgb(6*pixelinset, 40*pixelinset, 200*pixelinset))
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, rgb(6*pixelinset, 10*pixelinset, 200*pixelinset))
         }
       }
     }
