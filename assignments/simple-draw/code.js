@@ -126,7 +126,7 @@ const drawmandel = (iterations, border) =>{
 //drawmandel(100, 600)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
 //console.log(isPixelInSet([0,0], [5,0], 50))
-drawRectFilled(0,0, 10, 10, rgb(10,10,10))
+drawRectFill(0,0, 10, 10, rgb(10,10,10))
 drawRect(0,100, 10, 10, rgb(102,40,13))
 drawRect(0,200, 10, 10, rgb(1000000,40,70))
 drawRect(0,300, 10, 10, rgb(1,0,1))
