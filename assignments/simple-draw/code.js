@@ -116,7 +116,7 @@ const drawmandel = (iterations, border) =>{
       }
       else if(pixelinset>0){
         
-        drawLine(x, y, x+1, y, rgb(6*pixelinset, 6*pixelinset, 6*pixelinset))
+        drawLine(x, y, x+1, y, rgb(pixelinset, pixelinset, pixelinset))
       }
 
       pixelschecked++
