@@ -105,7 +105,7 @@ const drawmandel = (iterations, border, startx, starty) =>{
   let ymath = 0
   for(let y = starty; y<=border; y++){
     for(let x = startx; x<=border; x++){
-      if(x<=530||y<=600){
+      if(xmath<=530||ymath<=600){
         xmath=-2+(4/border)*x
         ymath=2-(4/border)*y
       
