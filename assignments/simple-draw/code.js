@@ -109,33 +109,13 @@ const drawmandel = (iterations, border, startx, starty) =>{
       ymath=2-(4/border)*y
       
       let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
-      let percent = pixelinset/iterations
-      //console.log([xmath, ymath] + ": " + pixelinset)
-      let colornum = 765*percent
-      let r=0;
-      let g=0;
-      let b=0;
-      if(colornum<=255){
-        r=colornum
-        g=0
-        b=0
-      }
-      else if(colornum<=510){
-        r=0
-        g=colornum-255
-        b=0
-      }
-      else{
-        r=0
-        g=0
-        b=colornum-510
-      }
+      
       if(pixelinset===0){
         drawLine(x, y, x+1, y, "black")
       }
       else if(pixelinset>0){
         
-        drawLine(x, y, x+1, y, rgb(r, g, b))
+        drawLine(x, y, x+1, y, rgb(6*pixelinset, 10*pixelinset, 20*pixelinset))
       }
 
       pixelschecked++
@@ -143,6 +123,6 @@ const drawmandel = (iterations, border, startx, starty) =>{
     }
   }
 }
-drawmandel(1000, 600, 0, 0)
+drawmandel(200, 600, 0, 0)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
 //console.log(isPixelInSet([0,0], [5,0], 50))
