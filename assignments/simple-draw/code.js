@@ -91,7 +91,7 @@ const isPixelInSet = (z, c, iterations) =>{
     }
   }
   if(z[0]>2||z[1]>2){
-    return iterations-i
+    return iterations
   }
   return 0
 }
@@ -109,8 +109,11 @@ const drawmandel = (iterations, border) =>{
     for(let x = 0; x<=border; x++){
       xmath=-2+(4/border)*x
       ymath=2-(4/border)*y
+      
       let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
+      let percent = pixelinset/iterations
       //console.log([xmath, ymath] + ": " + pixelinset)
+      
       if(pixelinset===0){
         drawLine(x, y, x+1, y, "black")
       }
