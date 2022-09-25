@@ -28,6 +28,7 @@ const isPixelInSet = (z, c, iterations) =>{
 
 
 const drawmandel = (iterations, border) =>{
+  var paused = true
   const color = 'black'
   const offsetx = 500
   const offsety = (border-600)/2
@@ -50,6 +51,7 @@ const drawmandel = (iterations, border) =>{
       }
     }
   }
+  var pause = flase
 }
 drawmandel(50, 6000)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
@@ -58,12 +60,11 @@ var e = 1
 var e1 = false
 const drawFrame = (time) => {
   clear();
-  while(True){
+  
 
-    drawmandel(50, 600*10*time)
-
+  drawmandel(50, 600*10*time)
+  while(paused = true){
   }
-   
 }
     
 animate(drawFrame);
