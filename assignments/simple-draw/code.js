@@ -105,6 +105,7 @@ const drawmandel = (iterations, border) =>{
   let xmath = 0
   let ymath = 0
   const centermathcord = [-2+(4/border)*width/2, 2-(4/border)*y*height/2]
+  console.log(centermathcord)
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
   for(let y =0; y<=600+offsety; y++){
