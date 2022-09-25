@@ -127,12 +127,9 @@ const drawmandel = (iterations, border) =>{
 }
 const x = 100
 const y = 100
-drawmandel(50, 1200, x, y)
+drawmandel(50, 600, x, y)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
 //console.log(isPixelInSet([0,0], [5,0], 50))
 
 
-//-1.6466666666666667, 2
-//-1.8233333333333333, 1
-//-1.9116666666666666, 0.5
 
