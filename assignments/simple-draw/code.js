@@ -105,21 +105,22 @@ const drawmandel = (iterations, border, startx, starty) =>{
   let ymath = 0
   for(let y = starty; y<=border; y++){
     for(let x = startx; x<=border; x++){
-      xmath=-2+(4/border)*x
-      ymath=2-(4/border)*y
+      if(x<=530||y<=600){
+        xmath=-2+(4/border)*x
+        ymath=2-(4/border)*y
       
-      let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
+        let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
       
-      if(pixelinset===0){
-        drawLine(x, y, x+1, y, "black")
-      }
-      else if(pixelinset>0){
+        if(pixelinset===0){
+          drawLine(x, y, x+1, y, "black")
+        }
+        else if(pixelinset>0){
         
-        drawLine(x, y, x+1, y, rgb(6*pixelinset, 40*pixelinset, 200*pixelinset))
+          drawLine(x, y, x+1, y, rgb(6*pixelinset, 40*pixelinset, 200*pixelinset))
+        }
+
+        pixelschecked++
       }
-
-      pixelschecked++
-
     }
   }
 }
