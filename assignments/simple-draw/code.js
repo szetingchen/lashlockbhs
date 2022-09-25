@@ -74,17 +74,20 @@ function rgb(red, green, blue) {
 }
 
 const z_sqr = (x,y) =>{
+  if(x===0){
+    return [0,0]
+  }
   return [x**2 - y**2, 2*x*y];
 }
 const f = (z, c) =>{
-  return z_sqr
+  return [z_sqr(z)[0] + c[0], z_sqr(z)[1] + c[1]]
 }
 
-const isPixelInSet = (c, iterations) =>{
-  let z = c;
+const isPixelInSet = (z, c, iterations) =>{
+  let c;
   let i=0
   for(i; i<iterations; i++){
-    z=f(z);
+    z=f(z, c);
     
     if(z[0]===Infinity||z[1]===Infinity||z[0]===-Infinity||z[1]===-Infinity){
     //console.log("z: "+z)
@@ -110,7 +113,7 @@ const drawmandel = (iterations, border) =>{
     for(let x = 0; x<=border; x++){
       xmath=-2+(4/border)*x
       ymath=2-(4/border)*y
-      let pixelinset = isPixelInSet([xmath, ymath], iterations)
+      let pixelinset = isPixelInSet(0, [xmath, ymath], iterations)
       //console.log([xmath, ymath] + ": " + pixelinset)
       if(pixelinset===0){
         drawFilledRect(x, y, 1, 1, rgb(pixelinset*10,pixelinset*10,pixelinset*10))
