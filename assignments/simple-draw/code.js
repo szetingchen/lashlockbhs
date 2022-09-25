@@ -76,9 +76,8 @@ function rgb(red, green, blue) {
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y];
 }
-const f = (z) =>{
-  const z_sqr1 = z_sqr(z[0], z[1])
-  return [z_sqr1[0]+z[0], z_sqr1[1]+z[1]];
+const f = (z, c) =>{
+  return z_sqr
 }
 
 const isPixelInSet = (c, iterations) =>{
@@ -127,5 +126,5 @@ const drawmandel = (iterations, border) =>{
 }
 drawmandel(50, 400)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
-
+console.log(z_sqr(1,1))
 
