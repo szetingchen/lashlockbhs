@@ -102,7 +102,7 @@ const drawmandel = (iterations, border, startx, starty) =>{
   const color = 'black'
   let pixelschecked = 0
   let xmath = 0
-  let ymath = 100
+  let ymath = 2
   for(let y = starty; y<=600; y++){
     for(let x = startx; x<=530; x++){
       if(x<=530||y<=600){
