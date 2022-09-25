@@ -115,7 +115,7 @@ const drawmandel = (iterations, border) =>{
         drawFilledRect(x, y, 1, 1, "black")
       }
       else if(pixelinset>0){
-        drawFilledRect(x, y, 1, 1, 'gray')
+        drawFilledRect(x, y, 1, 1, hsl(isPixelInSet, 100, 100))
       }
 
       pixelschecked++
