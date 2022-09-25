@@ -108,7 +108,7 @@ const drawmandel = (iterations, border) =>{
     for(let x=0; x<=530+offsetx; x++){
       if((x<=530+offsetx||y<=600+offsety)&&x-offsetx>=0&&y-offsety>=0){
         xmath=-2+(4/border)*x
-        ymath=2-(4/border)*y
+        ymath=2-(4/border)*y+(offsety/600)
         let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
         if(x===offsetx&&y===offsety){
             console.log(xmath + ", " + ymath)
@@ -123,7 +123,7 @@ const drawmandel = (iterations, border) =>{
     }
   }
 }
-drawmandel(50, 600)
+drawmandel(50, 1200)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
 //console.log(isPixelInSet([0,0], [5,0], 50))
 
