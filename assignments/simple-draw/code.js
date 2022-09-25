@@ -117,7 +117,7 @@ const drawmandel = (iterations, border) =>{
         drawFilledRect(x, y, 1, 1, rgb(pixelinset*10,pixelinset*10,pixelinset*10))
       }
       else{
-        drawFilledRect(x, y, 1, 1, rgb(pixelinset*10,pixelinset*10,pixelinset*10))
+        //drawFilledRect(x, y, 1, 1, rgb(pixelinset*10,pixelinset*10,pixelinset*10))
       }
       pixelschecked++
 
