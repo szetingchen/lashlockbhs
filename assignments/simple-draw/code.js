@@ -104,6 +104,7 @@ const drawmandel = (iterations, border) =>{
   const offsety = (border-600)/2
   let xmath = 0
   let ymath = 0
+  const centermathcord = [-2+(4/border)*width/2, 2-(4/border)*y*height/2]
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
   for(let y =0; y<=600+offsety; y++){
@@ -112,7 +113,7 @@ const drawmandel = (iterations, border) =>{
         xmath=-2+(4/border)*x
         ymath=2-(4/border)*y
         let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
-  
+        
         if(pixelinset===0){
           drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, color)
         }
