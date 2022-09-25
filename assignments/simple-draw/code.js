@@ -110,6 +110,7 @@ const drawmandel = (iterations, border, startx, starty) =>{
       
       let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
       let percent = pixelinset/iterations
+      console.log(percent)
       //console.log([xmath, ymath] + ": " + pixelinset)
       
       if(pixelinset===0){
