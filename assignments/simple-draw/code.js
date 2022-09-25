@@ -119,6 +119,6 @@ const drawmandel = (iterations, border) =>{
     }
   }
 }
-drawmandel(200, 600)
+drawmandel(4, 600)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
 //console.log(isPixelInSet([0,0], [5,0], 50))
