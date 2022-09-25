@@ -74,9 +74,6 @@ function rgb(red, green, blue) {
 }
 
 const z_sqr = (x,y) =>{
-  if(x===0){
-    return [0,0]
-  }
   return [x**2 - y**2, 2*x*y];
 }
 const f = (z, c) =>{
