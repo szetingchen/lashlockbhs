@@ -109,14 +109,13 @@ const drawmandel = (iterations, border) =>{
       if((x<=530+offsetx||y<=600+offsety)&&x-offsetx>=0&&y-offsety>=0){
         xmath=-2+(4/border)*x
         ymath=2-(4/border)*y
-        
-        
-        
         let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
-      
+        if(x===53&&y===600){
+            console.log(xmath + ", " + ymath)
+        }
         if(pixelinset===0){
           drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, "black")
-        
+        }
         else if(pixelinset>0){
           drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, rgb(6*pixelinset, 40*pixelinset, 200*pixelinset))
         }
