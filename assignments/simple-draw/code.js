@@ -74,6 +74,7 @@ function rgb(red, green, blue) {
 }
 
 const z_sqr = (x,y) =>{
+  console.log([x**2 - y**2, 2*x*y])
   return [x**2 - y**2, 2*x*y];
 }
 const f = (z, c) =>{
@@ -124,4 +125,3 @@ const drawmandel = (iterations, border) =>{
 //drawmandel(50, 400)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
 console.log(isPixelInSet(0, [5,0], 50))
-console.log(z_sqr(5, 0))
