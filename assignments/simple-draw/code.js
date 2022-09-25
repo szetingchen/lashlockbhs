@@ -100,7 +100,7 @@ const isPixelInSet = (z, c, iterations) =>{
 
 const drawmandel = (iterations, border) =>{
   const color = 'black'
-  const offsetx = 200
+  const offsetx = 5000
   const offsety = 100
   let xmath = 0
   let ymath = 100
