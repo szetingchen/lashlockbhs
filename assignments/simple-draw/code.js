@@ -110,7 +110,7 @@ const drawmandel = (iterations, border) =>{
         xmath=-2+(4/border)*x
         ymath=2-(4/border)*y
         let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
-        if(x===53&&y===600){
+        if(x===53&&y===offsety/2){
             console.log(xmath + ", " + ymath)
         }
         if(pixelinset===0){
