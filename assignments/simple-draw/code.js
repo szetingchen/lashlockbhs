@@ -101,7 +101,7 @@ const isPixelInSet = (z, c, iterations) =>{
 const drawmandel = (iterations, border) =>{
   const color = 'black'
   const offsetx = 0
-  const offsety = (border-600)/2
+  const offsety = 0 //(border-600)/2
   let xmath = 0
   let ymath = 0
   const centermathcord = [-2+(4/border)*width/2, 2-(4/border)*height/2]
