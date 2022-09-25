@@ -103,7 +103,7 @@ const drawmandel = (iterations, border) =>{
   let pixelschecked = 0
   let xmath = 0
   let ymath = 0  
-  for(let y =-20; y<=600; y++){
+  for(let y =-234; y<=600; y++){
     for(let x=-20; x<=530; x++){
       if(x<=530||y<=600){
         xmath=-2+(4/1200)*x
