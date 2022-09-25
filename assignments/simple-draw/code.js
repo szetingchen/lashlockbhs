@@ -128,5 +128,5 @@ const drawmandel = (iterations, border) =>{
 //console.log(isPixelInSet([0,0], [5,0], 50))
 console.log(rgb(10,10,10))
 console.log(rgb(102,40,13))
-console.log(rgb(156,40,70))
+console.log(rgb(1000000,40,70))
 console.log(rgb(1,0,1))
