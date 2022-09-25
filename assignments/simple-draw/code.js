@@ -108,7 +108,7 @@ const drawmandel = (iterations, border) =>{
   drawLine(0, height/2, width, height/2, 'black')
   for(let y =0; y<=600+offsety; y++){
     for(let x=0; x<=530+offsetx+width/2; x++){
-      if((x<=530+offsetx+width/2||y<=600+offsety)&&x-offsetx>=0&&y-offsety>=0){
+      if((x<=530+offsetx+width/2||y<=600+offsety)&&x-offsetx+width/2>=0&&y-offsety>=0){
         xmath=-2+(4/border)*x
         ymath=2-(4/border)*y
         let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
