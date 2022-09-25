@@ -103,7 +103,7 @@ const drawmandel = (iterations, border) =>{
   const offsetx = 0
   const offsety = -100
   let xmath = 0
-  let ymath = 0
+  let ymath = 0+offsety
   for(let y =0; y<=600; y++){
     for(let x=0; x<=530+offsetx; x++){
       if((x<=530+offsetx||y<=600)&&x-offsetx>=0&&y+offsety>=offsety){
