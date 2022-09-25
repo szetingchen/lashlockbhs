@@ -84,7 +84,6 @@ const f = (z, c) =>{
 }
 
 const isPixelInSet = (z, c, iterations) =>{
-  let c;
   let i=0
   for(i; i<iterations; i++){
     z=f(z, c);
