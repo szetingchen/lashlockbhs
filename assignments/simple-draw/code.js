@@ -125,3 +125,16 @@ const drawmandel = (iterations, border) =>{
 drawmandel(50, 6000)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
 //console.log(isPixelInSet([0,0], [5,0], 50))
+var e = 1
+var e1 = false
+const drawFrame = (time) => {
+  clear();
+  while(True){
+
+    drawmandel(50, 600*10*time)
+
+  }
+   
+}
+    
+animate(drawFrame);
