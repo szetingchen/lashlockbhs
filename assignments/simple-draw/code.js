@@ -128,6 +128,6 @@ const drawmandel = (iterations, border) =>{
 //console.log(isPixelInSet([0,0], [5,0], 50))
 drawFilledRect(0,0, 10, 10, rgb(10,10,10))
 drawFilledRect(0,100, 10, 10, rgb(102,40,13))
-drawFilledRect(0,200, 10, 10, rgb(1000000,40,70))
+drawFilledRect(0,200, 10, 10, rgb(100000000000000000000000000,40,70))
 drawFilledRect(0,300, 10, 10, rgb(1,0,1))
 
