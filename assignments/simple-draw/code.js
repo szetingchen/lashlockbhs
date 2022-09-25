@@ -93,7 +93,6 @@ const isPixelInSet = (z, c, iterations) =>{
   if(z[0]>2||z[1]>2){
     return i
   }
-  console.log(z)
   return 0
 }
 
