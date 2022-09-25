@@ -111,11 +111,11 @@ const drawmandel = (iterations, border) =>{
       ymath=2-(4/border)*y
       let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
       //console.log([xmath, ymath] + ": " + pixelinset)
-      if(pixelinset>0){
-        drawFilledRect(x, y, 1, 1, rgb(pixelinset*10,pixelinset*10,pixelinset*10))
+      if(pixelinset===0){
+        drawFilledRect(x, y, 1, 1, "black")
       }
-      else if(pixelinset===0){
-        drawFilledRect(x, y, 1, 1, 'black')
+      else if(pixelinset>0){
+        drawFilledRect(x, y, 1, 1, rgb(pixelinset*10,pixelinset*10,pixelinset*10))
       }
 
       pixelschecked++
