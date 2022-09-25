@@ -100,7 +100,6 @@ const isPixelInSet = (z, c, iterations) =>{
 
 const drawmandel = (iterations, border) =>{
   const color = 'black'
-  let pixelschecked = 0
   let xmath = 0
   let ymath = 0  
   for(let y =-234; y<=600; y++){
@@ -117,8 +116,6 @@ const drawmandel = (iterations, border) =>{
         else if(pixelinset>0){
           drawLine(x, y, x+1, y, rgb(6*pixelinset, 40*pixelinset, 200*pixelinset))
         }
-
-        pixelschecked++
       }
     }
   }
