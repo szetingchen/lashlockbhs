@@ -97,45 +97,31 @@ const isPixelInSet = (z, c, iterations) =>{
 }
 const drawmandel = (iterations, border, zoomx, zoomy) =>{
   const color = 'black';
-  const xbasedoz = border*(zoomx/600);
-  const ybasedoz = border*(zoomy/600);
   
-  let offsetx;
-  let offsety;
-  if(border===600){
-    offsetx=zoomx-width/2;
-    offsety=zoomy-height/2;
-  }
-  else{
-    offsetx = xbasedoz-250;
-    offsety = ybasedoz-300;
-  }
-  let xmath = 0;
-  let ymath = 0;
   let count = 0;
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
   for(let y = 0; y<=border+offsety; y++){
     for(let x= 0; x<=border+offsetx; x++){
-      if(x<=500+offsetx&&y<=600+offsety&&x-offsetx>=0&&y-offsety>=0){
-        xmath=-2+(4/border)*x
-        ymath=2-(4/border)*y
-        let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
+      
+      xmath=-2+(2/border)*x
+      ymath=2-(2/border)*y
+      let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
         
-        if(pixelinset===0){
-          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, color)
-          count++
-        }
-        else if(pixelinset>0){
-          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
-          count++
-        }
+      if(pixelinset===0){
+        drawLine(x, y, x+1, y, color)
+        count++
+      }
+      else if(pixelinset>0){
+        drawLine(x, y, x+1, y, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
+        count++
       }
     }
   }
+}
   console.log(count)
   
-}
+
 //mandelend
 
 //zoom on sea horse vally
