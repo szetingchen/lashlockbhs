@@ -103,8 +103,6 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   const xbasedoz = border*(zoomx/600);
   const ybasedoz = border*(zoomy/600);
   
-  console.log(xbasedoz);
-  console.log(ybasedoz);
   let offsetx;
   let offsety;
   if(border===600){
@@ -115,8 +113,6 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
     offsetx = xbasedoz-250;
     offsety = ybasedoz-300;
   }
-  console.log(offsetx)
-  console.log(offsety)
   let xmath = 0
   let ymath = 0
   drawLine(width/2, 0, width/2, height, 'black')
