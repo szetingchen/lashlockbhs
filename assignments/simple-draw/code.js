@@ -97,7 +97,8 @@ const isPixelInSet = (z, c, iterations) =>{
 }
 const drawmandel = (iterations, border, zoomx, zoomy) =>{
   const color = 'black';
-  
+  let xmath;
+  let ymath;
   let count = 0;
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
