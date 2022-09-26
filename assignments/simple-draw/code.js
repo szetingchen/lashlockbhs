@@ -95,7 +95,7 @@ const isPixelInSet = (z, c, iterations) =>{
   }
   return 0
 }
-const drawmandel = (iterations, border, zoomx, zoomy) =>{
+const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   const color = 'black';
   let xmath;
   let ymath;
@@ -105,8 +105,8 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   for(let y = 0; y<=border; y++){
     for(let x= 0; x<=border; x++){
       
-      xmath=-2+(8/border)*x
-      ymath=2-(8/border)*y
+      xmath=-2+((4/2)/border))*x
+      ymath=2-((4/2)/border))*y
       let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
         
       if(pixelinset===0){
@@ -130,6 +130,6 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 
 const x = 0
 const y = 200
-drawmandel(1000, 600, x+width/2, y+height/2)
+drawmandel(1000, 600, 600, x+width/2, y+height/2, 2)
 
 
