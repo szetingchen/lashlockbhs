@@ -222,6 +222,6 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
 const x = 0
-const y = 150
+const y = 110
 drawmandel(1000, 6000, x+width/2, y+height/2)
 
