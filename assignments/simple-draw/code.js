@@ -74,7 +74,7 @@ function rgb(red, green, blue) {
 }
 
 const z_sqr = (x,y) =>{
-  return [x**2 - y**3, 2*x*y];
+  return [x**3 - y**3, 2*x*y];
 }
 const f = (z, c) =>{
   return [z_sqr(z[0], z[1])[0] + c[0], z_sqr(z[0], z[1])[1] + c[1]]
