@@ -139,7 +139,7 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 //mandelend
 
 //zoom on sea horse vally
-const x = -63
+const x = -60
 const y = -20
 
 //const x = 0
