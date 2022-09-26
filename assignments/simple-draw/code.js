@@ -113,8 +113,9 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
     offsetx = xbasedoz-250;
     offsety = ybasedoz-300;
   }
-  let xmath = 0
-  let ymath = 0
+  let xmath = 0;
+  let ymath = 0;
+  let count = 0;
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
   for(let y =0; y<=border+offsety; y++){
@@ -125,14 +126,17 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
         let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
         
         if(pixelinset===0){
-          drawLine(x-offsetx+100, y-offsety, x+1-offsetx+100, y-offsety, color)
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, color)
+          count++
         }
         else if(pixelinset>0){
-          drawLine(x-offsetx+100, y-offsety, x+1-offsetx+100, y-offsety, rgb(2*pixelinset, 45*pixelinset, 76*pixelinset))
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, rgb(2*pixelinset, 45*pixelinset, 76*pixelinset))
+          count++
         }
       }
     }
   }
+  
 }
 const x = 50
 const y = 100
