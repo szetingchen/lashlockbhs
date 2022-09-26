@@ -223,5 +223,5 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 //squareOfCircles(10, 'blue') //not done 
 const x = 0
 const y = 0
-drawmandel(1000, 600, x+width/2, y+height/2)
+drawmandel(1000, height, x+width/2, y+height/2)
 
