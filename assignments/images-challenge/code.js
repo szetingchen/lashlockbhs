@@ -169,13 +169,13 @@ const isPixelInSet = (z, c, iterations) =>{
 }
 const drawmandel = (iterations, border, zoomx, zoomy) =>{
   const color = 'black';
-  const xbasedoz = border*(zoomx/600);
-  const ybasedoz = border*(zoomy/600);
+  const xbasedoz = border*(zoomx/height);
+  const ybasedoz = border*(zoomy/height);
   
   let offsetx;
   let offsety;
-  if(border===600){
-    offsetx=zoomx-width/2;
+  if(border===height){
+    offsetx=zoomx-height/2;
     offsety=zoomy-height/2;
   }
   else{
