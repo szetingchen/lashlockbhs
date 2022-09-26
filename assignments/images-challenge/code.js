@@ -26,6 +26,7 @@
  *
  */
 
+/*
 
 const notreallycurved =(num, base, rside)=>{
   for(let linesD = 0; linesD!=num; linesD++){
@@ -139,6 +140,7 @@ const squareOfCircles = (r, color) =>{
     //not done
   }
 }
+ */
 
 //madnelstart
 function rgb(red, green, blue) {
