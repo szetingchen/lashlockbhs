@@ -144,6 +144,6 @@ const y = -20
 
 //const x = 0
 //const y = 0
-drawmandel(10000, 60000, x+width/2, y+height/2)
+drawmandel(10000, 6000, x+width/2, y+height/2)
 
 
