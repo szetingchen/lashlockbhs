@@ -136,6 +136,7 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
       }
     }
   }
+  console.log(count)
   
 }
 const x = 50
