@@ -104,8 +104,8 @@ const drawmandel = (iterations, border) =>{
   const offsety = (border-600)/2
   let xmath = 0
   let ymath = 0
-  drawLine(width/2, 0, width/2, height, 'black')
-  drawLine(0, height/2, width, height/2, 'black')
+  drawLine(border/2, 0, border/2, border, 'black')
+  drawLine(0, border/2, border, border/2, 'black')
   for(let y =0; y<=600+offsety; y++){
     for(let x=0; x<=530+offsetx; x++){
       if((x<=530+offsetx||y<=600+offsety)&&x-offsetx>=0&&y-offsety>=0){
