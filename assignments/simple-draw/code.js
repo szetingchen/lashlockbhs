@@ -109,11 +109,11 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
       let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
         
       if(pixelinset===0){
-        drawLine(x+100, y, x+1+100, y, color)
+        drawLine(x, y, x+1, y, color)
         count++;
       }
       else if(pixelinset>0){
-        drawLine(x+100, y, x+1+100, y, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
+        drawLine(x, y, x+1, y, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
         count++;
       }
     }
