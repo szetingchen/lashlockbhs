@@ -118,8 +118,8 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   for(let y =0; y<=border+offsety; y++){
     for(let x=0; x<=border+offsetx; x++){
       if(x<=500+offsetx&&y<=600+offsety&&x-offsetx>=0&&y-offsety>=0){
-        xmath=-2+(8/border)*x
-        ymath=2-(8/border)*y
+        xmath=-2+(4/border)*x
+        ymath=2-(4/border)*y
         let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
         
         if(pixelinset===0){
@@ -144,6 +144,6 @@ const y = -20
 
 //const x = 0
 //const y = 0
-drawmandel(1000, 600, x+width/2, y+height/2)
+drawmandel(1000, 24000, x+width/2, y+height/2)
 
 
