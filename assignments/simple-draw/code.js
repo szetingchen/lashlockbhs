@@ -144,6 +144,6 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 
 const x = 0
 const y = 200
-drawmandel(100, 600, x+width/2, y+height/2)
+drawmandel(10000, 600, x+width/2, y+height/2)
 
 
