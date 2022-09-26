@@ -142,8 +142,8 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 //const x = -61
 //const y = -20
 
-const x = 30
-const y = 150
+const x = 0
+const y = 0
 drawmandel(10000, 8000, x+width/2, y+height/2)
 
 
