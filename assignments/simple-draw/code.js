@@ -107,8 +107,8 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   let offsetx;
   let offsety;
   if(border===600){
-    offsetx;
-    offsety;
+    offsetx=0;
+    offsety=0;
   }
   else{
     offsetx = border-xbasedoz;
