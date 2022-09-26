@@ -101,8 +101,8 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   let count = 0;
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
-  for(let y = 0; y<=border+offsety; y++){
-    for(let x= 0; x<=border+offsetx; x++){
+  for(let y = 0; y<=border; y++){
+    for(let x= 0; x<=border; x++){
       
       xmath=-2+(2/border)*x
       ymath=2-(2/border)*y
