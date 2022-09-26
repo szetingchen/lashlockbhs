@@ -104,8 +104,8 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   const ybasedoz = border*(zoomy/600)
   console.log(xbasedoz)
   console.log(ybasedoz)
-  const offsetx = 0
-  const offsety = 0
+  const offsetx = border-xbasedoz
+  const offsety = border-ybasedoz
   let xmath = 0
   let ymath = 0
   drawLine(width/2, 0, width/2, height, 'black')
