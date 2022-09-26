@@ -169,13 +169,13 @@ const isPixelInSet = (z, c, iterations) =>{
 }
 const drawmandel = (iterations, border, zoomx, zoomy) =>{
   const color = 'black';
-  const xbasedoz = border*(zoomx/height);
-  const ybasedoz = border*(zoomy/height);
+  const xbasedoz = border*(zoomx/600);
+  const ybasedoz = border*(zoomy/600);
   
   let offsetx;
   let offsety;
-  if(border===height){
-    offsetx=zoomx-height/2;
+  if(border===600){
+    offsetx=zoomx-width/2;
     offsety=zoomy-height/2;
   }
   else{
@@ -223,5 +223,5 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 //squareOfCircles(10, 'blue') //not done 
 const x = 0
 const y = 0
-drawmandel(1000, height, x+width/2, y+height/2)
+drawmandel(1000, 600, x+width/2, y+height/2)
 
