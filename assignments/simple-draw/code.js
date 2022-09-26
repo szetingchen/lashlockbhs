@@ -69,17 +69,17 @@ for(let i=0; i < 250; i++){
 }
 */
 
+
+//madnelstart
 function rgb(red, green, blue) {
     return (red & 0xF0 ? '#' : '#0') + (red << 16 | green << 8 | blue).toString(16)
 }
-
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y];
 }
 const f = (z, c) =>{
   return [z_sqr(z[0], z[1])[0] + c[0], z_sqr(z[0], z[1])[1] + c[1]]
 }
-
 const isPixelInSet = (z, c, iterations) =>{
   let i=0
   for(i; i<iterations; i++){
@@ -95,9 +95,6 @@ const isPixelInSet = (z, c, iterations) =>{
   }
   return 0
 }
-
-
-
 const drawmandel = (iterations, border, zoomx, zoomy) =>{
   const color = 'black';
   const xbasedoz = border*(zoomx/600);
@@ -130,7 +127,7 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
           count++
         }
         else if(pixelinset>0){
-          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, rgb(pixelinset/2, pixelinset/4, pixelinset/8))
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, rgb(pixelinset/iterations, pixelinset/iterations, pixelinset/iterations))
           count++
         }
       }
@@ -139,16 +136,11 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   console.log(count)
   
 }
-
-//600, 386251
-//2400, 2758351
+//mandelend
 
 
 const x = -63
 const y = -20
 drawmandel(5000, 24000, x+width/2, y+height/2)
-//console.log("iterations: "+isPixelInSet([1,1], 50)) 
-//console.log(isPixelInSet([0,0], [5,0], 50))
-
 
 
