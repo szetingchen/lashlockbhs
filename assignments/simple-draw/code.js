@@ -104,8 +104,8 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   let count = 0;
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
-  for(let y = 0-offsetx; y<=bordery; y++){
-    for(let x= 0-offsety; x<=borderx; x++){
+  for(let y = 0-offsetx; y<=bordery+offsetx; y++){
+    for(let x= 0-offsety; x<=borderx+offsety; x++){
       xmath=-2/zoom+((4/zoom)/borderx)*x
       ymath=2/zoom-((4/zoom)/bordery)*y
       let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
