@@ -130,7 +130,7 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
           count++
         }
         else if(pixelinset>0){
-          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, rgb((pixelinset/iterations)*100, (pixelinset/iterations)*256*2, (pixelinset/iterations)*256*3))
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, rgb((pixelinset/iterations)*100, (pixelinset/iterations)*100*2, (pixelinset/iterations)*100*3))
           count++
         }
       }
