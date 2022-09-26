@@ -213,7 +213,7 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 
 
 
-//notreallycurved(20, 530, 500)
+notreallycurved(20, 530, 500)
 //lineOfCircles(23)
 //lineOfCirclesColor(12, 'pink', 'teal')
 //concentricCircles(11, 'teal', 'pink')
@@ -223,5 +223,5 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 //squareOfCircles(10, 'blue') //not done 
 const x = 0
 const y = 0
-drawmandel(1000, 600, x+width/2, y+height/2)
+//drawmandel(1000, 600, x+width/2, y+height/2)
 
