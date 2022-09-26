@@ -104,7 +104,7 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   let count = 0;
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
-  for(let y = 0; y<=bordery; y++){
+  for(let y = -85; y<=bordery; y++){
     for(let x= 0; x<=borderx; x++){
       xmath=-2/zoom+((4/zoom)/borderx)*x
       ymath=2/zoom-((4/zoom)/bordery)*y
