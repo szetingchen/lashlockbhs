@@ -121,10 +121,8 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   let ymath = 0
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
-  let y = 0;
-  let x = 0
-  for(y; y<=border+offsety; y++){
-    for(x; x<=border+offsetx; x++){
+  for(let y =0; y<=border+offsety; y++){
+    for(let x=0; x<=border+offsetx; x++){
       if((x<=width+offsetx||y<=height+offsety)&&x>=0&&y>=0){
         xmath=-2+(4/border)*x
         ymath=2-(4/border)*y
@@ -139,7 +137,6 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
       }
     }
   }
-  console.log(x*y)
 }
 const x = 100
 const y = 100
