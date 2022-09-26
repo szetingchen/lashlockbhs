@@ -140,7 +140,7 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 }
 const x = 100
 const y = 100
-drawmandel(40, 1900, 0+width/2, 0+height/2)
+drawmandel(40, 1000, 0+width/2, 0+height/2)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
 //console.log(isPixelInSet([0,0], [5,0], 50))
 
