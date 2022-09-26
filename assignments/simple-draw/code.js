@@ -105,11 +105,11 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   
   console.log(xbasedoz);
   console.log(ybasedoz);
-  let offsetx=zoomx;
-  let offsety=zoomy;
+  let offsetx;
+  let offsety;
   if(border===600){
-    offsetx=0;
-    offsety=0;
+    offsetx=zoomx;
+    offsety=zoomy;
   }
   else{
     offsetx = xbasedoz-250;
