@@ -102,7 +102,7 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   const color = 'black'
   const offsetx = 600*((border-600)/600)-(600/zoomx*border)
   console.log(offsetx)
-  const offsety =  border-(600/zoomy*border)
+  const offsety =  600*((border-600)/600)-(600/zoomy*border)
   console.log(offsety)
   let xmath = 0
   let ymath = 0
