@@ -112,8 +112,8 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
     offsety=0;
   }
   else{
-    offsetx = xbasedoz/1.5;
-    offsety = ybasedoz/1.5;
+    offsetx = xbasedoz/(border/600);
+    offsety = ybasedoz/(border/600);
   }
   console.log(offsetx)
   console.log(offsety)
@@ -140,7 +140,7 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 }
 const x = 100
 const y = 100
-drawmandel(40, 1800, 0+width/2, 0+height/2)
+drawmandel(40, 1200, 0+width/2, 0+height/2)
 //console.log("iterations: "+isPixelInSet([1,1], 50)) 
 //console.log(isPixelInSet([0,0], [5,0], 50))
 
