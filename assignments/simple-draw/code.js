@@ -110,16 +110,15 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
         
       if(pixelinset===0){
         drawLine(x, y, x+1, y, color)
-        count++
+        count++;
       }
       else if(pixelinset>0){
         drawLine(x, y, x+1, y, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
-        count++
+        count++;
       }
     }
   }
 }
-  console.log(count)
   
 
 //mandelend
