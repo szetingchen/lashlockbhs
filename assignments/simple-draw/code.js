@@ -113,8 +113,8 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
   let xmath = 0;
   let ymath = 0;
   let count = 0;
-  drawLine(width/2, 0, width/2, height, 'black')
-  drawLine(0, height/2, width, height/2, 'black')
+  //drawLine(width/2, 0, width/2, height, 'black')
+  //drawLine(0, height/2, width, height/2, 'black')
   for(let y =0; y<=border+offsety; y++){
     for(let x=0; x<=border+offsetx; x++){
       if(x<=500+offsetx&&y<=600+offsety&&x-offsetx>=0&&y-offsety>=0){
@@ -143,7 +143,7 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 //const y = -20
 
 const x = 0
-const y = 10
+const y = 0
 drawmandel(1000, 600, x+width/2, y+height/2)
 
 
