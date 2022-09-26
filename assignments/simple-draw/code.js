@@ -102,7 +102,7 @@ const drawmandel = (iterations, border) =>{
   const color = 'black'
   const centermathcord = [-2+(4/border)*0, 2-(4/border)*0]
   const offsetx = centermathcord[0]*4-2
-  const offsety = centermathcord[1]*4 //0 //(border-600)/2
+  const offsety = centermathcord[1]*4+2 //0 //(border-600)/2
   let xmath = 0
   let ymath = 0
   console.log(centermathcord)
