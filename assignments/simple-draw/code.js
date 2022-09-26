@@ -129,10 +129,10 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
         let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
         
         if(pixelinset===0){
-          drawLine(x-offsetx, y-offsety-200, x+1-offsetx, y-offsety-200, color)
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, color)
         }
         else if(pixelinset>0){
-          drawLine(x-offsetx, y-offsety-200, x+1-offsetx, y-offsety-200, rgb(2*pixelinset, 45*pixelinset, 76*pixelinset))
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, rgb(2*pixelinset, 45*pixelinset, 76*pixelinset))
         }
       }
     }
