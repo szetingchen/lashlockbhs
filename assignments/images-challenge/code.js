@@ -140,48 +140,77 @@ const squareOfCircles = (r, color) =>{
   }
 }
 
+//madnelstart
+function rgb(red, green, blue) {
+    return (red & 0xF0 ? '#' : '#0') + (red << 16 | green << 8 | blue).toString(16)
+}
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y];
 }
-const f = (z) =>{
-  const z_sqr1 = z_sqr(z[0], z[1])
-  return [z_sqr1[0]+z[0], z_sqr1[1]+z[1]];
+const f = (z, c) =>{
+  return [z_sqr(z[0], z[1])[0] + c[0], z_sqr(z[0], z[1])[1] + c[1]]
 }
-const isPixelInSet = (c, iterations) =>{
-  let z = c;
-  for(let i=0; i<iterations; i++){
-    z=f(z);
-    console.log(z)
-    if(z[1]===Infinity||z[0]===Infinity){
-      return false
-    }
+const isPixelInSet = (z, c, iterations) =>{
+  let i=0
+  for(i; i<iterations; i++){
+    z=f(z, c);
     
+    if(z[0]===Infinity||z[1]===Infinity||z[0]===-Infinity||z[1]===-Infinity){
+    //console.log("z: "+z)
+    return i
+    }
   }
-  return true
+  if(z[0]>2||z[1]>2){
+    return i
+  }
+  return 0
+}
+const drawmandel = (iterations, border, zoomx, zoomy) =>{
+  const color = 'black';
+  const xbasedoz = border*(zoomx/600);
+  const ybasedoz = border*(zoomy/600);
+  
+  let offsetx;
+  let offsety;
+  if(border===600){
+    offsetx=zoomx-width/2;
+    offsety=zoomy-height/2;
+  }
+  else{
+    offsetx = xbasedoz-250;
+    offsety = ybasedoz-300;
+  }
+  let xmath = 0;
+  let ymath = 0;
+  let count = 0;
+  drawLine(width/2, 0, width/2, height, 'black')
+  drawLine(0, height/2, width, height/2, 'black')
+  for(let y = 0; y<=border+offsety; y++){
+    for(let x= 0; x<=border+offsetx; x++){
+      if(x<=500+offsetx&&y<=600+offsety&&x-offsetx>=0&&y-offsety>=0){
+        xmath=-2+(4/border)*x
+        ymath=2-(4/border)*y
+        let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
+        
+        if(pixelinset===0){
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, color)
+          count++
+        }
+        else if(pixelinset>0){
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
+          count++
+        }
+      }
+    }
+  }
+  console.log(count)
   
 }
-const drawmandel = (iterations) =>{
-  const startx=width/2
-  const starty=height/2
-  let pixelschecked = 0
-  let xmath = 0
-  let ymath = 0
-  let x = 0
-  let y = 0
-  for(let a = 0; a<height; a++){
-    for(let i = 0; i<width; i++){
-      console.log(isPixelInSet([xmath, ymath], iterations))
-      if(isPixelInSet([xmath, ymath], iterations)){
-        drawFilledRect(x, y, 1, 1, 'black')
-      }
-      x++
-      xmath+=2/width
-      pixelschecked++
-    }
-    y++
-    ymath+=2/height
-  }
-}
+//mandel_end
+
+
+
+
 //notreallycurved(20, 530, 500)
 //lineOfCircles(23)
 //lineOfCirclesColor(12, 'pink', 'teal')
@@ -190,5 +219,7 @@ const drawmandel = (iterations) =>{
 //fillWithCircles(30, 'blue')
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
 //squareOfCircles(10, 'blue') //not done 
+const x = 0
+const y = 0
+drawmandel(10000, 600, x+width/2, y+height/2)
 
-drawmandel(10)
