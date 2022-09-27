@@ -133,6 +133,6 @@ const x = 169.969215
 const y = 40.0315
 //const x = 0
 //const y = 0
-drawmandel(100, height, height, x, y, 1)
+drawmandel(100, 600, 600, x, y, 1)
 
 
