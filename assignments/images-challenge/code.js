@@ -32,7 +32,6 @@ const notreallycurved =(num, base, rside)=>{
   for(let linesD = 0; linesD!=num; linesD++){
     drawLine(rside/num*linesD, base, 0, base/num*linesD, "black", 0.5)
   }
-
 }
 const lineOfCircles = (r) =>{
   const d = r*2
@@ -213,7 +212,7 @@ const drawmandel = (iterations, border, zoomx, zoomy) =>{
 
 
 
-notreallycurved(10, height, width/2)
+notreallycurved(5, height, width/2)
 //lineOfCircles(23)
 //lineOfCirclesColor(12, 'pink', 'teal')
 //concentricCircles(11, 'teal', 'pink')
