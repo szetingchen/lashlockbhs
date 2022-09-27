@@ -139,6 +139,6 @@ let y = -0.64935990748190
 //let y = 0
 //const x = -244.61
 //const y = -0.99998999999999999
-drawmandel(1000, 300, 300, x, y, 2)
+drawmandel(1000, height, height, x, y, 2)
 
 
