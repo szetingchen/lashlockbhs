@@ -97,8 +97,8 @@ const isPixelInSet = (z, c, iterations) =>{
 }
 
 
-let count;
 const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
+  var count =0;
   const color = 'black';
   let offsetx=centerx;
   let offsety=centery;
