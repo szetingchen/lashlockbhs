@@ -129,7 +129,7 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 //mandelend
 
 //zoom on sea horse vally
-const x = 169.96899
+const x = 169.9691
 const y = 40.0315
 //const x = 0
 //const y = 0
