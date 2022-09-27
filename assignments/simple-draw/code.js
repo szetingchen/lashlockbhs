@@ -131,6 +131,6 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 
 const x = 0
 const y = 100
-drawmandel(1000, width, height, x, y, 1)
+drawmandel(1000, width, height, x, y, 3)
 
 
