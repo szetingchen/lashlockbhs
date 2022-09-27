@@ -95,35 +95,42 @@ const isPixelInSet = (z, c, iterations) =>{
   }
   return 0
 }
-const drawmandel = (iterations, borderx, bordery, zoom) =>{
+const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   const color = 'black';
+  let offsetx=0;
+  let offsety=0;
+  let xmath;
+  let ymath;
+  let count = 0;
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
-  let offsetx;
-  let offsety;
-  for(let y = 0; y<=bordery; y++){
-    for(let x= 0; x<=borderx; x++){
-      xmath=-2+((4/zoom)/borderx)*x
-      ymath=2-((4/zoom)/bordery)*y
+  for(let y =-offsety; y<=bordery; y++){
+    for(let x=-offsetx; x<=borderx; x++){
+      xmath=-2/zoom+((4/zoom)/borderx)*x
+      ymath=2/zoom-((4/zoom)/bordery)*y
       let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
         
       if(pixelinset===0){
-        drawLine(x, y, x+1, y, color)
+        drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, color)
+        count++;
       }
       else if(pixelinset>0){
-        drawLine(x, y, x+1, y, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
+        drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
+        count++;
       }
     }
   }
 }
+  
+
 //mandelend
 
 //zoom on sea horse vally
 //const x = -61
 //const y = -20
 
-const x = -500
-const y = 0
-drawmandel(10000, width, height, 2)
+const x = 0
+const y = 200
+drawmandel(1000, 600, 600, x+width/2, y+height/2, 2)
 
 
