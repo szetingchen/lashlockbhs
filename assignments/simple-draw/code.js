@@ -101,7 +101,7 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   let count =0;
   const color = 'black';
   let offsetx=-((centerx/(width/borderx))*zoom);
-  let offsety=-((centery/(height/bordery))*zoom);
+  let offsety=((centery/(height/bordery))*zoom);
   let xmath;
   let ymath;
   drawLine(borderx/2, 0, borderx/2, bordery, 'black')
@@ -130,7 +130,7 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 
 
 const x = -224
-const y = -20
+const y = 20
 //const x = -244.61
 //const y = -0.99998999999999999
 drawmandel(1000, 300, 300, x, y, 4)
