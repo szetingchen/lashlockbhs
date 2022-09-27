@@ -97,7 +97,7 @@ const isPixelInSet = (z, c, iterations) =>{
 }
 
 
-let count = 0;
+let count;
 const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   const color = 'black';
   let offsetx=centerx;
@@ -117,8 +117,8 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
         count++
       }
       else if(pixelinset>0){
-        count++
         drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
+        count++
       }
     }
   }
