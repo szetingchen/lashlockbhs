@@ -104,8 +104,8 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   let offsety=-((centery/(height/bordery))*zoom);
   let xmath;
   let ymath;
-  drawLine(20, 0, -20, 0, 'black')
-  drawLine(0, 20, 0, -20, 'black')
+  drawLine(borderx/2, 0, borderx/2, bordery, 'black')
+  drawLine(0, bordery/2, borderx, bordery/2, 'black')
   for(let y=-offsety; y<=bordery-offsety; y++){
     for(let x=-offsetx; x<=borderx-offsetx; x++){
       xmath=(-2-(offsetx/borderx))/zoom+((4/zoom)/borderx)*x
@@ -133,6 +133,6 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 //const y = 21.002155201
 const x = -240
 const y = 0
-drawmandel(100000, height, height, x, y, 100000000000000)
+drawmandel(10000, height, height, x, y, 100000000000000)
 
 
