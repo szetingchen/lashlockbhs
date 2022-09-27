@@ -99,9 +99,11 @@ const isPixelInSet = (z, c, iterations) =>{
 
 const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   let count =0;
+  thiscenterx=centerx
+  thiscentery=centery
   const color = 'black';
-  let offsetx=-((centerx/(width/borderx))*zoom);
-  let offsety=((centery/(height/bordery))*zoom);
+  let offsetx=-((thiscenterx/(width/borderx))*zoom);
+  let offsety=((thiscentery/(height/bordery))*zoom);
   let xmath;
   let ymath;
   drawLine(borderx/2, 0, borderx/2, bordery, 'black')
@@ -129,8 +131,8 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 //mandelend
 
 
-let x = -0.13856524454488*300
-let y = -0.64935990748190*300
+let x = -0.13856524454488
+let y = -0.64935990748190
 
 
 //const x = -244.61
