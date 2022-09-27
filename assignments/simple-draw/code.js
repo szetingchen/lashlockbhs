@@ -102,7 +102,7 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   //const thiscenterx=-borderx/((4/zoom)/centerx)
   //const thiscentery=bordery/((4/zoom)/centery)
   const thiscenterx=-centerx
-  const thiscentery=-centery
+  const thiscentery=centery
   const color = 'black';
   let offsetx=-((thiscenterx/(width/borderx))*zoom);
   let offsety=((thiscentery/(height/bordery))*zoom);
