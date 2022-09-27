@@ -95,34 +95,47 @@ const isPixelInSet = (z, c, iterations) =>{
   }
   return 0
 }
-const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
+const drawmandel = (iterations, border, zoomx, zoomy) =>{
   const color = 'black';
-  let offsetx=0;
-  let offsety=0;
-  let xmath;
-  let ymath;
+  const xbasedoz = border*(zoomx/600);
+  const ybasedoz = border*(zoomy/600);
+  
+  let offsetx;
+  let offsety;
+  if(border===600){
+    offsetx=zoomx-width/2;
+    offsety=zoomy-height/2;
+  }
+  else{
+    offsetx = xbasedoz-250;
+    offsety = ybasedoz-300;
+  }
+  let xmath = 0;
+  let ymath = 0;
   let count = 0;
   drawLine(width/2, 0, width/2, height, 'black')
   drawLine(0, height/2, width, height/2, 'black')
-  for(let y =-offsety; y<=bordery; y++){
-    for(let x=-offsetx; x<=borderx; x++){
-      xmath=-2/zoom+((4/zoom)/borderx)*x
-      ymath=2/zoom-((4/zoom)/bordery)*y
-      let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
+  for(let y = 0; y<=border+offsety; y++){
+    for(let x= 0; x<=border+offsetx; x++){
+      if(x<=500+offsetx&&y<=600+offsety&&x-offsetx>=0&&y-offsety>=0){
+        xmath=-2+(4/border)*x
+        ymath=2-(4/border)*y
+        let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
         
-      if(pixelinset===0){
-        drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, color)
-        count++;
-      }
-      else if(pixelinset>0){
-        drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
-        count++;
+        if(pixelinset===0){
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, color)
+          count++
+        }
+        else if(pixelinset>0){
+          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
+          count++
+        }
       }
     }
   }
-}
+  console.log(count)
   
-
+}
 //mandelend
 
 //zoom on sea horse vally
@@ -130,7 +143,7 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 //const y = -20
 
 const x = 0
-const y = 200
-drawmandel(1000, 600, 600, x+width/2, y+height/2, 2)
+const y = 0
+drawmandel(10000, 600, x+width/2, y+height/2)
 
 
