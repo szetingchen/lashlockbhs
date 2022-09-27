@@ -117,7 +117,7 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
         count++
       }
       else if(pixelinset>0){
-        drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, 'hsl(' + 2+(pixelinset) + ', 100%, 50%)')
+        drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, 'hsl(' + (pixelinset) + ', 100%, 50%)')
         count++
       }
     }
