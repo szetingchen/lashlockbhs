@@ -129,8 +129,8 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 //mandelend
 
 
-const x = 80
-const y = 21.002155201
+const x = 0
+const y = 0
 //const x = -244.61
 //const y = -0.99998999999999999
 drawmandel(1000, 300, 300, x, y, 20)
