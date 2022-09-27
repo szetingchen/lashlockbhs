@@ -117,7 +117,7 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
         count++
       }
       else if(pixelinset>0){
-        drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, 'hsl(' + (pixelinset) + ', 100%, 50%)')
+        drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, 'hsl(' + 2+(pixelinset*3) + ', 100%, 50%)')
         count++
       }
     }
@@ -129,8 +129,8 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 //mandelend
 
 //zoom on sea horse vally
-const x = 0
-const y = 0
+const x = 169.969215
+const y = 40.0315
 //const x = 0
 //const y = 0
 drawmandel(100, height, height, x, y, 1)
