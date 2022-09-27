@@ -103,21 +103,18 @@ const drawmandel = (iterations, borderx, bordery, zoom) =>{
   let offsety;
   for(let y = 0; y<=bordery+offsety; y++){
     for(let x= 0; x<=borderx+offsetx; x++){
-      if(x<=500+offsetx&&y<=600+offsety&&x-offsetx>=0&&y-offsety>=0){
-        xmath=-2+((4/zoom)/border)*x
-        ymath=2-((4/zoom)/border)*y
-        let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
+      xmath=-2+((4/zoom)/border)*x
+      ymath=2-((4/zoom)/border)*y
+      let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
         
-        if(pixelinset===0){
-          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, color)
-        }
-        else if(pixelinset>0){
-          drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
-        }
+      if(pixelinset===0){
+        drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, color)
+      }
+      else if(pixelinset>0){
+        drawLine(x-offsetx, y-offsety, x+1-offsetx, y-offsety, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
       }
     }
   }
-  
 }
 //mandelend
 
