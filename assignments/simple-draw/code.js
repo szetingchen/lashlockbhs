@@ -117,7 +117,6 @@ const drawmandel = (iterations, borderx, bordery, zoom) =>{
       }
     }
   }
-  console.log(count)
   
 }
 //mandelend
