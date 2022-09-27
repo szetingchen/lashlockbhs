@@ -133,6 +133,6 @@ const x = -60.2024
 const y = 0
 //const x = 0
 //const y = 0
-drawmandel(1000, 600, 600, x, y, 100000000)
+drawmandel(1000, 600, 600, x, y, 10000000)
 
 
