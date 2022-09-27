@@ -97,7 +97,7 @@ const isPixelInSet = (z, c, iterations) =>{
 }
 
 
-
+let count = 0;
 const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   const color = 'black';
   let offsetx=centerx;
@@ -114,8 +114,10 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 
       if(pixelinset===0){
         drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, color)
+        count++
       }
       else if(pixelinset>0){
+        count++
         drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, 'hsl(' + 2+(pixelinset*2) + ', 100%, 50%)')
       }
     }
@@ -128,9 +130,9 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 //zoom on sea horse vally
 //const x = -61
 //const y = -20
-
+console.log(count)
 const x = 0
-const y = 100
+const y = 0
 drawmandel(1000, width, height, x, y, 1)
 
 
