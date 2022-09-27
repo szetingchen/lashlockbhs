@@ -98,7 +98,7 @@ const isPixelInSet = (z, c, iterations) =>{
 
 
 const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
-  var count =0;
+  let count =0;
   const color = 'black';
   let offsetx=centerx;
   let offsety=centery;
@@ -122,6 +122,7 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
       }
     }
   }
+  console.log(count)
 }
   
 
@@ -130,7 +131,6 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 //zoom on sea horse vally
 //const x = -61
 //const y = -20
-console.log(count)
 const x = 0
 const y = 0
 drawmandel(1000, width, height, x, y, 1)
