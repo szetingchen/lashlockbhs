@@ -137,8 +137,8 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
 //let y = -0.64935990748190
 //let x = 165
 //let y = 0
-const x = 83.99998
-const y = 7.99997
+const x = 100
+const y = 100
 drawmandel(10000, height, height, x, y, 1)
 
 
