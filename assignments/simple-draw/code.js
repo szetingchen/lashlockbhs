@@ -35,10 +35,10 @@ const drawmandel = (iterations, bx, by, centerx, centery, zoom, c) =>{
   }
 }
 
-const x = 0 //center of zoomx
-const y = 0 //center of zoomy
-const maxiterations = 10000 //maximum iterations that computer can check for infinty
-const zoom = 1 //1 = no zoom
+const x = 0 
+const y = 0 
+const maxiterations = 10000
+const zoom = 1 
 
 
 drawmandel(maxiterations, height, height, x, y, zoom, 'black')
