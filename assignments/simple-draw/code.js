@@ -25,7 +25,7 @@ const drawmandel = (iterations, bx, by, centerx, centery, zoom, c) =>{
   let ymath;
   drawLine(by/2, 0, bx/2, by, 'black')
   drawLine(0, by/2, bx, by/2, 'black')
-  for(let y=-ofy; y<=bordery-ofy; y++){
+  for(let y=-ofy; y<=by-ofy; y++){
     for(let x=-ofx; x<=bx-ofx; x++){
       xmath=(-2-(ofx/bx))/zoom+((4/zoom)/bx)*x
       ymath=(2+(ofy/by))/zoom-((4/zoom)/by)*y
