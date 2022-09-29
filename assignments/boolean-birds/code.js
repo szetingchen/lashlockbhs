@@ -16,3 +16,53 @@
  *   - Globby Birds eat fish, mice, and nuts.
  *
  */
+
+function isFlobbyBird(b1, b2){
+  return b1 && b2
+}
+
+function isBloggyBird(b1, b2){
+  return b1 && !b2
+}
+
+function isFlibbleBird(b1, b2){
+  return !b1 && b2
+}
+
+function isGlobbyBird(b1, b2){
+  return !b1 && !b2
+}
+
+function eatsWorms(b1, b2){
+  return !isGlobbyBird(b1, b2)
+}
+
+function eatsNuts(b1, b2){
+  return !isFlibbleBird(b1, b2)
+}
+
+function eatsFish(b1, b2){
+  return !isBloggyBird(b1, b2)
+}
+
+function eatsMice(b1, b2){
+  return !isFlobbyBird(b1, b2)
+}
+
+function isRed(s1){
+  return s1 === 'Flobby' || s1 === 'Bloggy'
+}
+
+function isSpotted(s1){
+  return s1 === 'Flobby' || s1 === 'Flibble'
+}
+
+function isNotRed(s1){
+  return s1 === 'Globby' || s1 === 'Flibble'
+  
+}
+
+function isNotSpotted(s1){
+  return s1 === 'Globby' || s1 === 'Bloggy'
+  
+}
