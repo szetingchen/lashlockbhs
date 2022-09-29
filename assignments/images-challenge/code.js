@@ -188,7 +188,7 @@ squareOfCircles(20, 'blue');
 
 
 //notreallycurved(5, height, width/2)
-lineOfCircles(23)
+//lineOfCircles(23)
 //lineOfCirclesColor(12, 'pink', 'teal')
 //concentricCircles(11, 'teal', 'pink')
 //checkerBoard(5, 'black', 'red')
