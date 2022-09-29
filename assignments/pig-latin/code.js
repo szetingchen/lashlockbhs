@@ -33,12 +33,12 @@
 // operator works.
 
 
-function pigLatin(str){
-  var volu1 = str.search(/[aeiou]/)
-  return str.substring(volu1) + str.substring(0, volu1) + "ay"
+const pigLatin=(str)=>{
+  var v = str.search(/[aeiou]/)
+  return str.substring(v) + str.substring(0, v) + "ay"
 }
-function advancedPigLatin(str){
-  var volu1 = str.search(/[aeiou]/)
-  return volu1 === 0? str+"way" : str.substring(volu1) + str.substring(0, volu1) + "ay"
+const advancedPigLatin=(str)=>{
+  var v = str.search(/[aeiou]/)
+  return v === 0? str+"way" : str.substring(v) + str.substring(0, v) + "ay"
   
 }
