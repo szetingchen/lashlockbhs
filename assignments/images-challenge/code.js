@@ -182,7 +182,6 @@ const squareOfCircles = (radius, color) =>{
     drawCircle(xCheese, yPos, radius, color)
   }
 }
-squareOfCircles(20, 'blue');
 
 
 
