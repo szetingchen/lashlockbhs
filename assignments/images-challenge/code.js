@@ -167,6 +167,23 @@ const isPixelInSet = (z, c, iterations) =>{
   return 0
 }
 
+const squareOfCircles = (radius, color) =>{
+  const diameter = 2*radius
+  const cNum = Math.floor(height/diameter)
+  const cExtra = (height - (diameter*cNum))/2+radius
+  let xCheese;
+  for(let xPos = (width - height+cExtra)/2;xPos < width - ((width - height)- cExtra)/2-radius; xPos += diameter){
+    drawCircle(xPos, height - cExtra, radius, color)
+    drawCircle (xPos, cExtra, radius, color)
+    xCheese = xPos
+  }
+  for(let yPos = cExtra+diameter; yPos < height-cExtra; yPos += diameter){
+    drawCircle((width-height+cExtra)/2,yPos, radius, color)
+    drawCircle(xCheese, yPos, radius, color)
+  }
+}
+squareOfCircles(20, 'blue');
+
 
 
 
@@ -177,6 +194,6 @@ lineOfCircles(23)
 //checkerBoard(5, 'black', 'red')
 //fillWithCircles(30, 'blue')
 //fillWithCirclesRandomlyFilled(30, 0.99, 'blue')
-//squareOfCircles(10, 'blue') //not done 
+squareOfCircles(10, 'blue') //not done 
 
 
