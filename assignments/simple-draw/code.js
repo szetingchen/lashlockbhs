@@ -9,7 +9,7 @@ const isPixelInSet = (c, iterations) =>{
   let i=0 
   for(i; i<iterations; i++){
     z=f(z, c);
-    if(z[0]===Infinity||z[1]===Infinity||z[0]===-Infinity||z[1]===-Infinity){
+    if(!isFinite(z[0])||!isFinite(z[1])){
     return i
     }
   }
@@ -34,13 +34,10 @@ const drawmandel = (iterations, bx, by, centerx, centery, zoom, c) =>{
     }
   }
 }
-
 const x = 0 
 const y = 0 
 const maxiterations = 10000
 const zoom = 1 
-
-
 drawmandel(maxiterations, height, height, x, y, zoom, 'black')
 
 
