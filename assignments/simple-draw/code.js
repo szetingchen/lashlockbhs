@@ -18,22 +18,19 @@ const isPixelInSet = (c, iterations) =>{
   }
   return 0
 }
-const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
-  const color = 'black';
-  let offsetx=-((centerx/(width/borderx))*zoom);
-  let offsety=((centery/(height/bordery))*zoom);
+const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom, c) =>{
+  const ofx=-((centerx/(width/borderx))*zoom);
+  const ofy=((centery/(height/bordery))*zoom);
   let xmath;
   let ymath;
   drawLine(borderx/2, 0, borderx/2, bordery, 'black')
   drawLine(0, bordery/2, borderx, bordery/2, 'black')
-  for(let y=-offsety; y<=bordery-offsety; y++){
-    for(let x=-offsetx; x<=borderx-offsetx; x++){
-      xmath=(-2-(offsetx/borderx))/zoom+((4/zoom)/borderx)*x
-      ymath=(2+(offsety/bordery))/zoom-((4/zoom)/bordery)*y
+  for(let y=-ofy; y<=bordery-ofy; y++){
+    for(let x=-ofx; x<=borderx-ofx; x++){
+      xmath=(-2-(ofx/borderx))/zoom+((4/zoom)/borderx)*x
+      ymath=(2+(ofy/bordery))/zoom-((4/zoom)/bordery)*y
       let pixelinset = isPixelInSet([xmath, ymath], iterations)
-
-      pixelinset===0 ? drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, color) : drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, 'hsl(' + (pixelinset*2) + ', 100%, 50%)')
-      
+      pixelinset===0 ? drawLine(x+ofx, y+ofy, x+1+ofx, y+ofy, c) : drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, 'hsl(' + (pixelinset*2) + ', 100%, 50%)')
     }
   }
 }
@@ -44,6 +41,6 @@ const maxiterations = 10000 //maximum iterations that computer can check for inf
 const zoom = 1 //1 = no zoom
 
 
-drawmandel(maxiterations, height, height, x, y, zoom)
+drawmandel(maxiterations, height, height, x, y, zoom, 'black')
 
 
