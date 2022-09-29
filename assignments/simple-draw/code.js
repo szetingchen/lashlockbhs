@@ -1,12 +1,22 @@
-
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y];
+  //calculates the square of a complex number, "z^2"
+  //z starts as 0,0 not a complex number
+  //after 1 recersion it starts being inputed complex numbers
+
 }
 const f = (z, c) =>{
   return [z_sqr(z[0], z[1])[0] + c[0], z_sqr(z[0], z[1])[1] + c[1]]
+  //equation, only looks long because normal and imaginary numbers need to be- 
+  //- combined seperatly
+
+
 }
-const isPixelInSet = (z, c, iterations) =>{
-  let i=0
+const isPixelInSet = (c, iterations) =>{
+  //takes in a constant z
+  let z=[0,0]
+  let i=0 
+  //defines "i" outside for loop so it can be used in the entire funciton
   for(i; i<iterations; i++){
     z=f(z, c);
     
@@ -36,7 +46,7 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
     for(let x=-offsetx; x<=borderx-offsetx; x++){
       xmath=(-2-(offsetx/borderx))/zoom+((4/zoom)/borderx)*x
       ymath=(2+(offsety/bordery))/zoom-((4/zoom)/bordery)*y
-      let pixelinset = isPixelInSet([0,0], [xmath, ymath], iterations)
+      let pixelinset = isPixelInSet([xmath, ymath], iterations)
 
       if(pixelinset===0){
         drawLine(x+offsetx, y+offsety, x+1+offsetx, y+offsety, color)
