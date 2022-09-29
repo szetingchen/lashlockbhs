@@ -1,76 +1,3 @@
-
-/*
-var x = 0
-var y = 0
-var size = 250
-for(let i=0; i < 25; i++){
-    drawTriangle(x, y, size, 'red');
-    var size=size-10
-    var x=x+10
-    var y=y+15
-}
-
- 
-function drawTriangle(x, y, size, color) {
-    if(x <= 0){
-        var x = size
-    }
-    else if(x >= 0){
-        var x = size + x
-    }
-    if(y == 0){
- 
-    }
-    var px = x
-    var py = y
-    var px1 = x
-    var py1 = y
-    for(let i=0; i < size; i++){
-        var px = px - 1
-        var py = py + 2
-        drawRect(px, py, 1, 1, color);
-    }
-    for(let i=0; i < size; i++){
-        var px1 = px1 + 1
-        var py1 = py1 + 2
-        drawRect(px1, py1, 1, 1, color);
-    }
-    for(let i=0; i < size/3*2; i++){
-        drawRect(px1, py1, 1, 1, color);
-        var px1 = px1 -3
-    }
- 
-}
-*/
-/*
-var x = -1000
-var y = 350
-var size = 250
-var color = 'aqua'
-drawTriangle(x, y, size, color)
-function drawTriangle(x, y, size, color){
-    drawLine(x, y, x+size/2, y+size, color)
-    drawLine(x+size/2, y+size, x+size/2-size, y+size, color)
-    drawLine(x, y, x-size/2, y+size, color)
-   
-}
-for(let i=0; i < 250; i++){
-
-    for(let i=0; i < 25; i++){
-        drawTriangle(x, y, size, color);
-        var size=size-10
-        
-        var y=y-14.6
-
-    }
-    var size = 250
-    var y = 350
-    var x=x+30
-}
-*/
-
-
-//madnelstart
 function rgb(red, green, blue) {
     return (red & 0xF0 ? '#' : '#0') + (red << 16 | green << 8 | blue).toString(16)
 }
@@ -86,7 +13,6 @@ const isPixelInSet = (z, c, iterations) =>{
     z=f(z, c);
     
     if(z[0]===Infinity||z[1]===Infinity||z[0]===-Infinity||z[1]===-Infinity){
-    //console.log("z: "+z)
     return i
     }
   }
@@ -99,8 +25,6 @@ const isPixelInSet = (z, c, iterations) =>{
 
 const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   let count =0;
-  //const thiscenterx=-borderx/((4/zoom)/centerx)
-  //const thiscentery=bordery/((4/zoom)/centery)
   const thiscenterx=-centerx
   const thiscentery=centery
   const color = 'black';
@@ -128,17 +52,9 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   }
   console.log(count)
 }
-  
 
-//mandelend
-
-
-//let x = -0.13856524454488
-//let y = -0.64935990748190
-//let x = 165
-//let y = 0
-const x = -5
-const y = 48
+const x = 0
+const y = 0
 drawmandel(10000, height, height, x, y, 1)
 
 
