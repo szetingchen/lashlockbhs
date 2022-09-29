@@ -1,6 +1,4 @@
-function rgb(red, green, blue) {
-    return (red & 0xF0 ? '#' : '#0') + (red << 16 | green << 8 | blue).toString(16)
-}
+
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y];
 }
@@ -53,8 +51,12 @@ const drawmandel = (iterations, borderx, bordery, centerx, centery, zoom) =>{
   console.log(count)
 }
 
-const x = 0
-const y = 0
-drawmandel(10000, height, height, x, y, 1)
+const x = 0 //center of zoomx
+const y = 0 //center of zoomy
+const maxiterations = 10000 //maximum iterations that computer can check for infinty
+const zoom = 1 //1 = no zoom
+
+
+drawmandel(maxiterations, height, height, x, y, zoom)
 
 
