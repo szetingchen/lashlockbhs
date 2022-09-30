@@ -13,9 +13,6 @@ const isPixelInSet = (c, iterations) =>{
     return i
     }
   }
-  if(z[0]>2||z[1]>2){
-    return i
-  }
   return 0
 }
 const drawmandel = (iterations, bx, by, centerx, centery, zoom, c) =>{
