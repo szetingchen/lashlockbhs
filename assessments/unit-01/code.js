@@ -49,3 +49,8 @@ const aFartherThanB = (num1, num2, num3) => {
 const firstHalf = (str) => {
   return str.substring(0, str.length/2);
 }
+
+
+const secondHalf = (str) => {
+  return str.substring(str.length/2, str.length)
+}
