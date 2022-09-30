@@ -75,3 +75,13 @@ const upDownLastCharacter = (str) => {
 const yesIfEven = (num) => {
   return num%2 === 0;
 }
+
+const countXs = (str) => {
+  let xcount;
+  for(let i = 0; i<str.length; i++){
+    if(str.substring(i, i+1)==='x'){
+      xcount++;
+    }
+  }
+  return xcount;
+}
