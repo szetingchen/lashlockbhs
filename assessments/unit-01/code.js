@@ -45,3 +45,7 @@ const moreThanTwiceAsLong = (str1, str2) => {
 const aFartherThanB = (num1, num2, num3) => {
   return Math.abs(num1-num2) > Math.abs(num3-num2);
 }
+
+const firstHalf = (str) => {
+  return str.substring(0, str.length/2);
+}
