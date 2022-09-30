@@ -71,3 +71,7 @@ const upDownLastCharacter = (str) => {
   const lastchar = str.substring(str.length-1);
   return lastchar.toUpperCase() + lastchar;
 }
+
+const yesIfEven = (num) => {
+  return num%2 === 0;
+}
