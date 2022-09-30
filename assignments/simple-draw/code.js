@@ -21,14 +21,12 @@ const isPixelInSet = (c, iterations) =>{
 const drawmandel = (iterations, bx, by, centerx, centery, zoom, c) =>{
   const ofx=-((centerx/(width/bx))*zoom);
   const ofy=((centery/(height/by))*zoom);
-  let xm;
-  let ym;
   drawLine(by/2, 0, bx/2, by, 'black')
   drawLine(0, by/2, bx, by/2, 'black')
   for(let y=-ofy; y<=by-ofy; y++){
     for(let x=-ofx; x<=bx-ofx; x++){
-      xm=(-2-(ofx/bx))/zoom+((4/zoom)/bx)*x
-      ym=(2+(ofy/by))/zoom-((4/zoom)/by)*y
+      const xm=(-2-(ofx/bx))/zoom+((4/zoom)/bx)*x
+      const ym=(2+(ofy/by))/zoom-((4/zoom)/by)*y
       let pixelinset = isPixelInSet([xm, ym], iterations)
       pixelinset===0 ? drawLine(x+ofx, y+ofy, x+1+ofx, y+ofy, c) : drawLine(x+ofx, y+ofy, x+1+ofx, y+ofy, 'hsl(' + (pixelinset*2) + ', 100%, 50%)')
     }
