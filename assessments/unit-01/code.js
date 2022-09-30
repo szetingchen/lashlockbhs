@@ -29,3 +29,7 @@ const offset = (width, fig_width) => {
 const canSleepIn = (isWeekday, isVacation) => {
   return !isWeekday || isVacation;
 }
+
+const canGoToProm = (isSenior, isInvited, isExluded) => { 
+  return (isSenior || isInvited) && !isExluded
+}
