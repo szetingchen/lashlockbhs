@@ -35,5 +35,5 @@ const canGoToProm = (isSenior, isInvited, isExluded) => {
 }
 
 const getsSpeedingTicket = (mph, isGrouchy) => {
-  return mph < 70 && mph > 65 && !isGrouchy || mph > 65 && mph < 70 && isGrouchy;
+  return !((mph < 70 && mph > 65) && !isGrouchy || mph > 65 && mph < 70 && isGrouchy);
 }
