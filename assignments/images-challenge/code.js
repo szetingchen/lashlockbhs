@@ -123,49 +123,6 @@ const fillWithCirclesRandomlyFilled = (r, prob, color) =>{
   console.log("num filled:"+numfilled)
 }
 
-const squareOfCircles = (r, color) =>{
-  const d = r*2
-  const num = Math.floor(width/d)
-  const offset = (width-num*d)/2
-  let cy = r;
-  let e = 1;
-  for (let i = 0; i<=num*2; i++){
-    if(i===26){
-      cy=-r
-      e = 0
-    }
-    drawCircle(offset + r + d*i, e*height-cy, r, color)
-    //not done
-  }
-}
- 
-
-//madnelstart
-function rgb(red, green, blue) {
-    return (red & 0xF0 ? '#' : '#0') + (red << 16 | green << 8 | blue).toString(16)
-}
-const z_sqr = (x,y) =>{
-  return [x**2 - y**2, 2*x*y];
-}
-const f = (z, c) =>{
-  return [z_sqr(z[0], z[1])[0] + c[0], z_sqr(z[0], z[1])[1] + c[1]]
-}
-const isPixelInSet = (z, c, iterations) =>{
-  let i=0
-  for(i; i<iterations; i++){
-    z=f(z, c);
-    
-    if(z[0]===Infinity||z[1]===Infinity||z[0]===-Infinity||z[1]===-Infinity){
-    //console.log("z: "+z)
-    return i
-    }
-  }
-  if(z[0]>2||z[1]>2){
-    return i
-  }
-  return 0
-}
-
 const squareOfCircles = (radius, color) =>{
   const diameter = 2*radius
   const cNum = Math.floor(height/diameter)
