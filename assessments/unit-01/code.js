@@ -31,5 +31,5 @@ const canSleepIn = (isWeekday, isVacation) => {
 }
 
 const canGoToProm = (isSenior, isInvited, isExluded) => { 
-  return (isSenior || isInvited) && !isExluded
+  return (isSenior || isInvited) && !isExluded;
 }
