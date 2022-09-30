@@ -66,3 +66,8 @@ const everyOther = (str) => {
   }
   return str1;
 }
+
+const upDownLastCharacter = (str) => {
+  const lastchar = str.substring(str.length-2, str.length-1);
+  return lastchar.toUpperCase() + lastchar;
+}
