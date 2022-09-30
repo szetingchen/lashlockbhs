@@ -61,7 +61,7 @@ const upDown = (str) => {
 
 const everyOther = (str) => {
   let str1;
-  for(let i = 0; i<str.length()/2; i+=2){
+  for(let i = 0; i<str.length/2; i+=2){
     str1+=str1.substring(i);
   }
   return str1;
