@@ -26,3 +26,6 @@ const offset = (width, fig_width) => {
   return (width-fig_width)/2;
 }
 
+const canSleepIn = (isWeekday, isVacation) => {
+  return !isWeekday || isVacation;
+}
