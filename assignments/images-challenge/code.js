@@ -55,13 +55,14 @@ const lineOfCirclesColor = (r, color1, color2) =>{
   }
 }
 const concentricCircles = (num, color1, color2) =>{
-  const inc = height/num/2
+  const smallerD = width>height ? height : width
+  const inc = smallerD/num/2
   for (let i = 0; num>i; i++){
     if(i%2===0){
-      drawFilledCircle(width/2, height/2, width/2-inc*i, color1)
+      drawFilledCircle(width/2, height/2, smallerD/2-inc*i, color1)
     }
     else{
-      drawFilledCircle(width/2, height/2, width/2-inc*i, color2)
+      drawFilledCircle(width/2, height/2, smallerD/2-inc*i, color2)
     }
   }
 }
