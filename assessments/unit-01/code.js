@@ -107,6 +107,7 @@ const sumSquares = (num) => {
   let sum = 0;
   for(let i = 0; i<num; i++){
     sum+=num**2;
+    console.log(sum)
   }
   return sum;
 }
