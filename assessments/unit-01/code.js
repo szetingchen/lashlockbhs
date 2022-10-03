@@ -89,7 +89,7 @@ const countXs = (str) => {
 const timesTable = (num) => {
   for(let y = 0; y<=num; y++){
     for(let x = 0; x<=num; x++){
-      emit(x, y, x*y)
+      emit(x, y, x*y);
     }
   }
 }
@@ -97,8 +97,16 @@ const timesTable = (num) => {
 const containsX = (str) => {
   for(let i = 0; i<str.length; i++){
     if(str[i]==="x"){
-      return true
+      return true;
     }
   }
-  return false
+  return false;
+}
+
+const sumSquares = (num) => {
+  let sum = 0;
+  for(let i = 0; i<num; i++){
+    sum+=num**2;
+  }
+  return sum;
 }
