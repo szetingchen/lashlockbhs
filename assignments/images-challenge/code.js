@@ -90,7 +90,7 @@ const fillWithCircles = (r, color) => {
   const offsety = (height - (numy * d)) / 2
   for (let y = 0; y < numy*d; y += d) {
     for (let x = 0; x < numx*d; x += d) {
-      drawCircle(x, y, r, color)
+      drawCircle(offsetx + x, offsety + y, r, color)
     }
   }
 }
