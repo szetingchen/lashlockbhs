@@ -91,7 +91,7 @@ const fillWithCircles = (r, color) => {
   console.log(offsetx)
   console.log(offsety)
   for (let y = offsetx + d; y < numy*d; y += d) {
-    for (let x = offsety+d; x < numx*d; x += d) {
+    for (let x = offsety + d; x < numx*d; x += d) {
       drawCircle(x, y, r, color)
     }
   }
