@@ -88,9 +88,9 @@ const fillWithCircles = (r, color) => {
   const numy = Math.floor(height / d)
   const offsetx = (width - (numx * d)) / 2
   const offsety = (height - (numy * d)) / 2
-  for (let y = 0; y < numy*d; y += d) {
-    for (let x = 0; x < numx*d; x += d) {
-      drawCircle(offsetx + x, offsety + y, r, color)
+  for (let y = offsety; y < numy*d; y += d) {
+    for (let x = offsetx; x < numx*d; x += d) {
+      drawCircle(x, y, r, color)
     }
   }
 }
