@@ -71,14 +71,13 @@ const checkerBoard = (num, color1, color2) => {
   const size = smallerD / num
   let color11 = color1;
   let color22 = color2;
-  let y = 0;
-  for (let y = 0; y < num; y+size*y) {
-    for (let x = 0; x < num; x++) {
+  for (let y = 0; y < num; y+=size) {
+    for (let x = 0; x < num; x+=size) {
       if (x % 2 === 0) {
-        drawFilledRect(size * x, y, size, size, color11)
+        drawFilledRect(x, y, size, size, color11)
       }
       else {
-        drawFilledRect(size * x, y, size, size, color22)
+        drawFilledRect(x, y, size, size, color22)
       }
     }
     let temp = color11;
