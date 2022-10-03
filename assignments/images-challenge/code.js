@@ -68,7 +68,7 @@ const concentricCircles = (num, color1, color2) => {
 }
 const checkerBoard = (num, color1, color2) => {
   const smallerD = width > height ? height : width
-  const size = height / num
+  const size = smallerD / num
   let color11 = color1;
   let color22 = color2;
   let y = 0;
