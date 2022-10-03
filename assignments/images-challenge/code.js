@@ -86,12 +86,10 @@ const fillWithCircles = (r, color) => {
   const d = r * 2
   const numx = Math.floor(width / d)
   const numy = Math.floor(height / d)
-  const offsetx = (width - (numx * d))/2
-  const offsety = (height - (numy * d))/2
-  console.log(offsetx)
-  console.log(offsety)
-  for (let y = offsetx + d; y < numy*d; y += d) {
-    for (let x = offsety + d; x < numx*d; x += d) {
+  const offsetx = (width - (numx * d)) / 2
+  const offsety = (height - (numy * d)) / 2
+  for (let y = offsetx + d; y < numy * d; y += d) {
+    for (let x = offsety + d; x < numx * d; x += d) {
       drawCircle(x, y, r, color)
     }
   }
@@ -102,20 +100,17 @@ const fillWithCirclesRandomlyFilled = (r, prob, color) => {
   const numy = Math.floor(height / d)
   const offsetx = (width - (numx * d)) / 2
   const offsety = (height - (numy * d)) / 2
-  let numfilled = 0;
   let y = r;
-  for (let a = 0; a < numy; a++) {
-    for (let i = 0; i < numx; i++) {
+  for (let y = offsetx + d; y < numy * d; y += d) {
+    for (let x = offsety + d; x < numx * d; x += d) {
       if (Math.random() <= prob) {
-        drawFilledCircle(offsetx + r + d * i, offsety + y, r, color)
-        numfilled++
+        drawFilledCircle(x, y, r, color)
       }
       else {
-        drawCircle(offsetx + r + d * i, offsety + y, r, color)
+        drawCircle(x, y, r, color)
 
       }
     }
-    y += d
   }
   console.log("num circles:" + numx * numy)
   console.log("num filled:" + numfilled)
