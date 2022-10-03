@@ -100,7 +100,6 @@ const fillWithCirclesRandomlyFilled = (r, prob, color) => {
   const numy = Math.floor(height / d)
   const offsetx = (width - (numx * d)) / 2
   const offsety = (height - (numy * d)) / 2
-  let y = r;
   for (let y = offsetx + d; y < numy * d; y += d) {
     for (let x = offsety + d; x < numx * d; x += d) {
       if (Math.random() <= prob) {
@@ -112,8 +111,6 @@ const fillWithCirclesRandomlyFilled = (r, prob, color) => {
       }
     }
   }
-  console.log("num circles:" + numx * numy)
-  console.log("num filled:" + numfilled)
 }
 
 const squareOfCircles = (radius, color) => {
