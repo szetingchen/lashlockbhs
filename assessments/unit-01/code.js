@@ -96,6 +96,9 @@ const timesTable = (num) => {
 
 const containsX = (str) => {
   for(let i = 0; i<str.length; i++){
-    str[i]==="x" ? true
+    if(str[i]==="x"){
+      return true
+    }
   }
+  return false
 }
