@@ -71,7 +71,7 @@ const checkerBoard = (num, color1, color2) => {
   const size = height / num
   let color11 = color1;
   let color22 = color2;
-  let y = 50;
+  let y = 0;
   for (let a = 0; a < num; a++) {
     for (let i = 0; i < num; i++) {
       if (i % 2 === 0) {
