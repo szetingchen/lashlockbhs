@@ -74,7 +74,7 @@ const checkerBoard = (num, color1, color2) => {
   let y = 0;
   for (let y = 0; y < num; y+size*y) {
     for (let x = 0; x < num; x++) {
-      if (i % 2 === 0) {
+      if (x % 2 === 0) {
         drawFilledRect(size * x, y, size, size, color11)
       }
       else {
