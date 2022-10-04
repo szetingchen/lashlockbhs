@@ -76,10 +76,10 @@ const checkerBoard = (num, color1, color2) => {
       console.log(x + y)
       drawFilledRect(x, y, size, size, color11)
       //swap
-      let temp = color11;
-      color11 = color22;
-      color22 = temp
+      [color11, color22] = [color22, color11];
+
     }
+    [color11, color22] = [color22, color11];
   }
 }
 const fillWithCircles = (r, color) => {
