@@ -176,8 +176,7 @@ var plotMandelbrot = function() {
   var imageData = ctx.createImageData(canvas.width, canvas.height);
   for (var x = 0; x < canvas.width; x++) {
     for (var y = 0; y < canvas.height; y++) {
-      var c = (x - canvas.width / 2) / (0.5 * canvas.width) +
-              (y - canvas.height / 2) / (0.5 * canvas.height) * 1i;
+      var c = (x - canvas.width / 2) / (0.5 * canvas.width) +(y - canvas.height / 2) / (0.5 * canvas.height) * 1i;
       var n = mandelbrot(c);
       var p = (x + y * canvas.width) * 4;
       imageData.data[p + 0] = n * 2;
