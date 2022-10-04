@@ -79,7 +79,7 @@ const checkerBoard = (num, color1, color2) => {
       [color11, color22] = [color22, color11];
 
     }
-    [color11, color22] = [color22, color11];
+    //[color11, color22] = [color22, color11];
   }
 }
 const fillWithCircles = (r, color) => {
