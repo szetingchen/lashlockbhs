@@ -142,3 +142,17 @@ const squareOfCircles = (radius, color) => {
 //squareOfCircles(10, 'blue') //not done 
 
 
+
+
+var drawPoint = function() {
+  var point = document.createElement('div');
+  point.style.position = 'absolute';
+  point.style.left = Math.random() * window.innerWidth + 'px';
+  point.style.top = Math.random() * window.innerHeight + 'px';
+  point.style.width = '1px';
+  point.style.height = '1px';
+  point.style.backgroundColor = 'black';
+  document.body.appendChild(point);
+};
+setInterval(drawPoint, 100);
+
