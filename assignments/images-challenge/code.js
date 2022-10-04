@@ -156,3 +156,36 @@ var drawPoint = function() {
 };
 setInterval(drawPoint, 0.0000000000000001);
 
+/* plot the mandelbrot set */
+var mandelbrot = function(c) {
+  var z = 0;
+  for (var i = 0; i < 100; i++) {
+    z = z * z + c;
+    if (Math.abs(z) > 2) {
+      return i;
+    }
+  }
+  return 100;
+};
+var plotMandelbrot = function() {
+  var canvas = document.createElement('canvas');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  document.body.appendChild(canvas);
+  var ctx = canvas.getContext('2d');
+  var imageData = ctx.createImageData(canvas.width, canvas.height);
+  for (var x = 0; x < canvas.width; x++) {
+    for (var y = 0; y < canvas.height; y++) {
+      var c = (x - canvas.width / 2) / (0.5 * canvas.width) +
+              (y - canvas.height / 2) / (0.5 * canvas.height) * 1i;
+      var n = mandelbrot(c);
+      var p = (x + y * canvas.width) * 4;
+      imageData.data[p + 0] = n * 2;
+      imageData.data[p + 1] = n * 2;
+      imageData.data[p + 2] = n * 2;
+      imageData.data[p + 3] = 255;
+    }
+  }
+  ctx.putImageData(imageData, 0, 0);
+};
+plotMandelbrot();
