@@ -76,7 +76,7 @@ const checkerBoard = (num, color1, color2) => {
       console.log(x + y)
       drawFilledRect(x, y, size, size, color11)
       //swap
-      [color11, color22] = 'red', 'black'];
+      [color11, color22] = ['red', 'black'];
 
     }
     [color11, color22] = [color22, color11];
