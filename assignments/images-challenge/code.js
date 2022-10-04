@@ -72,7 +72,7 @@ const checkerBoard = (num, color1, color2) => {
   let color11 = color1;
   let color22 = color2;
   for (let y = 0; y<smallerD; y+=size) {
-    for (let x = 0; x < num * size; x*size) {
+    for (let x = 0; x <smallerD; x+=size) {
       console.log(x+ " " +y)
       drawFilledRect(x, y, size, size, color11)
       //swap
@@ -89,7 +89,7 @@ const fillWithCircles = (r, color) => {
   const offsetx = (width - (numx * d)) / 2
   const offsety = (height - (numy * d)) / 2
   for (let y = offsety + d; y < numy * d; y += d) {
-    for (let x = offsetyx + d; x < numx * d; x += d) {
+    for (let x = offsetx + d; x < numx * d; x += d) {
       drawCircle(x, y, r, color)
     }
   }
