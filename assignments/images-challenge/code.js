@@ -80,9 +80,6 @@ const checkerBoard = (num, color1, color2) => {
       color11 = color22;
       color22 = temp
     }
-    let temp = color11;
-    color11 = color22;
-    color22 = temp
   }
 }
 const fillWithCircles = (r, color) => {
