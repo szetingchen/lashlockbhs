@@ -72,8 +72,8 @@ const checkerBoard = (num, color1, color2) => {
   const widthOf = size*num;
   let color11 = color1;
   let color22 = color2;
-  for (let numSquaresy = 0; numSquaresy!=widthOf; numSquaresy++) {
-    for (let numSquaresx = 0; numSquaresx!=widthOf; numSquaresx++) {
+  for (let numSquaresy = 0; numSquaresy<widthOf; numSquaresy++) {
+    for (let numSquaresx = 0; numSquaresx<widthOf; numSquaresx++) {
       drawFilledRect(numSquaresx*size, numSquaresy*size, size, size, color11)
       //swap
       let temp = color11;
