@@ -69,12 +69,13 @@ const concentricCircles = (num, color1, color2) => {
 const checkerBoard = (num, color1, color2) => {
   const smallerD = width > height ? height : width
   const size = smallerD / num
+  const widthOf = size*num;
   let color11 = color1;
   let color22 = color2;
-  for (let y = 0; y!=size*num; y+=size) {
-    for (let x = 0; x!=size*num; x+=size) {
+  for (let numSquaresy = 0; numSquaresy!=widthOf; numSquaresy++) {
+    for (let numSquaresx = 0; numSquaresx!=widthOf; numSquaresx++) {
       console.log(x+ " " +y)
-      drawFilledRect(x, y, size, size, color11)
+      drawFilledRect(numSquaresx*size, numSquaresy*size, size, size, color11)
       //swap
       let temp = color11;
       color11 = color22;
@@ -82,6 +83,8 @@ const checkerBoard = (num, color1, color2) => {
     }
   }
 }
+
+
 const fillWithCircles = (r, color) => {
   const d = r * 2
   const numx = Math.floor(width / d)
