@@ -74,19 +74,23 @@ const checkerBoard = (num, color1, color2) => {
   let color;
   for (let numSquaresy = 0; numSquaresy<num; numSquaresy++) {
     for (let numSquaresx = 0; numSquaresx<num; numSquaresx++) {
+      
       if(color%2===0){
         color = color1;
+        console('white')
       }
       else if(color%num===0){
         color = lastcolor;
+        console('end of x')
       }
       else{
         color = color2;
+        console('black')
       }
       drawFilledRect(numSquaresx*size, numSquaresy*size, size, size, color);
       let lastcolor=color;
       numdrawn++;
-      
+      console.log(numdrawn);
     }
   }
 }
