@@ -71,7 +71,7 @@ const checkerBoard = (num, color1, color2) => {
   const size = smallerD / num;
   let numdrawn=0;
   let color;
-  let lastcolor;
+  let lastcolor=color1;
   for (let numSquaresy = 0; numSquaresy<num; numSquaresy++) {
     for (let numSquaresx = 0; numSquaresx<num; numSquaresx++) {
       
