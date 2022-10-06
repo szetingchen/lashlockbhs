@@ -70,12 +70,12 @@ const checkerBoard = (num, color1, color2) => {
   const smallerD = width > height ? height : width;
   const size = smallerD / num;
   let color;
-  let numSquaresy;
-  for (numSquaresy = 0; numSquaresy<num; numSquaresy++) {
-    for (let numSquaresx = 0; numSquaresx<num/2; numSquaresx++) {
+  let numSquaresx;
+  for (let numSquaresy = 0; numSquaresy<num; numSquaresy++) {
+    for (numSquaresx = 0; numSquaresx<num/2; numSquaresx++) {
       drawFilledRect(numSquaresx*(size*2), numSquaresy*size, size, size, color);
     }
-    numSquaresy+=size
+    numSquaresx+=size
   }
 }
 checkerBoard(10, 'white', 'black')
