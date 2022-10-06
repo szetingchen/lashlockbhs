@@ -84,7 +84,7 @@ const checkerBoard = (num, color1, color2) => {
     color22 = temp
   }
 }
-checkerBoard(34, 'white', 'black')
+checkerBoard(56, 'white', 'black')
 
 
 const fillWithCircles = (r, color) => {
