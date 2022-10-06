@@ -74,12 +74,6 @@ const checkerBoard = (num, color1, color2) => {
   let lastcolor=color1;
   for (let numSquaresy = 0; numSquaresy<num; numSquaresy++) {
     for (let numSquaresx = 0; numSquaresx<num; numSquaresx++) {
-      if(numdrawn%num===0){
-        color = lastcolor;
-        console.log('end of x')
-        console.log(color)
-        console.log(' ')
-      }
       if(numdrawn%2===0){
         color = color1;
         console.log('white')
@@ -95,6 +89,12 @@ const checkerBoard = (num, color1, color2) => {
       numdrawn++;
       console.log(numdrawn);
       console.log(' ')
+      if(numdrawn%num===0){
+        color = lastcolor;
+        console.log('end of x')
+        console.log(color)
+        console.log(' ')
+      }
     }
   }
 }
