@@ -76,6 +76,7 @@ const checkerBoard = (num, color1, color2) => {
       drawFilledRect(numSquaresx*(size*2), numSquaresy*size, size, size, color);
       console.log(numSquaresy, numSquaresx)
       console.log(color)
+      console.log(switchx)
     }
     switchx = switchx ? false : true
   }
