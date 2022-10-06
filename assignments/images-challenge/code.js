@@ -79,6 +79,9 @@ const checkerBoard = (num, color1, color2) => {
       color22 = temp
       drawFilledRect(numSquaresx*size, numSquaresy*size, size, size, color11)
     }
+    temp = color11;
+    color11 = color22;
+    color22 = temp
   }
 }
 checkerBoard(11, 'white', 'black')
