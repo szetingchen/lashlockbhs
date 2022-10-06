@@ -79,7 +79,7 @@ const checkerBoard = (num, color1, color2) => {
     }
   }
 }
-
+checkerBoard(10, 'black', 'white')
 
 const fillWithCircles = (r, color) => {
   const d = r * 2
