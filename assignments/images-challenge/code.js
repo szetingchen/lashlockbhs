@@ -80,7 +80,7 @@ const checkerBoard = (num, color1, color2) => {
         console.log(color)
         console.log(' ')
       }
-      else if(numdrawn%2===0){
+      if(numdrawn%2===0){
         color = color1;
         console.log('white')
         console.log(' ')
