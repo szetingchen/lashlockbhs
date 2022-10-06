@@ -67,22 +67,16 @@ const concentricCircles = (num, color1, color2) => {
   }
 }
 const checkerBoard = (num, color1, color2) => {
-  const smallerD = width > height ? height : width
-  const size = smallerD / num
-  console.log(num)
-  const widthOf = size*num;
-  let color11 = color1;
-  let color22 = color2;
+  const smallerD = width > height ? height : width;
+  const size = smallerD / num;
+  console.log(num);
+  let numdrawn=0;
   for (let numSquaresy = 0; numSquaresy<num; numSquaresy++) {
     for (let numSquaresx = 0; numSquaresx<num; numSquaresx++) {
-      let temp = color11;
-      color11 = color22;
-      color22 = temp
-      drawFilledRect(numSquaresx*size, numSquaresy*size, size, size, color11)
+      let color = numdrawn%2 === 0 ? color1 : color2
+      drawFilledRect(numSquaresx*size, numSquaresy*size, size, size, color);
+      numdrawn++;
     }
-    let temp = color11;
-    color11 = color22;
-    color22 = temp
   }
 }
 checkerBoard(13, 'white', 'black')
