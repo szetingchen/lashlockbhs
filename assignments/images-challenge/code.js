@@ -69,7 +69,7 @@ const concentricCircles = (num, color1, color2) => {
 const checkerBoard = (num, color1, color2) => {
   const smallerD = width > height ? height : width;
   const size = smallerD / num;
-  let color=color1;
+  let color=color2;
   let switchx = false;
   for (let numSquaresy = 0; numSquaresy<num; numSquaresy++) {
     for (let numSquaresx = switchx ?  size : 0; numSquaresx<num/2; numSquaresx++) {
