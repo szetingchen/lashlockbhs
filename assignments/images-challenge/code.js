@@ -79,7 +79,7 @@ const checkerBoard = (num, color1, color2) => {
         color = color1;
         console.log('white')
       }
-      else if(numdrawn%num===0){
+      if(numdrawn%num===0){
         color = lastcolor;
         console.log('end of x')
       }
