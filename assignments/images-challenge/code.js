@@ -94,8 +94,8 @@ const checkerBoard = (num, color1, color2) => {
         console.log('end of x')
         console.log(color)
         console.log(' ')
-      drawFilledRect(numSquaresx*size, numSquaresy*size, size, size, color);
       }
+      drawFilledRect(numSquaresx*size, numSquaresy*size, size, size, color);
     }
   }
 }
