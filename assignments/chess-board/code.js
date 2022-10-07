@@ -30,6 +30,11 @@ const drawBoard = (board) => {
     }
   }
 }
+const checkMove = (board, piecex, piecey, targetx, targety, mode)=>{
+  const piece = board[piecey][piecex]
+  return piece;
+}
+
+checkMove(startBoard, 0, 1, 6, 0, null)
 
 
-drawBoard(startBoard)
