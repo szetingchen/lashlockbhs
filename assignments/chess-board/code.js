@@ -25,16 +25,20 @@ const drawBoard = (board) => {
   for (let yAr = 0; yAr < 8; yAr++) {
     for (let xAr = 0; xAr < board[yAr].length; xAr++) {
       if (board[yAr][xAr] != undefined) {
-        drawText(board[yAr][xAr], 40*xAr, 50 + 40*yAr, 'black', 64);
+        drawText(board[yAr][xAr], 40 * xAr, 50 + 40 * yAr, 'black', 64);
       }
     }
   }
 }
-const checkMove = (board, piecex, piecey, targetx, targety, mode)=>{
+const checkMove = (board, piecex, piecey, targetx, targety, mode) => {
+  drawBoard(board)
   const piece = board[piecex][piecey]
-  return piece;
+  const targetEmpty = board[targetx][targety] === undefined
+  if (piece === BLACK_PAWN || WHITE_PAWN) {
+    if (piecex - targetx === 1 || piecey - targety === 1 ){
+
+    }
+  }
 }
-
-console.log(checkMove(startBoard, 0, 1, 6, 0, null))
-
+  checkMove(startBoard, 0, 1, 6, 0, null)
 
