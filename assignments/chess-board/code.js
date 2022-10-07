@@ -26,7 +26,7 @@ const startBoard = [
 ]
 const drawBoard = (board) => {
   for (let yAr = 0; yAr < 8; yAr++) {
-    for (let xAr = 0; xAr < board[y].length; xAr++) {
+    for (let xAr = 0; xAr < board[yAr].length; xAr++) {
       drawText(board[xAr][yAr], width / 2, height / 2, 'black', 64);
     }
   }
