@@ -34,9 +34,10 @@ const checkMove = (board, piecex, piecey, targetx, targety, mode) => {
   drawBoard(board)
   const piece = board[piecex][piecey]
   const targetEmpty = board[targetx][targety] === undefined
+  const targetFriendly = board[targetx][targety]
   if (piece === BLACK_PAWN || WHITE_PAWN) {
-    if (piecex - targetx === 1 || piecey - targety === 1 ){
-
+    if (piecex - targetx === 1 || piecey - targety === 1){
+      
     }
   }
 }
