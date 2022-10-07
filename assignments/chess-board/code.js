@@ -44,5 +44,5 @@ const checkMove = (board, piecex, piecey, targetx, targety, mode) => {
   }
 }
 checkMove(startBoard, 0, 1, 6, 0, null)
-*\
+*/
 
