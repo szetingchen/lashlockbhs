@@ -24,11 +24,11 @@ const startBoard = [
 const drawBoard = (board) => {
   for (let yAr = 0; yAr < 8; yAr++) {
     for (let xAr = 0; xAr < board[yAr].length; xAr++) {
-      if (board[xAr][yAr] != undefined) {
-        drawText(board[xAr][yAr], 40*xAr, 40 + 40*yAr, 'black', 64);
-        console.log([xAr][yAr]+"drawn")
+      if (board[yAr][xAr] != undefined) {
+        drawText(board[yAr][xAr], 40*xAr, 40 + 40*yAr, 'black', 64);
+        console.log([yAr][xAr]+"drawn")
       }
-      console.log(xAr, yAr)
+      console.log(yAr, xAr)
     }
   }
 }
