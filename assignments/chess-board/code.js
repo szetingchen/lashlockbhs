@@ -33,4 +33,4 @@ const drawBoard = (board) => {
 }
 
 
-drawBoard
+drawBoard(startBoard)
