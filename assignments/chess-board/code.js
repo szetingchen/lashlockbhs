@@ -31,6 +31,8 @@ const drawBoard = (board) => {
   }
 }
 
+
+drawBoard(startBoard)
 /*
 const checkMove = (board, piecex, piecey, targetx, targety, mode) => {
   drawBoard(board)
