@@ -32,7 +32,7 @@ const drawmandel = (iterations, bx, by, centerx, centery, zoom, c) => {
 const x = -85
 const y = 0
 const maxiterations = 10000
-const zoom = 1
+const zoom = 5
 drawmandel(maxiterations, height, height, x, y, zoom, 'black')
 
 
