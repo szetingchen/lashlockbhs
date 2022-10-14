@@ -19,7 +19,7 @@ const sum = (array) => {
 const evens = (array) => {
   let arraydos=[]
   for (let i = 0; i < array.length; i++) {
-    if (array[i]%2===10){
+    if (array[i]%2===0){
       arraydos.push(array[i])
     }
   }
