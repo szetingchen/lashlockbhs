@@ -69,12 +69,14 @@ const checkSqaure = (ax, ay, sudostart) => {
   const inVert = false
   const inHort = sudostart[ay].find(sudostart[ax][ay])!=undefined ? true : false
   const inBox = false
-  if((sudostart[ax-1][ay-1]===sudostart[ax][ay])&&(sudostart[ax][ay-1]===sudostart[ax][ay]))
+  if((sudostart[ax][ay-1]===sudostart[ax][ay])||(sudostart[ax-1][ay-1]===sudostart[ax][ay])||(sudostart[ax][ay-1]===sudostart[ax][ay])){
+
+  }
   for(let i=0; i<9; i++){
     if(sudostart[ax][i]===sudostart[ax][ay]!=undefined){
       inVert = true
     }
-  }``
+  }
   if(!inHort&&!inVert&&!inBox){
 
   }
