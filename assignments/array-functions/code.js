@@ -45,3 +45,7 @@ const pyramid = (num) => {
   }
   return array;
 }
+
+
+
+
