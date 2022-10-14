@@ -74,8 +74,15 @@ const checkSqaure = (ax, ay, sudostart) => {
     if(sudostart[ax][i]===sudostart[ax][ay]!=undefined){
       inVert = true
     }
-  }
+  }``
   if(!inHort&&!inVert&&!inBox){
 
   }
 }
+
+
+
+
+
+
+console.log(sudostart[0][-1])
