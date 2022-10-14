@@ -17,11 +17,31 @@ const sum = (array) => {
 }
 
 const evens = (array) => {
-  let arraydos=[]
+  let arraydos = []
   for (let i = 0; i < array.length; i++) {
-    if (array[i]%2===0){
+    if (array[i] % 2 === 0) {
       arraydos.push(array[i])
     }
   }
   return arraydos;
+}
+
+const anyOverOneHundred = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > 100) {
+      return true
+    }
+  }
+  return false
+}
+
+const pyramid = (num) => {
+  let i = 0;
+  let array=[];
+  for (i = 0; i < num; i++) {
+    for (let oi=0; oi < i; oi++) {
+      array.push(i);
+    }
+  }
+  return array;
 }
