@@ -80,6 +80,9 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
         inBox = true;
         console.log("in box")
       }
+      else{
+        console.log("not in box")
+      }
       console.log("---")
     }
   }
@@ -88,12 +91,20 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
       inHort = true;
       console.log("in colum")
     }
+    else{
+      console.log("not in colum")
+    }
+    console.log("---")
   }
   for (let i = 1; i < 9; i++) {
     if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && sudostarttest[ax][ay][0] != undefined) {
       inVert = true;
       console.log("in row")
     }
+    else{
+      console.log("not in row")
+    }
+    console.log("---")
   }
   if (!inHort && !inVert && !inBox && undefined) {
     return true;
