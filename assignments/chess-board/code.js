@@ -119,7 +119,7 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
   for (let i = 0; i < 9; i++) {
 
     console.log("0, " + i)
-    console.log(sudostarttest[ax][ay][0] + " " + sudostarttest[ax][i][0])
+    console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[ax][i][0])
 
     if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined)&&ay!=i) {
       inVert = true;
