@@ -67,7 +67,7 @@ const sudostart = [
 
 const canBePlaced = (ax, ay, sudostart, placement) => {
   const sudostarttest=sudostart;
-  sudostarttest[ax][ay]=placement
+  sudostarttest[ax][ay]=placement;
   let inVert = false;
   let inHort = false;
   let inBox = false;
@@ -77,17 +77,20 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
     for (x = 0; x < 9; x++) {
       if((sudostarttest[x][y][1]===sudostarttest[ax][ay][1])&&(sudostarttest[x][y][0]===sudostarttest[ax][ay][0])){
         inBox = true;
+        console.log("in box")
       }
     }
   }
   for (let i = 0; i < 9; i++) {
     if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && sudostarttest[ax][ay][0] != undefined) {
       inHort = true;
+      console.log("in row")
     }
   }
   for (let i = 0; i < 9; i++) {
     if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && sudostarttest[ax][ay][0] != undefined) {
       inVert = true;
+      console.log("in colum")
     }
   }
   if (!inHort && !inVert && !inBox && undefined) {
