@@ -103,14 +103,14 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
     console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[i][ay][0])
 
     if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined)&&ax!=i) {
-      inHort = true;
+      inVert = true;
 
-      console.log("in row")
+      console.log("in colum")
 
     }
     else{
 
-      console.log("not in row")
+      console.log("not in colum")
 
     }
     console.log("---")
@@ -122,14 +122,14 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
     console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[ax][i][0])
 
     if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined)&&ay!=i) {
-      inVert = true;
+      inHort = true;
 
-      console.log("in colum")
+      console.log("in row")
 
     }
     else{
 
-      console.log("not in colum")
+      console.log("not in row")
 
     }
 
