@@ -86,13 +86,13 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
   for (let i = 1; i < 9; i++) {
     if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && sudostarttest[ax][ay][0] != undefined) {
       inHort = true;
-      console.log("in row")
+      console.log("in colum")
     }
   }
   for (let i = 1; i < 9; i++) {
     if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && sudostarttest[ax][ay][0] != undefined) {
       inVert = true;
-      console.log("in colum")
+      console.log("in row")
     }
   }
   if (!inHort && !inVert && !inBox && undefined) {
