@@ -68,6 +68,7 @@ const sudostart = [
 const canBePlaced = (ax, ay, sudostart, placement) => {
   const sudostarttest=sudostart;
   sudostarttest[ax][ay]=placement;
+  console.log(sudostarttest[ax][ay])
   let inVert = false;
   let inHort = false;
   let inBox = false;
@@ -95,7 +96,7 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
 
     }
   }
-  for (let i = 1; i < 9; i++) {
+  for (let i = 0; i < 9; i++) {
 
     console.log(x + " " + y)
     console.log(sudostarttest[ax][ay][0] + " " + sudostarttest[i][ay][0])
@@ -113,7 +114,7 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
     }
     console.log("---")
   }
-  for (let i = 1; i < 9; i++) {
+  for (let i = 0; i < 9; i++) {
 
     console.log(x + " " + y)
     console.log(sudostarttest[ax][ay][0] + " " + sudostarttest[ax][i][0])
@@ -138,7 +139,7 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
   }
   return false;
 }
-canBePlaced(1, 1, sudostart, '4')
+canBePlaced(0, 0, sudostart, '4')
 
 
 
