@@ -141,7 +141,7 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
   }
   return false;
 }
-canBePlaced(0, 0, sudostart, '4')
+console.log(canBePlaced(0, 0, sudostart, '4'))
 
 
 
