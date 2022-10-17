@@ -65,7 +65,9 @@ const sudostart = [
 ]
 
 
-const checkSqaure = (ax, ay, sudostart) => {
+const canBePlaced = (ax, ay, sudostart, placement) => {
+  const sudostarttest=sudostart;
+  sudostarttest[ax][ay]=placement
   const inVert = false;
   const inHort = false;
   const inBox = false;
@@ -73,29 +75,28 @@ const checkSqaure = (ax, ay, sudostart) => {
   let y;
   for (y = 0; y < 9; y++) {
     for (x = 0; x < 9; x++) {
-      if((sudostart[x][y][1]===sudostart[ax][ay][1])&&(sudostart[x][y][0]===sudostart[ax][ay][0])){
-        
+      if((sudostarttest[x][y][1]===sudostarttest[ax][ay][1])&&(sudostarttest[x][y][0]===sudostarttest[ax][ay][0])){
+        inBox = true;
       }
     }
   }
   for (let i = 0; i < 9; i++) {
-    if ((sudostart[ax][ay][0] === sudostart[i][ay][0]) && sudostart[ax][ay][0] != undefined) {
+    if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && sudostarttest[ax][ay][0] != undefined) {
       inHort = true;
     }
   }
   for (let i = 0; i < 9; i++) {
-    if ((sudostart[ax][i][0] === sudostart[ax][ay][0]) && sudostart[ax][ay][0] != undefined) {
+    if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && sudostarttest[ax][ay][0] != undefined) {
       inVert = true;
     }
   }
-  if (!inHort && !inVert && !inBox) {
-
+  if (!inHort && !inVert && !inBox && undefined) {
+    return true;
   }
+  return false;
 }
+canBePlaced(0, 0, sudostart, '5')
 
 
 
 
-
-
-console.log(sudostart[0][-1])
