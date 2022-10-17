@@ -136,7 +136,7 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
     console.log("---")
 
   }
-  if (!inHort && !inVert && !inBox && undefined) {
+  if (!inHort && !inVert && !inBox) {
     return true;
   }
   return false;
