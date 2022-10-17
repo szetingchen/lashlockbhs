@@ -138,7 +138,7 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
   }
   return false;
 }
-canBePlaced(0, 0, sudostart, '4')
+canBePlaced(1, 1, sudostart, '4')
 
 
 
