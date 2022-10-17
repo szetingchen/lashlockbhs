@@ -73,7 +73,9 @@ const checkSqaure = (ax, ay, sudostart) => {
   let y;
   for (y = 0; y < 9; y++) {
     for (x = 0; x < 9; x++) {
-      if(sudostart)
+      if((sudostart[x][y][1]===sudostart[ax][ay][1])&&(sudostart[x][y][0]===sudostart[ax][ay][0])){
+        
+      }
     }
   }
   for (let i = 0; i < 9; i++) {
