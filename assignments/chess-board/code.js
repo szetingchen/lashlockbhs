@@ -144,7 +144,7 @@ console.log(canBePlaced(0, 0, sudostart, '6'))
 const drawSudo = (array) => {
   const spacing=height < width ? height/9 : width/9
   for(let i = 0; i<12; i++){
-    drawLine(0, spacing*(-i), height, spacing*(-i), 'black', 1)
+    drawLine(0, spacing*(i), height, spacing*(i), 'black', 1)
   }
   for (let y = 0; y<9; y++){
     for (let x = 0; x<9; x++){
