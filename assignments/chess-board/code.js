@@ -66,9 +66,9 @@ const sudostart = [
 
 
 const canBePlaced = (ax, ay, sudostart, placement) => {
-  const sudostarttest=sudostart;
-  sudostarttest[ax][ay][0]=placement;
-  
+  const sudostarttest = sudostart;
+  sudostarttest[ax][ay][0] = placement;
+
   let inVert = false;
   let inHort = false;
   let inBox = false;
@@ -79,13 +79,13 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
       console.log("target box: " + sudostarttest[ax][ay][1] + " check box: " + sudostarttest[x][y][1])
       console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[x][y][0])
 
-      if((sudostarttest[x][y][1]===sudostarttest[ax][ay][1])&&(sudostarttest[x][y][0]===sudostarttest[ax][ay][0])&&ax!=x&&ay!=y){
+      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0]) && ax != x && ay != y) {
         inBox = true;
 
         console.log("in box")
 
       }
-      else{
+      else {
 
         console.log("not in box")
 
@@ -97,16 +97,16 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
   }
   for (let i = 0; i < 9; i++) {
 
-    console.log("0, "  + i)
+    console.log("0, " + i)
     console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[i][ay][0])
 
-    if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined)&&ax!=i) {
+    if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ax != i) {
       inVert = true;
 
       console.log("in colum")
 
     }
-    else{
+    else {
 
       console.log("not in colum")
 
@@ -119,13 +119,13 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
     console.log("0, " + i)
     console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[ax][i][0])
 
-    if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined)&&ay!=i) {
+    if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ay != i) {
       inHort = true;
 
       console.log("in row")
 
     }
-    else{
+    else {
 
       console.log("not in row")
 
@@ -141,6 +141,17 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
 }
 console.log(canBePlaced(0, 0, sudostart, '6'))
 
+const drawSudo = (array) => {
+  const spacing=height < width ? height/9 : width/9
+  for(let i = 0; i<12; i++){
+    drawLine(0, spacing*(-i), height, spacing*(-i), color, lineWidth)
+  }
+  for (let y = 0; y<9; y++){
+    for (let x = 0; x<9; x++){
+
+    }
+  }
+}
 
 
 
