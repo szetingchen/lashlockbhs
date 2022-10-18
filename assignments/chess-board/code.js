@@ -152,6 +152,6 @@ const drawSudo = (array) => {
     }
   }
 }
-
+drawSudo(sudostart)
 
 
