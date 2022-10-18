@@ -97,7 +97,7 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
   }
   for (let i = 0; i < 9; i++) {
 
-    console.log(i + ", 0")
+    console.log("0, "  + i)
     console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[i][ay][0])
 
     if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined)&&ax!=i) {
