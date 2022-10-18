@@ -32,7 +32,7 @@ const drawBoard = (board) => {
 }
 
 
-drawBoard(startBoard)
+//drawBoard(startBoard)
 /*
 const checkMove = (board, piecex, piecey, targetx, targety, mode) => {
   drawBoard(board)
@@ -72,10 +72,8 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
   let inVert = false;
   let inHort = false;
   let inBox = false;
-  let x;
-  let y;
-  for (x = 0; x < 9; x++) {
-    for (y = 0; y < 9; y++) {
+  for (let x = 0; x < 9; x++) {
+    for (let y = 0; y < 9; y++) {
 
       console.log(x + ", " + y)
       console.log("target box: " + sudostarttest[ax][ay][1] + " check box: " + sudostarttest[x][y][1])
