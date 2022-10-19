@@ -80,7 +80,7 @@ const canBePlaced = (ay, ax, sudostart, placement) => {
 
       console.log(x + ", " + y)
       console.log(ax + ", " + ay)
-      console.log([ax, ay]!=[x, y])
+      console.log(ax, ay!=x, y)
       console.log("target box: " + sudostarttest[ax][ay][1] + " check box: " + sudostarttest[x][y][1])
       console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[x][y][0])
 
