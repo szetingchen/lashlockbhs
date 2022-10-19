@@ -142,12 +142,15 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
 console.log(canBePlaced(0, 0, sudostart, '6'))
 
 const drawSudo = (array) => {
-  const spacing=height < width ? height/9 : width/9
+  let thickness=3;
+  const spacing=height < width ? height/9 : width/9;
   for(let i = 0; i<10; i++){
-    drawLine(0, spacing*(i), height, spacing*(i), 'black', 1)
+    thickness=i%3===0 ? 3 : 1;
+    drawLine(0, spacing*(i), height, spacing*(i), 'black', thickness)
   }
   for(let i = 0; i<10; i++){
-    drawLine(spacing*(i), 0, spacing*(i), width, 'black', 1)
+    thickness=i%3===0 ? 3 : 1;
+    drawLine(spacing*(i), 0, spacing*(i), width, 'black', thickness)
   }
   for (let y = 0; y<9; y++){
     for (let x = 0; x<9; x++){
