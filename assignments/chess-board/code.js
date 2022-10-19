@@ -65,7 +65,7 @@ let sudostart = [
 ]
 
 
-const canBePlaced = (ax, ay, sudostart, placement) => {
+const canBePlaced = (ay, ax, sudostart, placement) => {
   const sudostarttest = sudostart;
   if(sudostarttest[ax][ay][0] != ''){
     return false;
