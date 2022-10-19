@@ -174,7 +174,9 @@ const solve_aspossible = (array) =>{
       }
       if(possible.length===1){
         console.log(possible)
+        console.log("changed: " + newarray[x][y][0] + "to: " + possible[0])
         newarray[x][y][0] = possible[0];
+        
       }
     }
   }
