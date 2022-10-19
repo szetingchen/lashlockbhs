@@ -180,9 +180,10 @@ const solve_aspossible = (array) =>{
   return newarray;
 }
 
-drawSudo(sudostart)
-
-drawSudo(sudostart)
+drawSudo(sudostart);
+solve_aspossible(sudostart);
+sudostart=solve_aspossible;
+drawSudo(sudostart);
 
 
 
