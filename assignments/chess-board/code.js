@@ -194,4 +194,4 @@ drawSudo(sudostart);
 
 
 
-console.log(canBePlaced(1, 1, sudostart, 3))
+console.log(canBePlaced(0, 1, sudostart, 3))
