@@ -191,4 +191,4 @@ const solve_aspossible = (array) =>{
 
 
 
-canBePlaced(0, 0, sudostart, 1)
+console.log(canBePlaced(0, 0, sudostart, 1))
