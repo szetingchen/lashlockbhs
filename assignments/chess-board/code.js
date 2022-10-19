@@ -146,7 +146,7 @@ const drawSudo = (array) => {
   for(let i = 0; i<12; i++){
     drawLine(0, spacing*(i), height, spacing*(i), 'black', 1)
   }
-  for(let i = 0; i<12; i++){
+  for(let i = 0; i<10; i++){
     drawLine(spacing*(i), 0, spacing*(i), width, 'black', 1)
   }
   for(let i = 0; i<12; i++){
