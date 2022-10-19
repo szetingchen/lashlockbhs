@@ -172,12 +172,13 @@ const solve_aspossible = (array) =>{
           possible.push(n);
         }
       }
+      console.log("possible nums for " + x + ", " + y+possible.length)
       if(possible.length===1){
         console.log(possible)
         console.log("changed: " + newarray[x][y][0] + "to: " + possible[0])
         newarray[x][y][0] = possible[0];
-        
       }
+
     }
   }
   return newarray;
