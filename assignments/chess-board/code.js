@@ -65,7 +65,7 @@ let sudostart = [
 ]
 
 
-const canBePlaced = (ax, ay, sudostart, placement) => {
+const canBePlaced = (ay, ax, sudostart, placement) => {
   const sudostarttest = sudostart;
   if(sudostarttest[ax][ay][0] != ''){
     return false;
@@ -82,7 +82,7 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
       console.log("target box: " + sudostarttest[ax][ay][1] + " check box: " + sudostarttest[x][y][1])
       console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[x][y][0])
 
-      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0]) && [ax, ay]!=[x, y]){
+      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0]) && [ay, ax]!=[x, y]){
         inBox = true;
 
         console.log("in box")
