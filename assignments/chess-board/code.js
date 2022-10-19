@@ -172,7 +172,7 @@ const solve_aspossible = (array) =>{
         if(canBePlaced(x, y, newarray, n)===true){
           console.log(x + ", " + y + " num: " + n)
           console.log("can be placed")
-          possible.push(n);
+          possible.push(n+"");
         }
       }
       console.log("possible nums for " + x + ", " + y + " are " + possible)
