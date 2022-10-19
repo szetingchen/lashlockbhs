@@ -139,7 +139,6 @@ const canBePlaced = (ax, ay, sudostart, placement) => {
   }
   return false;
 }
-console.log(canBePlaced(0, 0, sudostart, '6'))
 
 const drawSudo = (array) => {
   let thickness=3;
@@ -154,7 +153,6 @@ const drawSudo = (array) => {
   }
   for (let y = 0; y<9; y++){
     for (let x = 0; x<9; x++){
-      console.log(array[y][x][0])
       drawText(array[y][x][0], (x*spacing), (y*spacing)+spacing, 'black', spacing)
     }
   }
