@@ -183,6 +183,7 @@ const solve_aspossible = (array) =>{
 
 drawSudo(sudostart);
 solve_aspossible(sudostart);
+console.log(solve_aspossible)
 sudostart=solve_aspossible;
 drawSudo(sudostart);
 
