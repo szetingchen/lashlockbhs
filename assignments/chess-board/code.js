@@ -168,7 +168,7 @@ const solve_aspossible = (array) =>{
       possible = [];
       let n;
       for(n=0; n<9; n++){
-        if(canBePlaced(x, y, array, n)){
+        if(canBePlaced(x, y, array, n)===true){
           console.log("can be placed")
           possible.push(n);
         }
