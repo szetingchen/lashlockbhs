@@ -67,6 +67,9 @@ let sudostart = [
 
 const canBePlaced = (ax, ay, sudostart, placement) => {
   const sudostarttest = sudostart;
+  if(sudostarttest[ax][ay][0] != undefined){
+    return false;
+  }
   sudostarttest[ax][ay][0] = placement;
 
   let inVert = false;
