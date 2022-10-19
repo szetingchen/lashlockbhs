@@ -154,7 +154,7 @@ const drawSudo = (array) => {
   }
   for (let y = 0; y<9; y++){
     for (let x = 0; x<9; x++){
-      drawText(sudostart[x][y][0], (x*spacing)/spacing/4, (y*spacing)+spacing/4, 'black', spacing)
+      drawText(sudostart[x][y][0], (x*spacing)+spacing/4, (y*spacing)+spacing/4, 'black', spacing)
     }
   }
 }
