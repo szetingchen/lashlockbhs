@@ -128,7 +128,7 @@ const drawSudo = (array) => {
 }
 
 const solve_aspossible = (array) => {
-  const newarray = array;
+  const newarray = JSON.parse(JSON.stringify(array));;
 
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
@@ -137,6 +137,9 @@ const solve_aspossible = (array) => {
         if (canBePlaced(x, y, newarray, n + "")) {
           possible.push(n + "")
         }
+      }
+      if(possible.length===1){
+        newarray[x][y][0]
       }
     }
   }
