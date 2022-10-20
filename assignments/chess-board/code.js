@@ -159,6 +159,3 @@ for (let n = 1; n <= 9; n++) {
 console.log(possible)
 
 
-
-let n = 3
-console.log(canBePlaced(2,0, sudostart, n+""))
