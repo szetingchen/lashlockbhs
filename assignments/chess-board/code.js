@@ -152,4 +152,4 @@ drawSudo(sudostart)
 
 
 
-solve_aspossible(sudostart)
+drawSudo(solve_aspossible(sudostart))
