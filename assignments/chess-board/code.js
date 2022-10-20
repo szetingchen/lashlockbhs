@@ -150,7 +150,7 @@ drawSudo(sudostart)
 
 let possible = []
 for (let n = 1; n <= 9; n++) {
-  canBePlaced(0, 2, sudostart, n+"")
+  console.log(canBePlaced(0, 2, sudostart, n+""))
 }
 console.log(possible)
 
