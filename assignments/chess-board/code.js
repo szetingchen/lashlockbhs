@@ -148,7 +148,7 @@ drawSudo(sudostart)
 
 let possible = []
 for (let n = 1; n <= 9; n++) {
-  if (canBePlaced(0, 2, sudostart, n + "")) {
+  if (canBePlaced(0, 2, sudostart, n)) {
     possible.push(n + "")
     console.log("E")
   }
