@@ -135,7 +135,6 @@ const solve_aspossible = (array) => {
       let possible = [];
       for (let n = 1; n <= 9; n++) {
         if (canBePlaced(x, y, newarray, n + "")) {
-          console.log(newarray)
           possible.push(n + "")
         }
       }
