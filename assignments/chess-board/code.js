@@ -159,4 +159,4 @@ console.log(possible)
 
 
 let n = 1
-canBePlaced(0, 2, sudostart, n)
+console.log(canBePlaced(0, 2, sudostart, n))
