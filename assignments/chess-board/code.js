@@ -152,7 +152,7 @@ for(let i =0; i<9; i++){
   console.log(canBePlaced(0, 2, sudostart, i+""))
 }
 */
-console.log(canBePlaced(0, 2, sudostart, 5+""))
+console.log(canBePlaced(0, 2, sudostart, 6+""))
 
 
 
