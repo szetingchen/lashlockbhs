@@ -190,7 +190,6 @@ const solve_aspossible = (array) =>{
  
 drawSudo(sudostart);
 let e  = solve_aspossible(sudostart);
-drawSudo(e);
 
 
 
