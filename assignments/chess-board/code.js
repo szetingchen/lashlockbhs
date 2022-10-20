@@ -151,6 +151,5 @@ drawSudo(sudostart)
 let canbeplaced = canBePlaced(0, 2, sudostart, 1+"")
 console.log(canbeplaced)
 
-console.log(possible)
 
 
