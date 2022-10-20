@@ -166,7 +166,7 @@ const solve_aspossible = (array) =>{
   const newarray=array;
   let possible;
   for(let y=0; y<1; y++){
-    for(let x=0; x<2; x++){
+    for(let x=0; x<3; x++){
       possible = [];
       let n;
       for(n=1; n<=9; n++){
