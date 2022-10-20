@@ -139,6 +139,8 @@ const solve_aspossible = (array) => {
           console.log("can be placed: " + n)
         }
       }
+      console.log(possible)
+      console.log("---")
       if(possible.length===1){
         newarray[x][y][0]=possible[0]
       }
