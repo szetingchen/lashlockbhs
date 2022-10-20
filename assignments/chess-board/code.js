@@ -157,7 +157,7 @@ for(let i =0; i<9; i++){
 let i =1;
 let x =0;
 let y =2;
-console.log("can be placed? (" + x + ", " +  y + ") :" + canBePlaced(x, y, sudostart, i+""))
+console.log("can be placed? (" + x + ", " +  y + ") : " + canBePlaced(x, y, sudostart, i+""))
 
 
 
