@@ -176,7 +176,7 @@ const solve_aspossible = (array) =>{
           possible.push(n+"");
         }
         else{
-          console.log(x + ", " + y + " num: " + n)'
+          console.log(x + ", " + y + " num: " + n)
           console.log("cannot be placed")
         }
       }
