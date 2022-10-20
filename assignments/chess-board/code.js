@@ -76,12 +76,11 @@ const canBePlaced = (ay, ax, sudostart, placement) => {
   let inBox = false;
   for (let x = 0; x < 9; x++) {
     for (let y = 0; y < 9; y++) {
-      console.log(y + ", " + x + " : " + sudostarttest[x][y][0])
-
       if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0]) && !((ax === x) && (ay === y))) {
         inBox = true;
       }
       else {
+        console.log(y + ", " + x + " : " + sudostarttest[x][y][0])
       }
     }
   }
