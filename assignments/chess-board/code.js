@@ -147,8 +147,13 @@ const solve_aspossible = (array) => {
 drawSudo(sudostart)
 
 
-let canbeplaced = canBePlaced(0, 2, sudostart, 2+"")
-console.log(canbeplaced)
+
+for(let i =0; i<9; i++){
+  canBePlaced(0, 2, sudostart, i+"")
+}
+
+
+
 
 
 
