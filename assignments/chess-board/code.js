@@ -67,57 +67,35 @@ let sudostart = [
 
 const canBePlaced = (ay, ax, sudostart, placement) => {
   const sudostarttest = sudostart;
-  if(sudostarttest[ax][ay][0] != ''){
+  if (sudostarttest[ax][ay][0] != '') {
     return false;
   }
   sudostarttest[ax][ay][0] = placement;
-
   let inVert = false;
   let inHort = false;
   let inBox = false;
   for (let x = 0; x < 9; x++) {
     for (let y = 0; y < 9; y++) {
-      console.log("target box: " + sudostarttest[ax][ay][1] + " check box: " + sudostarttest[x][y][1])
-      console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[x][y][0])
-
-      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0])&&!((ax === x) && (ay === y))){
+      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0]) && !((ax === x) && (ay === y))) {
         inBox = true;
-        console.log("in box")
       }
       else {
       }
     }
   }
   for (let i = 0; i < 9; i++) {
-    console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[i][ay][0])
     if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ax != i) {
       inVert = true;
-
-      console.log("in colum")
-
     }
     else {
-
-
     }
   }
-
   for (let i = 0; i < 9; i++) {
-
-    console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[ax][i][0])
-
     if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ay != i) {
       inHort = true;
-
-      console.log("in row")
-
     }
     else {
-
-
     }
-
-
   }
   if (!inHort && !inVert && !inBox) {
     console.log("true")
@@ -125,49 +103,51 @@ const canBePlaced = (ay, ax, sudostart, placement) => {
   }
   console.log("false")
   return false;
-  
 }
 
+
+
+
 const drawSudo = (array) => {
-  let thickness=3;
-  const spacing=height < width ? height/9 : width/9;
-  for(let i = 0; i<10; i++){
-    thickness=i%3===0 ? 3 : 1;
-    drawLine(0, spacing*(i), height, spacing*(i), 'black', thickness)
+  let thickness = 3;
+  const spacing = height < width ? height / 9 : width / 9;
+  for (let i = 0; i < 10; i++) {
+    thickness = i % 3 === 0 ? 3 : 1;
+    drawLine(0, spacing * (i), height, spacing * (i), 'black', thickness)
   }
-  for(let i = 0; i<10; i++){
-    thickness=i%3===0 ? 3 : 1;
-    drawLine(spacing*(i), 0, spacing*(i), width, 'black', thickness)
+  for (let i = 0; i < 10; i++) {
+    thickness = i % 3 === 0 ? 3 : 1;
+    drawLine(spacing * (i), 0, spacing * (i), width, 'black', thickness)
   }
-  for (let y = 0; y<9; y++){
-    for (let x = 0; x<9; x++){
-      if(array[y][x][0]!=undefined){
-        drawText(array[y][x][0], (x*spacing), (y*spacing)+spacing, 'black', spacing)
+  for (let y = 0; y < 9; y++) {
+    for (let x = 0; x < 9; x++) {
+      if (array[y][x][0] != undefined) {
+        drawText(array[y][x][0], (x * spacing), (y * spacing) + spacing, 'black', spacing)
       }
     }
   }
 }
 
-const solve_aspossible = (array) =>{
-  const newarray=array;
+const solve_aspossible = (array) => {
+  const newarray = array;
   let possible;
-  for(let y=0; y<9; y++){
-    for(let x=0; x<9; x++){
+  for (let y = 0; y < 9; y++) {
+    for (let x = 0; x < 9; x++) {
       possible = [];
       let n;
-      for(n=1; n<=9; n++){
-        if(canBePlaced(x, y, newarray, n)===true){
+      for (n = 1; n <= 9; n++) {
+        if (canBePlaced(x, y, newarray, n) === true) {
           console.log(x + ", " + y + " num: " + n)
           console.log("can be placed")
-          possible.push(n+"");
+          possible.push(n + "");
         }
-        else{
+        else {
           console.log(x + ", " + y + " num: " + n)
           console.log("cannot be placed")
         }
       }
       console.log("possible nums for " + x + ", " + y + " are " + possible)
-      if(possible.length===1){
+      if (possible.length === 1) {
         console.log(possible)
         console.log("changed: " + newarray[x][y][0] + "to: " + possible[0])
         newarray[x][y][0] = possible[0];
