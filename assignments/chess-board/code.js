@@ -147,7 +147,7 @@ const solve_aspossible = (array) => {
 drawSudo(sudostart)
 
 
-let canbeplaced = canBePlaced(0, 2, sudostart, "2")
+let canbeplaced = canBePlaced(0, 2, sudostart, "3")
 console.log(canbeplaced)
 
 
