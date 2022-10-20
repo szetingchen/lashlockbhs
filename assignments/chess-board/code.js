@@ -166,11 +166,11 @@ const solve_aspossible = (array) =>{
   const newarray=array;
   let possible;
   for(let y=0; y<9; y++){
-    for(let x=0; x<9; x++){
+    for(let x=0; x<2; x++){
       possible = [];
       let n;
-      for(n=1; n<=2; n++){
-        if(canBePlaced(x, y, newarray, n)){
+      for(n=1; n<=9; n++){
+        if(canBePlaced(x, y, newarray, n)===true){
           console.log(x + ", " + y + " num: " + n)
           console.log("can be placed")
           possible.push(n+"");
@@ -190,6 +190,7 @@ const solve_aspossible = (array) =>{
  
 drawSudo(sudostart);
 let e  = solve_aspossible(sudostart);
+drawSudo(e);
 
 
 
