@@ -160,5 +160,5 @@ console.log(possible)
 */
 
 
-let n = 3
+let n = 4
 console.log(canBePlaced(2,0, sudostart, n+""))
