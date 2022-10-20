@@ -175,6 +175,10 @@ const solve_aspossible = (array) =>{
           console.log("can be placed")
           possible.push(n+"");
         }
+        else{
+          console.log(x + ", " + y + " num: " + n)'
+          console.log("cannot be placed")
+        }
       }
       console.log("possible nums for " + x + ", " + y + " are " + possible)
       if(possible.length===1){
