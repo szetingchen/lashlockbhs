@@ -155,8 +155,8 @@ for(let i =1; i<9; i++){
 
 
 
-console.log("can be placed? (" + x + ", " +  y + ") : " + canBePlaced(0, 2, sudostart, 1+""))
-console.log("can be placed? (" + x + ", " +  y + ") : " + canBePlaced(0, 2, sudostart, 2+""))
+console.log(canBePlaced(0, 2, sudostart, 1+""))
+console.log(canBePlaced(0, 2, sudostart, 2+""))
 
 
 
