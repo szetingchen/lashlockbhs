@@ -139,7 +139,7 @@ const solve_aspossible = (array) => {
         }
       }
       if(possible.length===1){
-        newarray[x][y][0]
+        newarray[x][y][0]=possible[0]
       }
     }
   }
