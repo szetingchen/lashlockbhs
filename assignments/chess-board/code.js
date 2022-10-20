@@ -120,9 +120,12 @@ const canBePlaced = (ay, ax, sudostart, placement) => {
 
   }
   if (!inHort && !inVert && !inBox) {
+    console.log("true")
     return true;
   }
+  console.log("false")
   return false;
+  
 }
 
 const drawSudo = (array) => {
