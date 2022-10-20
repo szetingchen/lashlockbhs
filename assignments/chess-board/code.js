@@ -146,8 +146,11 @@ const solve_aspossible = (array) => {
   return newarray;
 }
 drawSudo(sudostart)
+
+
+let possible = []
 for (let n = 1; n <= 9; n++) {
-  if (canBePlaced(x, y, newarray, n + "")) {
+  if (canBePlaced(0, 0, sudostart, n + "")) {
     possible.push(n + "")
   }
 }
