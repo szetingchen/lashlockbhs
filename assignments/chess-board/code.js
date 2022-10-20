@@ -101,7 +101,6 @@ const canBePlaced = (ay, ax, sudostart, placement) => {
     console.log("true")
     return true;
   }
-  console.log("false")
   return false;
 }
 
