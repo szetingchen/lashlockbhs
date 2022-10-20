@@ -52,7 +52,7 @@ checkMove(startBoard, 0, 1, 6, 0, null)
 
 //sudoku
 
-let sudostart = [
+const sudostart = [
   [['5', 1], ['3', 1], ['', 1], ['', 2], ['7', 2], ['', 2], ['', 3], ['', 3], ['', 3]],
   [['6', 1], ['', 1], ['', 1], ['1', 2], ['9', 2], ['5', 2], ['', 3], ['', 3], ['', 3]],
   [['', 1], ['9', 1], ['8', 1], ['', 2], ['', 2], ['', 2], ['', 3], ['6', 3], ['', 3]],
@@ -65,12 +65,9 @@ let sudostart = [
 ]
 
 
-const canBePlaced = (ay, ax, sudostart, placement) => {
+const canBePlaced = (ax, ay, sudostart, placement) => {
   const sudostarttest = sudostart;
-  if(sudostarttest[ax][ay][0] != ''){
-    return false;
-  }
-  sudostarttest[ax][ay][0] = placement;
+  placement=sudostarttest[ax][ay][0];
 
   let inVert = false;
   let inHort = false;
@@ -78,62 +75,63 @@ const canBePlaced = (ay, ax, sudostart, placement) => {
   for (let x = 0; x < 9; x++) {
     for (let y = 0; y < 9; y++) {
 
-      //console.log(x + ", " + y)
-      //console.log(ax + ", " + ay)
-      //console.log("target box: " + sudostarttest[ax][ay][1] + " check box: " + sudostarttest[x][y][1])
-      //console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[x][y][0])
+      console.log(x + ", " + y)
+      console.log("target box: " + sudostarttest[ax][ay][1] + " check box: " + sudostarttest[x][y][1])
+      console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[x][y][0])
 
-      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0])&&!((ax === x) && (ay === y))){
+      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0]) && ax != x && ay != y) {
         inBox = true;
 
-        //console.log("in box")
+        console.log("in box")
 
       }
       else {
 
-        //console.log("not in box")
+        console.log("not in box")
 
       }
 
-      //console.log("---")
+      console.log("---")
 
     }
   }
   for (let i = 0; i < 9; i++) {
-    //console.log("0, " + i)
-    //console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[i][ay][0])
+
+    console.log("0, " + i)
+    console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[i][ay][0])
+
     if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ax != i) {
       inVert = true;
 
-      //console.log("in colum")
+      console.log("in colum")
 
     }
     else {
 
-      //console.log("not in colum")
+      console.log("not in colum")
 
     }
-    //console.log("---")
+    console.log("---")
   }
 
   for (let i = 0; i < 9; i++) {
 
-    //console.log("0, " + i)
-    //console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[ax][i][0])
+    console.log("0, " + i)
+    console.log("target num: " + sudostarttest[ax][ay][0] + " check num: " + sudostarttest[ax][i][0])
 
     if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ay != i) {
       inHort = true;
 
-      //console.log("in row")
+      console.log("in row")
 
     }
     else {
 
-      //console.log("not in row")
+      console.log("not in row")
 
     }
 
-    //console.log("---")
+    console.log("---")
 
   }
   if (!inHort && !inVert && !inBox) {
@@ -141,6 +139,7 @@ const canBePlaced = (ay, ax, sudostart, placement) => {
   }
   return false;
 }
+console.log(canBePlaced(0, 0, sudostart, '6'))
 
 const drawSudo = (array) => {
   let thickness=3;
@@ -155,40 +154,11 @@ const drawSudo = (array) => {
   }
   for (let y = 0; y<9; y++){
     for (let x = 0; x<9; x++){
-      if(array[y][x][0]!=undefined){
-        drawText(array[y][x][0], (x*spacing), (y*spacing)+spacing, 'black', spacing)
-      }
+      console.log(array[y][x][0])
+      drawText(array[y][x][0], (x*spacing), (y*spacing)+spacing, 'black', spacing)
     }
   }
 }
-
-const solve_aspossible = (array) =>{
-  const newarray=array;
-  let possible;
-  for(let y=0; y<1; y++){
-    for(let x=0; x<3; x++){
-      possible = [];
-      let n;
-      for(n=1; n<=9; n++){
-        if(canBePlaced(x, y, newarray, n)===true){
-          console.log(x + ", " + y + " num: " + n)
-          console.log("can be placed")
-          possible.push(n+"");
-        }
-      }
-      console.log("possible nums for " + x + ", " + y + " are " + possible)
-      if(possible.length===1){
-        console.log(possible)
-        console.log("changed: " + newarray[x][y][0] + "to: " + possible[0])
-        newarray[x][y][0] = possible[0];
-      }
-
-    }
-  }
-  return newarray;
-}
- 
-
 drawSudo(sudostart)
-let e = canBePlaced(2, 0, sudostart, '3')
-drawSudo(e)
+
+
