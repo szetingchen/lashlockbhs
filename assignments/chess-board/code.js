@@ -165,7 +165,7 @@ const drawSudo = (array) => {
 const solve_aspossible = (array) =>{
   const newarray=array;
   let possible;
-  for(let y=0; y<9; y++){
+  for(let y=0; y<1; y++){
     for(let x=0; x<2; x++){
       possible = [];
       let n;
