@@ -132,7 +132,7 @@ const solve_aspossible = (array) => {
   const newarray = array;
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
-      for (let n = 1; m < 9; n++) {
+      for (let n = 1; n <= 9; n++) {
 
       }
     }
