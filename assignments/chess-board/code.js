@@ -80,7 +80,7 @@ const canBePlaced = (ay, ax, sudostart, placement) => {
         inBox = true;
       }
       else {
-        console.log(y + ", " + x + " : " + sudostarttest[x][y][0])
+        //console.log(y + ", " + x + " : " + sudostarttest[x][y][0])
       }
     }
   }
