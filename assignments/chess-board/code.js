@@ -154,3 +154,4 @@ for (let n = 1; n <= 9; n++) {
     possible.push(n + "")
   }
 }
+console.log(possible)
