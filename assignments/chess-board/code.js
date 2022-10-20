@@ -138,7 +138,6 @@ const solve_aspossible = (array) => {
           possible.push(n + "")
         }
       }
-      console.log(possible)
     }
   }
   return newarray;
