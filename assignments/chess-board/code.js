@@ -149,7 +149,7 @@ drawSudo(sudostart)
 
 
 for(let i =0; i<9; i++){
-  canBePlaced(0, 2, sudostart, i+"")
+  console.log(canBePlaced(0, 2, sudostart, i+""))
 }
 
 
