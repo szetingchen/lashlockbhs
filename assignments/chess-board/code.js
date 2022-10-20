@@ -130,11 +130,16 @@ const drawSudo = (array) => {
 
 const solve_aspossible = (array) => {
   const newarray = array;
+  
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
+      let possible=[];
       for (let n = 1; n <= 9; n++) {
-
+        if(canBePlaced(x, y, newarray, n+"")){
+          possible.push(n+"")
+        }
       }
+      console.log(possible)
     }
   }
   return newarray;
