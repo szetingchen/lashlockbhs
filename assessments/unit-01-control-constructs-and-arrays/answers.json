@@ -16,5 +16,6 @@
   "undefined",
   "xs[2][1]",
   "200",
-  "true"
+  "true",
+  "The sum of the numbers from 0 to numbers.length."
 ]
