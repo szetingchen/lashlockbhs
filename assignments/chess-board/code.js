@@ -130,22 +130,18 @@ const drawSudo = (array) => {
 const solve_aspossible = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
   console.log(newarray)
-  for (let y = 0; y < 9; y++) {
-    for (let x = 0; x < 9; x++) {
-      let possible = [];
-      for (let n = 1; n <= 9; n++) {
-        if (canBePlaced(x, y, newarray, n + "")) {
-          possible.push(n + "")
-          console.log("can be placed: " + x + ", " +y + " : " + n)
+  for (let box = 1; box <= 9; box++) {
+    for (let num = 1; num < 9; num++) {
+      let numpossibleofnum = 0
+      for (let y = 1; y<=9; y++){
+        for (let x = 1; x<=9; x++){
+          if(newarray[x][y][1]===n && !canBePlaced(x, y, newarray, num)){
+            numpossibleofnum++
+          }
         }
       }
-      console.log(possible)
-      console.log("---")
-      if(possible.length===1){
-        newarray[y][x][0]=possible[0]
-        console.log("changed: " + "("+ possible[0]+")" + "newarray point check: " + newarray[x][y][0])
-        console.log(newarray)
-        drawSudo(newarray)
+      if(numpossibleofnum===1){
+        newarray[x][y][0]=nun
       }
     }
   }
