@@ -13,5 +13,5 @@
   "10",
   "xs[xs.length - 1]",
   "3",
-  "Nothing, it’s a syntax error."
+  "0"
 ]
