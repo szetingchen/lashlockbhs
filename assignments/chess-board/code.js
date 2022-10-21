@@ -144,8 +144,8 @@ const solve_aspossible = (array) => {
       if(possible.length===1){
         newarray[x][y][0]=possible[0]
         console.log("changed: " + "("+ possible[0]+")" + "newarray point check: " + newarray[x][y][0])
+        console.log(newarray)
         drawSudo(newarray)
-
       }
     }
   }
