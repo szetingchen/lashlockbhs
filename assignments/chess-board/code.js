@@ -136,7 +136,7 @@ const solve_aspossible = (array) => {
       for (let n = 1; n <= 9; n++) {
         if (canBePlaced(x, y, newarray, n + "")) {
           possible.push(n + "")
-          console.log("can be placed: " + y + ", " +x + " : " + n)
+          console.log("can be placed: " + x + ", " +y + " : " + n)
         }
       }
       console.log(possible)
