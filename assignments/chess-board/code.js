@@ -65,12 +65,15 @@ let sudostart = [
 ]
 
 const convert = (mode, n, array) => {
+  let newarray = []
   if(mode === "box"){
-    arr
+    
   }
   else if(mode === "vert"){
-
-  }
+    for(let i = 0; i<9; i++){
+      newarray.push(array[])
+    }
+  } 
   else if(mode === "hort"){
 
   }
