@@ -18,5 +18,5 @@
   "200",
   "true",
   "The sum of the elements of the array.",
-  "Produces a new array containing all the words in words in uppercase."
+  "Changes all the words in the words array to uppercase."
 ]
