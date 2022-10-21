@@ -135,7 +135,7 @@ const solve_aspossible = (array) => {
       let numpossibleofnum = 0
       for (let y = 1; y<=9; y++){
         for (let x = 1; x<=9; x++){
-          if(newarray[x][y][1]===n && !canBePlaced(x, y, newarray, num)){
+          if(newarray[x][y][1]===num && !canBePlaced(x, y, newarray, num)){
             numpossibleofnum++
           }
         }
