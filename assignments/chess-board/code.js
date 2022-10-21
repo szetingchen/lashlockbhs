@@ -152,7 +152,6 @@ const solve_aspossible = (array) => {
   return newarray; 
 
 }
-drawSudo(sudostart)
 solve_aspossible(sudostart)
 
 
