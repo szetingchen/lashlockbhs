@@ -152,7 +152,7 @@ const solve_aspossible = (array) => {
   return newarray; 
 
 }
-
+solve_aspossible(sudostart)
 
 
 
