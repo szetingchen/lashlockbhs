@@ -129,7 +129,7 @@ const drawSudo = (array) => {
 
 const solve_aspossible = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
-  console.log(newarray)
+  console.log(newarray[0][0][1])
   for (let box = 1; box <= 9; box++) {
     for (let num = 1; num < 9; num++) {
       let numpossibleofnum = 0
