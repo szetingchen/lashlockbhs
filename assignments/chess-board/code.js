@@ -157,13 +157,14 @@ const solve = (array) => {
   for(let i = 1; i<=9; i++){
     if(canBePlaced(x, y, newarray, i)){
       newarray[y][x][0]=i
+      clear();
       drawSudo(newarray)
       if(solve(newarray)){
         return true
       }
       newarray[y][x] = ''
     }
-    
+    clear();
     drawSudo(newarray)
   }
   return false
