@@ -77,6 +77,7 @@ const convert = (mode, n, array) => {
       newarray[row].push(array[num])
     }
   }
+  console.log(newarray)
   if (mode === "box") {
 
   }
@@ -95,7 +96,7 @@ const convert = (mode, n, array) => {
 }
 
 convert('none', 0, sudostart)
-
+console.log(sudostart)
 
 
 
