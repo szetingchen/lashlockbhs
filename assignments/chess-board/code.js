@@ -83,7 +83,7 @@ const convert = (mode,x, y, array) => {
   }
   else if (mode === "vert") {
     for (let i = 0; i < 9; i++) {
-      newAr.push(array[i][x])
+      newAr.push(array[x][i])
     }
   }
   else if (mode === "hort") {
