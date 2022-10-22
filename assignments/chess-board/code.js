@@ -68,42 +68,34 @@ const convert = (mode, x, y, array) => {
 
 
   let convert2d = [];
+  let convert2Box = []
   let newAr = [];
   let num = -1;
-
+  for (let row = 0; row < 9; row++) {
+    convert2d.push([])
+    for (let rowx = 0; rowx < 9; rowx++) {
+      num++;
+      convert2d[row].push(array[num])
+    }
+  }
   if (mode === "box") {
     for (let boxnum = 0; boxnum < 9; boxnum++) {
       convert2d.push([])
       for (let y = 0; y < 3; y++) {
         for (let x = 0; x < 3; x++) {
-          num++
-          convert2d[boxnum].push(array[num])
+          convert2d[boxnum].push(convert2d[y][x])
         }
       }
     }
     console.log(convert2d)
   }
   else if (mode === "vert") {
-    for (let row = 0; row < 9; row++) {
-      convert2d.push([])
-      for (let rowx = 0; rowx < 9; rowx++) {
-        num++;
-        convert2d[row].push(array[num])
-      }
-    }
     for (let i = 0; i < 9; i++) {
       newAr.push(convert2d[x][i])
 
     }
   }
   else if (mode === "hort") {
-    for (let row = 0; row < 9; row++) {
-      convert2d.push([])
-      for (let rowx = 0; rowx < 9; rowx++) {
-        num++;
-        convert2d[row].push(array[num])
-      }
-    }
     for (let i = 0; i < 9; i++) {
       newAr.push(convert2d[i][y])
     }
