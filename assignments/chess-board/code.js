@@ -162,8 +162,8 @@ const solve = (array) => {
         return true
       }
       newarray[y][x] = ''
+      drawSudo(newarray)
     }
-    drawSudo(newarray)
   }
   return false
 }
