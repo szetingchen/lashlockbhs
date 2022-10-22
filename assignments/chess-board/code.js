@@ -67,17 +67,16 @@ let sudostart = [
 const convert = (mode, n, array) => {
 
 
-  let newarray = []
+  let convert2d = []
   let num = -1;
 
   for (let row = 0; row < 9; row++) {
-    newarray.push([])
+    convert2d.push([])
     for (let rowx = 0; rowx < 9; rowx++) {
       num++;
-      newarray[row].push(array[num])
+      convert2d[row].push(array[num])
     }
   }
-  console.log(newarray)
   if (mode === "box") {
 
   }
@@ -96,7 +95,6 @@ const convert = (mode, n, array) => {
 }
 
 convert('none', 0, sudostart)
-console.log(sudostart)
 
 
 
