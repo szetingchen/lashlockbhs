@@ -88,6 +88,7 @@ const convert = (mode,x, y, array) => {
   }
   else if (mode === "hort") {
     for (let i = 0; i < 9; i++) {
+      console.log(i + ", " + y)
       newAr.push(array[i][y])
     }
   }
