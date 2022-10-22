@@ -135,19 +135,19 @@ const filled = (array) =>{
       }
     }
   }
-  return true
+  return 'empty'
 }
 
 const solve = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
-  const filled = filled(newarray)
-  if(filled!=true){
+  const find = filled(newarray)
+  if(find==='empty'){
     return true
     
   }
   else{
-    let x = filled[0]
-    let y = filled[1]
+    let x = find[0]
+    let y = find[1]
   }
 
   for(let i = 1; i<=9; i++){
