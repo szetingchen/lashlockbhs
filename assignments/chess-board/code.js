@@ -145,8 +145,8 @@ const solve = (array) => {
     
   }
   else{
-    x = filled[0]
-    y = filled[1]
+    let x = filled[0]
+    let y = filled[1]
   }
 
   for(let i = 1; i<=9; i++){
