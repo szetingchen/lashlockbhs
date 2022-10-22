@@ -95,6 +95,8 @@ const convert = (mode, n, array) => {
   }
 }
 
+convert('none', 0, sudostart)
+
 
 
 
