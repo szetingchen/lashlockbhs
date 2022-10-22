@@ -94,7 +94,7 @@ const convert = (mode, x, y, array) => {
       }
       
     }
-    console.log(convert2d)
+    console.log(convert2Box)
   }
   else if (mode === "vert") {
     for (let i = 0; i < 9; i++) {
