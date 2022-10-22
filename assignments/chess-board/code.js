@@ -166,6 +166,6 @@ const solve = (array) => {
 
 
 
-solve_aspossible(sudostart)
+solve(sudostart)
 
 
