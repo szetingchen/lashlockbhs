@@ -85,14 +85,14 @@ const convert = (mode, x, y, array) => {
         convert2Box.push([])
         for (let y = 0; y < 3; y++) {
           for (let x = 0; x < 3; x++) {
-            convert2Box[boxnum].push(convert2d[y+3*boxnumy][x+3*boxnumx])
-            
-            console.log("boxnum: " + boxnum + " | " + (y+3*boxnumy) + ", " + (x+3*boxnumx) + " : " + convert2d[y+3*boxnumy][x+3*boxnumx])
+            convert2Box[boxnum].push(convert2d[y + 3 * boxnumy][x + 3 * boxnumx])
+
+            console.log("boxnum: " + boxnum + " | " + (y + 3 * boxnumy) + ", " + (x + 3 * boxnumx) + " : " + convert2d[y + 3 * boxnumy][x + 3 * boxnumx])
           }
         }
         boxnum++
       }
-      
+
     }
 
     for (let i = 0; i < 9; i++) {
@@ -100,17 +100,20 @@ const convert = (mode, x, y, array) => {
     }
     console.log(newAr)
   }
+
   else if (mode === "vert") {
     for (let i = 0; i < 9; i++) {
       newAr.push(convert2d[x][i])
 
     }
   }
+
   else if (mode === "hort") {
     for (let i = 0; i < 9; i++) {
       newAr.push(convert2d[i][y])
     }
   }
+  
   else {
     console.log("not valid mode: " + mode)
     console.log("valid modes are: box, vert, hort")
