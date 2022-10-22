@@ -74,7 +74,7 @@ const convert = (mode, n, array) => {
     newarray.push(['penis', 'dick'])
     for (let rowx = 0; rowx < 9; rowx++) {
       console.log(newarray)
-      newarray.push(array[(row+1)*rowx])
+      newarray[row].push(array[(row+1)*rowx])
     }
   }
   console.log(newarray)
