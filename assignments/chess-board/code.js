@@ -86,7 +86,7 @@ const convert = (mode, x, y, array) => {
         for (let y = 1; y <= 3; y++) {
           for (let x = 1; x <= 3; x++) {
             convert2Box[boxnum].push(convert2d[y*boxnumy][x*boxnumx])
-            console.log("boxnum: " + boxnum + " | " + y*boxnumy + ", " + x*boxnumx)
+            console.log("boxnum: " + boxnum + " | " + y + ", " + x)
           }
         }
         boxnum++
