@@ -79,7 +79,7 @@ const convert = (mode, x, y, array) => {
     }
   }
   if (mode === "box") {
-    let boxnum = 1
+    let boxnum = 0
     for (let boxnumy = 1; boxnumy <= 3; boxnumy++) {
       for (let boxnumx = 1; boxnumx <= 3; boxnumx++) {
         convert2Box.push([])
