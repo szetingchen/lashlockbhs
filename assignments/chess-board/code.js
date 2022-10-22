@@ -94,6 +94,10 @@ const convert = (mode, x, y, array) => {
       }
       
     }
+
+    for (let i = 0; i < 9; i++) {
+      newAr.push(convert2Box[i][y])
+    }
     console.log(convert2Box)
   }
   else if (mode === "vert") {
