@@ -146,8 +146,8 @@ const solve = (array) => {
     
   }
   else{
-    let x = find[0]
-    let y = find[1]
+    x = find[0]
+    y = find[1]
   }
 
   for(let i = 1; i<=9; i++){
