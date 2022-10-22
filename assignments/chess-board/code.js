@@ -79,11 +79,13 @@ const convert = (mode, x, y, array) => {
     }
   }
   if (mode === "box") {
-    for (let boxnum = 0; boxnum < 9; boxnum++) {
-      convert2d.push([])
-      for (let y = 0; y < 3; y++) {
-        for (let x = 0; x < 3; x++) {
-          convert2d[boxnum].push(convert2d[y][x])
+    for (let boxnumy = 1; boxnumy <= 3; boxnumy++) {
+      for (let boxnumx = 1; boxnumx <= 3; boxnumx++) {
+        convert2d.push([])
+        for (let y = 0; y < 3; y++) {
+          for (let x = 0; x < 3; x++) {
+            convert2d[boxnum].push(convert2d[y*boxnumy][x*boxnumx])
+          }
         }
       }
     }
