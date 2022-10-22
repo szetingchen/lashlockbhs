@@ -95,7 +95,7 @@ const convert = (mode,x, y, array) => {
     console.log("not valid mode: " + mode)
     console.log("valid modes are: box, vert, hort")
   }
-  
+  console.log(newAr)
 }
 
 convert('vert', 0, 0, sudostart)
