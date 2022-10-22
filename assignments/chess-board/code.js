@@ -53,90 +53,58 @@ checkMove(startBoard, 0, 1, 6, 0, null)
 //sudoku
 
 let sudostart = [
-  '1', '1', '1', '1', '1', '1', '1', '1', '1',
-  '2', 't', '2', '2', 'e', '2', '2', 'b', '2',
-  '3', '3', '3', '3', '3', '3', '3', '3', '3',
-  '4', '4', '4', '4', '4', '4', '4', '4', '4',
-  '5', 'g', '5', '5', 'e', '5', '5', 'b', '5',
-  '6', '6', '6', '6', '6', '6', '6', '6', '6',
-  '7', '7', '7', '7', '7', '7', '7', '7', '7',
-  '8', 'we', '8', '8', 'E', '8', '8', 'j', '8',
-  '9', '9', '9', '9', '9', '9', '9', '9', '9',
+  [['2', 1], ['', 1], ['', 1], ['', 2], ['', 2], ['', 2], ['', 3], ['', 3], ['', 3]],
+  [['', 1], ['', 1], ['', 1], ['', 2], ['', 2], ['', 2], ['', 3], ['', 3], ['', 3]],
+  [['', 1], ['', 1], ['', 1], ['2', 2], ['', 2], ['', 2], ['', 3], ['', 3], ['', 3]],
+  [['', 4], ['', 4], ['', 4], ['', 5], ['', 5], ['', 5], ['', 6], ['', 6], ['', 6]],
+  [['', 4], ['', 4], ['', 4], ['', 5], ['', 5], ['', 5], ['', 6], ['', 6], ['', 6]],
+  [['', 4], ['', 4], ['', 4], ['', 5], ['', 5], ['', 5], ['', 6], ['2', 6], ['', 6]],
+  [['', 7], ['', 7], ['', 7], ['', 8], ['', 8], ['', 8], ['', 9], ['', 9], ['2', 9]],
+  [['', 7], ['', 7], ['', 7], ['', 8], ['', 8], ['', 8], ['', 9], ['', 9], ['', 9]],
+  [['', 7], ['', 7], ['', 7], ['', 8], ['', 8], ['', 8], ['', 9], ['', 9], ['', 9]],
 ]
 
-const convert = (mode, x, y, array) => {
 
-
-  let convert2d = [];
-  let convert2Box = []
-  let newAr = [];
-  let num = -1;
-  for (let row = 0; row < 9; row++) {
-    convert2d.push([])
-    for (let rowx = 0; rowx < 9; rowx++) {
-      num++;
-      convert2d[row].push(array[num])
-    }
+const canBePlaced = (ay, ax, sudostart1, placement) => {
+  const sudostarttest = JSON.parse(JSON.stringify(sudostart1));
+  if (sudostarttest[ax][ay][0] != '') {
+    return false;
   }
-  if (mode === "box") {
-    let boxnum = 0
-    for (let boxnumy = 0; boxnumy < 3; boxnumy++) {
-      for (let boxnumx = 0; boxnumx < 3; boxnumx++) {
-        convert2Box.push([])
-        for (let y = 0; y < 3; y++) {
-          for (let x = 0; x < 3; x++) {
-            convert2Box[boxnum].push(convert2d[y + 3 * boxnumy][x + 3 * boxnumx])
-
-            console.log("boxnum: " + boxnum + " | " + (y + 3 * boxnumy) + ", " + (x + 3 * boxnumx) + " : " + convert2d[y + 3 * boxnumy][x + 3 * boxnumx])
-          }
-        }
-        boxnum++
-      }
-
-    }
-
-    for (let i = 0; i < 9; i++) {
-      newAr.push(convert2Box[x][i])
-    }
-    console.log(newAr)
-  }
-
-  else if (mode === "vert") {
-    for (let i = 0; i < 9; i++) {
-      newAr.push(convert2d[x][i])
-
-    }
-  }
-
-  else if (mode === "hort") {
-    for (let i = 0; i < 9; i++) {
-      newAr.push(convert2d[i][y])
-    }
-  }
-  
-  else {
-    console.log("not valid mode: " + mode)
-    console.log("valid modes are: box, vert, hort")
-  }
-}
-
-convert('box', 0, 3, sudostart)
-
-
-
-
-const canBePlaced = (ay, ax, vertAR, hortAR, boxAR, placement) => {
-
   sudostarttest[ax][ay][0] = placement;
   let inVert = false;
   let inHort = false;
   let inBox = false;
-
+  for (let x = 0; x < 9; x++) {
+    for (let y = 0; y < 9; y++) {
+      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0]) && !((ax === x) && (ay === y))) {
+        inBox = true;
+      }
+      else {
+        //console.log(y + ", " + x + " : " + sudostarttest[x][y][0])
+      }
+    }
+  }
+  for (let i = 0; i < 9; i++) {
+    if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ax != i) {
+      inVert = true;
+    }
+    else {
+    }
+  }
+  for (let i = 0; i < 9; i++) {
+    if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ay != i) {
+      inHort = true;
+    }
+    else {
+    }
+  }
   if (!inHort && !inVert && !inBox) {
     return true;
   }
   return false;
 }
+
+
 
 
 const drawSudo = (array) => {
@@ -161,8 +129,29 @@ const drawSudo = (array) => {
 
 const solve_aspossible = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
-  return newarray;
+  console.log(newarray)
+  for (let y = 0; y < 9; y++) {
+    for (let x = 0; x < 9; x++) {
+      let possible = [];
+      for (let n = 1; n <= 9; n++) {
+        if (canBePlaced(x, y, newarray, n + "")) {
+          possible.push(n + "")
+          console.log("can be placed: " + x + ", " +y + " : " + n)
+        }
+      }
+      console.log(possible)
+      console.log("---")
+      if(possible.length===1){
+        newarray[y][x][0]=possible[0]
+        console.log("changed: " + "("+ possible[0]+")" + "newarray point check: " + newarray[x][y][0])
+        console.log(newarray)
+        drawSudo(newarray)
+      }
+    }
+  }
+  return newarray; 
 
 }
+solve_aspossible(sudostart)
 
 
