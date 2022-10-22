@@ -98,7 +98,7 @@ const convert = (mode,x, y, array) => {
   console.log(newAr)
 }
 
-convert('vert', 0, 0, sudostart)
+convert('hort', 0, 0, sudostart)
 
 
 
