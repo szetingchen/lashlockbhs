@@ -65,21 +65,33 @@ let sudostart = [
 ]
 
 const convert = (mode, n, array) => {
+
+
   let newarray = []
-  if(mode === "box"){
-    
-  }
-  else if(mode === "vert"){
-    for(let i = 0; i<9; i++){
-      newarray.push(array[])
+
+
+  for (let row = 0; row < 9; row++) {
+    newarray.push([])
+    for (let rowx = 0; rowx < 9; rowx++) {
+      newarray[row][rowx].push(array[(row+1)*rowx])
     }
-  } 
-  else if(mode === "hort"){
+  }
+  console.log(newarray)
+
+  if (mode === "box") {
 
   }
-  else{
+  else if (mode === "vert") {
+    for (let i = 0; i < 9; i++) {
+      
+    }
+  }
+  else if (mode === "hort") {
+
+  }
+  else {
     console.log("not valid mode: " + mode)
-    console.log("valud modes are: box, vert, hort")
+    console.log("valid modes are: box, vert, hort")
   }
 }
 
@@ -88,12 +100,12 @@ const convert = (mode, n, array) => {
 
 
 const canBePlaced = (ay, ax, vertAR, hortAR, boxAR, placement) => {
-    
+
   sudostarttest[ax][ay][0] = placement;
   let inVert = false;
   let inHort = false;
   let inBox = false;
-  
+
   if (!inHort && !inVert && !inBox) {
     return true;
   }
@@ -123,7 +135,7 @@ const drawSudo = (array) => {
 
 const solve_aspossible = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
-  return newarray; 
+  return newarray;
 
 }
 
