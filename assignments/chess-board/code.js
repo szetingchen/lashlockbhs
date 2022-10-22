@@ -72,17 +72,17 @@ const convert = (mode, x, y, array) => {
   let num = -1;
 
   if (mode === "box") {
-    for(let boxnum = 0; boxnum < 9; boxnum++){
+    for (let boxnum = 0; boxnum < 9; boxnum++) {
       convert2d.push([])
-      for(let y = 0; y<3; y++){
-        for(let x = 0; x<3; x++){
-        num++
-        convert2d[row].push(array[num])
+      for (let y = 0; y < 3; y++) {
+        for (let x = 0; x < 3; x++) {
+          num++
+          convert2d[boxnum].push(array[num])
+        }
       }
     }
   }
   else if (mode === "vert") {
-
     for (let row = 0; row < 9; row++) {
       convert2d.push([])
       for (let rowx = 0; rowx < 9; rowx++) {
