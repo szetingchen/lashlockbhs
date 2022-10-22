@@ -79,7 +79,7 @@ const convert = (mode, n, array) => {
       console.log(array[num] + " :::")
     }
   }
-  console.log(newarray)
+  console.log(newarray[0][0])
 
   if (mode === "box") {
 
