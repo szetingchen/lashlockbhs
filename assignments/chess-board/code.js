@@ -96,7 +96,7 @@ const convert = (mode, x, y, array) => {
     }
 
     for (let i = 0; i < 9; i++) {
-      newAr.push(convert2Box[y][x])
+      newAr.push(convert2Box[i][x])
     }
     console.log(newAr)
   }
