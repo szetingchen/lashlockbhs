@@ -141,7 +141,8 @@ const filled = (array) =>{
 
 const solve = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
-  if(filled(array)){
+  console.log(newarray)
+  if(filled(newarray)){
     console.log("filled")
     return true
     
