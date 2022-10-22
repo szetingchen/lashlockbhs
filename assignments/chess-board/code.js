@@ -141,14 +141,17 @@ const filled = (array) =>{
 const solve = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
   const find = filled(newarray)
+  let x;
+  let y;
   if(find==='empty'){
     console.log('empty')
     return true
     
   }
   else{
-    let x = find[0]
-    let y = find[1]
+    
+    x = find[0]
+    y = find[1]
   }
 
   for(let i = 1; i<=9; i++){
