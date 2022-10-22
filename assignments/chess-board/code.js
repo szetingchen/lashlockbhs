@@ -127,18 +127,44 @@ const drawSudo = (array) => {
   }
 }
 
-const isEmpty = (array) =>{
+const filled = (array) =>{
   for(let y = 0; y<9; y++){
     for(let x = 0; x<9; x++){
-
+      if(array[y][x][0]===""){
+        return [x, y]
+      }
     }
   }
+  return true
 }
 
-const solve_aspossible = (array) => {
+const solve = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
+  if(filled(newarray)){
+    return true
+  }
+  else{
+    x = filled[0]
+    y = filled[1]
+  }
 
+  for(let i = 1; i<=9; i++){
+    if(canBePlaced(x, y, newarray, i)){
+      newarray[y][x][0]=i
+      clear();
+      drawSudo(newarray)
+      if(solve(newarray)){
+        return true
+      }
+    }
+    newarray[y][x] = ''
+    clear();
+    drawSudo(newarray)
+  }
+  return false
 }
+
+
 
 solve_aspossible(sudostart)
 
