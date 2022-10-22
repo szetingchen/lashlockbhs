@@ -67,8 +67,8 @@ let sudostart = [
 const convert = (mode, n, array) => {
 
 
-  let convert2d = []
-  let newAr = []
+  let convert2d = [];
+  let newAr = [];
   let num = -1;
 
   for (let row = 0; row < 9; row++) {
@@ -83,11 +83,13 @@ const convert = (mode, n, array) => {
   }
   else if (mode === "vert") {
     for (let i = 0; i < 9; i++) {
-      
+      newAr.push(array[i][x])
     }
   }
   else if (mode === "hort") {
-
+    for (let i = 0; i < 9; i++) {
+      newAr.push(array[y][i])
+    }
   }
   else {
     console.log("not valid mode: " + mode)
