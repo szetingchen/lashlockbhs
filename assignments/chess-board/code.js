@@ -64,7 +64,7 @@ let sudostart = [
   '', '', '', '', '', '', '', '', '',
 ]
 
-const convert = (mode, n, array) => {
+const convert = (mode,x, y, array) => {
 
 
   let convert2d = [];
@@ -98,7 +98,7 @@ const convert = (mode, n, array) => {
   
 }
 
-convert('vert', 0, sudostart)
+convert('vert', 0, 0, sudostart)
 
 
 
