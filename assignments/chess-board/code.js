@@ -88,7 +88,7 @@ const convert = (mode,x, y, array) => {
   }
   else if (mode === "hort") {
     for (let i = 0; i < 9; i++) {
-      newAr.push(array[y][i])
+      newAr.push(array[i][y])
     }
   }
   else {
