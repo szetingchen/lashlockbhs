@@ -130,6 +130,7 @@ const drawSudo = (array) => {
 const filled = (array) =>{
   for(let y = 0; y<9; y++){
     for(let x = 0; x<9; x++){
+      console.log(x + ", " + y)
       if(array[y][x][0]===""){
         console.log("empty")
         return [x, y]
@@ -141,7 +142,6 @@ const filled = (array) =>{
 
 const solve = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
-  console.log(newarray)
   if(filled(newarray)){
     console.log("filled")
     return true
