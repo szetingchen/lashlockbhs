@@ -142,12 +142,13 @@ const solve = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
   const find = filled(newarray)
   if(find==='empty'){
+    console.log('empty')
     return true
     
   }
   else{
-    x = find[0]
-    y = find[1]
+    let x = find[0]
+    let y = find[1]
   }
 
   for(let i = 1; i<=9; i++){
