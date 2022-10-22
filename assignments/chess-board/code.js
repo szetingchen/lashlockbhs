@@ -163,7 +163,6 @@ const solve = (array) => {
       }
       newarray[y][x] = ''
     }
-    clear();
     drawSudo(newarray)
   }
   return false
