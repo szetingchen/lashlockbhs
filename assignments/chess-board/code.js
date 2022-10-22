@@ -64,29 +64,33 @@ let sudostart = [
   '', '', '', '', '', '', '', '', '',
 ]
 
-const convert = (mode, n, array) => {
+const convert = (mode, x, y, array) => {
 
 
   let newarray = []
+  let artwd = []
   let num = -1;
 
   for (let row = 0; row < 9; row++) {
-    newarray.push([])
+    artwd.push([])
     for (let rowx = 0; rowx < 9; rowx++) {
       num++;
-      newarray[row].push(array[num])
+      artwd[row].push(array[num])
     }
   }
   if (mode === "box") {
-
   }
   else if (mode === "vert") {
     for (let i = 0; i < 9; i++) {
-      
+      newarray.push(artwd[i][x])
+      console.log(newarray)
     }
   }
   else if (mode === "hort") {
-
+    for (let i = 0; i < 9; i++) {
+      newarray.push(artwd[y][i])
+      console.log(newarray)
+    }
   }
   else {
     console.log("not valid mode: " + mode)
