@@ -89,8 +89,9 @@ const convert = (mode, x, y, array) => {
             console.log("boxnum: " + boxnum + " | " + y*boxnumy + ", " + x*boxnumx)
           }
         }
+        boxnum++
       }
-      boxnum++
+      
     }
     console.log(convert2d)
   }
