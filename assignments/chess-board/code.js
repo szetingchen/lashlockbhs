@@ -77,7 +77,6 @@ const convert = (mode, n, array) => {
       num++;
       newarray[row].push(array[num])
       console.log(array[num] + " :::")
-      console.log(num)
     }
   }
   console.log(newarray)
