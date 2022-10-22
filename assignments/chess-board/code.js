@@ -68,7 +68,7 @@ const convert = (mode, n, array) => {
 
 
   let newarray = []
-  let num = 0;
+  let num = -1;
 
   for (let row = 0; row < 9; row++) {
     newarray.push([])
