@@ -142,6 +142,7 @@ const solve = (array) => {
   const newarray = JSON.parse(JSON.stringify(array));
   if(filled(newarray)){
     return true
+    console.log("filled")
   }
   else{
     x = filled[0]
