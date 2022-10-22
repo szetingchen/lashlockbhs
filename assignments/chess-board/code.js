@@ -88,10 +88,7 @@ const convert = (mode,x, y, array) => {
     }
   }
   else if (mode === "hort") {
-    console.log(convert2d)
     for (let i = 0; i < 9; i++) {
-      console.log(i + ", " + y)
-      console.log(convert2d[i][y])
       newAr.push(convert2d[i][y])
     }
   }
@@ -99,7 +96,6 @@ const convert = (mode,x, y, array) => {
     console.log("not valid mode: " + mode)
     console.log("valid modes are: box, vert, hort")
   }
-  console.log(newAr)
 }
 
 convert('hort', 0, 1, sudostart)
