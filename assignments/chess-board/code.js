@@ -73,7 +73,6 @@ const convert = (mode, n, array) => {
   for (let row = 0; row < 9; row++) {
     newarray.push([])
     for (let rowx = 0; rowx < 9; rowx++) {
-      console.log(newarray)
       newarray[row].push(array[(row+1)*rowx])
     }
   }
@@ -97,6 +96,7 @@ const convert = (mode, n, array) => {
 }
 
 convert('none', 0, sudostart)
+console.log
 
 
 
