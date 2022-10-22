@@ -71,7 +71,7 @@ const convert = (mode, n, array) => {
 
 
   for (let row = 0; row < 9; row++) {
-    newarray.push([])
+    newarray.push(['e'])
     for (let rowx = 0; rowx < 9; rowx++) {
       console.log(newarray+'e')
       newarray[row][rowx].push(array[(row+1)*rowx])
