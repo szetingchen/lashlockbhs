@@ -131,6 +131,7 @@ const filled = (array) =>{
   for(let y = 0; y<9; y++){
     for(let x = 0; x<9; x++){
       if(array[y][x][0]===""){
+        console.log("empty")
         return [x, y]
       }
     }
