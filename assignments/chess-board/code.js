@@ -72,8 +72,9 @@ const convert = (mode, n, array) => {
 
   for (let row = 0; row < 9; row++) {
     newarray.push([])
-    num++;
+    
     for (let rowx = 0; rowx < 9; rowx++) {
+      num++;
       newarray[row].push(array[num])
       console.log(array[num] + " :::")
       console.log(num)
