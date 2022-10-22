@@ -81,6 +81,7 @@ const convert = (mode, x, y, array) => {
         }
       }
     }
+    console.log(convert2d)
   }
   else if (mode === "vert") {
     for (let row = 0; row < 9; row++) {
