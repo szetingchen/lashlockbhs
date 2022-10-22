@@ -67,7 +67,7 @@ let sudostart = [
 const convert = (mode, n, array) => {
 
 
-  let newarray = ['e']
+  let newarray = []
 
 
   for (let row = 0; row < 9; row++) {
