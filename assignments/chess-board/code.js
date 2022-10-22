@@ -81,17 +81,18 @@ const convert = (mode,x, y, array) => {
   if (mode === "box") {
 
   }
+  
   else if (mode === "vert") {
     for (let i = 0; i < 9; i++) {
-      newAr.push(array[x][i])
+      newAr.push(convert2d[x][i])
     }
   }
   else if (mode === "hort") {
-    console.log(array)
+    console.log(convert2d)
     for (let i = 0; i < 9; i++) {
       console.log(i + ", " + y)
-      console.log(array[i][y])
-      newAr.push(array[i][y])
+      console.log(convert2d[i][y])
+      newAr.push(convert2d[i][y])
     }
   }
   else {
