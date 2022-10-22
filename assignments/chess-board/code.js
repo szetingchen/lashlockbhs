@@ -68,6 +68,7 @@ const convert = (mode, n, array) => {
 
 
   let convert2d = []
+  let newAr = []
   let num = -1;
 
   for (let row = 0; row < 9; row++) {
