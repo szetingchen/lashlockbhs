@@ -54,40 +54,55 @@ checkMove(startBoard, 0, 1, 6, 0, null)
 
 let sudostart = [
   '1', '1', '1', '1', '1', '1', '1', '1', '1',
-  '2', '2', '2', '2', '2', '2', '2', '2', '2',
+  '2', 't', '2', '2', 'e', '2', '2', 'b', '2',
   '3', '3', '3', '3', '3', '3', '3', '3', '3',
   '4', '4', '4', '4', '4', '4', '4', '4', '4',
-  '5', '5', '5', '5', '5', '5', '5', '5', '5',
+  '5', 'g', '5', '5', 'e', '5', '5', 'b', '5',
   '6', '6', '6', '6', '6', '6', '6', '6', '6',
   '7', '7', '7', '7', '7', '7', '7', '7', '7',
-  '8', '8', '8', '8', '8', '8', '8', '8', '8',
+  '8', 'we', '8', '8', 'E', '8', '8', 'j', '8',
   '9', '9', '9', '9', '9', '9', '9', '9', '9',
 ]
 
-const convert = (mode,x, y, array) => {
+const convert = (mode, x, y, array) => {
 
 
   let convert2d = [];
   let newAr = [];
   let num = -1;
 
-  for (let row = 0; row < 9; row++) {
-    convert2d.push([])
-    for (let rowx = 0; rowx < 9; rowx++) {
-      num++;
-      convert2d[row].push(array[num])
+  if (mode === "box") {
+    for(let boxnum = 0; boxnum < 9; boxnum++){
+      convert2d.push([])
+      for(let y = 0; y<3; y++){
+        for(let x = 0; x<3; x++){
+        num++
+        convert2d[row].push(array[num])
+      }
     }
   }
-  if (mode === "box") {
-
-  }
-  
   else if (mode === "vert") {
+
+    for (let row = 0; row < 9; row++) {
+      convert2d.push([])
+      for (let rowx = 0; rowx < 9; rowx++) {
+        num++;
+        convert2d[row].push(array[num])
+      }
+    }
     for (let i = 0; i < 9; i++) {
       newAr.push(convert2d[x][i])
+
     }
   }
   else if (mode === "hort") {
+    for (let row = 0; row < 9; row++) {
+      convert2d.push([])
+      for (let rowx = 0; rowx < 9; rowx++) {
+        num++;
+        convert2d[row].push(array[num])
+      }
+    }
     for (let i = 0; i < 9; i++) {
       newAr.push(convert2d[i][y])
     }
