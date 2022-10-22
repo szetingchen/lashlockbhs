@@ -96,7 +96,7 @@ const convert = (mode, n, array) => {
 }
 
 convert('none', 0, sudostart)
-console.log
+console.log(sudostart)
 
 
 
