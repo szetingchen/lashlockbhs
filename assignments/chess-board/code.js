@@ -157,7 +157,7 @@ const solve = (array) => {
     if(canBePlaced(x, y, array, i)){ 
       console.log("e")
       array[y][x][0]=i
-      console.log(array)
+      drawSudo(array)
       if(solve(array)){
         
         return true
