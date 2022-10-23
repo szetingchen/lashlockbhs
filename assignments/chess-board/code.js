@@ -169,5 +169,5 @@ const solve = (array) => {
 
 drawSudo(sudostart)
 solve(sudostart)
-
+drawSudo(sudostart)
 
