@@ -163,6 +163,7 @@ const solve = (array) => {
         return true
       }
       array[y][x] = ''
+      console.log("2")
     }
   }
   return false
