@@ -139,8 +139,8 @@ const filled = (array) =>{
 }
 
 const solve = (array) => {
-  const newarray = JSON.parse(JSON.stringify(array));
-  const find = filled(newarray)
+  
+  const find = filled(array)
   let x;
   let y;
   if(find==='fill'){
@@ -155,19 +155,19 @@ const solve = (array) => {
   }
 
   for(let i = 1; i<=9; i++){
-    if(canBePlaced(x, y, newarray, i)){
-      newarray[y][x][0]=i
-      if(solve(newarray)){
+    if(canBePlaced(x, y, array, i)){
+      array[y][x][0]=i
+      if(solve(array)){
         return true
       }
-      newarray[y][x] = ''
+      array[y][x] = ''
     }
   }
   return false
 }
 
 
-
+console.log(sudostart)
 solve(sudostart)
 
 
