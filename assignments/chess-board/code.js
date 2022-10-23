@@ -157,6 +157,7 @@ const solve = (array) => {
     if(canBePlaced(x, y, array, i)){
       array[y][x][0]=i
       if(solve(array)){
+        console.log("solve")
         return true
       }
       array[y][x] = ''
