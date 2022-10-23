@@ -146,7 +146,6 @@ const solve = (array) => {
   if(find==='fill'){
     console.log('fill')
     return true
-    
   }
   else{
     
