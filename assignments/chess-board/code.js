@@ -135,7 +135,7 @@ const filled = (array) =>{
       }
     }
   }
-  return 'empty'
+  return 'fill'
 }
 
 const solve = (array) => {
@@ -143,8 +143,8 @@ const solve = (array) => {
   const find = filled(newarray)
   let x;
   let y;
-  if(find==='empty'){
-    console.log('empty')
+  if(find==='fill'){
+    console.log('fill')
     return true
     
   }
@@ -157,12 +157,10 @@ const solve = (array) => {
   for(let i = 1; i<=9; i++){
     if(canBePlaced(x, y, newarray, i)){
       newarray[y][x][0]=i
-      drawSudo(newarray)
       if(solve(newarray)){
         return true
       }
       newarray[y][x] = ''
-      drawSudo(newarray)
     }
   }
   return false
