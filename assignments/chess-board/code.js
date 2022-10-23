@@ -154,10 +154,11 @@ const solve = (array) => {
   }
 
   for(let i = 1; i<=9; i++){
-    if(canBePlaced(x, y, array, i)){
+    if(canBePlaced(x, y, array, i)){ 
+      console.log("e")
       array[y][x][0]=i
       if(solve(array)){
-        console.log("solve")
+        
         return true
       }
       array[y][x] = ''
