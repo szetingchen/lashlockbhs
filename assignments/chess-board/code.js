@@ -167,7 +167,7 @@ const solve = (array) => {
 }
 
 
-console.log(sudostart)
+drawSudo(sudostart)
 solve(sudostart)
 
 
