@@ -155,7 +155,6 @@ const solve = (array) => {
 
   for(let i = 1; i<=9; i++){
     if(canBePlaced(x, y, array, i)){ 
-      console.log("e")
       array[y][x][0]=i
       drawSudo(array)
       if(solve(array)){
@@ -165,12 +164,13 @@ const solve = (array) => {
       array[y][x] = ''
       console.log("2")
     }
+
   }
   return false
 }
 
 
 drawSudo(sudostart)
-solve(sudostart)
+console.log(solve(sudostart))
 drawSudo(sudostart)
 
