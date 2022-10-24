@@ -132,6 +132,11 @@ const printSudo = (array) => {
   let line = "-----------------"
 
   for (let y = 0; y < 9; y++) {
+
+    if(y%3===0){
+      str+=line+"\n"
+    }
+
     for (let x = 0; x < 9; x++) {
 
       if ((x) % 3 === 0) {
@@ -148,11 +153,6 @@ const printSudo = (array) => {
       }
     }
     str = (str + "|" + "\n")
-
-    if(y%3===0){
-      str+=line+"\n"
-    }
-
   }
   console.log(str)
 }
