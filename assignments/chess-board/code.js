@@ -147,10 +147,11 @@ const printSudo = (array) => {
         str = (str + array[y][x][0])
       }
     }
+    str = (str + "|" + "\n")
+
     if(y%3===0){
       str+=line
     }
-    str = (str + "|" + "\n")
 
   }
   console.log(str)
