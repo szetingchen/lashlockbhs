@@ -133,20 +133,22 @@ const printSudo = (array) => {
 
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
-      if(y%3===0){
-        str+=line
+      if (y % 3 === 0) {
+        str += line
       }
-      if((x)%3===0){
-        str += "|"
-      }
-      else{
-        str += " "
-      }
-      if(array[y][x][0] === ""){
-        str = (str + "-")
-      }
-      else{
-        str = (str + array[y][x][0])
+      else {
+        if ((x) % 3 === 0) {
+          str += "|"
+        }
+        else {
+          str += " "
+        }
+        if (array[y][x][0] === "") {
+          str = (str + "-")
+        }
+        else {
+          str = (str + array[y][x][0])
+        }
       }
     }
     str = (str + "|" + "\n")
@@ -193,7 +195,7 @@ const solve = (array) => {
       }
       array[y][x] = ''
     }
-    
+
 
   }
   return array
