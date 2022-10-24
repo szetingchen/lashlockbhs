@@ -132,7 +132,7 @@ const printSudo = (array) => {
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
       if(array[y][x][0] === ""){
-        str = (str + "E")
+        str = (str + "E ")
       }
       else{
         str = (str + " " + array[y][x][0])
