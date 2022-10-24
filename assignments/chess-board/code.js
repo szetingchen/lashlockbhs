@@ -132,9 +132,11 @@ const printSudo = (array) => {
     for (let x = 0; x < 9; x++) {
       console.log(array[y][x][0] + " ")
     }
-    console.log("/n")
+    console.log("\n")
   }
 }
+
+printSudo(sudostart)
 
 const filled = (array) => {
   for (let y = 0; y < 9; y++) {
