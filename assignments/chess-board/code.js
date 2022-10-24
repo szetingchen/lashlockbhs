@@ -129,8 +129,13 @@ const drawSudo = (array) => {
 
 const printSudo = (array) => {
   let str = "";
+  let line = "-----------------"
+
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
+      if(y%3===0){
+        console.log(line)
+      }
       if((x)%3===0){
         str += "|"
       }
