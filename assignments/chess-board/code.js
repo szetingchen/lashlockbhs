@@ -159,7 +159,6 @@ const solve = (array) => {
     if (canBePlaced(x, y, array, i)) {
       console.log("placed")
       array[y][x][0] = i
-      drawSudo(array)
       if (solve(array)) {
 
         return array
@@ -173,7 +172,4 @@ const solve = (array) => {
 }
 
 
-drawSudo(sudostart)
-console.log(solve(sudostart))
-drawSudo(sudostart)
-
+drawSudo(solve(sudostart))
