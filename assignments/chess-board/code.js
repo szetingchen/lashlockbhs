@@ -159,14 +159,13 @@ const solve = (array) => {
       drawSudo(array)
       if(solve(array)){
         
-        return true
+        return array
       }
       array[y][x] = ''
-      
     }
 
   }
-  return false
+  return array
 }
 
 
