@@ -128,11 +128,14 @@ const drawSudo = (array) => {
 }
 
 const printSudo = (array) => {
+  let str = "";
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
-      console.log(array[0][x][0] + " ")
+      str = (str + array[y][x][0] + " ")
     }
+    str = (str + "/n")
   }
+
 }
 
 printSudo(sudostart)
