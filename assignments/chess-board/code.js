@@ -133,7 +133,7 @@ const printSudo = (array) => {
 
   for (let y = 0; y < 9; y++) {
 
-    if(y%3===0){
+    if(y%3===0 && y!=1){
       str+=line+"\n"
     }
 
