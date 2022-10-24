@@ -182,4 +182,3 @@ const solve = (array) => {
 }
 
 
-drawSudo(solve(sudostart))
