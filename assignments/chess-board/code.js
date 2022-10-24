@@ -150,7 +150,7 @@ const printSudo = (array) => {
     str = (str + "|" + "\n")
 
     if(y%3===0){
-      str+=line
+      str+=line+"\n"
     }
 
   }
