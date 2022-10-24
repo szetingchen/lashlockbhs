@@ -7,4 +7,9 @@
 
 registerOnclick((x, y) => {
   drawText('qwiyweiuyweifywef', x, y, 'black', Math.min(width, height) * 0.3);
+  drawText('qwiyweiuyweifywef', x, y, 'black', Math.min(width, height) * 0.3);drawText('qwiyweiuyweifywef', x, y, 'black', Math.min(width, height) * 0.3);
+
+  drawText('qwiyweiuyweifywef', x, y, 'black', Math.min(width, height) * 0.3);
+  drawText('qwiyweiuyweifywef', x, y, 'black', Math.min(width, height) * 0.3);
+  drawText('qwiyweiuyweifywef', x, y, 'black', Math.min(width, height) * 0.3);
 });
