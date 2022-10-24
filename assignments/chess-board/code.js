@@ -131,6 +131,12 @@ const printSudo = (array) => {
   let str = "";
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
+      if((x+1)%3===0){
+        str += "|"
+      }
+      else{
+        str += " "
+      }
       if(array[y][x][0] === ""){
         str = (str + "-")
       }
@@ -138,12 +144,7 @@ const printSudo = (array) => {
         str = (str + array[y][x][0])
       }
 
-      if((x+1)%3===0){
-        str += "|"
-      }
-      else{
-        str += " "
-      }
+      
       
     }
     str = (str + "\n")
