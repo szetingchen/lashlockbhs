@@ -127,10 +127,10 @@ const drawSudo = (array) => {
   }
 }
 
-const filled = (array) =>{
-  for(let y = 0; y<9; y++){
-    for(let x = 0; x<9; x++){
-      if(array[y][x][0]===""){
+const filled = (array) => {
+  for (let y = 0; y < 9; y++) {
+    for (let x = 0; x < 9; x++) {
+      if (array[y][x][0] === "") {
         return [x, y]
       }
     }
@@ -139,26 +139,26 @@ const filled = (array) =>{
 }
 
 const solve = (array) => {
-  
+
   const find = filled(array)
   let x;
   let y;
-  if(find==='fill'){
+  if (find === 'fill') {
     console.log('fill')
     return true
   }
-  else{
-    
+  else {
+
     x = find[0]
     y = find[1]
   }
 
-  for(let i = 1; i<=9; i++){
-    if(canBePlaced(x, y, array, i)){ 
-      array[y][x][0]=i
+  for (let i = 1; i <= 9; i++) {
+    if (canBePlaced(x, y, array, i)) {
+      array[y][x][0] = i
       drawSudo(array)
-      if(solve(array)){
-        
+      if (solve(array)) {
+
         return array
       }
       array[y][x] = ''
