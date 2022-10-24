@@ -154,7 +154,10 @@ const solve = (array) => {
   }
 
   for (let i = 1; i <= 9; i++) {
+    console.log(array)
+    console.log(x + ", " + y + " : " + i + " : " + canBePlaced(x, y, array, i))
     if (canBePlaced(x, y, array, i)) {
+      console.log("placed")
       array[y][x][0] = i
       drawSudo(array)
       if (solve(array)) {
@@ -163,8 +166,7 @@ const solve = (array) => {
       }
       array[y][x] = ''
     }
-    console.log(array)
-    console.log(x + ", " + y + " : " + i + " : " + canBePlaced(x, y, array, i))
+    
 
   }
   return array
