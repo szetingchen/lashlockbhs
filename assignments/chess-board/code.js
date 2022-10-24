@@ -163,6 +163,7 @@ const solve = (array) => {
       }
       array[y][x] = ''
     }
+    console.log(x + ", " + y + " : " + i + " : " + canBePlaced(x, y, array, i))
 
   }
   return array
