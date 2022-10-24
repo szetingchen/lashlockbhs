@@ -135,7 +135,7 @@ const printSudo = (array) => {
     }
     str = (str + "/n")
   }
-
+  console.log(str)
 }
 
 printSudo(sudostart)
