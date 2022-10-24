@@ -137,6 +137,7 @@ const printSudo = (array) => {
       else{
         str = (str + array[y][x][0])
       }
+      str += " "
       
     }
     str = (str + "\n")
