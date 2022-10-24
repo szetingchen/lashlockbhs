@@ -127,6 +127,15 @@ const drawSudo = (array) => {
   }
 }
 
+const printSudo = (array) => {
+  for (let y = 0; y < 9; y++) {
+    for (let x = 0; x < 9; x++) {
+      console.log(array[y][x][0] + " ")
+    }
+    console.log("/n")
+  }
+}
+
 const filled = (array) => {
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
@@ -160,7 +169,6 @@ const solve = (array) => {
       console.log("placed")
       array[y][x][0] = i
       if (solve(array)) {
-
         return array
       }
       array[y][x] = ''
