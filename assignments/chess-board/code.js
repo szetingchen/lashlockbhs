@@ -138,7 +138,7 @@ const printSudo = (array) => {
         str = (str + array[y][x][0])
       }
 
-      if(x-1%3===0){
+      if((x-1)%3===0){
         str += "|"
       }
       else{
