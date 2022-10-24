@@ -132,7 +132,6 @@ const printSudo = (array) => {
     for (let x = 0; x < 9; x++) {
       console.log(array[y][x][0] + " ")
     }
-    console.log("/n")
   }
 }
 
