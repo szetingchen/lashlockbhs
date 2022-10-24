@@ -131,7 +131,7 @@ const printSudo = (array) => {
   let str = "";
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
-      if((x+1)%3===0){
+      if((x)%3===0){
         str += "|"
       }
       else{
