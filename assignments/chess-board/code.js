@@ -181,14 +181,16 @@ const solve = (array) => {
       clear();
       array[y][x] = i
       drawSudo(array)
+      delay(1000000)
       if (solve(array)) {
         return true
       }
       clear();
       array[y][x] = ''
       drawSudo(array)
+      delay(1000000)
     }
-    delay(1000000)
+    
   }
   return false
 }
