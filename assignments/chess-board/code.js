@@ -53,54 +53,39 @@ checkMove(startBoard, 0, 1, 6, 0, null)
 //sudoku
 
 let sudostart = [
-  '','','','','','','','','',
-  '','','','','','','','','',
-  '','','','','','','','','',
-  '','','','','','','','','',
-  '','','','','','','','','',
-  '','','','','','','','','',
-  '','','','','','','','','',
-  '','','','','','','','','',
-  '','','','','','','','','',
+  ['','','','','','','','',''],
+  ['','','','','','','','',''],
+  ['','','','','','','','',''],
+  ['','','','','','','','',''],
+  ['','','','','','','','',''],
+  ['','','','','','','','',''],
+  ['','','','','','','','',''],
+  ['','','','','','','','',''],
+  ['','','','','','','','',''],
 ]
 
 const canBePlaced = (ay, ax, sudostart1, placement) => {
-  const sudostarttest = JSON.parse(JSON.stringify(sudostart1));
-  if (sudostarttest[ax][ay][0] != '') {
-    return false;
-  }
-  sudostarttest[ax][ay][0] = placement;
-  let inVert = false;
-  let inHort = false;
-  let inBox = false;
-  for (let x = 0; x < 9; x++) {
-    for (let y = 0; y < 9; y++) {
-      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0]) && !((ax === x) && (ay === y))) {
-        inBox = true;
-      }
-      else {
-        //console.log(y + ", " + x + " : " + sudostarttest[x][y][0])
+  box_x = Math.floor(ax/3)
+  box_y = Math.floor(ay/3)
+  for(let y = box_y*3;  y < box_y*3+3; y++){
+    for(let x = box_x*3;  x < box_x*3+3; x++){
+      if(sudostart1[y][x]===placement){
+        return false
       }
     }
   }
-  for (let i = 0; i < 9; i++) {
-    if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ax != i) {
-      inVert = true;
-    }
-    else {
-    }
-  }
-  for (let i = 0; i < 9; i++) {
-    if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ay != i) {
-      inHort = true;
-    }
-    else {
+
+  for(let i = 0; i<sudostart1[0].length; i++){
+    if(sudostart1[ay][i]===placement){
+      return false
     }
   }
-  if (!inHort && !inVert && !inBox) {
-    return true;
+  for(let i = 0; i<sudostart1[0].length; i++){
+    if(sudostart1[i][ax]===placement){
+      return false
+    }
   }
-  return false;
+  return true
 }
 
 
