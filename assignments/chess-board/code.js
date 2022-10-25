@@ -65,8 +65,8 @@ let sudostart = [
 ]
 
 const canBePlaced = (ay, ax, sudostart1, placement) => {
-  box_x = Math.floor(ax/3)
-  box_y = Math.floor(ay/3)
+  const box_x = Math.floor(ax/3)
+  const box_y = Math.floor(ay/3)
   for(let y = box_y*3;  y < box_y*3+3; y++){
     for(let x = box_x*3;  x < box_x*3+3; x++){
       if(sudostart1[y][x]===placement){
