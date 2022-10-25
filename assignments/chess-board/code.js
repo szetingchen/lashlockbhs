@@ -185,4 +185,4 @@ const solve = (array) => {
   return array
 }
 
-solve(sudostart)
+drawBoard(solve(sudostart))
