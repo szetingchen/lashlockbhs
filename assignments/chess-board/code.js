@@ -96,7 +96,7 @@ const canBePlaced = (ay, ax, sudostart1, placement) => {
 
 
 const drawSudo = (array) => {
-  let thickness = 3;
+  let thickness = 1;
   const spacing = height < width ? height / 9 : width / 9;
   for (let i = 0; i < 10; i++) {
     thickness = i % 3 === 0 ? 3 : 1;
