@@ -64,28 +64,45 @@ let sudostart = [
   [['', 7], ['', 7], ['', 7], ['', 8], ['8', 8], ['', 8], ['', 9], ['7', 9], ['9', 9]],
 ]
 
-
 const canBePlaced = (ay, ax, sudostart1, placement) => {
+  const sudostarttest = JSON.parse(JSON.stringify(sudostart1));
+  if (sudostarttest[ax][ay][0] != '') {
+    return false;
+  }
+  sudostarttest[ax][ay][0] = placement;
+  let inVert = false;
+  let inHort = false;
+  let inBox = false;
   for (let x = 0; x < 9; x++) {
     for (let y = 0; y < 9; y++) {
-      if ((sudostart1[x][y][1] === sudostart1[ax][ay][1]) && (sudostart1[x][y][0] === placement)) {
-        return false
+      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0]) && !((ax === x) && (ay === y))) {
+        inBox = true;
+      }
+      else {
+        //console.log(y + ", " + x + " : " + sudostarttest[x][y][0])
       }
     }
   }
   for (let i = 0; i < 9; i++) {
-    if (sudostart1[ay][i]===placement) {
-      return false
+    if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ax != i) {
+      inVert = true;
+    }
+    else {
     }
   }
   for (let i = 0; i < 9; i++) {
-    if (sudostart1[i][ax]===placement) {
-      return false
-
+    if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ay != i) {
+      inHort = true;
+    }
+    else {
     }
   }
-  return true;
+  if (!inHort && !inVert && !inBox) {
+    return true;
+  }
+  return false;
 }
+
 
 const drawSudo = (array) => {
   let thickness = 3;
