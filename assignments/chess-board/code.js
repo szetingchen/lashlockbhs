@@ -98,7 +98,7 @@ const canBePlaced = (ay, ax, sudostart1, placement) => {
     else {
     }
   }
-  if (!inHort && !inVert && !inBox) {
+  if ((!inHort && !inVert) && !inBox) {
     return true;
   }
   return false;
