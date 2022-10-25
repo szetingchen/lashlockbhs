@@ -6,14 +6,16 @@
 // weeks but for now you can just adapt this code.
 
 
-const drawTik = (board) => {
+const drawTik = () => {
   const spacing = width/10
   drawLine(0, 0, 100, 100, 'black', 1)
   
 }
 
+drawTik()
+
 registerOnclick((x, y) => { 
-  drawTik()
+  
   const offset = 0
   const box_x = 0
   const box_y = 0
