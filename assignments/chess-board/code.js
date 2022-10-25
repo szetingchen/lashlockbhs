@@ -177,7 +177,7 @@ const solve = (array) => {
       if (solve(array)) {
         return array
       }
-      array[y][x] = ''
+      array[y][x][0] = ''
     }
     else {
       console.log("_____________________")
