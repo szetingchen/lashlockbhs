@@ -75,9 +75,7 @@ const canBePlaced = (ay, ax, sudostart1, placement) => {
   const box_y = Math.floor(ay/3)
   for(let y = box_y*3;  y < box_y*3+3; y++){
     for(let x = box_x*3;  x < box_x*3+3; x++){
-      //console.log("box x, y: " + box_x + ", " + box_y + " | check x, y: "+ sudostart1[x][y] + " : " + x + ", " + y + " | placement x, y: " + placement + " : " + ax + " ," + ay)
       if((sudostart1[x][y]+"")===(placement+"")&&!((ay===y)&&(ax===x))){
-        //console.log("in box")
         return false
       }
     }
@@ -85,13 +83,11 @@ const canBePlaced = (ay, ax, sudostart1, placement) => {
 
   for(let i = 0; i<sudostart1[0].length; i++){
     if((sudostart1[i][ay]+"")===(placement+"")&&i!=ax){
-      //console.log("in vert")
       return false
     }
   }
   for(let i = 0; i<sudostart1[0].length; i++){
     if((sudostart1[ax][i]+"")===(placement+"")&&i!=ay){
-      //console.log("in hort")
       return false
     }
   }
