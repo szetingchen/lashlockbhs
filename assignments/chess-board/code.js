@@ -182,7 +182,7 @@ async function solve (array){
       clear();
       drawSudo(array)
       
-      if (solve(array)) {
+      if (await solve(array)) {
         return true
       }
       
