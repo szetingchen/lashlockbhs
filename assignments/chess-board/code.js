@@ -179,7 +179,7 @@ const solve = (array) => {
       console.log("_____________________")
       array[y][x] = i
       if (solve(array)) {
-        return array
+        return true
       }
       array[y][x] = ''
     }
@@ -189,7 +189,7 @@ const solve = (array) => {
 
 
   }
-  return array
+  return false
 }
 
 drawSudo(solve(sudostart))
