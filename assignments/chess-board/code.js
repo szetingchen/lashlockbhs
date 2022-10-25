@@ -194,4 +194,4 @@ async function solve (array){
   return false
 }
 
-Promise.all(solve(sudostart)).then(()=>drawSudo(sudostart))
+(solve(sudostart)).then(()=>drawSudo(sudostart))
