@@ -50,13 +50,7 @@ checkMove(startBoard, 0, 1, 6, 0, null)
 
 
 
-//sudoku"?: l.,m  \,.=\
-
-function delay(milliseconds){
-    return new Promise(resolve => {
-        setTimeout(resolve, milliseconds);
-    });
-}
+//sudoku
 
 let sudostart = [
   ['5','3','','','7','','','',''],
@@ -161,7 +155,7 @@ const filled = (array) => {
   return 'fill'
 }
 
-async function solve (array){
+const solve = (array) => {
 
   const find = filled(array)
   let x;
@@ -177,16 +171,19 @@ async function solve (array){
 
   for (let i = 1; i <= 9; i++) {
     let canbeplaced = canBePlaced(x, y, array, i)
+    //printSudo(array)
+    //console.log(x + ", " + y + " : " + i + " : " + canbeplaced)
     if (canbeplaced) {
+      //console.log("placed")
+      //console.log("_____________________")
       array[y][x] = i
-      
       if (solve(array)) {
         return true
       }
-      
       array[y][x] = ''
-      
-  
+    }
+    else {
+      //console.log("_____________________")
     }
 
 
@@ -194,4 +191,5 @@ async function solve (array){
   return false
 }
 
-(solve(sudostart)).then(()=>drawSudo(sudostart))
+solve(sudostart)
+drawSudo(sudostart)
