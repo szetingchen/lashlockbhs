@@ -80,11 +80,13 @@ const canBePlaced = (ay, ax, sudostart1, placement) => {
 
   for(let i = 0; i<sudostart1[0].length; i++){
     if(sudostart1[i][ay]===placement){
+      console.log("in hort")
       return false
     }
   }
   for(let i = 0; i<sudostart1[0].length; i++){
     if(sudostart1[ax][i]===placement){
+      console.log("in vert")
       return false
     }
   }
