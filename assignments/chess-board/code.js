@@ -197,6 +197,6 @@ async function solve (array){
   return false
 }
 
-solve(sudostart);
+solve(sudostart).then(console.log("done"));
 
 
