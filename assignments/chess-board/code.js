@@ -207,5 +207,5 @@ const solve = (array) => {
 
 //solve(sudostart)
 console.log("E")
-sleep(5000)
+sleep(50343400)
 console.log("E")
