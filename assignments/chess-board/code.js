@@ -64,6 +64,18 @@ let sudostart = [
   ['','','','','8','','','7','9'],
 ]
 
+
+
+const sleep = (milliseconds) =>{
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
+
 const delay = (num) => {
   while(num>0){
     num--;
@@ -181,18 +193,21 @@ const solve = (array) => {
       clear();
       array[y][x] = i
       drawSudo(array)
-      delay(1000000)
       if (solve(array)) {
         return true
       }
       clear();
       array[y][x] = ''
       drawSudo(array)
-      delay(1000000)
     }
     
   }
   return false
 }
 
-solve(sudostart)
+//solve(sudostart)
+
+
+console.log("yo")
+sleep(5000)
+console.log("yo after 4")
