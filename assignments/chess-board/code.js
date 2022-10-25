@@ -191,6 +191,5 @@ const canBePlaced = (ay, ax, sudostart1, placement) => {
       }
       return array
     }
-
-    solve(sudostart)
 }
+    solve(sudostart)
