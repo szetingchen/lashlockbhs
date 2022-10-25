@@ -80,12 +80,12 @@ const canBePlaced = (ay, ax, sudostart1, placement) => {
     }
   }
   for (let i = 0; i < 9; i++) {
-    if (sudostarttest[ay][i]!=placement && ax != i) {
+    if (sudostarttest[ay][i]===placement && ax != i) {
       return false
     }
   }
   for (let i = 0; i < 9; i++) {
-    if (sudostarttest[i][ax]!=placement && ay != i) {
+    if (sudostarttest[i][ax]===placement && ay != i) {
       return false
 
     }
