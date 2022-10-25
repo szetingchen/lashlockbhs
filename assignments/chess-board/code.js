@@ -177,21 +177,17 @@ const solve = (array) => {
 
   for (let i = 1; i <= 9; i++) {
     let canbeplaced = canBePlaced(x, y, array, i)
-    //printSudo(array)
-    //console.log(x + ", " + y + " : " + i + " : " + canbeplaced)
     if (canbeplaced) {
-      //console.log("placed")
-      //console.log("_____________________")
+      clear();
       array[y][x] = i
+      drawSudo(array)
       if (solve(array)) {
         return true
       }
+      clear();
       array[y][x] = ''
+      drawSudo(array)
     }
-    else {
-      //console.log("_____________________")
-    }
-
 
   }
   return false
