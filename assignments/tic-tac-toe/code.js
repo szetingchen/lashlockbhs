@@ -5,7 +5,17 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 
-registerOnclick((x, y) => {
+
+const drawTik = (board) => {
+  const spacing = width/10
+  drawLine(width/2-spacing*x, height/2+spacing*y, 100, 100, 1, 'black')
+  
+}
+
+registerOnclick((x, y) => { 
+  const offset = 0
+  const box_x = 0
+  const box_y = 0
   drawText('qwiyweiuyweifywef', x, y, 'black', Math.min(width, height) * 0.3);
 });
 
