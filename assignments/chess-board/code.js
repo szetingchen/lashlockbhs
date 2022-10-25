@@ -171,9 +171,10 @@ const solve = (array) => {
   }
 
   for (let i = 1; i <= 9; i++) {
+    let canbeplaced = canBePlaced(x, y, array, i)
     printSudo(array)
-    console.log(x + ", " + y + " : " + i + " : " + canBePlaced(x, y, array, i))
-    if (canBePlaced(x, y, array, i)) {
+    console.log(x + ", " + y + " : " + i + " : " + canbeplaced)
+    if (canbeplaced) {
       console.log("placed")
       console.log("_____________________")
       array[y][x] = i
