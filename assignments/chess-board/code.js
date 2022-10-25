@@ -188,7 +188,7 @@ const solve = (array) => {
       array[y][x] = ''
       drawSudo(array)
     }
-    delay(10000)
+    delay(1000000)
   }
   return false
 }
