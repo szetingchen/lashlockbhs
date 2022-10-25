@@ -198,5 +198,4 @@ async function solve (array){
 }
 
 solve(sudostart)
-console.log("donw")
 
