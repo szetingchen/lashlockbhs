@@ -67,9 +67,6 @@ let sudostart = [
 
 const canBePlaced = (ay, ax, sudostart1, placement) => {
   const sudostarttest = JSON.parse(JSON.stringify(sudostart1));
-  if (sudostarttest[ax][ay][0] != '') {
-    return false;
-  }
   sudostarttest[ax][ay][0] = placement;
 
   for (let x = 0; x < 9; x++) {
