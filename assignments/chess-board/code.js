@@ -189,7 +189,6 @@ async function solve (array){
       array[y][x] = ''
       clear();
       drawSudo(array)
-      await delay(1000);
   
     }
 
