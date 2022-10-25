@@ -191,7 +191,7 @@ async function solve (array){
       drawSudo(array)
   
     }
-    await delay(1);
+    await delay(0.00001);
 
   }
   return false
