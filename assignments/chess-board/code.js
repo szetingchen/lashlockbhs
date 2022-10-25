@@ -161,7 +161,7 @@ const filled = (array) => {
   return 'fill'
 }
 
-async function solve (array){
+function solve (array){
 
   const find = filled(array)
   let x;
