@@ -64,6 +64,12 @@ let sudostart = [
   ['','','','','8','','','7','9'],
 ]
 
+const delay = (num) => {
+  while(num>0){
+    num--;
+  }
+}
+
 const canBePlaced = (ay, ax, sudostart1, placement) => {
   const box_x = Math.floor(ax/3)
   const box_y = Math.floor(ay/3)
