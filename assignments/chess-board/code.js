@@ -157,7 +157,6 @@ const printSudo = (array) => {
   console.log(str)
 }
 
-printSudo(sudostart)
 
 const filled = (array) => {
   for (let y = 0; y < 9; y++) {
@@ -186,7 +185,7 @@ const solve = (array) => {
   }
 
   for (let i = 1; i <= 9; i++) {
-    console.log(array)
+    printSudo(array)
     console.log(x + ", " + y + " : " + i + " : " + canBePlaced(x, y, array, i))
     if (canBePlaced(x, y, array, i)) {
       console.log("placed")
