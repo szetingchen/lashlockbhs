@@ -161,7 +161,6 @@ const solve = (array) => {
   let x;
   let y;
   if (find === 'fill') {
-    console.log('fill')
     return true
   }
   else {
