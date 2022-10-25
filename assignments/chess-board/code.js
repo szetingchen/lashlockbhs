@@ -189,14 +189,18 @@ const solve = (array) => {
     console.log(x + ", " + y + " : " + i + " : " + canBePlaced(x, y, array, i))
     if (canBePlaced(x, y, array, i)) {
       console.log("placed")
+      console.log("_____________________")
       array[y][x][0] = i
       if (solve(array)) {
         return array
       }
       array[y][x] = ''
     }
+    else{
+      console.log("_____________________")
+    }
 
-    console.log("_____________________")
+    
   }
   return array
 }
