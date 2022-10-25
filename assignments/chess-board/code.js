@@ -161,7 +161,7 @@ const filled = (array) => {
   return 'fill'
 }
 
-async function solve (array){
+const solve = (array) => {
 
   const find = filled(array)
   let x;
@@ -177,21 +177,27 @@ async function solve (array){
 
   for (let i = 1; i <= 9; i++) {
     let canbeplaced = canBePlaced(x, y, array, i)
+    //printSudo(array)
+    //console.log(x + ", " + y + " : " + i + " : " + canbeplaced)
     if (canbeplaced) {
+      //console.log("placed")
+      //console.log("_____________________")
       array[y][x] = i
       clear();
       drawSudo(array)
-      
+      await delay(1000);
       if (solve(array)) {
-        await delay(1000);
         return true
       }
       
       array[y][x] = ''
       clear();
       drawSudo(array)
-      
+      await delay(1000);
   
+    }
+    else {
+      //console.log("_____________________")
     }
 
 
