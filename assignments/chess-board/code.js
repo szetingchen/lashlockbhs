@@ -70,7 +70,7 @@ const canBePlaced = (ay, ax, sudostart1, placement) => {
   for(let y = box_y*3;  y < box_y*3+3; y++){
     for(let x = box_x*3;  x < box_x*3+3; x++){
       console.log("box x, y: " + box_x + ", " + box_y + " | check x, y: "+ sudostart1[x][y] + " : " + x + ", " + y + " | placement x, y: " + placement + " : " + ax + " ," + ay)
-      if(sudostart1[y][x]+""===placement){
+      if(sudostart1[x][y]===placement){
         console.log("in box")
         return false
       }
