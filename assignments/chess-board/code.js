@@ -102,8 +102,8 @@ const drawSudo = (array) => {
   }
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
-      if (array[y][x][0] != undefined) {
-        drawText(array[y][x][0], (x * spacing), (y * spacing) + spacing, 'black', spacing)
+      if (array[y][x] != undefined) {
+        drawText(array[y][x], (x * spacing), (y * spacing) + spacing, 'black', spacing)
       }
     }
   }
@@ -131,7 +131,7 @@ const printSudo = (array) => {
         str = (str + "-")
       }
       else {
-        str = (str + array[y][x][0])
+        str = (str + array[y][x])
       }
     }
     str = (str + "|" + "\n")
@@ -143,7 +143,7 @@ const printSudo = (array) => {
 const filled = (array) => {
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
-      if (array[y][x][0] === "") {
+      if (array[y][x]=== "") {
         return [x, y]
       }
     }
@@ -172,11 +172,11 @@ const solve = (array) => {
     if (canBePlaced(x, y, array, i)) {
       console.log("placed")
       console.log("_____________________")
-      array[y][x][0] = i
+      array[y][x] = i
       if (solve(array)) {
         return array
       }
-      array[y][x][0] = ''
+      array[y][x] = ''
     }
     else {
       console.log("_____________________")
