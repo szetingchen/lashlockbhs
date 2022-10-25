@@ -172,7 +172,7 @@ const solve = (array) => {
       console.log("_____________________")
       array[y][x][0] = i
       if (solve(array)) {
-        return array
+        return true
       }
       array[y][x][0] = ''
     }
@@ -182,7 +182,7 @@ const solve = (array) => {
 
 
   }
-  return array
+  return false
 }
 
 drawBoard(sudostart)
