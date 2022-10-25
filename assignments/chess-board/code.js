@@ -195,4 +195,4 @@ async function solve (array){
 }
 
 solve(sudostart)
-draw(sudostart)
+drawSudo(sudostart)
