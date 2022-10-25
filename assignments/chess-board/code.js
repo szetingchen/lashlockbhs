@@ -78,118 +78,118 @@ const canBePlaced = (ay, ax, sudostart1, placement) => {
         return false
       }
     }
-    for (let i = 0; i < 9; i++) {
-      if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ax != i) {
-        return false
+  }
+  for (let i = 0; i < 9; i++) {
+    if ((sudostarttest[ax][ay][0] === sudostarttest[i][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ax != i) {
+      return false
 
-      }
     }
-    for (let i = 0; i < 9; i++) {
-      if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ay != i) {
-        return false
+  }
+  for (let i = 0; i < 9; i++) {
+    if ((sudostarttest[ax][i][0] === sudostarttest[ax][ay][0]) && (sudostarttest[ax][ay][0] != undefined) && ay != i) {
+      return false
 
-      }
     }
-    return true;
+  }
+  return true;
 }
 
-
-    const drawSudo = (array) => {
-      let thickness = 3;
-      const spacing = height < width ? height / 9 : width / 9;
-      for (let i = 0; i < 10; i++) {
-        thickness = i % 3 === 0 ? 3 : 1;
-        drawLine(0, spacing * (i), height, spacing * (i), 'black', thickness)
-      }
-      for (let i = 0; i < 10; i++) {
-        thickness = i % 3 === 0 ? 3 : 1;
-        drawLine(spacing * (i), 0, spacing * (i), width, 'black', thickness)
-      }
-      for (let y = 0; y < 9; y++) {
-        for (let x = 0; x < 9; x++) {
-          if (array[y][x][0] != undefined) {
-            drawText(array[y][x][0], (x * spacing), (y * spacing) + spacing, 'black', spacing)
-          }
-        }
+const drawSudo = (array) => {
+  let thickness = 3;
+  const spacing = height < width ? height / 9 : width / 9;
+  for (let i = 0; i < 10; i++) {
+    thickness = i % 3 === 0 ? 3 : 1;
+    drawLine(0, spacing * (i), height, spacing * (i), 'black', thickness)
+  }
+  for (let i = 0; i < 10; i++) {
+    thickness = i % 3 === 0 ? 3 : 1;
+    drawLine(spacing * (i), 0, spacing * (i), width, 'black', thickness)
+  }
+  for (let y = 0; y < 9; y++) {
+    for (let x = 0; x < 9; x++) {
+      if (array[y][x][0] != undefined) {
+        drawText(array[y][x][0], (x * spacing), (y * spacing) + spacing, 'black', spacing)
       }
     }
+  }
+}
 
-    const printSudo = (array) => {
-      let str = "";
-      let line = "-----------------"
+const printSudo = (array) => {
+  let str = "";
+  let line = "-----------------"
 
-      for (let y = 0; y < 9; y++) {
+  for (let y = 0; y < 9; y++) {
 
-        if (y % 3 === 0 && y != 0) {
-          str += line + "\n"
-        }
-
-        for (let x = 0; x < 9; x++) {
-
-          if ((x) % 3 === 0) {
-            str += "|"
-          }
-          else {
-            str += " "
-          }
-          if (array[y][x][0] === "") {
-            str = (str + "-")
-          }
-          else {
-            str = (str + array[y][x][0])
-          }
-        }
-        str = (str + "|" + "\n")
-      }
-      console.log(str)
+    if (y % 3 === 0 && y != 0) {
+      str += line + "\n"
     }
 
+    for (let x = 0; x < 9; x++) {
 
-    const filled = (array) => {
-      for (let y = 0; y < 9; y++) {
-        for (let x = 0; x < 9; x++) {
-          if (array[y][x][0] === "") {
-            return [x, y]
-          }
-        }
-      }
-      return 'fill'
-    }
-
-    const solve = (array) => {
-
-      const find = filled(array)
-      let x;
-      let y;
-      if (find === 'fill') {
-        console.log('fill')
-        return true
+      if ((x) % 3 === 0) {
+        str += "|"
       }
       else {
-
-        x = find[0]
-        y = find[1]
+        str += " "
       }
-
-      for (let i = 1; i <= 9; i++) {
-        printSudo(array)
-        console.log(y + ", " + x + " : " + i + " : " + canBePlaced(x, y, array, i))
-        if (canBePlaced(x, y, array, i)) {
-          console.log("placed")
-          console.log("_____________________")
-          array[y][x][0] = i
-          if (solve(array)) {
-            return array
-          }
-          array[y][x] = ''
-        }
-        else {
-          console.log("_____________________")
-        }
-
-
+      if (array[y][x][0] === "") {
+        str = (str + "-")
       }
-      return array
+      else {
+        str = (str + array[y][x][0])
+      }
     }
+    str = (str + "|" + "\n")
+  }
+  console.log(str)
 }
-    solve(sudostart)
+
+
+const filled = (array) => {
+  for (let y = 0; y < 9; y++) {
+    for (let x = 0; x < 9; x++) {
+      if (array[y][x][0] === "") {
+        return [x, y]
+      }
+    }
+  }
+  return 'fill'
+}
+
+const solve = (array) => {
+
+  const find = filled(array)
+  let x;
+  let y;
+  if (find === 'fill') {
+    console.log('fill')
+    return true
+  }
+  else {
+
+    x = find[0]
+    y = find[1]
+  }
+
+  for (let i = 1; i <= 9; i++) {
+    printSudo(array)
+    console.log(y + ", " + x + " : " + i + " : " + canBePlaced(x, y, array, i))
+    if (canBePlaced(x, y, array, i)) {
+      console.log("placed")
+      console.log("_____________________")
+      array[y][x][0] = i
+      if (solve(array)) {
+        return array
+      }
+      array[y][x] = ''
+    }
+    else {
+      console.log("_____________________")
+    }
+
+
+  }
+  return array
+}
+
+solve(sudostart)
