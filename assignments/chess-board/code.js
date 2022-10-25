@@ -183,7 +183,6 @@ async function solve (array){
       drawSudo(array)
       
       if (solve(array)) {
-        await delay(1000);
         return true
       }
       
