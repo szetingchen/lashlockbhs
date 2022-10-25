@@ -185,4 +185,4 @@ const solve = (array) => {
   return false
 }
 
-drawBoard(sudostart)
+drawSudo(sudostart)
