@@ -181,7 +181,7 @@ async function solve (array){
       array[y][x] = i
       clear();
       drawSudo(array)
-      await delay(1000);
+      
       if (solve(array)) {
         return true
       }
@@ -191,7 +191,7 @@ async function solve (array){
       drawSudo(array)
   
     }
-
+    await delay(1000);
 
   }
   return false
