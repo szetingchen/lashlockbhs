@@ -201,4 +201,4 @@ const solve = (array) => {
   return array
 }
 
-
+solve(sudostart)
