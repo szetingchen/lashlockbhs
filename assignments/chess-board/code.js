@@ -50,7 +50,13 @@ checkMove(startBoard, 0, 1, 6, 0, null)
 
 
 
-//sudoku
+//sudoku"?: l.,m  \,.=\
+
+function delay(milliseconds){
+    return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
+}
 
 let sudostart = [
   ['5','3','','','7','','','',''],
@@ -177,10 +183,18 @@ const solve = (array) => {
       //console.log("placed")
       //console.log("_____________________")
       array[y][x] = i
+      clear();
+      drawSudo(array)
+      await delay(1000);
       if (solve(array)) {
         return true
       }
+      
       array[y][x] = ''
+      clear();
+      drawSudo(array)
+      await delay(1000);
+  
     }
     else {
       //console.log("_____________________")
@@ -192,4 +206,3 @@ const solve = (array) => {
 }
 
 solve(sudostart)
-drawSudo(sudostart)
