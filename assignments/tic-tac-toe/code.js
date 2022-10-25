@@ -13,6 +13,7 @@ const drawTik = (board) => {
 }
 
 registerOnclick((x, y) => { 
+  drawTik()
   const offset = 0
   const box_x = 0
   const box_y = 0
