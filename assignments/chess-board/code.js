@@ -66,7 +66,7 @@ let sudostart = [
 
 
 
-const sleep = (milliseconds) =>{
+function sleep(milliseconds) {
   var start = new Date().getTime();
   for (var i = 0; i < 1e7; i++) {
     if ((new Date().getTime() - start) > milliseconds){
@@ -206,8 +206,6 @@ const solve = (array) => {
 }
 
 //solve(sudostart)
-
-
-console.log("yo")
+console.log("E")
 sleep(5000)
-console.log("yo after 4")
+console.log("E")
