@@ -109,7 +109,7 @@ const drawSudo = (array) => {
   for (let y = 0; y < 9; y++) {
     for (let x = 0; x < 9; x++) {
       if (array[y][x] != undefined) {
-        drawText(array[y][x], (x * spacing)+spacing/4, (y * spacing) + spacing +spacing/4, 'black', spacing*5/6)
+        drawText(array[y][x], (x * spacing)+spacing/4, (y * spacing) + spacing, 'black', spacing*5/6)
       }
     }
   }
