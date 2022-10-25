@@ -179,16 +179,12 @@ async function solve (array){
     let canbeplaced = canBePlaced(x, y, array, i)
     if (canbeplaced) {
       array[y][x] = i
-      clear();
-      drawSudo(array)
       
       if (solve(array)) {
         return true
       }
       
       array[y][x] = ''
-      clear();
-      drawSudo(array)
       
   
     }
@@ -199,3 +195,4 @@ async function solve (array){
 }
 
 solve(sudostart)
+draw(sudostart)
