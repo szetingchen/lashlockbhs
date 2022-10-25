@@ -198,4 +198,4 @@ async function solve (array){
   return false
 }
 
-await solve(sudostart)
+solve(sudostart)
