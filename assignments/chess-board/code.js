@@ -50,7 +50,13 @@ checkMove(startBoard, 0, 1, 6, 0, null)
 
 
 
-//sudoku
+//sudoku"?: l.,m  \,.=\
+
+function delay(milliseconds){
+    return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
+}
 
 let sudostart = [
   ['5','3','','','7','','','',''],
@@ -63,24 +69,6 @@ let sudostart = [
   ['','','','4','1','9','','','5'],
   ['','','','','8','','','7','9'],
 ]
-
-
-
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-}
-
-
-const delay = (num) => {
-  while(num>0){
-    num--;
-  }
-}
 
 const canBePlaced = (ay, ax, sudostart1, placement) => {
   const box_x = Math.floor(ax/3)
@@ -173,7 +161,7 @@ const filled = (array) => {
   return 'fill'
 }
 
-const solve = (array) => {
+async function solve (array){
 
   const find = filled(array)
   let x;
@@ -190,22 +178,25 @@ const solve = (array) => {
   for (let i = 1; i <= 9; i++) {
     let canbeplaced = canBePlaced(x, y, array, i)
     if (canbeplaced) {
-      clear();
       array[y][x] = i
+      clear();
       drawSudo(array)
+      
       if (solve(array)) {
+        await delay(1000);
         return true
       }
-      clear();
+      
       array[y][x] = ''
+      clear();
       drawSudo(array)
+      
+  
     }
-    
+
+
   }
   return false
 }
 
-//solve(sudostart)
-console.log("E")
-sleep(50343400)
-console.log("E")
+solve(sudostart)
