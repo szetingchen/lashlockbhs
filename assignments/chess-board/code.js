@@ -161,7 +161,7 @@ const filled = (array) => {
   return 'fill'
 }
 
-function solve (array){
+async function solve (array){
 
   const find = filled(array)
   let x;
@@ -194,5 +194,5 @@ function solve (array){
   return false
 }
 
-solve(sudostart)
+Promise.all(solve(sudostart))
 drawSudo(sudostart)
