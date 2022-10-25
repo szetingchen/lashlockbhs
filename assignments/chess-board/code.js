@@ -74,6 +74,7 @@ const canBePlaced = (ay, ax, sudostart1, placement) => {
     }
   }
   for (let i = 0; i < 9; i++) {
+    console.log(ay + ", "  + i)
     if (sudostart1[ay][i]===placement) {
       return false
     }
