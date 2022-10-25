@@ -8,7 +8,7 @@
 
 const drawTik = (board) => {
   const spacing = width/10
-  drawLine(width/2-spacing*x, height/2+spacing*y, 100, 100, 'black', 1)
+  drawLine(0, height/2+spacing*y, 100, 100, 'black', 1)
   
 }
 
