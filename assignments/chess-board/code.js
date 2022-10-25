@@ -66,23 +66,20 @@ let sudostart = [
 
 
 const canBePlaced = (ay, ax, sudostart1, placement) => {
-  const sudostarttest = JSON.parse(JSON.stringify(sudostart1));
-  sudostarttest[ax][ay][0] = placement;
-
   for (let x = 0; x < 9; x++) {
     for (let y = 0; y < 9; y++) {
-      if ((sudostarttest[x][y][1] === sudostarttest[ax][ay][1]) && (sudostarttest[x][y][0] === sudostarttest[ax][ay][0]) && !((ax === x) && (ay === y))) {
+      if ((sudostart1[x][y][1] === sudostart1[ax][ay][1]) && (sudostarttest[x][y][0] === placement) && !((ax === x) && (ay === y))) {
         return false
       }
     }
   }
   for (let i = 0; i < 9; i++) {
-    if (sudostarttest[ay][i]===placement && ax != i) {
+    if (sudostart1[ay][i]===placement && ax != i) {
       return false
     }
   }
   for (let i = 0; i < 9; i++) {
-    if (sudostarttest[i][ax]===placement && ay != i) {
+    if (sudostart1[i][ax]===placement && ay != i) {
       return false
 
     }
