@@ -15,7 +15,6 @@ const drawTik = () => {
 }
 
 drawTik()
-
 registerOnclick((x, y) => { 
   
   const offset = 0
