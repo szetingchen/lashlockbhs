@@ -22,7 +22,7 @@ drawTik()
 registerOnclick((x, y) => { 
   console.log(drawTik("e"))
   const offset = 0
-  const box_x = Math.floor(x/drawTik("e"))
+  const box_x = Math.floor(x/drawTik("e"))-2
   console.log(box_x)
   const box_y = Math.floor(y/drawTik("e"))
   console.log(box_x + ", " + box_y)
