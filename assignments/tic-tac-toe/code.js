@@ -7,7 +7,7 @@
 
 
 const drawTik = () => {
-  const spacing = width/4
+  const spacing = width/3
   drawLine(0+spacing, height*2/3, width-spacing, height*2/3)
   drawLine(0+spacing, height/3, width-spacing, height/3)
 
