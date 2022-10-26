@@ -20,7 +20,13 @@ registerOnclick((x, y) => {
   const offset = 0
   const box_x = 0
   const box_y = 0
-  drawText('X', x, y, 'black', Math.min(width, height) * 0.25);
+  const turn === "x"
+  if(turn==="x"){
+    drawText('X', xCalc, yCalc, 'black', Math.min(width, height) * 0.25);
+  }
+  else{
+    drawText('O', xCalc, yCalc, 'black', Math.min(width, height) * 0.25);
+  }
 });
 
 
