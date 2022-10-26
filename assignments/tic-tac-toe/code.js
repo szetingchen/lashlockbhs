@@ -23,8 +23,8 @@ registerOnclick((x, y) => {
   console.log(drawTik("e"))
   const offset = 0
   const box_x = Math.floor((x-width/2-drawTik("e")*1.5)/drawTik("e"))
-  console.log(box_x)
-  const box_y = y
+  const box_y = y/drawTik("e")
+  console.log(x + ", " + y)
   const turn = "x"
   if(turn==="x"){
     drawText('X', xCalc, yCalc, 'black', Math.min(width, height) * 0.25);
