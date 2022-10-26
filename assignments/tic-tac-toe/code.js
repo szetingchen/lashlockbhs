@@ -20,7 +20,7 @@ const drawTik = (spacingIn) => {
 
 drawTik()
 registerOnclick((x, y) => { 
-  
+  console.log(drawTik("e"))
   const offset = 0
   const box_x = Math.floor((x-width/2-drawTik("e")*1.5)/drawTik("e"))
   const box_y = y
