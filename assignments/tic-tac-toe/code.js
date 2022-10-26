@@ -22,7 +22,7 @@ const drawTik = (board, spacingIn) => {
   }
 }
 const board = [
-  ['','',''],
+  ['x','',''],
   ['','',''],
   ['','',''],
 ]
