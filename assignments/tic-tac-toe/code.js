@@ -17,7 +17,7 @@ const drawTik = (board, spacingIn) => {
   drawLine(width/2+spacing/2, 0, width/2+spacing/2, height)
   for(let y = 0; y < 3; y++){
     for(let x = 0; x < 3; x++){
-      drawText(board[y][x], ((spacing*x)+width/2-spacing*1.5)-spacing/4, ((spacing*y)+spacing)-spacing/4, 'black', Math.min(width, height) * 0.25)
+      drawText(board[y][x], ((spacing*x)+width/2-spacing*1.5)+spacing/4, ((spacing*y)+spacing)-spacing/4, 'black', Math.min(width, height) * 0.25)
     }
   }
 }
