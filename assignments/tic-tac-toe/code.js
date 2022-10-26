@@ -32,7 +32,7 @@ registerOnclick((x, y) => {
   const offset = 0
   const box_x = Math.floor((x-width/4-drawTik(board,"e")/2)/drawTik(board,"e"))
   const box_y = Math.floor(y/drawTik(board,"e"))
-  const turn = "x"
+  let turn = "x"
   if(turn==="x"){
     board[box_y][box_x] = "X"
     turn = "o"
