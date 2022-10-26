@@ -39,6 +39,8 @@ registerOnclick((x, y) => {
     board[box_y][box_x] = "O"
     turn = "x"
   }
+  clear();
+  drawTik(board)
 });
 
 
