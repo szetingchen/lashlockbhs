@@ -12,7 +12,7 @@ const drawTik = () => {
   drawLine(0+spacing, height/3, width-spacing, height/3)
 
   drawLine(width*2/3, 0, width*2/3, height)
-  drawLine(width/2+spacing, 0, width/2+spacing, height)
+  drawLine(width/2, 0, width/2, height)
 }
 
 drawTik()
