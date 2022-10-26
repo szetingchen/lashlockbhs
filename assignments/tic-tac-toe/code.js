@@ -21,8 +21,8 @@ const drawTik = (spacingIn) => {
 drawTik()
 registerOnclick((x, y) => { 
   const offset = 0
-  const box_x = Math.floor((x-width/4-drawTik("e")/2)/drawTik("e"))
-  const box_y = Math.floor(y/drawTik("e"))
+  const box_x = Math.floor((x-width/4-drawTik("")/2)/drawTik(""))
+  const box_y = Math.floor(y/drawTik(""))
   const turn = "x"
   if(turn==="x"){
     drawText('X', xCalc, yCalc, 'black', Math.min(width, height) * 0.25);
