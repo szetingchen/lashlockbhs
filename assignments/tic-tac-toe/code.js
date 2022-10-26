@@ -6,7 +6,7 @@
 // weeks but for now you can just adapt this code.
 
 
-const drawTik = (spacingIn) => {
+const drawTik = (board, spacingIn) => {
   const spacing = height < width ? height/3 : width/3
   if(spacingIn){
     return spacing;
@@ -15,10 +15,18 @@ const drawTik = (spacingIn) => {
   drawLine(width/2-spacing*1.5, 0+spacing*2, width/2+spacing*1.5, 0+spacing*2)
   drawLine(width/2-spacing/2, 0, width/2-spacing/2, height)
   drawLine(width/2+spacing/2, 0, width/2+spacing/2, height)
-  
+  for(let y = 0; y < 3; y++){
+    for(let x = 0; x < 3; x++){
+      drawText(board[y][x], spacing*x, spacing*y)
+    }
+  }
 }
-
-drawTik()
+const board = [
+  ['','',''],
+  ['','',''],
+  ['','',''],
+]
+drawTik(board)
 registerOnclick((x, y) => { 
   const offset = 0
   const box_x = Math.floor((x-width/4-drawTik("")/2)/drawTik(""))
