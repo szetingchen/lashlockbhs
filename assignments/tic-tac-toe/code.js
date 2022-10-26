@@ -22,9 +22,9 @@ const drawTik = (board, spacingIn) => {
   }
 }
 const board = [
-  ['x','x','x'],
-  ['x','x','x'],
-  ['x','x','x'],
+  ['','',''],
+  ['','',''],
+  ['','',''],
 ]
 drawTik(board)
 registerOnclick((x, y) => { 
