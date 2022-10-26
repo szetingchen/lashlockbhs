@@ -32,7 +32,7 @@ const drawBoard = (board) => {
 }
 
 
-//drawBoard(startBoard)
+drawBoard(startBoard)
 /*
 const checkMove = (board, piecex, piecey, targetx, targety, mode) => {
   drawBoard(board)
@@ -193,6 +193,5 @@ async function solve (array){
   return false
 }
 
-solve(sudostart)
 
 
