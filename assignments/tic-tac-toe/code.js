@@ -26,17 +26,18 @@ const board = [
   ['','',''],
   ['','',''],
 ]
-drawTik(board)
 registerOnclick((x, y) => { 
   const offset = 0
   const box_x = Math.floor((x-width/4-drawTik("")/2)/drawTik(""))
   const box_y = Math.floor(y/drawTik(""))
   const turn = "x"
   if(turn==="x"){
-    drawText('X', xCalc, yCalc, 'black', Math.min(width, height) * 0.25);
+    board[box_y][box_x] = "X"
+    turn = "o"
   }
   else{
-    drawText('O', xCalc, yCalc, 'black', Math.min(width, height) * 0.25);
+    board[box_y][box_x] = "O"
+    turn = "x"
   }
 });
 
