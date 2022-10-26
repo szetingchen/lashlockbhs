@@ -6,20 +6,24 @@
 // weeks but for now you can just adapt this code.
 
 
-const drawTik = () => {
+const drawTik = (spacingIn) => {
   const spacing = height < width ? height/3 : width/3
+  if(spacing){
+    return spacing;
+  }
   drawLine(width/2-spacing*1.5, 0+spacing, width/2+spacing*1.5, 0+spacing)
   drawLine(width/2-spacing*1.5, 0+spacing*2, width/2+spacing*1.5, 0+spacing*2)
   drawLine(width/2-spacing/2, 0, width/2-spacing/2, height)
   drawLine(width/2+spacing/2, 0, width/2+spacing/2, height)
+  
 }
 
 drawTik()
 registerOnclick((x, y) => { 
   
   const offset = 0
-  const box_x = 0
-  const box_y = 0
+  const box_x = Math.floor((x-width/2-spacing*1.5)/drawTik("e"))
+  const box_y = y
   const turn = "x"
   if(turn==="x"){
     drawText('X', xCalc, yCalc, 'black', Math.min(width, height) * 0.25);
