@@ -10,7 +10,6 @@ const drawTik = () => {
   const spacing = height < width ? height/3 : width/3
   drawLine(width/2-spacing*1.5, 0+spacing, width/2+spacing*1.5, 0+spacing)
   drawLine(width/2-spacing*1.5, 0+spacing*2, width/2+spacing*1.5, 0+spacing*2)
-
   drawLine(width/2-spacing/2, 0, width/2-spacing/2, height)
   drawLine(width/2+spacing/2, 0, width/2+spacing/2, height)
 }
