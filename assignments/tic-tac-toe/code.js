@@ -26,6 +26,7 @@ const board = [
   ['','',''],
   ['','',''],
 ]
+drawTik(board)
 registerOnclick((x, y) => { 
   const offset = 0
   const box_x = Math.floor((x-width/4-drawTik("")/2)/drawTik(""))
