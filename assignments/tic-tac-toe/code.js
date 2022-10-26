@@ -20,7 +20,7 @@ registerOnclick((x, y) => {
   const offset = 0
   const box_x = 0
   const box_y = 0
-  drawText('X', x, y, 'black', Math.min(width, height) * 0.1);
+  drawText('X', x, y, 'black', Math.min(width, height) * 0.2);
 });
 
 
