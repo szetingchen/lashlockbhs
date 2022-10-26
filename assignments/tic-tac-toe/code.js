@@ -7,40 +7,44 @@
 
 
 const drawTik = (board, spacingIn) => {
-  const spacing = height < width ? height/3 : width/3
-  if(spacingIn){
+  const spacing = height < width ? height / 3 : width / 3
+  if (spacingIn) {
     return spacing;
   }
-  drawLine(width/2-spacing*1.5, 0+spacing, width/2+spacing*1.5, 0+spacing)
-  drawLine(width/2-spacing*1.5, 0+spacing*2, width/2+spacing*1.5, 0+spacing*2)
-  drawLine(width/2-spacing/2, 0, width/2-spacing/2, height)
-  drawLine(width/2+spacing/2, 0, width/2+spacing/2, height)
-  for(let y = 0; y < 3; y++){
-    for(let x = 0; x < 3; x++){
-      drawText(board[y][x], ((spacing*x)+width/2-spacing*1.5)+spacing/4, ((spacing*y)+spacing)-spacing/4, 'black', Math.min(width, height) * 0.25)
+  drawLine(width / 2 - spacing * 1.5, 0 + spacing, width / 2 + spacing * 1.5, 0 + spacing)
+  drawLine(width / 2 - spacing * 1.5, 0 + spacing * 2, width / 2 + spacing * 1.5, 0 + spacing * 2)
+  drawLine(width / 2 - spacing / 2, 0, width / 2 - spacing / 2, height)
+  drawLine(width / 2 + spacing / 2, 0, width / 2 + spacing / 2, height)
+  for (let y = 0; y < 3; y++) {
+    for (let x = 0; x < 3; x++) {
+      drawText(board[y][x], ((spacing * x) + width / 2 - spacing * 1.5) + spacing / 4, ((spacing * y) + spacing) - spacing / 4, 'black', Math.min(width, height) * 0.25)
       console.log("E")
     }
   }
 }
 const board = [
-  ['','',''],
-  ['','',''],
-  ['','',''],
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', ''],
 ]
 drawTik(board)
 let turn = "x"
-registerOnclick((x, y) => { 
+registerOnclick((x, y) => {
   const offset = 0
-  const box_x = Math.floor((x-width/4-drawTik(board,"e")/2)/drawTik(board,"e"))
-  const box_y = Math.floor(y/drawTik(board,"e"))
-  
-  if(turn==="x"){
-    board[box_y][box_x] = "X"
-    turn = "o"
-  }
-  else{
-    board[box_y][box_x] = "O"
-    turn = "x"
+  const box_x = Math.floor((x - width / 4 - drawTik(board, "e") / 2) / drawTik(board, "e"))
+  const box_y = Math.floor(y / drawTik(board, "e"))
+  if (board[box_y][box_x] === "") {
+    if (turn === "x") {
+
+      board[box_y][box_x] = "X"
+
+      turn = "o"
+    }
+    else {
+
+      board[box_y][box_x] = "O"
+      turn = "x"
+    }
   }
   clear();
   drawTik(board)
