@@ -22,6 +22,15 @@ const drawTik = (board, spacingIn) => {
     }
   }
 }
+
+const canKeepPlaying = (board) => {
+  
+  for(let y = 0; y<3; y++){
+    for(let x = 0; x<3; x++){
+      if()
+    }
+  }
+}
 const board = [
   ['', '', ''],
   ['', '', ''],
@@ -33,7 +42,7 @@ registerOnclick((x, y) => {
   const offset = 0
   const box_x = Math.floor((x - width / 4 - drawTik(board, "e") / 2) / drawTik(board, "e"))
   const box_y = Math.floor(y / drawTik(board, "e"))
-  if (board[box_y][box_x] === "") {
+  if (board[box_y][box_x] === "" && canKeepPlaying(board)) {
     if (turn === "x") {
 
       board[box_y][box_x] = "X"
