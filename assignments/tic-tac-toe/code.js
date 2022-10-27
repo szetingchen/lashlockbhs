@@ -89,7 +89,7 @@ registerOnclick((x, y) => {
 
     }
     else {
-      console.log("Square Taken");
+      console.log("Invalid");
     }
     clear();
     drawTik(board);
