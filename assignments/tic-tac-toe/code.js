@@ -30,31 +30,32 @@ const drawTik = (board, spacingIn) => {
 }
 
 const canKeepPlaying = (board) => {
-  for(let i = 0; i<3; i++){
-    if(board[0][i]===board[1][i]&&board[0][i]===board[2][i]){
+  for (let i = 0; i < 3; i++) {
+    if (board[0][i] === board[1][i] && board[0][i] === board[2][i]) {
       return false;
     }
   }
-  for(let i = 0; i<3; i++){{
-    if(board[i][0]===board[i][1]&&board[i][0]===board[i][2]){
+  for (let i = 0; i < 3; i++) {
+    {
+      if (board[i][0] === board[i][1] && board[i][0] === board[i][2]) {
+        return false;
+      }
+    }
+    if (board[0][0] === board[1][1] && board[0][0] === board[2][2]) {
       return false;
     }
+    if (board[0][2] === board[1][1] && board[0][2] === board[2][0]) {
+      return false;
+    }
+    return true;
   }
-  if(board[0][0]===board[1][1]&&board[0][0]===board[2][2]){
-    return false;
-  }
-  if(board[0][2]===board[1][1]&&board[0][2]===board[2][0]){
-    return false;
-  }
-  return true;
 }
-
 
 drawTik(board);
 let turn = "x";
 registerOnclick((x, y) => {
   const offset = 0;
-  const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2))-x)/drawTik(board, "e"))*-1;
+  const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2)) - x) / drawTik(board, "e")) * -1;
   const box_y = Math.floor(y / drawTik(board, "e"));
   if (board[box_y][box_x] === "") {
     if (turn === "x") {
