@@ -34,15 +34,14 @@ const canKeepPlaying = (board) => {
   for (let y = 0; y < 3; y++) {
     for (let x = 0; x < 3; x++) {
       if (board[y][x] === "") {
-
         filled = false;
       }
     }
   }
+
   if (filled) {
     return false;
   }
-
   for (let i = 0; i < 3; i++) {
     if (board[0][i] === board[1][i] && board[0][i] === board[2][i] && (board[0][i] === "O" || board[0][i] === "X")) {
       return false;
@@ -62,7 +61,6 @@ const canKeepPlaying = (board) => {
   return true;
 }
 
-
 drawTik(board);
 let turn = "x";
 let gameOver = false;
@@ -77,11 +75,9 @@ registerOnclick((x, y) => {
         turn = "o";
       }
       else {
-
         board[box_y][box_x] = "O";
         turn = "x";
       }
-
     }
     else {
       console.log("Invalid");
@@ -89,7 +85,6 @@ registerOnclick((x, y) => {
     clear();
     drawTik(board);
   }
-
   if (!canKeepPlaying(board)) {
     console.log("game ova")
     gameOver = true
