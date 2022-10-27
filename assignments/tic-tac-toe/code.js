@@ -30,6 +30,11 @@ const drawTik = (board, spacingIn) => {
 }
 
 const canKeepPlaying = (board) => {
+  for(let y = 0; y < 3; y++){
+    
+  }
+
+
   for (let i = 0; i < 3; i++) {
     if (board[0][i] === board[1][i] && board[0][i] === board[2][i] &&( board[0][i] === "O"|| board[0][i] === "X")) {
       return false;
