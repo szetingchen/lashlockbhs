@@ -58,7 +58,7 @@ registerOnclick((x, y) => {
   const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2)) - x) / drawTik(board, "e")) * -1;
   const box_y = Math.floor(y / drawTik(board, "e"));
   if (board[box_y][box_x] === "") {
-    if (canKeepPlaying(array)) {
+    if (canKeepPlaying(board)) {
       if (turn === "x") {
         board[box_y][box_x] = "X";
         turn = "o";
