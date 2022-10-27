@@ -6,6 +6,13 @@
 // weeks but for now you can just adapt this code.
 
 
+
+const board = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', ''],
+];
+
 const drawTik = (board, spacingIn) => {
   const spacing = height < width ? height / 3 : width / 3
   if (spacingIn) {
@@ -41,11 +48,8 @@ const canKeepPlaying = (board) => {
   }
   return true;
 }
-const board = [
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', ''],
-];
+
+
 drawTik(board);
 let turn = "x";
 registerOnclick((x, y) => {
