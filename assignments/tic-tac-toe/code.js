@@ -49,8 +49,6 @@ const canKeepPlaying = (board) => {
     }
   }
   for (let i = 0; i < 3; i++) {
-    {
-      console.log(board[i][0] + " " + board[i][1] + " " + board[i][2])
       if (board[i][0] === board[i][1] && board[i][0] === board[i][2] && (board[i][0] === "O" || board[i][0] === "X")) {
         return false;
       }
