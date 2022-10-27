@@ -25,11 +25,6 @@ const drawTik = (board, spacingIn) => {
 
 const canKeepPlaying = (board) => {
   
-  for(let y = 0; y<3; y++){
-    for(let x = 0; x<3; x++){
-      if()
-    }
-  }
 }
 const board = [
   ['', '', ''],
