@@ -58,15 +58,23 @@ registerOnclick((x, y) => {
   const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2)) - x) / drawTik(board, "e")) * -1;
   const box_y = Math.floor(y / drawTik(board, "e"));
   if (board[box_y][box_x] === "") {
-    if (turn === "x") {
-      board[box_y][box_x] = "X";
-      turn = "o";
-    }
-    else {
+    if (canKeepPlaying(array)) {
+      if (turn === "x") {
+        board[box_y][box_x] = "X";
+        turn = "o";
+      }
+      else {
 
-      board[box_y][box_x] = "O";
-      turn = "x";
+        board[box_y][box_x] = "O";
+        turn = "x";
+      }
     }
+    else{
+      console.log("Game Over")
+    }
+  }
+  else{
+    console.log("Square Taken")
   }
   clear();
   drawTik(board);
