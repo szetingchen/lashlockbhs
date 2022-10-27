@@ -23,7 +23,7 @@ const drawTik = (board, spacingIn) => {
 }
 
 const canKeepPlaying = (board) => {
-  
+
 }
 const board = [
   ['', '', ''],
