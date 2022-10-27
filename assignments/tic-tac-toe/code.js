@@ -69,6 +69,7 @@ let turn = "x";
 let gameOver = false;
 registerOnclick((x, y) => {
   if (!canKeepPlaying(board)) {
+    console.log("game ova")
     gameOver = true
   }
   if (!gameOver) {
