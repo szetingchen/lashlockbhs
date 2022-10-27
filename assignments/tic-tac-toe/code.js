@@ -69,10 +69,6 @@ drawTik(board);
 let turn = "x";
 let gameOver = false;
 registerOnclick((x, y) => {
-  if (!canKeepPlaying(board)) {
-    console.log("game ova")
-    gameOver = true
-    }
   if (!gameOver) {
     const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2)) - x) / drawTik(board, "e")) * -1;
     const box_y = Math.floor(y / drawTik(board, "e"));
@@ -95,6 +91,11 @@ registerOnclick((x, y) => {
     clear();
     drawTik(board);
   }
+
+  if (!canKeepPlaying(board)) {
+    console.log("game ova")
+    gameOver = true
+    }
 });
 
 
