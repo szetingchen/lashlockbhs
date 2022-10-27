@@ -65,6 +65,7 @@ const canKeepPlaying = (board) => {
 
 drawTik(board);
 let turn = "x";
+let gameOver = false;
 registerOnclick((x, y) => {
   if(!gameOver){
   const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2)) - x) / drawTik(board, "e")) * -1;
@@ -83,11 +84,12 @@ registerOnclick((x, y) => {
     }
     else{
       
-      console.log("Game Over")
+      console.log("Game Over");
+      gameOver=true;
     }
   }
   else{
-    console.log("Square Taken")
+    console.log("Square Taken");
   }
   clear();
   drawTik(board);
