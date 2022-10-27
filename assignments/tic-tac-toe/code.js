@@ -34,7 +34,7 @@ const canKeepPlaying = (board) => {
   for (let y = 0; y < 3; y++) {
     for (let x = 0; x < 3; x++) {
       if (board[y][x] === "") {
-        
+
         filled = false;
       }
     }
@@ -68,27 +68,24 @@ drawTik(board);
 let turn = "x";
 let gameOver = false;
 registerOnclick((x, y) => {
-  canKeepPlaying(board)
+  if (!canKeepPlaying(board)) {
+    gameOver = true
+  }
   if (!gameOver) {
     const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2)) - x) / drawTik(board, "e")) * -1;
     const box_y = Math.floor(y / drawTik(board, "e"));
     if (board[box_y][box_x] === "") {
-      if (canKeepPlaying(board)) {
-        if (turn === "x") {
-          board[box_y][box_x] = "X";
-          turn = "o";
-        }
-        else {
 
-          board[box_y][box_x] = "O";
-          turn = "x";
-        }
+      if (turn === "x") {
+        board[box_y][box_x] = "X";
+        turn = "o";
       }
       else {
-        gameOver = true;
-        console.log("Game Over");
-        
+
+        board[box_y][box_x] = "O";
+        turn = "x";
       }
+
     }
     else {
       console.log("Square Taken");
