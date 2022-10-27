@@ -30,10 +30,17 @@ const drawTik = (board, spacingIn) => {
 }
 
 const canKeepPlaying = (board) => {
+  let filled = true;
   for(let y = 0; y < 3; y++){
-    
+    for(let x = 0; x < 3; x++){
+      if(board[y][x]===""){
+        filled = false;
+      }
+    } 
   }
-
+  if(filled){
+    return false;
+  }
 
   for (let i = 0; i < 3; i++) {
     if (board[0][i] === board[1][i] && board[0][i] === board[2][i] &&( board[0][i] === "O"|| board[0][i] === "X")) {
@@ -59,7 +66,7 @@ const canKeepPlaying = (board) => {
 drawTik(board);
 let turn = "x";
 registerOnclick((x, y) => {
-  const offset = 0;
+  if(!gameOver){
   const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2)) - x) / drawTik(board, "e")) * -1;
   const box_y = Math.floor(y / drawTik(board, "e"));
   if (board[box_y][box_x] === "") {
@@ -75,6 +82,7 @@ registerOnclick((x, y) => {
       }
     }
     else{
+      
       console.log("Game Over")
     }
   }
@@ -83,6 +91,7 @@ registerOnclick((x, y) => {
   }
   clear();
   drawTik(board);
+  }
 });
 
 
