@@ -34,7 +34,7 @@ drawTik(board)
 let turn = "x"
 registerOnclick((x, y) => {
   const offset = 0
-  const box_x = Math.floor(((width / 2 - drawTik(board, "e") / 2))-x)
+  const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2))-x)/2)
   const box_y = Math.floor(y / drawTik(board, "e"))
   if (board[box_y][box_x] === "") {
     if (turn === "x") {
