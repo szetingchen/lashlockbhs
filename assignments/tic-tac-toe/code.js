@@ -49,19 +49,19 @@ const canKeepPlaying = (board) => {
     }
   }
   for (let i = 0; i < 3; i++) {
-      if (board[i][0] === board[i][1] && board[i][0] === board[i][2] && (board[i][0] === "O" || board[i][0] === "X")) {
-        return false;
-      }
-    }
-    if (board[0][0] === board[1][1] && board[0][0] === board[2][2] && (board[0][0] === "O" || board[0][0] === "X")) {
+    if (board[i][0] === board[i][1] && board[i][0] === board[i][2] && (board[i][0] === "O" || board[i][0] === "X")) {
       return false;
     }
-    if (board[0][2] === board[1][1] && board[0][2] === board[2][0] && (board[0][2] === "O" || board[0][2] === "X")) {
-      return false;
-    }
-    return true;
   }
+  if (board[0][0] === board[1][1] && board[0][0] === board[2][2] && (board[0][0] === "O" || board[0][0] === "X")) {
+    return false;
+  }
+  if (board[0][2] === board[1][1] && board[0][2] === board[2][0] && (board[0][2] === "O" || board[0][2] === "X")) {
+    return false;
+  }
+  return true;
 }
+
 
 drawTik(board);
 let turn = "x";
@@ -93,7 +93,7 @@ registerOnclick((x, y) => {
   if (!canKeepPlaying(board)) {
     console.log("game ova")
     gameOver = true
-    }
+  }
 });
 
 
