@@ -31,20 +31,20 @@ const drawTik = (board, spacingIn) => {
 
 const canKeepPlaying = (board) => {
   for (let i = 0; i < 3; i++) {
-    if (board[0][i] === board[1][i] && board[0][i] === board[2][i] && board[0][i] === "O" || "X") {
+    if (board[0][i] === board[1][i] && board[0][i] === board[2][i] &&( board[0][i] === "O"|| board[0][i] === "X")) {
       return false;
     }
   }
   for (let i = 0; i < 3; i++) {
     {
-      if (board[i][0] === board[i][1] && board[i][0] === board[i][2] && board[i][0] === "O" || "X") {
+      if (board[i][0] === board[i][1] && board[i][0] === board[i][2] &&( board[i][0] === "O"|| board[i][0] === "X")) {
         return false;
       }
     }
-    if (board[0][0] === board[1][1] && board[0][0] === board[2][2] && board[0][0] === "O" || "X") {
+    if (board[0][0] === board[1][1] && board[0][0] === board[2][2] &&( board[0][0] === "O"|| board[0][0] === "X")) {
       return false;
     }
-    if (board[0][2] === board[1][1] && board[0][2] === board[2][0] && board[0][2] === "O" || "X") {
+    if (board[0][2] === board[1][1] && board[0][2] === board[2][0] &&( board[0][2] === "O"|| board[0][2] === "X")) {
       return false;
     }
     return true;
