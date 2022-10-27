@@ -31,32 +31,33 @@ const drawTik = (board, spacingIn) => {
 
 const canKeepPlaying = (board) => {
   let filled = true;
-  for(let y = 0; y < 3; y++){
-    for(let x = 0; x < 3; x++){
-      if(board[y][x]===""){
+  for (let y = 0; y < 3; y++) {
+    for (let x = 0; x < 3; x++) {
+      if (board[y][x] === "") {
+        
         filled = false;
       }
-    } 
+    }
   }
-  if(filled){
+  if (filled) {
     return false;
   }
 
   for (let i = 0; i < 3; i++) {
-    if (board[0][i] === board[1][i] && board[0][i] === board[2][i] &&( board[0][i] === "O"|| board[0][i] === "X")) {
+    if (board[0][i] === board[1][i] && board[0][i] === board[2][i] && (board[0][i] === "O" || board[0][i] === "X")) {
       return false;
     }
   }
   for (let i = 0; i < 3; i++) {
     {
-      if (board[i][0] === board[i][1] && board[i][0] === board[i][2] &&( board[i][0] === "O"|| board[i][0] === "X")) {
+      if (board[i][0] === board[i][1] && board[i][0] === board[i][2] && (board[i][0] === "O" || board[i][0] === "X")) {
         return false;
       }
     }
-    if (board[0][0] === board[1][1] && board[0][0] === board[2][2] &&( board[0][0] === "O"|| board[0][0] === "X")) {
+    if (board[0][0] === board[1][1] && board[0][0] === board[2][2] && (board[0][0] === "O" || board[0][0] === "X")) {
       return false;
     }
-    if (board[0][2] === board[1][1] && board[0][2] === board[2][0] &&( board[0][2] === "O"|| board[0][2] === "X")) {
+    if (board[0][2] === board[1][1] && board[0][2] === board[2][0] && (board[0][2] === "O" || board[0][2] === "X")) {
       return false;
     }
     return true;
@@ -67,32 +68,32 @@ drawTik(board);
 let turn = "x";
 let gameOver = false;
 registerOnclick((x, y) => {
-  if(!gameOver){
-  const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2)) - x) / drawTik(board, "e")) * -1;
-  const box_y = Math.floor(y / drawTik(board, "e"));
-  if (board[box_y][box_x] === "") {
-    if (canKeepPlaying(board)) {
-      if (turn === "x") {
-        board[box_y][box_x] = "X";
-        turn = "o";
+  if (!gameOver) {
+    const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2)) - x) / drawTik(board, "e")) * -1;
+    const box_y = Math.floor(y / drawTik(board, "e"));
+    if (board[box_y][box_x] === "") {
+      if (canKeepPlaying(board)) {
+        if (turn === "x") {
+          board[box_y][box_x] = "X";
+          turn = "o";
+        }
+        else {
+
+          board[box_y][box_x] = "O";
+          turn = "x";
+        }
       }
       else {
 
-        board[box_y][box_x] = "O";
-        turn = "x";
+        console.log("Game Over");
+        gameOver = true;
       }
     }
-    else{
-      
-      console.log("Game Over");
-      gameOver=true;
+    else {
+      console.log("Square Taken");
     }
-  }
-  else{
-    console.log("Square Taken");
-  }
-  clear();
-  drawTik(board);
+    clear();
+    drawTik(board);
   }
 });
 
