@@ -34,7 +34,7 @@ drawTik(board)
 let turn = "x"
 registerOnclick((x, y) => {
   const offset = 0
-  console.log(x  + " - " + width / 2 + drawTik(board, "e") / 2)
+  console.log(x  + " - " + width / 2 - drawTik(board, "e") / 2)
   const box_x = Math.floor((x-width / 2 + drawTik(board, "e") / 2))
   const box_y = Math.floor(y / drawTik(board, "e"))
   console.log(box_x + ", " + box_y)
