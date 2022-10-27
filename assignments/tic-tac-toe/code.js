@@ -84,9 +84,9 @@ registerOnclick((x, y) => {
         }
       }
       else {
-
-        console.log("Game Over");
         gameOver = true;
+        console.log("Game Over");
+        
       }
     }
     else {
