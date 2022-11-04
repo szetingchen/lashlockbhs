@@ -14,7 +14,6 @@ const board = [
 ];
 
 const drawBoard = (board) => {
-  
   drawLine(width / 2 - spacing * 1.5, 0 + spacing, width / 2 + spacing * 1.5, 0 + spacing);
   drawLine(width / 2 - spacing * 1.5, 0 + spacing * 2, width / 2 + spacing * 1.5, 0 + spacing * 2);
   drawLine(width / 2 - spacing / 2, 0, width / 2 - spacing / 2, height);
@@ -25,9 +24,7 @@ const drawBoard = (board) => {
     }
   }
 }
-
 const canKeepPlaying = (board) => winner(board) == null && !boardFull(board);
-
 const boardFull = (board) =>{
   for (let y = 0; y < 3; y++) {
     for (let x = 0; x < 3; x++) {
@@ -38,7 +35,6 @@ const boardFull = (board) =>{
   }
   return true;
 }
-
 const winner = (board) =>{
   for (let i = 0; i < 3; i++) {
     if (board[0][i] === board[1][i] && board[0][i] === board[2][i] && (board[0][i] === "O" || board[0][i] === "X")) {
@@ -57,8 +53,6 @@ const winner = (board) =>{
     return board[0][2];
   }
 }
-
-
 drawBoard(board);
 let turn = "X";
 let gameOver = false;
