@@ -13,10 +13,8 @@ const board = [
   ['', '', ''],
 ];
 
-const drawTik = (board, spacingIn) => {
-  if (spacingIn) {
-    return spacing;
-  }
+const drawTik = (board) => {
+  
   drawLine(width / 2 - spacing * 1.5, 0 + spacing, width / 2 + spacing * 1.5, 0 + spacing);
   drawLine(width / 2 - spacing * 1.5, 0 + spacing * 2, width / 2 + spacing * 1.5, 0 + spacing * 2);
   drawLine(width / 2 - spacing / 2, 0, width / 2 - spacing / 2, height);
@@ -65,7 +63,7 @@ let turn = "x";
 let gameOver = false;
 registerOnclick((x, y) => {
   if (!gameOver) {
-    const box_x = Math.floor((((width / 2 - drawTik(board, "e") / 2)) - x) / drawTik(board, "e")) * -1;
+    const box_x = Math.floor((((width / 2 - spacing / 2)) - x) / spacing) * -1;
     const box_y = Math.floor(y / drawTik(board, "e"));
     if (board[box_y][box_x] === "") {
 
