@@ -47,7 +47,7 @@ const winner = (board) =>{
   }
   for (let i = 0; i < 3; i++) {
     if (board[i][0] === board[i][1] && board[i][0] === board[i][2] && (board[i][0] === "O" || board[i][0] === "X")) {
-      return board[0][i];
+      return board[i][0];
     }
   }
   if (board[0][0] === board[1][1] && board[0][0] === board[2][2] && (board[0][0] === "O" || board[0][0] === "X")) {
