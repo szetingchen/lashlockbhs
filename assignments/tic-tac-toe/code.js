@@ -59,7 +59,7 @@ const winner = (board) =>{
 }
 
 
-drawTik(board);
+drawBoard(board);
 let turn = "X";
 let gameOver = false;
 registerOnclick((x, y) => {
