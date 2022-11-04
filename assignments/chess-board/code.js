@@ -22,10 +22,11 @@ const startBoard = [
   [BLACK_ROOK, BLACK_KNIGHT, BLACK_BISHOP, BLACK_KING, BLACK_QUEEN, BLACK_BISHOP, BLACK_KNIGHT, BLACK_ROOK],
 ]
 const drawBoard = (board) => {
+  const size = 60
   for (let yAr = 0; yAr < 8; yAr++) {
     for (let xAr = 0; xAr < board[yAr].length; xAr++) {
       if (board[yAr][xAr] != undefined) {
-        drawText(board[yAr][xAr], (width/3)/8 * xAr, (height)/8 * yAr, 'black', 60);
+        drawText(board[yAr][xAr], (width/3)/8 * xAr, size+(height)/8 * yAr, 'black', size);
       }
     }
   }
