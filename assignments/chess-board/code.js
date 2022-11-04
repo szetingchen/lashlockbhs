@@ -22,7 +22,7 @@ const startBoard = [
   [BLACK_ROOK, BLACK_KNIGHT, BLACK_BISHOP, BLACK_KING, BLACK_QUEEN, BLACK_BISHOP, BLACK_KNIGHT, BLACK_ROOK],
 ]
 const drawBoard = (board) => {
-  const smallerD = height < width ? 800 : width
+  const smallerD = height < width ? height : width
   const size = (smallerD/3)/8
   for (let yAr = 0; yAr < 8; yAr++) {
     for (let xAr = 0; xAr < board[yAr].length; xAr++) {
