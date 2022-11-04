@@ -25,7 +25,7 @@ const drawBoard = (board) => {
   for (let yAr = 0; yAr < 8; yAr++) {
     for (let xAr = 0; xAr < board[yAr].length; xAr++) {
       if (board[yAr][xAr] != undefined) {
-        drawText(board[yAr][xAr], (width/3)/8 * xAr, 50 + (width/3)/8 * yAr, 'black', 60);
+        drawText(board[yAr][xAr], (width/3)/8 * xAr, 50 + (height)/8 * yAr, 'black', 60);
       }
     }
   }
