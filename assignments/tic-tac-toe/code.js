@@ -39,7 +39,6 @@ const boardFull = (board) =>{
   return true;
 }
 
-
 const winner = (board) =>{
   for (let i = 0; i < 3; i++) {
     if (board[0][i] === board[1][i] && board[0][i] === board[2][i] && (board[0][i] === "O" || board[0][i] === "X")) {
@@ -61,31 +60,22 @@ const winner = (board) =>{
 
 
 drawTik(board);
-let turn = "x";
+let turn = "X";
 let gameOver = false;
 registerOnclick((x, y) => {
   if (!gameOver) {
     const box_x = Math.floor((((width / 2 - spacing / 2)) - x) / spacing) * -1;
     const box_y = Math.floor(y / spacing);
     if (board[box_y][box_x] === "") {
-
-      if (turn === "x") {
-        board[box_y][box_x] = "X";
-        turn = "o";
-      }
-      else {
-        board[box_y][box_x] = "O";
-        turn = "x";
-      }
-    }
-    else {
-      console.log("Invalid");
+      board[box_y][box_x] = turn;
+      turn = turn === "X" ? "O" : "X";
     }
     clear();
     drawTik(board);
   }
   if (!canKeepPlaying(board)) {
-    console.log("game ova")
+    console.log("Game Over")
+    console.log(winner(board)===null ? "Stalemate" : winner(board) + " wins!")
     gameOver = true
   }
 });
