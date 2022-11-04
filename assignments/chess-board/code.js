@@ -24,7 +24,7 @@ const startBoard = [
 const drawBoard = (board) => {
   const heightTest = height
   const widthTest = width
-  const size = (widthTest/3)/8
+  const size = (heightTest/3)/8
   for (let yAr = 0; yAr < 8; yAr++) {
     for (let xAr = 0; xAr < board[yAr].length; xAr++) {
       if (board[yAr][xAr] != undefined) {
