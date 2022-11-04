@@ -75,7 +75,6 @@ registerOnclick((x, y) => {
   }
   if (!canKeepPlaying(board)) {
     console.log("Game Over")
-    console.log(board)
     console.log(winner(board)===null ? "Stalemate" : winner(board) + " wins!")
     gameOver = true
   }
