@@ -33,5 +33,5 @@ const createAr = (pixSize) =>{
 }
 
 
-pixSize = 2
+const pixSize = 2
 const screenAR = createAr(pixSize)
