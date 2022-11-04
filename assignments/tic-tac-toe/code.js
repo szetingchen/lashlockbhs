@@ -26,37 +26,39 @@ const drawTik = (board) => {
   }
 }
 
-const canKeepPlaying = (board) => {
-  let filled = true;
+const canKeepPlaying = (board) => winner(board) == null && !boardFull(board);
+
+const boardFull = (board) =>{
   for (let y = 0; y < 3; y++) {
     for (let x = 0; x < 3; x++) {
       if (board[y][x] === "") {
-        filled = false;
+        return false;
       }
     }
   }
+  return true;
+}
 
-  if (filled) {
-    return false;
-  }
+
+const winner = (board) =>{
   for (let i = 0; i < 3; i++) {
     if (board[0][i] === board[1][i] && board[0][i] === board[2][i] && (board[0][i] === "O" || board[0][i] === "X")) {
-      return false;
+      return board[0][i];
     }
   }
   for (let i = 0; i < 3; i++) {
     if (board[i][0] === board[i][1] && board[i][0] === board[i][2] && (board[i][0] === "O" || board[i][0] === "X")) {
-      return false;
+      return board[0][i];
     }
   }
   if (board[0][0] === board[1][1] && board[0][0] === board[2][2] && (board[0][0] === "O" || board[0][0] === "X")) {
-    return false;
+    return board[0][0];
   }
   if (board[0][2] === board[1][1] && board[0][2] === board[2][0] && (board[0][2] === "O" || board[0][2] === "X")) {
-    return false;
+    return board[0][2];
   }
-  return true;
 }
+
 
 drawTik(board);
 let turn = "x";
