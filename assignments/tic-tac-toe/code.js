@@ -6,7 +6,7 @@
 // weeks but for now you can just adapt this code.
 
 
-
+const spacing = height < width ? height / 3 : width / 3
 const board = [
   ['', '', ''],
   ['', '', ''],
@@ -14,7 +14,6 @@ const board = [
 ];
 
 const drawTik = (board, spacingIn) => {
-  const spacing = height < width ? height / 3 : width / 3
   if (spacingIn) {
     return spacing;
   }
