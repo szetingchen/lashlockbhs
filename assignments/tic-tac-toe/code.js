@@ -64,7 +64,7 @@ let gameOver = false;
 registerOnclick((x, y) => {
   if (!gameOver) {
     const box_x = Math.floor((((width / 2 - spacing / 2)) - x) / spacing) * -1;
-    const box_y = Math.floor(y / drawTik(board, "e"));
+    const box_y = Math.floor(y / spacing);
     if (board[box_y][box_x] === "") {
 
       if (turn === "x") {
