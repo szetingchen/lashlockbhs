@@ -75,7 +75,7 @@ registerOnclick((x, y) => {
   }
   if (!canKeepPlaying(board)) {
     console.log("Game Over")
-    console.log(winner(board)===null ? "Stalemate" : winner(board) + " wins!")
+    console.log(winner(board)===undefined ? "Stalemate" : winner(board) + " wins!")
     gameOver = true
   }
 });
