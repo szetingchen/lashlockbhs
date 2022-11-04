@@ -21,3 +21,17 @@
 
 //speed var?
 
+const createAr = (pixSize) =>{
+  const array = []
+  for(let y = 0; y<height/pixSize; y++){
+    array.push([])
+    for(let x = 0; x<width/pixSize; x++){
+      array[y].push([])
+    }
+  }
+  return array
+}
+
+
+pixSize = 2
+const screenAR = createAr(pixSize)
