@@ -23,7 +23,7 @@ const startBoard = [
 ]
 const drawBoard = (board) => {
   const smallerD = height < width ? height : width
-  const size = 5
+  const size = 20
   for (let yAr = 0; yAr < 8; yAr++) {
     for (let xAr = 0; xAr < board[yAr].length; xAr++) {
       if (board[yAr][xAr] != undefined) {
