@@ -13,7 +13,7 @@ const board = [
   ['', '', ''],
 ];
 
-const drawTik = (board) => {
+const drawBoard = (board) => {
   
   drawLine(width / 2 - spacing * 1.5, 0 + spacing, width / 2 + spacing * 1.5, 0 + spacing);
   drawLine(width / 2 - spacing * 1.5, 0 + spacing * 2, width / 2 + spacing * 1.5, 0 + spacing * 2);
@@ -71,7 +71,7 @@ registerOnclick((x, y) => {
       turn = turn === "X" ? "O" : "X";
     }
     clear();
-    drawTik(board);
+    drawBoard(board);
   }
   if (!canKeepPlaying(board)) {
     console.log("Game Over")
