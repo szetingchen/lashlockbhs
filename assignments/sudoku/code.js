@@ -139,3 +139,4 @@ async function solve (array){
   }
   return false
 }
+solve()
