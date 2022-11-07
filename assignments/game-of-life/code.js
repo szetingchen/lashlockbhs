@@ -66,4 +66,4 @@ const calcScreen = (screenAr) => {
 }
 const screenAr = declareAr(pixSizeFactor)
 randomPopulate(0.1, screenAr)
-
+display(screenAr)
