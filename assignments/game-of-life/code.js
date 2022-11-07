@@ -57,10 +57,28 @@ const display = (screenAr) => {
   }
 }
 
+
+//if the sum of all nine fields in a given neighbourhood is three, 
+//the inner field state for the next generation will be life; if the all-field sum is four, 
+//the inner field retains its current state; and every other sum sets the inner field to death.
+
+
 const calcScreen = (screenAr) => {
+  const tempScreenAr = JSON.parse(JSON.stringify(screenAr));
   for (let y = 0; y < screenAr.length; y++) {
     for (let x = 0; x < screenAr[0].length; x++) {
-       
+      let sum = 0
+      for(let yOffset = -1; yOffset<=1; yOffset++){
+        for(let xOffset = -1; xOffset<=1; xOffset++){
+          sum+=screenAr[y-yOffset][x-xOffset]
+        }
+      }
+      if(sum===3){
+        tempScreenAr[y][x]=1
+      }
+      else if(sum!=4){
+        tempScreenAr[y][x]=0
+      }
     }
   }
 }
