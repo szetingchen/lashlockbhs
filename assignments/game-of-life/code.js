@@ -91,8 +91,8 @@ randomPopulate(0.1, screenAr) //mutator
 const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
   const targetGen = Math.floor(time/timeTilUpdate)
   for(let gen = 0; gen < targetGen; gen++){
-    screenAr = declareNextGen(screenAr)
-    
+    screenAr = declareNextGen(screenAr);
+    display(screenAr)
   }
 }
 
@@ -102,6 +102,6 @@ const drawFrame = (time) => {
     calcTimeBasedGen(screenAr, time, timeTillUpdate)
     
   }
-  display(screenAr)
+  
 }
 animate(drawFrame)
