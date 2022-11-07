@@ -73,17 +73,11 @@ const declareNextGen = (screenAr) => {
           sum+=screenAr[y-yOffset][x-xOffset]
         }
       }
-      console.log(sum + " : " + (y-1) + ", " + (x-1))
       if(sum===3){
         tempScreenAr[y][x]=1
-        console.log("alive")
       }
       else if(sum!=4){
         tempScreenAr[y][x]=0
-        console.log("dead")
-      }
-      else{
-        console.log("no change")
       }
     }
   }
@@ -97,7 +91,6 @@ const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
   const targetGen = time/timeTilUpdate
   for(let gen = 0; gen < targetGen; gen++){
     screenAr = declareNextGen(screenAr)
-    console.log("gen " + gen+1)
   }
 }
 
