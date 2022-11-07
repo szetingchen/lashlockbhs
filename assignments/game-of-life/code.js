@@ -36,8 +36,8 @@ const declareAr = (pixSizeFactor) => {
 }
 
 const randomPopulate = (percent, screenAr) => {
-  for (let y = 1; y < screenAr.length-2; y++) {
-    for (let x = 1; x < screenAr[0].length-2; x++) {
+  for (let y = 1; y < screenAr.length-1; y++) {
+    for (let x = 1; x < screenAr[0].length-1; x++) {
       if (Math.random() <= percent) {
         screenAr[y][x] = 1
       }
