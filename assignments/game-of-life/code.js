@@ -35,7 +35,6 @@ const declareAr = (pixSizeFactor) => {
   return array
 }
 
-const screenAr = declareAr(1)
 
 const randomPopulate = (percent, screen) => {
   for (let y = 0; y < screen.length; y++) {
