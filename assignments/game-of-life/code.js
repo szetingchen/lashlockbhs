@@ -21,11 +21,15 @@
 
 //speed var?
 
-const createAr = (pixSize) =>{
+
+const screenAr = declareAr(1)
+
+
+const declareAr = (pixSizeFactor) =>{
   const array = []
-  for(let y = 0; y<height/pixSize; y++){
+  for(let y = 0; y<height/pixSizeFactor; y++){
     array.push([])
-    for(let x = 0; x<width/pixSize; x++){
+    for(let x = 0; x<width/pixSizeFactor; x++){
       array[y].push([])
     }
   }
@@ -33,6 +37,13 @@ const createAr = (pixSize) =>{
 }
 
 
-const pixSize = 2
+
+const randomPopulate = (percent, screen) =>{
+  if(Math.random()<=percent){
+
+  }
+}
+
+const pixSize = 1
 const screenAR = createAr(pixSize)
 console.log(screenAR.length)
