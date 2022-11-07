@@ -22,7 +22,7 @@
 //speed var?
 
 
-
+const pixSizeFactor = 10
 
 const declareAr = (pixSizeFactor) => {
   const array = []
@@ -35,18 +35,27 @@ const declareAr = (pixSizeFactor) => {
   return array
 }
 
-
-const randomPopulate = (percent, screen) => {
-  for (let y = 0; y < screen.length; y++) {
-    for (let x = 0; x < screen[0].length; x++) {
+const randomPopulate = (percent, screenAr) => {
+  for (let y = 0; y < screenAr.length; y++) {
+    for (let x = 0; x < screenAr[0].length; x++) {
       if (Math.random() <= percent) {
-        screen[y][x] = 1
+        screenAr[y][x] = 1
       }
     }
   }
 }
 
+const display = (screenAr) =>{
+  const widthPix = pixSizeFactor;
+  const heightPix = pixSizeFactor;
+  for (let y = 0; y < screenAr.length; y++) {
+    for (let x = 0; x < screenAr[0].length; x++) {
+      if(screenAr[y][x]===1){
+        drawFilledRect(x*pixSizeFactor, y*pixSizeFactor, widthPix, heightPix, 'black')
+      }
+    }
+  }
+}
 
-const screenAr = declareAr(10)
-
+const screenAr = declareAr(pixSizeFactor)
 randomPopulate(0.5, screenAr)
