@@ -23,6 +23,7 @@
 
 
 const pixSizeFactor = 60
+const timeTillUpdate = 0.5;
 
 const declareAr = (pixSizeFactor) => {
   const array = []
@@ -96,7 +97,9 @@ const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
 
 const drawFrame = (time) => {
   clear();
-  calcTimeBasedGen(screenAr, time, 0.5)
+  if(time%timeTillUpdate){
+    calcTimeBasedGen(screenAr, time, timeTillUpdate)
+  }
   display(screenAr)
 }
 animate(drawFrame)
