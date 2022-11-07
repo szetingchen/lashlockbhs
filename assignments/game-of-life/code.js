@@ -92,14 +92,15 @@ const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
   const targetGen = Math.floor(time/timeTilUpdate)
   for(let gen = 0; gen < targetGen; gen++){
     screenAr = declareNextGen(screenAr);
-    display(screenAr)
   }
 }
 
 const drawFrame = (time) => {
-  clear();
+  
   if(time%timeTillUpdate===0){
+    clear();
     calcTimeBasedGen(screenAr, time, timeTillUpdate)
+    display(screenAr)
   }
   
 }
