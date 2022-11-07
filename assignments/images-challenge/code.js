@@ -157,4 +157,4 @@ var drawPoint = function() {
   point.style.backgroundColor = 'black';
   document.body.appendChild(point);
 };
-setInterval(drawPoint, 0.0000000000000001);
+setInterval(drawPoint, 0.00000000000000000000000000000000000000000000000000000001);
