@@ -91,11 +91,12 @@ randomPopulate(0.5, screenAr) //mutator
 const drawFrame = (time) => {
   if(time%timeTillUpdate===0){
     clear();
-    screenAr = declareNextGen(screenAr)
-    display(screenAr)
+    //screenAr = declareNextGen(screenAr)
+    //display(screenAr)
   }
   
 }
 
 animate(drawFrame)
 
+display(screenAr)
