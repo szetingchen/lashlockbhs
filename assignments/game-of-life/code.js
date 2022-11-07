@@ -98,7 +98,7 @@ const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
 
 const drawFrame = (time) => {
   clear();
-  if(time%timeTillUpdate){
+  if(time%timeTillUpdate===1){
     calcTimeBasedGen(screenAr, time, timeTillUpdate)
     
   }
