@@ -81,7 +81,8 @@ const calcScreen = (screenAr) => {
       }
     }
   }
+  screenAr = tempScreenAr;
 }
-const screenAr = declareAr(pixSizeFactor)
-randomPopulate(0.1, screenAr)
+let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functions are ran
+randomPopulate(0.1, screenAr) //mutator
 display(screenAr)
