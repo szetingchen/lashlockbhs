@@ -58,12 +58,6 @@ const display = (screenAr, color) => {
   }
 }
 
-
-//if the sum of all nine fields in a given neighbourhood is three, 
-//the inner field state for the next generation will be life; if the all-field sum is four, 
-//the inner field retains its current state; and every other sum sets the inner field to death.
-
-
 const declareNextGen = (screenAr) => {
   const tempScreenAr = JSON.parse(JSON.stringify(screenAr));
   for (let y = 1; y < screenAr.length-1; y++) {
@@ -95,13 +89,11 @@ randomPopulate(0.5, screenAr) //mutator
 
 const drawFrame = (time) => {
   if(time%timeTillUpdate===0){
-    
-    //screenAr = declareNextGen(screenAr)
-    //display(screenAr)
+    clear();
+    screenAr = declareNextGen(screenAr)
+    display(screenAr)
   }
   
 }
 
 animate(drawFrame)
-
-display(screenAr)
