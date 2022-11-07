@@ -94,7 +94,7 @@ const drawFrame = (time) => {
     clear();
     screenAr = declareNextGen(screenAr);
     display(screenAr);
-    next+=1000;
+    next+=timeTillUpdate;
   }
 }
 
