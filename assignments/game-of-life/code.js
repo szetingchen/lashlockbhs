@@ -29,7 +29,7 @@ const declareAr = (pixSizeFactor) => {
   for (let y = 0; y < Math.floor(height / pixSizeFactor)+2; y++) {
     array.push([])
     for (let x = 0; x < Math.floor(width / pixSizeFactor)+2; x++) {
-      array[y].push([0])
+      array[y].push(0)
     }
   }
   return array
