@@ -75,9 +75,4 @@ const perFrame = (screenAr) =>{
   screenAr = declareNextGen(screenAr)
 }
 
-const drawFrame = (time) => {
-  clear();
-  display(screenAr)
-  screenAr = declareNextGen(screenAr)
-}
 animate(perFrame(screenAr))
