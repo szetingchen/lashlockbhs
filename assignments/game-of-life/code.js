@@ -91,7 +91,6 @@ randomPopulate(0.1, screenAr) //mutator
 const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
   let tempScreenAr = JSON.parse(JSON.stringify(screenAr));
   const targetGen = Math.floor(time/timeTilUpdate)
-  console.log("targetGen =" + targetGen + " Time = " + time)
   for(let gen = 0; gen < targetGen; gen++){
     tempScreenAr = declareNextGen(tempScreenAr);
   }
