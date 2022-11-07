@@ -22,7 +22,7 @@
 //speed var?
 
 
-const pixSizeFactor = 20;
+const pixSizeFactor = 30;
 const timeTillUpdate = 0.5;
 
 const declareAr = (pixSizeFactor) => {
@@ -88,17 +88,7 @@ const declareNextGen = (screenAr) => {
 let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functions are ran
 randomPopulate(0.5, screenAr) //mutator
 
-const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
-  let tempScreenAr = JSON.parse(JSON.stringify(screenAr));
-  const targetGen = Math.floor((time)/timeTilUpdate)
-  for(let gen = 0; gen < targetGen; gen++){
-    tempScreenAr = declareNextGen(tempScreenAr);
-  }
-  return tempScreenAr;
-}
-
 const drawFrame = (time) => {
-  
   if(time%timeTillUpdate===0){
     clear();
     screenAr = declareNextGen(screenAr)
