@@ -1,78 +1,42 @@
+// This is an example of a function definition. This function is called by the
+// underlying animation framework thanks to the call to animate below. This
+// function is responsible for drawing one frame of the animation. You can
+// change the code in here using the same functions you had in the simple
+// drawing exercise to draw shapes. The argument to this function, time, is the
+// number of milliseconds (one millionth of a second) since the program started.
+const drawFrame = (time) => {
+  clear();
+  drawFilledCircle((time / 3) % width, height / 2, 25, 'blue');
+  drawFallingTriangle(width / 2, time);
+};
 
-const pixSizeFactor = 60
+// This is a function that we define to make it easier to draw a triangle. You
+// may want to experiment with writing your own functions using this one as a
+// model to draw other shapes.
+const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
+  drawLine(x1, y1, x2, y2, color, width);
+  drawLine(x2, y2, x3, y3, color, width);
+  drawLine(x3, y3, x1, y1, color, width);
+};
 
-const declareAr = (pixSizeFactor) => {
-  const array = []
-  for (let y = 0; y < Math.floor(height / pixSizeFactor)+2; y++) {
-    array.push([])
-    for (let x = 0; x < Math.floor(width / pixSizeFactor)+2; x++) {
-      array[y].push(0)
-    }
-  }
-  return array
-}
+// This draws a falling trangle of a particular shape whose bottom point is
+// positioned at x and whose y is a function of time.
+const drawFallingTriangle = (x, time) => {
+  // Figure out the x values relative to the passed in x
+  let x1 = x - 50;
+  let x2 = x;
+  let x3 = x + 50;
 
-const randomPopulate = (percent, screenAr) => {
-  for (let y = 1; y < screenAr.length-1; y++) {
-    for (let x = 1; x < screenAr[0].length-1; x++) {
-      if (Math.random() <= percent) {
-        screenAr[y][x] = 1
-      }
-    }
-  }
-}
+  // Figure out the y values as a function of time.
+  let y1 = (time / 4) % height;
+  let y2 = y1 + 37;
+  let y3 = y1 - 13;
 
-const display = (screenAr, color) => {
-  const widthPix = pixSizeFactor;
-  const heightPix = pixSizeFactor;
-  for (let y = 1; y < screenAr.length-1; y++) {
-    for (let x = 1; x < screenAr[0].length-1; x++) {
-      if (screenAr[y][x] === 1) {
-        drawFilledRect((x-1) * pixSizeFactor, (y-1) * pixSizeFactor, widthPix, heightPix, color)
-      }
-    }
-  }
-}
+  // Actually draw the triangle.
+  drawTriangle(x1, y1, x2, y2, x3, y3, 'pink', 3);
+};
 
-
-//if the sum of all nine fields in a given neighbourhood is three, 
-//the inner field state for the next generation will be life; if the all-field sum is four, 
-//the inner field retains its current state; and every other sum sets the inner field to death.
-
-
-const declareNextGen = (screenAr) => {
-  const tempScreenAr = JSON.parse(JSON.stringify(screenAr));
-  for (let y = 1; y < screenAr.length-1; y++) {
-    for (let x = 1; x < screenAr[0].length-1; x++) {
-      let sum = 0
-      for(let yOffset = -1; yOffset<=1; yOffset++){
-        for(let xOffset = -1; xOffset<=1; xOffset++){
-          sum+=screenAr[y-yOffset][x-xOffset]
-        }
-      }
-      console.log(sum + " : " + (y-1) + ", " + (x-1))
-      if(sum===3){
-        tempScreenAr[y][x]=1
-        console.log("alive")
-      }
-      else if(sum!=4){
-        tempScreenAr[y][x]=0
-        console.log("dead")
-      }
-      else{
-        console.log("no change")
-      }
-    }
-  }
-  return tempScreenAr;
-}
-
-let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functions are ran
-randomPopulate(0.1, screenAr) //mutator
-
-const perFrame = (screenAr) =>{
-  display(screenAr)
-  screenAr = declareNextGen(screenAr)
-}
-
-animate(perFrame(screenAr))
+// Leave this code here or the animation won't run. Also don't change the name
+// of drawFrame either here or where it is defined. (Or, if you must, change it
+// the same way in both places.)
+animate(drawFrame);
