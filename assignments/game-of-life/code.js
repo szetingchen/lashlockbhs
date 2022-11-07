@@ -58,6 +58,6 @@ const display = (screenAr) =>{
 }
 
 const screenAr = declareAr(pixSizeFactor)
-randomPopulate(0.8, screenAr)
+randomPopulate(0.1, screenAr)
 display(screenAr)
 
