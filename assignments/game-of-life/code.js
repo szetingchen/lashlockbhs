@@ -97,11 +97,16 @@ const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
 
 const drawFrame = (time) => {
   
-  if(time%timeTillUpdate===0){
+  if(time%timeTillUpdate===1){
     clear();
     calcTimeBasedGen(screenAr, time, timeTillUpdate)
     display(screenAr)
   }
   
 }
+
 animate(drawFrame)
+
+display(screenAr, 'blue')
+declareNextGen(screenAr)
+display(screenAr, 'red')
