@@ -23,7 +23,7 @@
 
 
 const pixSizeFactor = 60
-const timeTillUpdate = 100;
+const timeTillUpdate = 10;
 
 const declareAr = (pixSizeFactor) => {
   const array = []
@@ -100,7 +100,6 @@ const drawFrame = (time) => {
   clear();
   if(time%timeTillUpdate===0){
     calcTimeBasedGen(screenAr, time, timeTillUpdate)
-    
   }
   
 }
