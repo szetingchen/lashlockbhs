@@ -89,11 +89,12 @@ let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functi
 randomPopulate(0.1, screenAr) //mutator
 
 const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
-  const tempScreenAr = JSON.parse(JSON.stringify(screenAr));
+  let tempScreenAr = JSON.parse(JSON.stringify(screenAr));
   const targetGen = Math.floor(time/timeTilUpdate)
   for(let gen = 0; gen < targetGen; gen++){
     tempScreenAr = declareNextGen(tempScreenAr);
   }
+  return tempScreenAr;
 }
 
 const drawFrame = (time) => {
