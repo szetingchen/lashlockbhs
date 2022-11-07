@@ -97,3 +97,5 @@ const perFrame = (screenAr) =>{
   display(screenAr)
   screenAr = declareNextGen(screenAr)
 }
+
+animate(perFrame)
