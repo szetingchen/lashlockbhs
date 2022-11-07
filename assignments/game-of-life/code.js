@@ -89,14 +89,16 @@ let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functi
 randomPopulate(0.1, screenAr) //mutator
 
 const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
+  console.log(time)
+
   const targetGen = Math.floor(time/timeTilUpdate)
   for(let gen = 0; gen < targetGen; gen++){
     screenAr = declareNextGen(screenAr)
+    
     console.log("gen " + gen + " : target gen " + targetGen)
   }
 }
 
-console.log(time)
 const drawFrame = (time) => {
   clear();
   if(time%timeTillUpdate===0){
