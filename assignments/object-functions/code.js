@@ -17,3 +17,10 @@ const distance = (point1, point2) =>{
 const midpoint = (point1, point2) =>{
   return {"x" : point1.x+(point2.x-point1.x)/2, "y" : point1.y+(point2.y-point1.y)/2}
 }
+
+const sumSalaries = (array) => {
+  let sum = 0;
+  for(let i = 0; i<array.length; i++){
+    sum+=array[i][0]
+  }
+}
