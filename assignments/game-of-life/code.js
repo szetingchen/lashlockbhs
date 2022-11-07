@@ -35,4 +35,4 @@ const createAr = (pixSize) =>{
 
 const pixSize = 1
 const screenAR = createAr(pixSize)
-console.log(screenAR.length)
+console.log(screenAR.length[0])
