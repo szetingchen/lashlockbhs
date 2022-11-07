@@ -45,19 +45,26 @@ const randomPopulate = (percent, screenAr) => {
   }
 }
 
-const display = (screenAr) =>{
+const display = (screenAr) => {
   const widthPix = pixSizeFactor;
   const heightPix = pixSizeFactor;
   for (let y = 0; y < screenAr.length; y++) {
     for (let x = 0; x < screenAr[0].length; x++) {
-      if(screenAr[y][x]===1){
-        drawFilledRect(x*pixSizeFactor, y*pixSizeFactor, widthPix, heightPix, 'black')
+      if (screenAr[y][x] === 1) {
+        drawFilledRect(x * pixSizeFactor, y * pixSizeFactor, widthPix, heightPix, 'black')
       }
     }
   }
 }
 
+const calcScreen = (screenAr) => {
+  for (let y = 0; y < screenAr.length; y++) {
+    for (let x = 0; x < screenAr[0].length; x++) {
+      
+    }
+  }
+}
 const screenAr = declareAr(pixSizeFactor)
 randomPopulate(0.1, screenAr)
-display(screenAr)
 
+animate()
