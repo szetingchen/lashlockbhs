@@ -23,7 +23,7 @@
 
 
 const pixSizeFactor = 60
-const timeTillUpdate = 2;
+const timeTillUpdate = 100;
 
 const declareAr = (pixSizeFactor) => {
   const array = []
@@ -89,13 +89,10 @@ let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functi
 randomPopulate(0.1, screenAr) //mutator
 
 const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
-  console.log(time)
-
   const targetGen = Math.floor(time/timeTilUpdate)
   for(let gen = 0; gen < targetGen; gen++){
     screenAr = declareNextGen(screenAr)
     
-    console.log("gen " + gen + " : target gen " + targetGen)
   }
 }
 
