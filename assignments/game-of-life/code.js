@@ -108,5 +108,5 @@ const drawFrame = (time) => {
 animate(drawFrame)
 
 display(screenAr, 'red')
-declareNextGen(screenAr)
+screenAr = declareNextGen(screenAr)
 display(screenAr, 'blue')
