@@ -81,8 +81,14 @@ const calcScreen = (screenAr) => {
       }
     }
   }
-  screenAr = tempScreenAr;
+  return tempScreenAr;
+}
+
+const drawOneGen = (array) =>{
+  clear();
+  display(calcScreen(array))
 }
 let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functions are ran
 randomPopulate(0.1, screenAr) //mutator
 display(screenAr)
+
