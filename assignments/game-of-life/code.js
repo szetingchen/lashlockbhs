@@ -87,14 +87,15 @@ const declareNextGen = (screenAr) => {
 let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functions are ran
 randomPopulate(0.5, screenAr) //mutator
 
+
+let next = 0;
 const drawFrame = (time) => {
-  const thisTime = time;
-  if(thisTime%timeTillUpdate===0){
+  if(time>next){
     clear();
-    screenAr = declareNextGen(screenAr)
-    display(screenAr)
+    screenAr = declareNextGen(screenAr);
+    display(screenAr);
+    next+=1000;
   }
-  
 }
 
 animate(drawFrame)
