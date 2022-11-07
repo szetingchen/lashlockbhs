@@ -73,7 +73,7 @@ const declareNextGen = (screenAr) => {
           sum+=screenAr[y-yOffset][x-xOffset]
         }
       }
-      console.log(sum + " : " + y + ", " + x)
+      console.log(sum + " : " + (y-1) + ", " + (x-1))
       if(sum===3){
         tempScreenAr[y][x]=1
       }
