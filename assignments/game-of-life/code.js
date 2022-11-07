@@ -99,7 +99,7 @@ const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
 
 const drawFrame = (time) => {
   
-  if(time%timeTillUpdate===0){
+  if(time/1000%timeTillUpdate===0){
     clear();
     display(calcTimeBasedGen(screenAr, time, timeTillUpdate))
   }
