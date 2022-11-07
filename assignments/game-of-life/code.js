@@ -51,7 +51,7 @@ const display = (screenAr) => {
   for (let y = 1; y < screenAr.length-1; y++) {
     for (let x = 1; x < screenAr[0].length-1; x++) {
       if (screenAr[y][x] === 1) {
-        drawFilledRect(x * pixSizeFactor, y * pixSizeFactor, widthPix, heightPix, 'black')
+        drawFilledRect((x-1) * pixSizeFactor, (y-1) * pixSizeFactor, widthPix, heightPix, 'black')
       }
     }
   }
