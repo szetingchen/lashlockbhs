@@ -69,14 +69,19 @@ const declareNextGen = (screenAr) => {
   for (let y = 1; y < screenAr.length-1; y++) {
     for (let x = 1; x < screenAr[0].length-1; x++) {
       let sum = 0
+      //counts the number of alive cells around the curent cell including itself
       for(let yOffset = -1; yOffset<=1; yOffset++){
         for(let xOffset = -1; xOffset<=1; xOffset++){
           sum+=screenAr[y-yOffset][x-xOffset]
         }
       }
+
+      //if the number of alive cells is 3 then set the current cell alive
       if(sum===3){
         tempScreenAr[y][x]=1
       }
+      //if the number of alive cells is 4 don't change the current cell
+      //otherwise kill the current cell
       else if(sum!=4){
         tempScreenAr[y][x]=0
       }
