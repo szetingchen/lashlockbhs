@@ -98,4 +98,4 @@ const perFrame = (screenAr) =>{
   screenAr = declareNextGen(screenAr)
 }
 
-animate(perFrame)
+animate(perFrame(screenAr))
