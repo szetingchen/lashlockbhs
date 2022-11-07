@@ -90,7 +90,7 @@ randomPopulate(0.5, screenAr) //mutator
 
 const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
   let tempScreenAr = JSON.parse(JSON.stringify(screenAr));
-  const targetGen = Math.floor((time/1000)/timeTilUpdate)
+  const targetGen = Math.floor((time/10)/timeTilUpdate)
   for(let gen = 0; gen < targetGen; gen++){
     tempScreenAr = declareNextGen(tempScreenAr);
   }
@@ -99,7 +99,7 @@ const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
 
 const drawFrame = (time) => {
   
-  if(time/1000%timeTillUpdate===0){
+  if(time%timeTillUpdate===0){
     clear();
     display(calcTimeBasedGen(screenAr, time, timeTillUpdate))
   }
