@@ -86,7 +86,7 @@ const declareNextGen = (screenAr) => {
 }
 
 let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functions are ran
-randomPopulate(0.9, screenAr) //mutator
+randomPopulate(0.5, screenAr) //mutator
 
 const calcTimeBasedGen = (screenAr, time, timeTilUpdate) =>{
   let tempScreenAr = JSON.parse(JSON.stringify(screenAr));
