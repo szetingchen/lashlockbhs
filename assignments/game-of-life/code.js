@@ -26,9 +26,9 @@ const pixSizeFactor = 60
 
 const declareAr = (pixSizeFactor) => {
   const array = []
-  for (let y = 0; y < Math.floor(height / pixSizeFactor); y++) {
+  for (let y = 0; y < Math.floor(height / pixSizeFactor)+2; y++) {
     array.push([])
-    for (let x = 0; x < Math.floor(width / pixSizeFactor); x++) {
+    for (let x = 0; x < Math.floor(width / pixSizeFactor)+2; x++) {
       array[y].push([0])
     }
   }
@@ -36,8 +36,8 @@ const declareAr = (pixSizeFactor) => {
 }
 
 const randomPopulate = (percent, screenAr) => {
-  for (let y = 0; y < screenAr.length; y++) {
-    for (let x = 0; x < screenAr[0].length; x++) {
+  for (let y = 1; y < screenAr.length-1; y++) {
+    for (let x = 1; x < screenAr[0].length-1; x++) {
       if (Math.random() <= percent) {
         screenAr[y][x] = 1
       }
@@ -48,8 +48,8 @@ const randomPopulate = (percent, screenAr) => {
 const display = (screenAr) => {
   const widthPix = pixSizeFactor;
   const heightPix = pixSizeFactor;
-  for (let y = 0; y < screenAr.length; y++) {
-    for (let x = 0; x < screenAr[0].length; x++) {
+  for (let y = 1; y < screenAr.length-1; y++) {
+    for (let x = 1; x < screenAr[0].length-1; x++) {
       if (screenAr[y][x] === 1) {
         drawFilledRect(x * pixSizeFactor, y * pixSizeFactor, widthPix, heightPix, 'black')
       }
@@ -60,7 +60,7 @@ const display = (screenAr) => {
 const calcScreen = (screenAr) => {
   for (let y = 0; y < screenAr.length; y++) {
     for (let x = 0; x < screenAr[0].length; x++) {
-      
+       
     }
   }
 }
