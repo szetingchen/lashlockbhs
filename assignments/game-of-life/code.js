@@ -87,7 +87,7 @@ const declareNextGen = (screenAr) => {
       }
     }
   }
-  screenAr = tempScreenAr;
+  return tempScreenAr;
 }
 
 const drawOneGen = (array) =>{
@@ -97,7 +97,7 @@ const drawOneGen = (array) =>{
 let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functions are ran
 randomPopulate(0.1, screenAr) //mutator
 display(screenAr, 'blue')
-declareNextGen(screenAr)
+screenAr = declareNextGen(screenAr);
 display(screenAr, 'red')
 
 
