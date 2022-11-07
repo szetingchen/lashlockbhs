@@ -109,4 +109,4 @@ animate(drawFrame)
 
 display(screenAr, 'blue')
 declareNextGen(screenAr)
-display(screenAr, 'red')
+display(screenAr, 'blue')
