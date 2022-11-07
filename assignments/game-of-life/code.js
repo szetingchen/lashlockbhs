@@ -65,8 +65,8 @@ const display = (screenAr) => {
 
 const calcScreen = (screenAr) => {
   const tempScreenAr = JSON.parse(JSON.stringify(screenAr));
-  for (let y = 0; y < screenAr.length; y++) {
-    for (let x = 0; x < screenAr[0].length; x++) {
+  for (let y = 1; y < screenAr.length-1; y++) {
+    for (let x = 1; x < screenAr[0].length-1; x++) {
       let sum = 0
       for(let yOffset = -1; yOffset<=1; yOffset++){
         for(let xOffset = -1; xOffset<=1; xOffset++){
