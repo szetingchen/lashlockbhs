@@ -45,13 +45,13 @@ const randomPopulate = (percent, screenAr) => {
   }
 }
 
-const display = (screenAr) => {
+const display = (screenAr, color) => {
   const widthPix = pixSizeFactor;
   const heightPix = pixSizeFactor;
   for (let y = 1; y < screenAr.length-1; y++) {
     for (let x = 1; x < screenAr[0].length-1; x++) {
       if (screenAr[y][x] === 1) {
-        drawFilledRect((x-1) * pixSizeFactor, (y-1) * pixSizeFactor, widthPix, heightPix, 'black')
+        drawFilledRect((x-1) * pixSizeFactor, (y-1) * pixSizeFactor, widthPix, heightPix, color)
       }
     }
   }
@@ -63,7 +63,7 @@ const display = (screenAr) => {
 //the inner field retains its current state; and every other sum sets the inner field to death.
 
 
-const calcScreen = (screenAr) => {
+const declareNextGen = (screenAr) => {
   const tempScreenAr = JSON.parse(JSON.stringify(screenAr));
   for (let y = 1; y < screenAr.length-1; y++) {
     for (let x = 1; x < screenAr[0].length-1; x++) {
@@ -73,6 +73,7 @@ const calcScreen = (screenAr) => {
           sum+=screenAr[y-yOffset][x-xOffset]
         }
       }
+      console.log(sum)
       if(sum===3){
         tempScreenAr[y][x]=1
       }
@@ -81,14 +82,17 @@ const calcScreen = (screenAr) => {
       }
     }
   }
-  return tempScreenAr;
+  screenAr = tempScreenAr;
 }
 
 const drawOneGen = (array) =>{
   clear();
-  display(calcScreen(array))
+  display()
 }
 let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functions are ran
 randomPopulate(0.1, screenAr) //mutator
-display(screenAr)
+display(screenAr, 'blue')
+
+display(screenAr, 'red')
+
 
