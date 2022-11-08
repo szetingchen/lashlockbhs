@@ -22,7 +22,7 @@
 //speed var?
 
 
-const pixSizeFactor = 15
+const pixSizeFactor = 1
 const timeTillUpdate = 50
 
 const declareAr = (pixSizeFactor) => {
