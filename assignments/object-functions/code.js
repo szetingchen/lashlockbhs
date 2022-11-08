@@ -25,3 +25,9 @@ const sumSalaries = (array) => {
   }
   return sum
 }
+
+const newHighScore = (highScore, players) =>{
+  for(let i = 0; i<players.length; i++){
+    if(players[i].)
+  }
+}
