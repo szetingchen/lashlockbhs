@@ -84,8 +84,8 @@ const declareNextGen = (screenAr) => {
   return tempScreenAr;
 }
 
-let screenAr = declareAr(pixSizeFactor) //will be redeclared when mutator functions are ran
-randomPopulate(0.5, screenAr) //mutator
+let screenAr = declareAr(pixSizeFactor)
+randomPopulate(0.5, screenAr)
 
 
 let next = 0;
