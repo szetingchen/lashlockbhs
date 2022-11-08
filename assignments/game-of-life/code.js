@@ -71,12 +71,12 @@ const declareNextGen = (screenAr) => {
       }
 
       //if the number of alive cells is 3 then set the current cell alive
-      if(sum===3){
+      if(sum===2){
         tempScreenAr[y][x]=1
       }
       //if the number of alive cells is 4 don't change the current cell
       //otherwise kill the current cell
-      else if(sum!=5){
+      else if(sum!=4){
         tempScreenAr[y][x]=0
       }
     }
