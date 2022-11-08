@@ -30,7 +30,7 @@ const newHighScore = (highScore, players) =>{
   let newHigh = highScore;
   for(let i = 0; i<players.length; i++){
     if(players[i].highscore>newHigh){
-      newHigh = players[i].highscore;
+      newHigh = players[i].score;
     }
   }
   return newHigh
