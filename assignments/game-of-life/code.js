@@ -23,7 +23,7 @@
 
 
 const pixSizeFactor = 15
-const timeTillUpdate = 10
+const timeTillUpdate = 5
 
 const declareAr = (pixSizeFactor) => {
   const array = []
