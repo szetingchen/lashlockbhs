@@ -27,7 +27,8 @@ const updateWins = (players) => {
 
 const bigWinners = (players) => {
   const bigWinners = []
-  players.map()
+  players.map(player => player.wins > 10 ? bigWinners.push(player) : "")
+  return bigWinners
 };
 
 const fillTimesTable = (table) => {
