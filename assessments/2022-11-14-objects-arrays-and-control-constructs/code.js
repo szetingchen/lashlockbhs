@@ -23,7 +23,7 @@ const isWinner = (player) => {
 
 const updateWins = (players) => {
   players.map(x => isWinner(x) ? x.wins++ : "")
-  console.log(players)
+  console.log(players[0].wins)
 };
 
 const bigWinners = (players) => {
