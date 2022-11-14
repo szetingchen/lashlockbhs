@@ -42,9 +42,10 @@ const fillTimesTable = (table) => {
 const sums = (n) => {
   const array = []
   for(let i =0; i<n+1; i++){
-    array.push()
-    //told to not do it
+    array.push(i+array[i-1])
+    
   }
+  return array;
 };
 
 const rule110 = (cells) => {
