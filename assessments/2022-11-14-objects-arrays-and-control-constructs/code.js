@@ -37,12 +37,17 @@ const fillTimesTable = (table) => {
       table[y-1][x-1] = y*x
     }
   }
-  return table
-
 };
 
 const sums = (n) => {
+  const array = []
+  for(let i =0; i<n+1; i++){
+    array.push()
+    //told to not do it
+  }
 };
 
 const rule110 = (cells) => {
+  const newCells = []
+  cells.map()
 };
