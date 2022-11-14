@@ -18,9 +18,12 @@ const totalWithTip = (bill, tipPercentage) => {
 };
 
 const isWinner = (player) => {
+  return player.score > 100
 };
 
 const updateWins = (players) => {
+  players.map(x => isWinner(x) ? x.wins++ : "")
+  console.log(players)
 };
 
 const bigWinners = (players) => {
