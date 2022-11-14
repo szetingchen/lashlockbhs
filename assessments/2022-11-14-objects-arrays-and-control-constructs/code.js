@@ -34,11 +34,11 @@ const bigWinners = (players) => {
 const fillTimesTable = (table) => {
   for(let y = 0; y<table.length; y++){
     for(let x = 0; x<table.length; x++){
-      table[y][x] = y+1 * x+1
+      table[y-1][x-1] = y*x
     }
   }
   return table
-  
+
 };
 
 const sums = (n) => {
