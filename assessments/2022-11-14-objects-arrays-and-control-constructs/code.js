@@ -49,5 +49,9 @@ const sums = (n) => {
 
 const rule110 = (cells) => {
   const newCells = []
-  cells.map()
+  for(let i = 0; i<cells.length; i++){
+    if(i === 0 ? 0 : cells[i-1] + cells[i] + i === cells.length-1 ? 0 : cells[i+1]=== 0){
+      newCells.push()
+    }
+  }
 };
