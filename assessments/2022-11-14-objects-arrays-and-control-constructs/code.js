@@ -22,11 +22,12 @@ const isWinner = (player) => {
 };
 
 const updateWins = (players) => {
-  players.map(x => isWinner(x) ? x.wins++ : "")
-  console.log(players[1].wins)
+  players.map(player => isWinner(player) ? player.wins++ : "")
 };
 
 const bigWinners = (players) => {
+  const bigWinners = []
+  players.map()
 };
 
 const fillTimesTable = (table) => {
