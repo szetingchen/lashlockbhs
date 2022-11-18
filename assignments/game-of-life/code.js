@@ -90,7 +90,7 @@ randomPopulate(0.5, screenAr)
 
 let next = 0;
 const drawFrame = (time) => {
-  if(time>next){
+  if(time>=next){
     clear();
     screenAr = declareNextGen(screenAr);
     display(screenAr);
