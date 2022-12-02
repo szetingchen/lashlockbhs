@@ -19,6 +19,9 @@ const day01Part1 = (str) =>{
   let currelfnum = 0
   let max = 0
   for(let i = 0; i<numbers.length; i++){
+    console.log(numbers[i])
+    console.log(currelfnum)
+    console.log("----")
     if(numbers[i]!=""){
       currelfnum+=numbers[i]
     }
