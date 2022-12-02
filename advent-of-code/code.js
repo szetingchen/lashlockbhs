@@ -16,7 +16,19 @@
 
 const day01Part1 = (str) =>{
   const numbers = str.split('\n');
-  console.log(numbers[3])
+  let currelfnum = 0
+  let max = 0
+  for(let i = 0; i<numbers.length; i++){
+    if(numbers[i]!=""){
+      currelfnum+=numbers[i]
+    }
+    else{
+      if(currelfnum > max){
+        max = currelfnum
+      }
+      currelfnum = 0
+    }
+  }
 }
 
 run('day_01.sample', day01Part1)
