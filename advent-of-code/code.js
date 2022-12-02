@@ -32,4 +32,4 @@ const day01Part1 = (str) =>{
   return max;
 }
 
-run('day_01.sample', day01Part1)
+run('day_01.sample', day01Part1, 24000)
