@@ -29,6 +29,7 @@ const day01Part1 = (str) =>{
       currelfnum = 0
     }
   }
+  return max;
 }
 
 run('day_01.sample', day01Part1)
