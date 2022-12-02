@@ -23,7 +23,7 @@ const day01Part1 = (str) =>{
     console.log(currelfnum)
     console.log("----")
     if(numbers[i]!=""){
-      currelfnum+=numbers[i]
+      currelfnum+=parseInt(numbers[i])
     }
     else{
       if(currelfnum > max){
