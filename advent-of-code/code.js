@@ -19,4 +19,4 @@ const day01Part1 = (str) =>{
   console.log(numbers[0])
 }
 
-run('day_01.sample', day01Part1, 24000)
+run('day_01.sample', day01Part1)
