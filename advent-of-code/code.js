@@ -17,6 +17,7 @@
 const day01Part1 = (str) =>{
   const numbers = str.split('\n');
   console.log(numbers[0])
+  console.log("E")
 }
 
 run('day_01.sample', day01Part1)
