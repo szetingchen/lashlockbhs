@@ -12,3 +12,10 @@
 //
 // Which will load the file and pass them to your function and then print the
 // return value in the REPL.
+
+
+const day01Part1 = () =>{
+  
+}
+
+run('day_01.sample', day01Part1, 24000)
