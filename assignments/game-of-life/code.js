@@ -98,4 +98,4 @@ const drawFrame = (time) => {
   }
 }
 
-animate(drawFrame)
+//animate(drawFrame)
