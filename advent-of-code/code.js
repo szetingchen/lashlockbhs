@@ -14,7 +14,7 @@
 // return value in the REPL.
 
 
-const day01Part1 = () =>{
+const day01Part1 = (str) =>{
   const numbers = str.split('\n');
   console.log(numbers[0])
 }
