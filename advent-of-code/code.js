@@ -29,13 +29,7 @@
   //index of there play -1 corresponds to our play in our play array
   //them = [A, B, C]
 
-  //us = [X, Y, Z
-  
-  
-  
-  
-  
-  
+  //us = [X, Y, Z]
   //if(us[them.indexOf(play)-1]===play)
 const day01Part1 = (str) => {
   const numbers = str.split('\n');
@@ -56,7 +50,6 @@ const day01Part1 = (str) => {
 }
 const day02Part1 = (str) => {
   const games = str.split("\n");
-  console.log(games.length)
   let score = 0;
   const them = ["A", "B", "C"]
   const us = ["X", "Y", "Z"]
@@ -68,6 +61,7 @@ const day02Part1 = (str) => {
     if (us[them.indexOf(thereplay) - 1] === ourplay) {
       score += 6 + us.indexOf(ourplay)+1
       console.log("WIN: 6 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
+      console.log("LOSS: " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
     }
     else if (them.indexOf(thereplay) === us.indexOf(ourplay)) {
       score += 3 + us.indexOf(ourplay)+1
@@ -75,10 +69,10 @@ const day02Part1 = (str) => {
     }
     else {
       score += us.indexOf(ourplay)+1
-      console.log("LOSS: " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay) 
+      console.log("WIN: 6 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
     }
   }
   return score
 
 }
-run('day_02.sample', day02Part1)
+run('day_02.tes', day02Part1)
