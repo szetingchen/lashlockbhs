@@ -53,12 +53,13 @@ const day02Part1 = (str) => {
   let score = 0;
   const them = ["A", "B", "C"]
   const us = ["X", "Y", "Z"]
+  
   for (let i = 0; i < games.length - 1; i++) {
     let thereplay = games[i].substring(0, 1)
     //console.log(thereplay)
     let ourplay = games[i].substring(2, 3)
     console.log(us[them.indexOf(thereplay) - 1] + "?==" + ourplay)
-    if (us[them.indexOf(thereplay) - 1]==ourplay) {
+    if (them.indexOf(thereplay) === 0 ? us[us.length-1] : us[them.indexOf(thereplay) - 1]==ourplay) {
       score+=us.indexOf(ourplay)
       console.log("Loss " + thereplay + ", " + ourplay)
     }
