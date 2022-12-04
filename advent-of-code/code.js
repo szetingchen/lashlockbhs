@@ -87,4 +87,32 @@ const day02Part1 = (str) => {
   return score
 
 }
+
+const day02Part2 = (str) =>{
+  const games = str.split("\n");
+  let score = 0;
+  const them = ["A", "B", "C"]
+  const us = ["A1", "B1", "C1"]
+  const goals = ["X", "Y", "Z"]
+  for (let i = 0; i < games.length-1; i++) {
+    let goal = games[i].substring(2, 3)
+    let ourplay = us[goals.indexOf(goal)]
+    let thereplay = games[i].substring(0, 1)
+    //console.log(thereplay)
+    console.log((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) + " " + us.indexOf(ourplay))
+    if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
+      score+=us.indexOf(ourplay)+1
+      console.log("Loss " + thereplay + ", " + ourplay)
+    }
+    else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
+      score+=3+us.indexOf(ourplay)+1
+      console.log("Tie " + thereplay + ", " + ourplay)
+    }
+    else{
+      score+=6+us.indexOf(ourplay)+1
+      console.log("Win " + thereplay + ", " + ourplay)
+    }
+  }
+  return score
+}
 run('day_02.test', day02Part1, 14069)
