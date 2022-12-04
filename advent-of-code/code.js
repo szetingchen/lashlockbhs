@@ -61,7 +61,7 @@ const day02Part1 = (str) => {
     console.log(them.indexOf("A") - 1)
     if (us[them.indexOf(thereplay) - 1] === ourplay) {
       score += 6 + us.indexOf(ourplay)
-      console.log("WIN: 6 + " + us.indexOf(ourplay))
+      console.log("WIN: 6 + " + (us.indexOf(ourplay)+1))
     }
     else if (them.indexOf(thereplay) === us.indexOf(ourplay)) {
       score += 3 + us.indexOf(ourplay)
@@ -69,7 +69,7 @@ const day02Part1 = (str) => {
     }
     else {
       score += us.indexOf(ourplay)
-      console.log("LOSS: " + us.indexOf(ourplay))
+      console.log("LOSS: " + (us.indexOf(ourplay)+1))
     }
   }
   return score
