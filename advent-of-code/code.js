@@ -48,8 +48,6 @@ const day01Part1 = (str) => {
   }
   return max;
 }
-console.log(["A", "B", "C"].indexOf("A"))
-console.log(["X", "Y", "Z"][["X", "Y", "Z"].length-1])
 
 const day02Part1 = (str) => {
   const games = str.split("\n");
@@ -61,8 +59,7 @@ const day02Part1 = (str) => {
     let thereplay = games[i].substring(0, 1)
     //console.log(thereplay)
     let ourplay = games[i].substring(2, 3)
-    console.log(us[them.indexOf(thereplay) - 1] + "?==" + ourplay)
-    if (them.indexOf(thereplay) === 0 ? us[us.length-1] : us[them.indexOf(thereplay) - 1]==ourplay) {
+    if (them.indexOf(thereplay) === 0 ? us[2] : us[them.indexOf(thereplay) - 1]==ourplay) {
       score+=us.indexOf(ourplay)
       console.log("Loss " + thereplay + ", " + ourplay)
     }
