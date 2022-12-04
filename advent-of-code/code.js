@@ -72,6 +72,7 @@ const day02Part1 = (str) => {
       console.log("LOSS: " + (us.indexOf(ourplay)+1))
     }
   }
+  console.log(score)
   return score
 
 }
