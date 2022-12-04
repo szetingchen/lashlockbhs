@@ -51,7 +51,6 @@ const day01Part1 = (str) => {
 
 const day02Part1 = (str) => {
   const games = str.split("\n");
-  console.log("e")
   let score = 0;
   const them = ["A", "B", "C"]
   const us = ["X", "Y", "Z"]
@@ -73,5 +72,5 @@ const day02Part1 = (str) => {
   return score
 
 }
-
+day02Part1("A X")
 run('day_02.sample', day02Part1)
