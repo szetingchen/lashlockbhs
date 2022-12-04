@@ -91,6 +91,13 @@ const day02Part1 = (str) => {
 const day02Part2 = (str) =>{
   const games = str.split("\n");
   let score = 0;
+  //A, X loss: A, C1: index : 0, 2, is -1
+  //A, Y tie: A, A1: index : 0, 0 is +0
+  //A, Z win: A, B1: index : 0, 1 is +1
+
+  //B, X loss: B, A1: index : 1, 0 : for loss index +2 : X index : 0 - 1 = -1
+  //B, Y tie: B, B1: index : 1, 1 : for tie index +0 : Y index : 1 - 1 = 0
+  //B, Z win: B, C1: 1, 2 : for win index +1 : Z index : 2 - 1 = 1
   const them = ["A", "B", "C"]
   const us = ["A1", "B1", "C1"]
   const goals = ["X", "Y", "Z"]
@@ -99,9 +106,8 @@ const day02Part2 = (str) =>{
 
     console.log(goal)
     let thereplay = games[i].substring(0, 1)
-    let indexplay = them.indexOf(thereplay)+1-goals.indexOf(goal);
-    let ourplay = us[indexplay === 3 ? 2 : indexplay]
-
+    let indexofourplay = them.indexOf(thereplay) - (goals.indexOf(goal)-1)
+    let ourplay = indexofourplay === -1 ? 2 : indexofourplay
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)+1
       console.log("Loss " + thereplay + ", " + ourplay)
