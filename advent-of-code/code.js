@@ -49,8 +49,6 @@ const day01Part1 = (str) => {
   return max;
 }
 const day02Part1 = (str) => {
-  const isLargeNumber = (element) => element > 13;
-
   const games = str.split("\n");
   let score = 0;
   const them = ["A", "B", "C"]
@@ -74,5 +72,4 @@ const day02Part1 = (str) => {
   return score
 
 }
-day02Part1("A X")
-//run('day_02.sample', day02Part1)
+run('day_02.sample', day02Part1)
