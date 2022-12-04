@@ -48,7 +48,7 @@ const day01Part1 = (str) => {
   }
   return max;
 }
-["A", "B", "C"].findIndex("A")
+console.log(["A", "B", "C"].findIndex("A"))
 const day02Part1 = (str) => {
   const games = str.split("\n");
   let score = 0;
