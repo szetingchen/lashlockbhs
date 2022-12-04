@@ -49,6 +49,7 @@ const day01Part1 = (str) => {
   return max;
 }
 console.log(["A", "B", "C"].indexOf("A"))
+console.log(["X", "Y", "Z"][["X", "Y", "Z"].length-1])
 
 const day02Part1 = (str) => {
   const games = str.split("\n");
