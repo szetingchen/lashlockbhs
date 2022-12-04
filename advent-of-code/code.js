@@ -108,7 +108,7 @@ const day02Part2 = (str) =>{
     let indexofourplay = them.indexOf(thereplay) - (goals.indexOf(goal)-1)
     let ourplay = indexofourplay === -1 ? 2 : indexofourplay
 
-    console.log("thereplay: " + thereplay + ", goal: " + goal + ", ourplay" + ourplay + ", index of ourplay: " + indexofourplay)
+    console.log("thereplay: " + thereplay + ", goal: " + goal + ", ourplay " + ourplay + ", index of ourplay: " + indexofourplay)
 
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)+1
