@@ -59,6 +59,7 @@ const day02Part1 = (str) => {
     console.log(thereplay)
     let ourplay = games[i].substring(2, 3)
     console.log(ourplay)
+    console.log(them.findIndex(thereplay) - 1)
     if (us[them.findIndex(thereplay) - 1] === ourplay) {
       score += 6 + us.findIndex(ourplay)
     }
