@@ -75,5 +75,4 @@ const day02Part1 = (str) => {
   return score
 
 }
-console.log(day02Part1("A X"))
-//run('day_02.sample', day02Part1)
+run('day_02.sample', day02Part1)
