@@ -87,4 +87,4 @@ const day02Part1 = (str) => {
   return score
 
 }
-run('day_02.test', day02Part1, 14059)
+run('day_02.test', day02Part1, 14069)
