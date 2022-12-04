@@ -101,43 +101,30 @@ const day02Part2 = (str) =>{
   const them = ["A", "B", "C"]
   const us = ["A1", "B1", "C1"]
   const goals = ["X", "Y", "Z"]
-  let goalcorrect;
+  
   for (let i = 0; i < games.length-1; i++) {
     let goal = games[i].substring(2, 3)
     
     let thereplay = games[i].substring(0, 1)
     let indexofourplay = them.indexOf(thereplay) + (goals.indexOf(goal)-1)
-    console.log("indexofourplay " + indexofourplay)
-    let indexofourplayrefinded = indexofourplay === (3||-1) ? (indexofourplay === 3 ? 0 : 2) : indexofourplay
-    console.log("indexofourplayrefinded " + indexofourplayrefinded)
-    let ourplay = us[indexofourplayrefinded]
+    //console.log("indexofourplay math: " + indexofourplay + " = "  + them.indexOf(thereplay) + " + " + (goals.indexOf(goal)-1) )
+    let ourplay = indexofourplay === -1 ? us[2] : us[indexofourplay]
 
     //console.log("thereplay: " + thereplay + ", goal: " + goal + ", ourplay " + ourplay + ", index of ourplay: " + indexofourplay)
 
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)+1
-      goalcorrect = (goal === "X")
+      let goalcorrect = (goal === "X")
       console.log("Loss " + thereplay + ", " + ourplay + " goal: " + goal + " " + goalcorrect)
-      if(!goalcorrect){
-        return false;
-      }
     }
     else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
       score+=3+us.indexOf(ourplay)+1
-      goalcorrect = (goal === "Y")
-      console.log("Tie " + thereplay + ", " + ourplay+ " goal: " +  goal + " " + goalcorrect)
-      if(!goalcorrect){
-        return false;
-      }
+      console.log("Tie " + thereplay + ", " + ourplay+ " goal: " +  goal + " " + (goal === "Y"))
       
     }
     else{
       score+=6+us.indexOf(ourplay)+1
-      goalcorrect = (goal === "Z")
-      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal + " " + goalcorrect + " indexOfPlay: " + indexofourplayrefinded)
-      if(!goalcorrect){
-        return false;
-      }
+      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal + " " + (goal === "Z"))
     }
   }
   return score
