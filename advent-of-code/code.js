@@ -132,7 +132,7 @@ const day02Part2 = (str) =>{
     else{
       score+=6+us.indexOf(ourplay)+1
       goalcorrect = (goal === "Z")
-      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal + " " + goalcorrect)
+      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal + " " + goalcorrect + " indexOfPlay: " + indexofourplay)
       if(!goalcorrect){
         return false;
       }
