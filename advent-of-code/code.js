@@ -65,7 +65,7 @@ const day02Part1 = (str) => {
     }
     else if (them.indexOf(thereplay) === us.indexOf(ourplay)) {
       score += 3 + us.indexOf(ourplay)
-      console.log("TIE: 3 + " + us.indexOf(ourplay)+1)
+      console.log("TIE: 3 + " + (us.indexOf(ourplay)+1))
     }
     else {
       score += us.indexOf(ourplay)
