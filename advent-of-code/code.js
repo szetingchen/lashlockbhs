@@ -69,7 +69,7 @@ const day02Part1 = (str) => {
       score += 6 + us.indexOf(ourplay)+1
       console.log("WIN: 6 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
     }
-    else if (them.indexOf(ourplay) === us.indexOf(thereplay)) {
+    else if (them.indexOf(ourplay) === us.indexOf(ourplay)) {
       score += 3 + us.indexOf(ourplay)+1
       console.log("TIE: 3 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
     }
