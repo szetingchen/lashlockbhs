@@ -48,6 +48,8 @@ const day01Part1 = (str) => {
   }
   return max;
 }
+console.log(["A", "B", "C"].indexOf("A"))
+
 const day02Part1 = (str) => {
   const games = str.split("\n");
   let score = 0;
