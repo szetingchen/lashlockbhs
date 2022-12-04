@@ -14,23 +14,23 @@
 // return value in the REPL.
 
 
-  //opponite       you
-  //A = rock = 1, X  
-  //B = paper = 2, Y
-  //C = scissors = 3, Z
+//opponite       you
+//A = rock = 1, X  
+//B = paper = 2, Y
+//C = scissors = 3, Z
 
 
-  // 1-3 = -2 rock vs scissors, loss
-  // 3-1 = 2 scissors vs rock, win
+// 1-3 = -2 rock vs scissors, loss
+// 3-1 = 2 scissors vs rock, win
 
-  //1-2 = -1
-  //2-1 = 1
+//1-2 = -1
+//2-1 = 1
 
-  //index of there play -1 corresponds to our play in our play array
-  //them = [A, B, C]
+//index of there play -1 corresponds to our play in our play array
+//them = [A, B, C]
 
-  //us = [X, Y, Z]
-  //if(us[them.indexOf(play)-1]===play)
+//us = [X, Y, Z]
+//if(us[them.indexOf(play)-1]===play)
 const day01Part1 = (str) => {
   const numbers = str.split('\n');
   let currelfnum = 0;
@@ -53,22 +53,22 @@ const day02Part1 = (str) => {
   let score = 0;
   const them = ["A", "B", "C"]
   const us = ["X", "Y", "Z"]
-  for (let i = 0; i < games.length-1; i++) {
+  for (let i = 0; i < games.length - 1; i++) {
     let thereplay = games[i].substring(0, 1)
     //console.log(thereplay)
     let ourplay = games[i].substring(2, 3)
     //console.log(ourplay)
-    if (us[them.indexOf(thereplay) - 1] === ourplay) {
-      score += 6 + us.indexOf(ourplay)+1
-      console.log("WIN: 6 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
+    if (ourplay != us[them.indexOf(thereplay) - 1]) {
+      score+=us.indexOf(ourplay)
+      console.log("Loss " + thereplay + ", " + ourplay)
     }
-    else if (them.indexOf(thereplay) === us.indexOf(ourplay)) {
-      score += 3 + us.indexOf(ourplay)+1
-      console.log("TIE: 3 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
+    else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
+      score+=3+us.indexOf(ourplay)
+      console.log("Tie " + thereplay + ", " + ourplay)
     }
-    else {
-      score += us.indexOf(ourplay)+1
-      console.log("LOSS: " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
+    else{
+      score+=6+us.indexOf(ourplay)
+      console.log("Win " + thereplay + ", " + ourplay)
     }
   }
   return score
