@@ -101,6 +101,7 @@ const day02Part2 = (str) =>{
   const them = ["A", "B", "C"]
   const us = ["A1", "B1", "C1"]
   const goals = ["X", "Y", "Z"]
+  let goalcorrect;
   for (let i = 0; i < games.length-1; i++) {
     let goal = games[i].substring(2, 3)
     
@@ -113,15 +114,28 @@ const day02Part2 = (str) =>{
 
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)+1
-      console.log("Loss " + thereplay + ", " + ourplay + " goal: " + goal + " " + (goal === "X"))
+      goalcorrect = (goal === "X")
+      console.log("Loss " + thereplay + ", " + ourplay + " goal: " + goal + " " + goalcorrect)
+      if(!goalcorrect){
+        return false;
+      }
     }
     else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
       score+=3+us.indexOf(ourplay)+1
-      console.log("Tie " + thereplay + ", " + ourplay+ " goal: " +  goal + " " + (goal === "Y"))
+      goalcorrect = (goal === "Y")
+      console.log("Tie " + thereplay + ", " + ourplay+ " goal: " +  goal + " " + goalcorrect)
+      if(!goalcorrect){
+        return false;
+      }
+      
     }
     else{
       score+=6+us.indexOf(ourplay)+1
-      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal + " " + (goal === "Z"))
+      goalcorrect = (goal === "Z")
+      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal + " " + goalcorrect)
+      if(!goalcorrect){
+        return false;
+      }
     }
   }
   return score
