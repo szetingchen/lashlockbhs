@@ -50,6 +50,7 @@ const day01Part1 = (str) => {
 }
 const day02Part1 = (str) => {
   const games = str.split("\n");
+  console.log(games.length)
   let score = 0;
   const them = ["A", "B", "C"]
   const us = ["X", "Y", "Z"]
@@ -68,7 +69,7 @@ const day02Part1 = (str) => {
     }
     else {
       score += us.indexOf(ourplay)+1
-      console.log("LOSS: " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
+      console.log("LOSS: " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay) 
     }
   }
   return score
