@@ -18,11 +18,18 @@
 //A = rock = 1, X  
 //B = paper = 2, Y
 //C = scissors = 3, Z
-//a, y correct
-//c, x correct
-//b, y correct
-//b, x correct
-//a, z incorrect
+
+//A, X tie correct
+//A, Y win correct
+//A, Z loss correct
+
+//B, X loss correct
+//B, Y tie correct
+//B, Z win correct
+
+//C, X win correct
+//C, Y loss correct
+//C, Z tie correct
 
 // 1-3 = -2 rock vs scissors, loss
 // 3-1 = 2 scissors vs rock, win
