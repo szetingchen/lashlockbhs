@@ -73,4 +73,4 @@ const day02Part1 = (str) => {
 
 }
 day02Part1("A X")
-run('day_02.sample', day02Part1)
+//run('day_02.sample', day02Part1)
