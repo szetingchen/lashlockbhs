@@ -52,8 +52,8 @@ const day02Part1 = (str) => {
   const games = str.split("\n");
   console.log(games.length)
   let score = 0;
-  const them = ["A", "B", "C"]
-  const us = ["X", "Y", "Z"]
+  const us = ["A", "B", "C"]
+  const them = ["X", "Y", "Z"]
   for (let i = 0; i < games.length-1; i++) {
     let thereplay = games[i].substring(0, 1)
     //console.log(thereplay)
