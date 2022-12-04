@@ -59,7 +59,7 @@ const day02Part1 = (str) => {
   const them = ["A", "B", "C"]
   const us = ["X", "Y", "Z"]
   
-  for (let i = 0; i < games.length; i++) {
+  for (let i = 0; i < games.length-1; i++) {
     let thereplay = games[i].substring(0, 1)
     //console.log(thereplay)
     let ourplay = games[i].substring(2, 3)
