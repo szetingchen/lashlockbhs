@@ -113,15 +113,15 @@ const day02Part2 = (str) =>{
 
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)+1
-      console.log("Loss " + thereplay + ", " + ourplay + " goal: " + (goal === "X"))
+      console.log("Loss " + thereplay + ", " + ourplay + " goal: " + goal + " " + (goal === "X"))
     }
     else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
       score+=3+us.indexOf(ourplay)+1
-      console.log("Tie " + thereplay + ", " + ourplay+ " goal: " +  (goal === "Y"))
+      console.log("Tie " + thereplay + ", " + ourplay+ " goal: " +  goal + " " + (goal === "Y"))
     }
     else{
       score+=6+us.indexOf(ourplay)+1
-      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + (goal === "Z"))
+      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal + " " + (goal === "Z"))
     }
   }
   return score
