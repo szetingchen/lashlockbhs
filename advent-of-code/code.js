@@ -108,7 +108,7 @@ const day02Part2 = (str) =>{
     let thereplay = games[i].substring(0, 1)
     let indexofourplay = them.indexOf(thereplay) + (goals.indexOf(goal)-1)
     let indexofourplayrefinded = indexofourplay === (3||-1) ? (indexofourplay === 3 ? 0 : 2) : indexofourplay
-    let ourplay = us[indexofourplay]
+    let ourplay = us[indexofourplayrefinded]
 
     //console.log("thereplay: " + thereplay + ", goal: " + goal + ", ourplay " + ourplay + ", index of ourplay: " + indexofourplay)
 
