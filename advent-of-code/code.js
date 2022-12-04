@@ -72,15 +72,15 @@ const day02Part1 = (str) => {
     let ourplay = games[i].substring(2, 3)
     console.log((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) + " " + us.indexOf(ourplay))
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
-      score+=us.indexOf(ourplay)
+      score+=us.indexOf(ourplay)+1
       console.log("Loss " + thereplay + ", " + ourplay)
     }
     else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
-      score+=3+us.indexOf(ourplay)
+      score+=3+us.indexOf(ourplay)+1
       console.log("Tie " + thereplay + ", " + ourplay)
     }
     else{
-      score+=6+us.indexOf(ourplay)
+      score+=6+us.indexOf(ourplay)+1
       console.log("Win " + thereplay + ", " + ourplay)
     }
   }
