@@ -29,7 +29,13 @@
   //index of there play -1 corresponds to our play in our play array
   //them = [A, B, C]
 
-  //us = [X, Y, Z]
+  //us = [X, Y, Z
+  
+  
+  
+  
+  
+  ]
   //if(us[them.indexOf(play)-1]===play)
 const day01Part1 = (str) => {
   const numbers = str.split('\n');
@@ -63,7 +69,7 @@ const day02Part1 = (str) => {
       score += 6 + us.indexOf(ourplay)+1
       console.log("WIN: 6 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
     }
-    else if (them.indexOf(thereplay) === us.indexOf(ourplay)) {
+    else if (us.indexOf(ourplay) === us.indexOf(thereplay)) {
       score += 3 + us.indexOf(ourplay)+1
       console.log("TIE: 3 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
     }
