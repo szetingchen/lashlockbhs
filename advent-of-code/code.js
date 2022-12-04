@@ -18,7 +18,11 @@
 //A = rock = 1, X  
 //B = paper = 2, Y
 //C = scissors = 3, Z
-
+//a, y correct
+//c, x correct
+//b, y correct
+//b, x correct
+//a, z incorrect
 
 // 1-3 = -2 rock vs scissors, loss
 // 3-1 = 2 scissors vs rock, win
@@ -59,6 +63,7 @@ const day02Part1 = (str) => {
     let thereplay = games[i].substring(0, 1)
     //console.log(thereplay)
     let ourplay = games[i].substring(2, 3)
+    console.log(them.indexOf(thereplay)-1)
     if (them.indexOf(thereplay)-1===us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)
       console.log("Loss " + thereplay + ", " + ourplay)
