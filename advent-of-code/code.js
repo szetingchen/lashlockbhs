@@ -103,7 +103,7 @@ const day02Part2 = (str) =>{
   const goals = ["X", "Y", "Z"]
   for (let i = 0; i < games.length-1; i++) {
     let goal = games[i].substring(2, 3)
-
+    
     let thereplay = games[i].substring(0, 1)
     let indexofourplay = them.indexOf(thereplay) + (goals.indexOf(goal)-1)
     //console.log("indexofourplay math: " + indexofourplay + " = "  + them.indexOf(thereplay) + " + " + (goals.indexOf(goal)-1) )
@@ -113,15 +113,15 @@ const day02Part2 = (str) =>{
 
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)+1
-      console.log("Loss " + thereplay + ", " + ourplay)
+      console.log("Loss " + thereplay + ", " + ourplay + " goal: " + goal)
     }
     else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
       score+=3+us.indexOf(ourplay)+1
-      console.log("Tie " + thereplay + ", " + ourplay)
+      console.log("Tie " + thereplay + ", " + ourplay+ " goal: " + goal)
     }
     else{
       score+=6+us.indexOf(ourplay)+1
-      console.log("Win " + thereplay + ", " + ourplay)
+      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal)
     }
   }
   return score
