@@ -35,7 +35,7 @@
   
   
   
-  ]
+  
   //if(us[them.indexOf(play)-1]===play)
 const day01Part1 = (str) => {
   const numbers = str.split('\n');
