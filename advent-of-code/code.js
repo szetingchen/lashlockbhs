@@ -48,8 +48,9 @@ const day01Part1 = (str) => {
   }
   return max;
 }
-console.log(["A", "B", "C"].findIndex("B"))
 const day02Part1 = (str) => {
+  const isLargeNumber = (element) => element > 13;
+
   const games = str.split("\n");
   let score = 0;
   const them = ["A", "B", "C"]
@@ -59,15 +60,15 @@ const day02Part1 = (str) => {
     console.log(thereplay)
     let ourplay = games[i].substring(2, 3)
     console.log(ourplay)
-    console.log(them.findIndex("A") - 1)
-    if (us[them.findIndex(thereplay) - 1] === ourplay) {
-      score += 6 + us.findIndex(ourplay)
+    console.log(them.indexOf("A") - 1)
+    if (us[them.indexOf(thereplay) - 1] === ourplay) {
+      score += 6 + us.indexOf(ourplay)
     }
-    else if (them.findIndex(thereplay) === us.findIndex(ourplay)) {
-      score += 3 + us.findIndex(ourplay)
+    else if (them.indexOf(thereplay) === us.indexOf(ourplay)) {
+      score += 3 + us.indexOf(ourplay)
     }
     else {
-      score += us.findIndex(ourplay)
+      score += us.indexOf(ourplay)
     }
   }
   return score
