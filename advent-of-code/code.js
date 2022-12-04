@@ -99,8 +99,8 @@ const day02Part2 = (str) =>{
 
     console.log(goal)
     let thereplay = games[i].substring(0, 1)
-    console.log(them.indexOf(thereplay)+1-goals.indexOf(goal))
-    let ourplay = us[them.indexOf(thereplay)+1-goals.indexOf(goal)]
+    let indexplay = them.indexOf(thereplay)+1-goals.indexOf(goal);
+    let ourplay = us[indexplay === 3 ? 2 : indexplay]
 
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)+1
