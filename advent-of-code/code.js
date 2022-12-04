@@ -14,6 +14,23 @@
 // return value in the REPL.
 
 
+  //opponite       you
+  //A = rock = 1, X  
+  //B = paper = 2, Y
+  //C = scissors = 3, Z
+
+
+  // 1-3 = -2 rock vs scissors, loss
+  // 3-1 = 2 scissors vs rock, win
+
+  //1-2 = -1
+  //2-1 = 1
+
+  //index of there play -1 corresponds to our play in our play array
+  //them = [A, B, C]
+
+  //us = [X, Y, Z]
+  //if(us[them.indexOf(play)-1]===play)
 const day01Part1 = (str) => {
   const numbers = str.split('\n');
   let currelfnum = 0;
@@ -34,6 +51,7 @@ const day01Part1 = (str) => {
 
 const day02Part1 = (str) => {
   const games = str.split("\n");
+  console.log("e")
   let score = 0;
   const them = ["A", "B", "C"]
   const us = ["X", "Y", "Z"]
@@ -51,26 +69,8 @@ const day02Part1 = (str) => {
     else {
       score += us.findIndex(ourplay)
     }
-
   }
-  return score;
-  //opponite       you
-  //A = rock = 1, X  
-  //B = paper = 2, Y
-  //C = scissors = 3, Z
-
-
-  // 1-3 = -2 rock vs scissors, loss
-  // 3-1 = 2 scissors vs rock, win
-
-  //1-2 = -1
-  //2-1 = 1
-
-  //index of there play -1 corresponds to our play in our play array
-  //them = [A, B, C]
-
-  //us = [X, Y, Z]
-  //if(us[them.indexOf(play)-1]===play)
+  return score
 
 }
 
