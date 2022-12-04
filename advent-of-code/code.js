@@ -72,4 +72,4 @@ const day02Part1 = (str) => {
 
 }
 
-run('day_01.test', day01Part1)
+run('day_02.samole', day02Part1)
