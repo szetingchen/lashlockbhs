@@ -55,23 +55,23 @@ const day02Part1 = (str) => {
   const us = ["X", "Y", "Z"]
   for (let i = 0; i < games.length-1; i++) {
     let thereplay = games[i].substring(0, 1)
-    console.log(thereplay)
+    //console.log(thereplay)
     let ourplay = games[i].substring(2, 3)
-    console.log(ourplay)
+    //console.log(ourplay)
     if (us[them.indexOf(thereplay) - 1] === ourplay) {
       score += 6 + us.indexOf(ourplay)+1
-      console.log("WIN: 6 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
+      //console.log("WIN: 6 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
     }
     else if (them.indexOf(thereplay) === us.indexOf(ourplay)) {
       score += 3 + us.indexOf(ourplay)+1
-      console.log("TIE: 3 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
+      //console.log("TIE: 3 + " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
     }
     else {
       score += us.indexOf(ourplay)+1
-      console.log("LOSS: " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
+      //console.log("LOSS: " + (us.indexOf(ourplay)+1) + " :" + thereplay + " :" + ourplay)
     }
   }
   return score
 
 }
-run('day_02.sample', day02Part1)
+run('day_02.test', day02Part1)
