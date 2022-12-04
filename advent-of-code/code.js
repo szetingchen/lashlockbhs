@@ -107,11 +107,8 @@ const day02Part2 = (str) =>{
     
     let thereplay = games[i].substring(0, 1)
     let indexofourplay = them.indexOf(thereplay) + (goals.indexOf(goal)-1)
-    //console.log("indexofourplay math: " + indexofourplay + " = "  + them.indexOf(thereplay) + " + " + (goals.indexOf(goal)-1) )
     let ourplay = indexofourplay === -1 ? us[2] : us[indexofourplay]
-
-    //console.log("thereplay: " + thereplay + ", goal: " + goal + ", ourplay " + ourplay + ", index of ourplay: " + indexofourplay)
-
+    ourplay = indexofourplay === 3 ? us[0] : us[indexofourplay]
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)+1
       let goalcorrect = (goal === "X")
