@@ -60,66 +60,57 @@ const day01Part1 = (str) => {
   return max;
 }
 
+const day01Part2 = (str) => {
+}
+
+
 const day02Part1 = (str) => {
   const games = str.split("\n");
   let score = 0;
   const them = ["A", "B", "C"]
   const us = ["X", "Y", "Z"]
-  
-  for (let i = 0; i < games.length-1; i++) {
+
+  for (let i = 0; i < games.length - 1; i++) {
+    
     let thereplay = games[i].substring(0, 1)
-    //console.log(thereplay)
     let ourplay = games[i].substring(2, 3)
-    if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
-      score+=us.indexOf(ourplay)+1
+
+    if ((them.indexOf(thereplay) - 1 === -1 ? 2 : them.indexOf(thereplay) - 1) === us.indexOf(ourplay)) {
+      score += us.indexOf(ourplay) + 1
     }
     else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
-      score+=3+us.indexOf(ourplay)+1
+      score += 3 + us.indexOf(ourplay) + 1
     }
-    else{
-      score+=6+us.indexOf(ourplay)+1
+    else {
+      score += 6 + us.indexOf(ourplay) + 1
     }
   }
   return score
 
 }
 
-const day02Part2 = (str) =>{
+const day02Part2 = (str) => {
   const games = str.split("\n");
   let score = 0;
-  //A, X loss: A, C1: index : 0, 2, is -1
-  //A, Y tie: A, A1: index : 0, 0 is +0
-  //A, Z win: A, B1: index : 0, 1 is +1
-
-  //B, X loss: B, A1: index : 1, 0 : for loss index +2 : X index : 0 - 1 = -1
-  //B, Y tie: B, B1: index : 1, 1 : for tie index +0 : Y index : 1 - 1 = 0
-  //B, Z win: B, C1: 1, 2 : for win index +1 : Z index : 2 - 1 = 1
   const them = ["A", "B", "C"]
   const us = ["A1", "B1", "C1"]
   const goals = ["X", "Y", "Z"]
-  
-  for (let i = 0; i < games.length-1; i++) {
+
+  for (let i = 0; i < games.length - 1; i++) {
     let goal = games[i].substring(2, 3)
-    
     let thereplay = games[i].substring(0, 1)
+    let indexofourplay = them.indexOf(thereplay) + (goals.indexOf(goal) - 1)
+    let ourplay = parseInt(indexofourplay) === 3 ? us[0] : (parseInt(indexofourplay) === -1 ? us[2] : us[indexofourplay]);
 
-    let indexofourplay = them.indexOf(thereplay) + (goals.indexOf(goal)-1)
-
-    let ourplay = parseInt(indexofourplay) === 3 ?  us[0] : (parseInt(indexofourplay) ===  -1 ?  us[2] : us[indexofourplay]);
-    
-    if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
-      score+=us.indexOf(ourplay)+1
-      let goalcorrect = (goal === "X")
-      console.log("Loss " + thereplay + ", " + ourplay + " goal: " + goal + " " + goalcorrect + " index ")
+    if ((them.indexOf(thereplay) - 1 === -1 ? 2 : them.indexOf(thereplay) - 1) === us.indexOf(ourplay)) {
+      score += us.indexOf(ourplay) + 1
     }
     else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
-      score+=3+us.indexOf(ourplay)+1
-      console.log("Tie " + thereplay + ", " + ourplay+ " goal: " +  goal + " " + (goal === "Y") + " index ")
-      
+      score += 3 + us.indexOf(ourplay) + 1
+
     }
-    else{
-      score+=6+us.indexOf(ourplay)+1
-      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal + " " + (goal === "Z") + " index ")
+    else {
+      score += 6 + us.indexOf(ourplay) + 1
     }
   }
   return score
