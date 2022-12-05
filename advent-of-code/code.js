@@ -70,18 +70,14 @@ const day02Part1 = (str) => {
     let thereplay = games[i].substring(0, 1)
     //console.log(thereplay)
     let ourplay = games[i].substring(2, 3)
-    console.log((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) + " " + us.indexOf(ourplay))
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)+1
-      console.log("Loss " + thereplay + ", " + ourplay)
     }
     else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
       score+=3+us.indexOf(ourplay)+1
-      console.log("Tie " + thereplay + ", " + ourplay)
     }
     else{
       score+=6+us.indexOf(ourplay)+1
-      console.log("Win " + thereplay + ", " + ourplay)
     }
   }
   return score
@@ -106,9 +102,11 @@ const day02Part2 = (str) =>{
     let goal = games[i].substring(2, 3)
     
     let thereplay = games[i].substring(0, 1)
+
     let indexofourplay = them.indexOf(thereplay) + (goals.indexOf(goal)-1)
-    let ourplay = parseInt(indexofourplay) === (3) ?  us[0] : us[indexofourplay]
-    ourplay = parseInt(indexofourplay) === (-1) ?  us[2] : us[indexofourplay]
+
+    let ourplay = parseInt(indexofourplay) === 3 ?  us[0] : (parseInt(indexofourplay) ===  -1 ?  us[2] : us[indexofourplay]);
+    
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
       score+=us.indexOf(ourplay)+1
       let goalcorrect = (goal === "X")
