@@ -116,12 +116,12 @@ const day02Part2 = (str) =>{
     }
     else if (us.indexOf(ourplay) === them.indexOf(thereplay)) {
       score+=3+us.indexOf(ourplay)+1
-      console.log("Tie " + thereplay + ", " + ourplay+ " goal: " +  goal + " " + (goal === "Y"))
+      console.log("Tie " + thereplay + ", " + ourplay+ " goal: " +  goal + " " + (goal === "Y") + " index " + indexofourplay)
       
     }
     else{
       score+=6+us.indexOf(ourplay)+1
-      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal + " " + (goal === "Z"))
+      console.log("Win " + thereplay + ", " + ourplay+ " goal: " + goal + " " + (goal === "Z") + " index " + indexofourplay)
     }
   }
   return score
