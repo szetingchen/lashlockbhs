@@ -42,6 +42,8 @@
 
 //us = [X, Y, Z]
 //if(us[them.indexOf(play)-1]===play)
+
+
 const day01Part1 = (str) => {
   const numbers = str.split('\n');
   let currelfnum = 0;
@@ -71,7 +73,6 @@ const day02Part1 = (str) => {
   const us = ["X", "Y", "Z"]
 
   for (let i = 0; i < games.length - 1; i++) {
-    
     let thereplay = games[i].substring(0, 1)
     let ourplay = games[i].substring(2, 3)
 
