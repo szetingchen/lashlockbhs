@@ -107,6 +107,7 @@ const day02Part2 = (str) =>{
     
     let thereplay = games[i].substring(0, 1)
     let indexofourplay = them.indexOf(thereplay) + (goals.indexOf(goal)-1)
+    console.log(parseInt(indexofourplay) === (-1 || 3))
     let ourplay = parseInt(indexofourplay) === (-1 || 3) ? (indexofourplay === -1 ? us[2] : us[0]) : us[indexofourplay]
 
     if ((them.indexOf(thereplay)-1 === -1 ? 2 : them.indexOf(thereplay)-1) === us.indexOf(ourplay)) {
