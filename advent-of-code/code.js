@@ -63,6 +63,31 @@ const day01Part1 = (str) => {
 }
 
 const day01Part2 = (str) => {
+
+  const numbers = str.split('\n');
+  let currelfnum = 0;
+  let maxs= [0,0,0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] != "") {
+      currelfnum += parseInt(numbers[i]);
+    }
+    else {
+      
+      if (currelfnum > maxs[0]) {
+        maxs[0] = currelfnum;
+      }
+      else if(currelfnum > maxs[1]){
+        maxs[1] = currelfnum;
+      }
+      else if(currelfnum > maxs[2]){
+        maxs[2] = currelfnum;
+      }
+      currelfnum = 0;
+    }
+    
+  }
+  return maxs[0]+maxs[1]+maxs[2];
+
 }
 
 
@@ -116,4 +141,4 @@ const day02Part2 = (str) => {
   }
   return score
 }
-run('day_02.test', day02Part2)
+run('day_02.test', day01Part2)
