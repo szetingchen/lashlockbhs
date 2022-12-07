@@ -86,7 +86,6 @@ const day01Part2 = (str) => {
     }
     
   }
-  console.log("e")
   return maxs[0]+maxs[1]+maxs[2];
 
 }
