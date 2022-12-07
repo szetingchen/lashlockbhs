@@ -75,10 +75,12 @@ const day01Part2 = (str) => {
     else {
       console.log("CurrentNum " + currelfnum)
       if (currelfnum > maxs[0]) {
-        console.log(maxs)
+        maxs[2] = maxs[1]
+        maxs[1] = maxs[0]
         maxs[0] = currelfnum;
       }
       else if(currelfnum > maxs[1]){
+        maxs[2] = maxs[1]
         maxs[1] = currelfnum;
       }
       else if(currelfnum > maxs[2]){
