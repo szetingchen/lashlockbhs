@@ -141,4 +141,5 @@ const day02Part2 = (str) => {
   }
   return score
 }
+
 run('day_01.test', day01Part2)
