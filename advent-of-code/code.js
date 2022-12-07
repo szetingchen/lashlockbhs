@@ -69,6 +69,7 @@ const day01Part2 = (str) => {
   let maxs= [0,0,0];
   for (let i = 0; i < numbers.length; i++) {
     console.log(currelfnum)
+    console.log(maxs)
     if (numbers[i] != "") {
       currelfnum += parseInt(numbers[i]);
     }
