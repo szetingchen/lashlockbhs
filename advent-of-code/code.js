@@ -73,7 +73,7 @@ const day01Part2 = (str) => {
       currelfnum += parseInt(numbers[i]);
     }
     else {
-      console.log("CurrentNum" + currelfnum)
+      console.log("CurrentNum " + currelfnum)
       if (currelfnum > maxs[0]) {
         console.log(maxs)
         maxs[0] = currelfnum;
