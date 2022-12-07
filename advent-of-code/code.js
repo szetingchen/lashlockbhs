@@ -69,11 +69,9 @@ const day01Part2 = (str) => {
   let maxs= [0,0,0];
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] != "") {
-      console.log(currelfnum)
       currelfnum += parseInt(numbers[i]);
     }
     else {
-      console.log("CurrentNum " + currelfnum)
       if (currelfnum > maxs[0]) {
         maxs[2] = maxs[1]
         maxs[1] = maxs[0]
@@ -86,7 +84,6 @@ const day01Part2 = (str) => {
       else if(currelfnum > maxs[2]){
         maxs[2] = currelfnum;
       }
-      console.log(maxs)
 
       currelfnum = 0;
       
@@ -149,4 +146,8 @@ const day02Part2 = (str) => {
   return score
 }
 
-run('day_01.test', day01Part2)
+const day03Part1 = (str) =>{
+
+}
+
+run('day_03.test', day03Part2)
