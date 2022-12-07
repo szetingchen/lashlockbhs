@@ -150,4 +150,4 @@ const day03Part1 = (str) =>{
 
 }
 
-run('day_03.test', day03Part2)
+run('day_03.test', day03Part1)
