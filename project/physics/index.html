@@ -13,6 +13,9 @@
   <script>
     const c = document.getElementById("canvas")
     const ctx = c.getContext("2d")
+    
+    c.width = window.innerWidth
+    c.height = window.innerHeight
 
     const animate = (drawFrame) => {
       let running = true;
@@ -79,6 +82,7 @@
       ctx.fillText(text, x, y, size, ctx);
     }
 
+    
     const clear = (ctx, canvas) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
     }
@@ -109,11 +113,54 @@
   </script>
   <script>
     //code physics here    
-    //use draw and helper funtions 
+    //use draw and helper funtions
+    let next = 0;
+    let countFrame = 0
+    let shapeCordsSquare = [{"xAdd" : 0, "yAdd" : 10}, {"xAdd" : 10, "yAdd" : 0}, {"xAdd" : 0, "yAdd" : -10}, {"xAdd" : -10, "yAdd" : 0}]
 
-    drawFilledCircle(10, 10, 10, "blue", ctx)
+    const shape = (sidesCords, x, y, rotation) =>{
+      return {"x" : x, "y" : y, "sidesCords" : sidesCords, "rotation" : rotation}
+    }
+
+    const drawShape = (shape) =>{
+      let rotaionalPercent = shape.rotation;
+      let currX = shape.x;
+      let currY = shape.y;
+      for(let i = 0; i<shape.sidesCords.length; i++){
+        drawLine(currX, currY, currX+shape.sidesCords[i].xAdd, currY+shape.sidesCords[i].yAdd, 'black', ctx);
+        currX += shape.sidesCords[i].xAdd;
+        currY += shape.sidesCords[i].yAdd;
+      }
+    }
+    const collisons = (objects) =>{
+      for(let objectIndex = 0; objectIndex < objects.length; objectIndex++){
+        for(let checkIndex = 0; checkIndex < objects.length; checkIndex++){
+          
+        }
+      }
+    }
+
+    const getBoundOfObject = (shape) =>{
+
+    }
+
+
+    const drawFrame = (time) =>{
+      if(time>next){
+        countFrame++
+        //clear();
+        //drawFilledCircle(10, 1*countFrame,10, "blue", ctx)
+        next+=10
+      }
+    }
+
+
+    const square1 = shape(shapeCordsSquare, 100, 100, 0)
+    drawShape(square1)
+
+    animate(drawFrame)
   </script>
-  
+
 </body>
 
 </html>
