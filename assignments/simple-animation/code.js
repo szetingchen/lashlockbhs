@@ -1,4 +1,17 @@
 
+let shapeCordsSquare = [
+    { "xAdd": 0, "yAdd": 10 },
+    { "xAdd": 10, "yAdd": 0 },
+    { "xAdd": 0, "yAdd": -10 },
+    { "xAdd": -10, "yAdd": 0 },
+]
+
+let trinaglesides = [
+    { "xAdd": 5, "yAdd": -10 },
+    { "xAdd": 5, "yAdd": 10 },
+    { "xAdd": -10, "yAdd": 0},
+]
+
 const rotate = (cx, cy, x, y, angle) => {
   let radians = (Math.PI / 180) * angle;
   cos = Math.cos(radians),
