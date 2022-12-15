@@ -111,7 +111,7 @@ const gravAttraction = (o1, o2) => {
 }
 
 
-const square1 = new Shape(shapeCordsSquare, 100, 100, 0, 0, 0, 0, []);
+const square1 = new Shape(shapeCordsSquare, 100, 100, 5, 5, 0, 0, []);
 //const triangle1 = new Shape(trinaglesides, 100, 150, 0, 0, 0, 5, []);
 
 
