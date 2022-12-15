@@ -125,7 +125,7 @@ const drawFrame = (time) => {
     //console.log(squareobjectBound);
 
     square1.drawShape();
-
+    triangle1.drawShape();
     square1.rotation = square1.rotation * 1;
     next += 10;
     countFrame++;
