@@ -132,7 +132,8 @@ const drawFrame = (time) => {
     square1.drawShape();
     triangle1.drawShape();
 
-    drawPoints(square1.getBoundOfObject())
+    console.log(squareobjectBound[0].x)
+    drawPoints(squareobjectBound)
 
     triangle1.rotation = triangle1.rotation * 1;
     square1.rotation = square1.rotation * 1;
