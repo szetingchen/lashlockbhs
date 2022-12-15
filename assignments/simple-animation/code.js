@@ -110,6 +110,11 @@ const gravAttraction = (o1, o2) => {
   return (o1.mass * o2.mass * G) / distance ** 2
 }
 
+const drawPoints = (array) => {
+    for (let i = 0; i < array.length; i++) {
+        drawLine(array[i].x, array[i].y, array[i].x, array[i].y, "black", ctx)
+    }
+}
 
 const square1 = new Shape(shapeCordsSquare, 100, 100, 0, 5, 49, 5, []);
 const triangle1 = new Shape(trinaglesides, 100, 100, 0, 5, 49, 5, []);
