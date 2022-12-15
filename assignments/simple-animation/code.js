@@ -64,7 +64,7 @@ class Shape {
     this.rotation = rotation;
     this.centerX = centerX;
     this.centerY = centerY;
-    this.force = addNumVectors(actingForces);
+    //this.force = addNumVectors(actingForces);
   }
 
   drawShape() {
