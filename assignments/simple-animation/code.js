@@ -91,7 +91,7 @@ class Shape {
       let yAddperpix = (rotatedSideCords[1] - this.centerY) / numOfSidePixels
 
       for (n = 0; n < numOfSidePixels; n++) {
-        array.push({ "x": this.centerX + (currX + (xAddperpix * n)), "y": this.centerY + (currY + (yAddperpix * n)) })
+        array.push({ "x": this.centerX*2 + (currX + (xAddperpix * n)), "y": this.centerY*2 + (currY + (yAddperpix * n)) })
 
       }
       currX = currX + (xAddperpix * n);
