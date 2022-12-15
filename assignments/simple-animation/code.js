@@ -62,13 +62,12 @@ class Shape {
     this.x = x;
     this.y = y;
     this.rotation = rotation;
-    this.centerX = centerX;
-    this.centerY = centerY;
+    this.centerX = this.x+centerX; //offset from x
+    this.centerY = this.y+centerY; //offset from y
     //this.force = addNumVectors(actingForces);
   }
 
   drawShape() {
-    console.log(this.centerX, this.centerY)
     let currX = this.x;
     let currY = this.y;
 
