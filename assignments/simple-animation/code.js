@@ -135,8 +135,8 @@ const drawFrame = (time) => {
     console.log(squareobjectBound[1].y)
     drawPoints(squareobjectBound)
 
-    triangle1.rotation = triangle1.rotation *countFrame;
-    square1.rotation = square1.rotation * countFrame;
+    triangle1.rotation = countFrame;
+    square1.rotation = countFrame;
     next += 10;
     countFrame++;
   }
