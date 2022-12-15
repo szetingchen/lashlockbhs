@@ -122,7 +122,7 @@ const drawFrame = (time) => {
 
     clear();
     const squareobjectBound = square1.getBoundOfObject();
-    console.log(squareobjectBound);
+    //console.log(squareobjectBound);
 
     square1.drawShape();
 
