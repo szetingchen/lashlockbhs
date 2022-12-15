@@ -68,6 +68,7 @@ class Shape {
   }
 
   drawShape() {
+    console.log(this.centerX, this.centerY)
     let currX = this.x;
     let currY = this.y;
 
