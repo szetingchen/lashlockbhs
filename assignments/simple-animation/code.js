@@ -116,8 +116,8 @@ const drawPoints = (array) => {
     }
 }
 
-const square1 = new Shape(shapeCordsSquare, 100, 100, 0, 5, 49, 5, []);
-const triangle1 = new Shape(trinaglesides, 100, 100, 0, 5, 49, 5, []);
+const square1 = new Shape(shapeCordsSquare, 100, 100, 1, 5, 49, 5, []);
+const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 49, 5, []);
 
 
 let next = 0;
