@@ -84,7 +84,7 @@ class Shape {
     let currY = this.x;
     let array = []
     let n;
-    for (let i = 0; i < this.sidesCords.length; i++) {
+    for (let i = 0; i < 1; i++) {
       let cordSetStart = rotate(this.centerX, this.centerY, currX, currY, this.rotation)
       let cordSetEnd = rotate(this.centerX, this.centerY, currX + this.sidesCords[i].xAdd, currY + this.sidesCords[i].yAdd, this.rotation);
       let numOfSidePixels = Math.sqrt(((cordSetStart[0]-cordSetEnd[0]) ** 2) + ((cordSetStart[1]-cordSetEnd[1]) ** 2));
@@ -93,6 +93,7 @@ class Shape {
 
       console.log("Point Start: " + cordSetStart)
       console.log("Point End: " + cordSetEnd)
+      
 
 
 
