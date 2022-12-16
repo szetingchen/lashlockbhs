@@ -128,9 +128,9 @@ const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
 //square1.drawShape();
 //console.log(square1.getBoundOfObject())
 drawPoints([{"x" : square1.centerX, "y" : square1.centerY}], "black")
-//drawPoints([{"x" : square1.x, "y" : square1.y}], "green")
+drawPoints([{"x" : square1.x, "y" : square1.y}], "green")
 
-//drawPoints(square1.getBoundOfObject(), "red")
+drawPoints(square1.getBoundOfObject(), "red")
 
 /*
 let next = 0;
