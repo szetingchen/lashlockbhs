@@ -66,11 +66,7 @@ class Shape {
     this.centerY = this.y+centerY; //offset from y
     //this.force = addNumVectors(actingForces);
   }
-  perFrame() {
-    const xybasedrotation = rotate(this.centerX, this.centerY, this.x, this.y, this.rotation)
-    this.y = xybasedrotation[1];
-    this.x = xybasedrotation[0];
-  }
+
   drawShape() {
     let currX = this.x;
     let currY = this.y;
@@ -114,34 +110,38 @@ const gravAttraction = (o1, o2) => {
   return (o1.mass * o2.mass * G) / distance ** 2
 }
 
-const drawPoints = (array, color, size) => {
+const drawPoints = (array) => {
     for (let i = 0; i < array.length; i++) {
-        drawLine(array[i].x, array[i].y, array[i].x+1*size, array[i].y+1*size, color, ctx)
+        drawLine(array[i].x, array[i].y, array[i].x+1, array[i].y+1, "red", ctx)
     }
 }
 
-const square1 = new Shape(shapeCordsSquare, 100, 100, 0, 5, 5, 5, []);
+const square1 = new Shape(shapeCordsSquare, 100, 100, 1, 5, 5, 5, []);
 const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
-
 
 
 let next = 0;
 let countFrame = 0;
-let timetilupdate = 10
 const drawFrame = (time) => {
   if (time > next) {
 
     clear();
-    square1.perFrame()
-    square1.drawShape();
-    square1.rotation = 40;
-    
+    const squareobjectBound = square1.getBoundOfObject();
+    //console.log(squareobjectBound);
 
-    next+=timetilupdate;
+    square1.drawShape();
+    triangle1.drawShape();
+
+    console.log(squareobjectBound[1].y)
+    drawPoints(squareobjectBound)
+
+    triangle1.rotation = countFrame;
+    square1.rotation = countFrame;
+    next += 10;
+    countFrame++;
   }
 }
 
 animate(drawFrame);
-
 
 
