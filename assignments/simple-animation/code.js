@@ -101,8 +101,8 @@ class Shape {
       }
       console.log(cordSetEnd)
       console.log("---")
-      currX = cordSetEnd[0];
-      currY = cordSetEnd[1];
+      currX = cordSetEnd[1];
+      currY = cordSetEnd[0];
     }
     return array
   }
