@@ -133,7 +133,7 @@ drawPoints([{"x" : square1.x, "y" : square1.y}], "green")
 
 let next = 0;
 let countFrame = 0;
-let timetilupdate = 10 //10 milaseconds between each frame
+let timetilupdate = 1 //10 milaseconds between each frame
 const drawFrame = (time) => {
   if (time > next) {
 
