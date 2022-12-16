@@ -123,7 +123,7 @@ const drawPoints = (array, color, size) => {
 const square1 = new Shape(shapeCordsSquare, 100, 100, 1, 5, 5, 5, []);
 const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
 
-
+/*
 let next = 0;
 let countFrame = 0;
 const drawFrame = (time) => {
@@ -153,6 +153,6 @@ const drawFrame = (time) => {
 }
 
 animate(drawFrame);
-
+*/
 
 
