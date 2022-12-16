@@ -136,7 +136,6 @@ const drawFrame = (time) => {
     square1.perFrame()
 
     square1.drawShape();
-    square1.rotation = 
   }
 }
 
