@@ -123,7 +123,7 @@ const drawPoints = (array, color) => {
     }
 }
 
-const square1 = new Shape(shapeCordsSquare, 100, 100, 50, 5, 5, 5, []);
+const square1 = new Shape(shapeCordsSquare, 100, 100, 60, 5, 5, 5, []);
 const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
 
 //square1.drawShape();
