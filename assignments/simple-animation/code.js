@@ -88,8 +88,8 @@ class Shape {
       let cordSetStart = rotate(this.centerX, this.centerY, currX, currY, this.rotation)
       let cordSetEnd = rotate(this.centerX, this.centerY, currX + this.sidesCords[i].xAdd, currY + this.sidesCords[i].yAdd, this.rotation);
       let numOfSidePixels = Math.sqrt(((cordSetStart[0]-cordSetEnd[0]) ** 2) + ((cordSetStart[1]-cordSetEnd[1]) ** 2));
-      let xAddPerPixel = -1*(cordSetStart[0]-cordSetEnd[0])/numOfSidePixels;
-      let yAddPerPixel = -1*(cordSetStart[1]-cordSetEnd[1])/numOfSidePixels;
+      let xAddPerPixel = (cordSetStart[0]-cordSetEnd[0])/numOfSidePixels;
+      let yAddPerPixel = (cordSetStart[1]-cordSetEnd[1])/numOfSidePixels;
 
 
       console.log("X " +currX + " Y "+ currY)
@@ -123,7 +123,7 @@ const drawPoints = (array, color) => {
     }
 }
 
-const square1 = new Shape(shapeCordsSquare, 100, 100, 20, 5, 5, 5, []);
+const square1 = new Shape(shapeCordsSquare, 100, 100, 0, 5, 5, 5, []);
 const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
 
 //square1.drawShape();
