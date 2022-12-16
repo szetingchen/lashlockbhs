@@ -138,7 +138,7 @@ const drawFrame = (time) => {
 
     clear();
     const squareObjectBound = square1.getBoundOfObject();
-    const triangleObjectBound = trinagle1.getBoundOfObject();
+    const triangleObjectBound = triangle1.getBoundOfObject();
     //console.log(squareobjectBound);
 
     drawPoints(squareObjectBound, "red")
