@@ -96,7 +96,7 @@ class Shape {
       console.log("numofsidepixels : " + numOfSidePixels)
       console.log("xadd " + xAddPerPixel + " yadd " + yAddPerPixel)
       for(n = 0; n < numOfSidePixels; n++){
-        array.push({ "x": currX+(xAddPerPixel * n)-numOfSidePixels, "y":  currY+(yAddPerPixel * n)-numOfSidePixels })
+        array.push({ "x": currX+(xAddPerPixel * n), "y":  currY+(yAddPerPixel * n) })
 
       }
       currX = cordSetEnd[0];
