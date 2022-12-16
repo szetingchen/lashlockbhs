@@ -116,9 +116,9 @@ const gravAttraction = (o1, o2) => {
   return (o1.mass * o2.mass * G) / distance ** 2
 }
 
-const drawPoints = (array) => {
+const drawPoints = (array, color) => {
     for (let i = 0; i < array.length; i++) {
-        drawLine(array[i].x, array[i].y, array[i].x+1, array[i].y+1, "red", ctx)
+        drawLine(array[i].x, array[i].y, array[i].x+1, array[i].y+1, color, ctx)
     }
 }
 
@@ -127,8 +127,8 @@ const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
 
 //square1.drawShape();
 //console.log(square1.getBoundOfObject())
-drawPoints([{"x" : square1.centerX, "y" : square1.centerY}])
-drawPoints(square1.getBoundOfObject())
+drawPoints([{"x" : square1.centerX, "y" : square1.centerY}], "black")
+drawPoints(square1.getBoundOfObject(), "red")
 
 /*
 let next = 0;
