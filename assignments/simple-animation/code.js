@@ -132,7 +132,12 @@ const drawFrame = (time) => {
     square1.drawShape();
     triangle1.drawShape();
 
+
+    //In this case the object bound is the red square
+    //I am not geting the bound of triangle
     console.log(squareobjectBound[1].y)
+    
+    drawPoints([square1.x, square1.y])
     drawPoints(squareobjectBound)
 
     triangle1.rotation = countFrame;
