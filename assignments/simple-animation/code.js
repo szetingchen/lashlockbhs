@@ -132,7 +132,7 @@ drawPoints([{"x" : square1.x, "y" : square1.y}], "green")
 
 drawPoints(square1.getBoundOfObject(), "red")
 
-
+/*
 let next = 0;
 let countFrame = 0;
 const drawFrame = (time) => {
@@ -152,5 +152,5 @@ const drawFrame = (time) => {
 }
 
 animate(drawFrame);
-
+*/
 
