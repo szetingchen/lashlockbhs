@@ -1,15 +1,15 @@
 
 let shapeCordsSquare = [
-  { "xAdd": 0, "yAdd": 10 },
-  { "xAdd": 10, "yAdd": 0 },
-  { "xAdd": 0, "yAdd": -10 },
-  { "xAdd": -10, "yAdd": 0 },
+    { "xAdd": 0, "yAdd": 10 },
+    { "xAdd": 10, "yAdd": 0 },
+    { "xAdd": 0, "yAdd": -10 },
+    { "xAdd": -10, "yAdd": 0 },
 ]
 
 let trinaglesides = [
-  { "xAdd": 5, "yAdd": -10 },
-  { "xAdd": 5, "yAdd": 10 },
-  { "xAdd": -10, "yAdd": 0 },
+    { "xAdd": 5, "yAdd": -10 },
+    { "xAdd": 5, "yAdd": 10 },
+    { "xAdd": -10, "yAdd": 0},
 ]
 
 const rotate = (cx, cy, x, y, angle) => {
@@ -62,8 +62,8 @@ class Shape {
     this.x = x;
     this.y = y;
     this.rotation = rotation;
-    this.centerX = this.x + centerX; //offset from x
-    this.centerY = this.y + centerY; //offset from y
+    this.centerX = this.x+centerX; //offset from x
+    this.centerY = this.y+centerY; //offset from y
     //this.force = addNumVectors(actingForces);
   }
 
@@ -87,19 +87,19 @@ class Shape {
     for (let i = 0; i < this.sidesCords.length; i++) {
       let cordSetStart = rotate(this.centerX, this.centerY, currX, currY, this.rotation)
       let cordSetEnd = rotate(this.centerX, this.centerY, currX + this.sidesCords[i].xAdd, currY + this.sidesCords[i].yAdd, this.rotation);
-      let numOfSidePixels = Math.round(Math.sqrt(((cordSetStart[0] - cordSetEnd[0]) ** 2) + ((cordSetStart[1] - cordSetEnd[1]) ** 2)));
+      let numOfSidePixels = Math.round(Math.sqrt(((cordSetStart[0]-cordSetEnd[0]) ** 2) + ((cordSetStart[1]-cordSetEnd[1]) ** 2)));
 
       drawLine(cordSetStart[0], cordSetStart[1], cordSetEnd[0], cordSetEnd[1])
+      
+      let xAddPerPix = (cordSetEnd[0] - cordSetStart[0])/numOfSidePixels
+      let yAddPerPix = (cordSetEnd[1] - cordSetStart[1])/numOfSidePixels
 
-      let xAddPerPix = (cordSetEnd[0] - cordSetStart[0]) / numOfSidePixels
-      let yAddPerPix = (cordSetEnd[1] - cordSetStart[1]) / numOfSidePixels
+    
 
-
-
-      for (n = 0; n < numOfSidePixels; n++) {
-        array.push({ "x": cordSetStart[0] + n * xAddPerPix, "y": cordSetStart[1] + n * yAddPerPix })
+      for(n = 0; n<numOfSidePixels; n++){
+        array.push({"x" : cordSetStart[0] + n*xAddPerPix, "y" : cordSetStart[1] + n*yAddPerPix})
       }
-
+      
       currX = currX + this.sidesCords[i].xAdd;
       currY = currY + this.sidesCords[i].yAdd;
     }
@@ -116,13 +116,13 @@ const gravAttraction = (o1, o2) => {
 }
 
 const drawPoints = (array, color) => {
-  for (let i = 0; i < array.length; i++) {
-    drawLine(array[i].x, array[i].y, array[i].x + 1, array[i].y + 1, color, ctx)
-  }
+    for (let i = 0; i < array.length; i++) {
+        drawLine(array[i].x, array[i].y, array[i].x+1, array[i].y+1, color, ctx)
+    }
 }
 
-const square1 = new Shape(shapeCordsSquare, x = 100, y = 100, rotation = 60, centerOfRotationX = 5, centerOfRotationY = 5, mass = 5, []);
-const triangle1 = new Shape(trinaglesides, x = 100, y = 100, rotation = 1, centerOfRotationX = 5, centerOfRotationY = 5, mass = 5, []);
+const square1 = new Shape(shapeCordsSquare, 100, 100, 60, 5, 5, 5, []);
+const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
 
 
 let next = 0;
@@ -135,7 +135,7 @@ const drawFrame = (time) => {
     const squareObjectBound = square1.getBoundOfObject();
     const triangleObjectBound = triangle1.getBoundOfObject();
     //console.log(squareobjectBound);
-
+    
 
     //drawpoint function takes array of points from objectbound function
     //draws each point
@@ -144,8 +144,8 @@ const drawFrame = (time) => {
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
 
-    square1.rotation = countFrame * 2;
-    triangle1.rotation = countFrame * 2;
+    square1.rotation = countFrame*2;
+    triangle1.rotation = countFrame*2;
 
     next += timetilupdate;
     countFrame++;
