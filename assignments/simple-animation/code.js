@@ -89,7 +89,7 @@ class Shape {
       let cordSetEnd = rotate(this.centerX, this.centerY, currX + this.sidesCords[i].xAdd, currY + this.sidesCords[i].yAdd, this.rotation);
       let numOfSidePixels = Math.sqrt(((cordSetStart[0]-cordSetEnd[0]) ** 2) + ((cordSetStart[1]-cordSetEnd[1]) ** 2));
       let xAddPerPixel = (cordSetStart[0]-cordSetEnd[0])/numOfSidePixels;
-      let yAddPerPixel = (cordSetStart[1]-cordSetEnd[1])/numOfSidePixels;
+      let yAddPerPixel = -1*(cordSetStart[1]-cordSetEnd[1])/numOfSidePixels;
 
 
       console.log("X " +currX + " Y "+ currY)
