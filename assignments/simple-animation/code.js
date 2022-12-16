@@ -127,6 +127,7 @@ const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
 
 let next = 0;
 let countFrame = 0;
+let timetilupdate = 10
 const drawFrame = (time) => {
   if (time > next) {
 
@@ -134,7 +135,9 @@ const drawFrame = (time) => {
     square1.perFrame()
     square1.drawShape();
     square1.rotation
-    next++
+    
+
+    next+=timetilupdate
   }
 }
 
