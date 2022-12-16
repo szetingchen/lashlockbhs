@@ -137,8 +137,8 @@ const drawFrame = (time) => {
     //I am not geting the bound of triangle
     console.log(squareobjectBound[1].y)
     
-    drawPoints([square1.x, square1.y], "green", size)
-    drawPoints(squareobjectBound, "red", size)
+    drawPoints([square1.x, square1.y], "green", 10)
+    drawPoints(squareobjectBound, "red", 1)
 
     triangle1.rotation = countFrame;
     square1.rotation = countFrame;
