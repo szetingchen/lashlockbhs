@@ -66,7 +66,11 @@ class Shape {
     this.centerY = this.y+centerY; //offset from y
     //this.force = addNumVectors(actingForces);
   }
-
+  perFrame() {
+    const xybasedrotation = rotate(this.centerX, this.centerY, this.x, this.y, this.rotation)
+    this.y = xybasedrotation[1];
+    this.x = xybasedrotation[0];
+  }
   drawShape() {
     let currX = this.x;
     let currY = this.y;
@@ -127,6 +131,7 @@ const drawFrame = (time) => {
 
     clear();
     const squareobjectBound = square1.getBoundOfObject();
+    square1.perFrame()
     //console.log(squareobjectBound);
 
     square1.drawShape();
