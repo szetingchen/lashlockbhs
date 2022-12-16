@@ -134,7 +134,7 @@ const drawFrame = (time) => {
     clear();
     square1.perFrame()
     square1.drawShape();
-    square1.rotation = countFrame;
+    square1.rotation = 10;
     
 
     next+=timetilupdate;
