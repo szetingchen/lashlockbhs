@@ -102,7 +102,7 @@ class Shape {
       console.log("---")
 
       for(n = 0; n<numOfSidePixels; n++){
-        array.push({"x" : currX + n*xAddPerPix, "y" : currY + n*yAddPerPix})
+        array.push({"x" : cordSetStart[0] + n*xAddPerPix, "y" : cordSetStart[1] + n*yAddPerPix})
         console.log(array[n].x + ", " + array[n].y)
       }
       
