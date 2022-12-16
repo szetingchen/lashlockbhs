@@ -133,6 +133,7 @@ drawPoints([{"x" : square1.x, "y" : square1.y}], "green")
 
 let next = 0;
 let countFrame = 0;
+let timetilupdate = 10 //10 milaseconds between each frame
 const drawFrame = (time) => {
   if (time > next) {
 
@@ -140,13 +141,20 @@ const drawFrame = (time) => {
     const squareObjectBound = square1.getBoundOfObject();
     const triangleObjectBound = triangle1.getBoundOfObject();
     //console.log(squareobjectBound);
+    
 
+    //drawpoint function takes array of points from objectbound function
+    //draws each point
+
+    //drawpoint function is another way to draw shape but is less fast
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
 
     square1.rotation = countFrame*2;
     triangle1.rotation = countFrame*2;
-    next += 10;
+
+    //fram
+    next += timetilupdate;
     countFrame++;
   }
 }
