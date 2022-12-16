@@ -99,9 +99,11 @@ class Shape {
       console.log(numOfSidePixels)
       console.log("Point Start: " + cordSetStart)
       console.log("Point End: " + cordSetEnd)
-      
-
       console.log("---")
+
+      for(n = 0; n<numOfSidePixels; n++){
+        array.push({"x" : currX + n*xAddPerPix}, {"y" : currY + n*yAddPerPix})
+      }
       currX = currX + this.sidesCords[i].xAdd;
       currY = currY + this.sidesCords[i].yAdd;
     }
