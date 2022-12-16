@@ -145,6 +145,7 @@ const drawFrame = (time) => {
     drawPoints(triangleObjectBound, "red")
 
     square1.rotation = countFrame*2;
+    triangle1.rotation = countFrame*2;
     next += 10;
     countFrame++;
   }
