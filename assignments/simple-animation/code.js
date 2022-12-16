@@ -91,6 +91,11 @@ class Shape {
 
       drawLine(cordSetStart[0], cordSetStart[1], cordSetEnd[0], cordSetEnd[1])
       
+      let xAddPerPix = cordSetEnd[0] - cordSetStart[0]
+      let yAddPerPix = cordSetEnd[1] - cordSetStart[1]
+
+      console.log(xAddPerPix + ", " + yAddPerPix)
+
       console.log(numOfSidePixels)
       console.log("Point Start: " + cordSetStart)
       console.log("Point End: " + cordSetEnd)
