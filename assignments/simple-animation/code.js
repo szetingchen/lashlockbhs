@@ -134,10 +134,10 @@ const drawFrame = (time) => {
     clear();
     square1.perFrame()
     square1.drawShape();
-    square1.rotation = countFrame
+    square1.rotation = countFrame;
     
 
-    next+=timetilupdate
+    next+=timetilupdate;
   }
 }
 
