@@ -103,8 +103,9 @@ class Shape {
 
       for(n = 0; n<numOfSidePixels; n++){
         array.push({"x" : currX + n*xAddPerPix}, {"y" : currY + n*yAddPerPix})
+        console.log(array[n])
       }
-      console.log(array)
+      
       currX = currX + this.sidesCords[i].xAdd;
       currY = currY + this.sidesCords[i].yAdd;
     }
