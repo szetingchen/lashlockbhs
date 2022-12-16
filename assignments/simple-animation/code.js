@@ -87,10 +87,17 @@ class Shape {
     for (let i = 0; i < 4; i++) {
       let cordSetStart = rotate(this.centerX, this.centerY, currX, currY, this.rotation)
       let cordSetEnd = rotate(this.centerX, this.centerY, currX + this.sidesCords[i].xAdd, currY + this.sidesCords[i].yAdd, this.rotation);
+      let numOfSidePixels = Math.sqrt(((cordSetStart[0]-cordSetEnd[0]) ** 2) + ((cordSetStart[1]-cordSetEnd[1]) ** 2));
 
       drawLine(cordSetStart[0], cordSetStart[1], cordSetEnd[0], cordSetEnd[1])
       
+      console.log("Point Start: " + cordSetStart)
+      console.log("Point End: " + cordSetEnd)
+      
 
+      console.log("---")
+      currX = currX + this.sidesCords[i].xAdd;
+      currY = currY + this.sidesCords[i].yAdd;
     }
     return array
   }
