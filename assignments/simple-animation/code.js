@@ -90,6 +90,7 @@ class Shape {
       let numOfSidePixels = Math.floor(Math.sqrt((cordSetStart[0]-cordSetEnd[0]) ** 2 + (cordSetStart[1]-cordSetStart[1]) ** 2));
       let xAddPerPixel = (cordSetStart[0]-cordSetEnd[0])/numOfSidePixels;
       let yAddPerPixel = (cordSetStart[1]-cordSetEnd[1])/numOfSidePixels;
+      console.log(numOfSidePixels)
       console.log("xadd " + xAddPerPixel + " yadd " + yAddPerPixel)
       for(n = 0; n < numOfSidePixels; n++){
         array.push({ "x": currX + (xAddPerPixel * n), "y": currY + (yAddPerPixel * n) })
