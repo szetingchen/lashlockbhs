@@ -90,10 +90,7 @@ class Shape {
       let numOfSidePixels = Math.sqrt(((cordSetStart[0]-cordSetEnd[0]) ** 2) + ((cordSetStart[1]-cordSetEnd[1]) ** 2));
 
       drawLine(cordSetStart[0], cordSetStart[1], cordSetEnd[0], cordSetEnd[1])
-
-
-      let numOfSidePixels = Math.sqrt(((cordSetStart[0]-cordSetEnd[0]) ** 2) + ((cordSetStart[1]-cordSetEnd[1]) ** 2));
-
+      
       let xAddPerPixel = (cordSetEnd[0]-cordSetStart[0])/numOfSidePixels;
       let yAddPerPixel = (cordSetEnd[1]-cordSetStart[1])/numOfSidePixels;
 
