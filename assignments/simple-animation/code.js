@@ -91,11 +91,11 @@ class Shape {
       let xAddPerPixel = (cordSetEnd[0]-cordSetStart[0])/numOfSidePixels;
       let yAddPerPixel = (cordSetEnd[1]-cordSetStart[1])/numOfSidePixels;
 
+      console.log("Point Start: " + cordSetStart[0] + ", " + cordSetStart[1])
+      console.log("Point End: " + cordSetEnd[0] + ", " + cordSetEnd[1])
 
-      console.log("X " +currX + " Y "+ currY)
-      console.log("numofsidepixels : " + numOfSidePixels)
-      console.log("xaddperpix " + xAddPerPixel + " yaddperpix " + yAddPerPixel)
-      console.log("sideXadd " + this.sidesCords[i].xAdd + " sideYadd " + this.sidesCords[i].yAdd)
+
+
       for(n = 0; n < numOfSidePixels; n++){
         array.push({ "x": currX + (xAddPerPixel * n), "y":  currY + (yAddPerPixel * n) })
 
