@@ -145,7 +145,7 @@ const drawFrame = (time) => {
     square1.drawShape();
     drawPoints(squareobjectBound)
 
-    square1.rotation = 50000-countFrame**2;
+    square1.rotation = 50000-countFrame**1.005;
     next += 10;
     countFrame++;
   }
