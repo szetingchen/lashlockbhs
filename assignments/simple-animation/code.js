@@ -80,26 +80,25 @@ class Shape {
     }
   }
   getBoundOfObject() {
-    let currX = 0;
-    let currY = 0;
+    let currX = this.y;
+    let currY = this.x;
     let array = []
     let n;
     for (let i = 0; i < this.sidesCords.length; i++) {
-      let rotatedSideCords = rotate(this.centerX, this.centerY, this.centerX + this.sidesCords[i].xAdd, this.centerY + this.sidesCords[i].yAdd, this.rotation)
-      let numOfSidePixels = Math.floor(Math.sqrt(this.sidesCords[i].xAdd ** 2 + this.sidesCords[i].yAdd ** 2))
-      let xAddperpix = (rotatedSideCords[0] - this.centerX) / numOfSidePixels
-      let yAddperpix = (rotatedSideCords[1] - this.centerY) / numOfSidePixels
-
-      for (n = 0; n < numOfSidePixels; n++) {
-        array.push({ "x": this.centerX + (currX + (xAddperpix * n)), "y": this.centerY + (currY + (yAddperpix * n)) })
+      let cordSetStart = rotate(this.centerX, this.centerY, currX, currY, this.rotation)
+      let cordSetEnd = rotate(this.centerX, this.centerY, currX + this.sidesCords[i].xAdd, currY + this.sidesCords[i].yAdd, this.rotation);
+      let numOfSidePixels = Math.floor(Math.sqrt(Math.abs(cordSetStart[0]-cordSetEnd[0]) ** 2 + Math.abs(cordSetStart[1]-cordSetStart[1]) ** 2));
+      let xAddPerPixel = (cordSetStart[0]-cordSetEnd[0])/numOfSidePixels;
+      let yAddPerPixel = (cordSetStart[1]-cordSetEnd[1])/numOfSidePixels;
+      for(n = 0; n < numOfSidePixels; n++){
+        array.push({ "x": currX + (xAddPerPixel * n), "y": currY + (yAddPerPixel * n) })
 
       }
-      currX = currX + (xAddperpix * n);
-      currY = currY + (yAddperpix * n);
+      currX = currX + this.sidesCords[i].xAdd;
+      currY = currY + this.sidesCords[i].yAdd;
     }
-    return array;
+    return array
   }
-
 }
 
 
