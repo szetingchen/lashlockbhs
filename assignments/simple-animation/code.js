@@ -118,7 +118,7 @@ const drawPoints = (array) => {
 const square1 = new Shape(shapeCordsSquare, 100, 100, 1, 5, 5, 5, []);
 const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
 
-square1.drawShape();
+//square1.drawShape();
 drawPoints(square1.getBoundOfObject())
 
 /*
