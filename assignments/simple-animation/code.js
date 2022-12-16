@@ -97,7 +97,6 @@ class Shape {
       currX = currX + this.sidesCords[i].xAdd;
       currY = currY + this.sidesCords[i].yAdd;
     }
-    console.log(array)
     return array
   }
 }
