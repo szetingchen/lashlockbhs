@@ -122,8 +122,7 @@ const drawPoints = (array, color, size) => {
 
 const square1 = new Shape(shapeCordsSquare, 100, 100, 0, 5, 5, 5, []);
 const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
-square1.perFrame()
-
+square1.perFrame();
 square1.drawShape();
 
 
@@ -134,25 +133,9 @@ const drawFrame = (time) => {
   if (time > next) {
 
     clear();
-    const squareobjectBound = square1.getBoundOfObject();
     square1.perFrame()
-    //console.log(squareobjectBound);
 
     square1.drawShape();
-    triangle1.drawShape();
-
-
-    //In this case the object bound is the red square
-    //I am not geting the bound of triangle
-    console.log(squareobjectBound[1].y)
-    
-    drawPoints([{"x" : square1.x, "y" : square1.y}], "green", 1)
-    drawPoints(squareobjectBound, "red", 1)
-
-    triangle1.rotation = countFrame;
-    square1.rotation = countFrame;
-    next += 10;
-    countFrame++;
   }
 }
 
