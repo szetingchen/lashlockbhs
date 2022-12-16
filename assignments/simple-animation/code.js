@@ -99,6 +99,7 @@ class Shape {
         array.push({ "x": currX + (xAddPerPixel * n), "y":  currY + (yAddPerPixel * n) })
 
       }
+      console.log(cordSetEnd)
       currX = cordSetEnd[0];
       currY = cordSetEnd[1];
     }
