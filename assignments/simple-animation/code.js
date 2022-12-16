@@ -110,9 +110,9 @@ const gravAttraction = (o1, o2) => {
   return (o1.mass * o2.mass * G) / distance ** 2
 }
 
-const drawPoints = (array) => {
+const drawPoints = (array, color) => {
     for (let i = 0; i < array.length; i++) {
-        drawLine(array[i].x, array[i].y, array[i].x+1, array[i].y+1, "red", ctx)
+        drawLine(array[i].x, array[i].y, array[i].x+1, array[i].y+1, color, ctx)
     }
 }
 
@@ -137,8 +137,8 @@ const drawFrame = (time) => {
     //I am not geting the bound of triangle
     console.log(squareobjectBound[1].y)
     
-    drawPoints([square1.x, square1.y])
-    drawPoints(squareobjectBound)
+    drawPoints([square1.x, square1.y], "green")
+    drawPoints(squareobjectBound, "red")
 
     triangle1.rotation = countFrame;
     square1.rotation = countFrame;
