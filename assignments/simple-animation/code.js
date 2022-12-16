@@ -129,7 +129,6 @@ const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
 drawPoints([{"x" : square1.centerX, "y" : square1.centerY}], "black")
 drawPoints([{"x" : square1.x, "y" : square1.y}], "green")
 
-drawPoints(triangle1.getBoundOfObject(), "red")
 
 
 let next = 0;
@@ -138,10 +137,12 @@ const drawFrame = (time) => {
   if (time > next) {
 
     clear();
-    const squareobjectBound = square1.getBoundOfObject();
+    const squareObjectBound = square1.getBoundOfObject();
+    const triangleObjectBound = trinagle1.getBoundOfObject();
     //console.log(squareobjectBound);
 
-    drawPoints(squareobjectBound, "red")
+    drawPoints(squareObjectBound, "red")
+    drawPoints(triangleObjectBound, "red")
 
     square1.rotation = countFrame*2;
     next += 10;
