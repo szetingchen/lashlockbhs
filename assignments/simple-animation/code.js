@@ -154,16 +154,14 @@ const drawFrame = (time) => {
     clear();
     const squareObjectBound = square1.getBoundOfObject();
     const triangleObjectBound = triangle1.getBoundOfObject();
-    //console.log(squareobjectBound);
 
 
-    //drawpoint function takes array of points from objectbound function
-    //draws each point
 
-    //drawpoint function is another way to draw shape but is less fast
-    
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
+
+    square1.x = countFrame;
+
 
     next += timetilupdate;
     countFrame++;
