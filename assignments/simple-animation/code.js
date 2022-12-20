@@ -80,8 +80,8 @@ class Shape {
     }
   }
   getBoundOfObject() {
-    let currX = this.y;
-    let currY = this.x;
+    let currX = this.x;
+    let currY = this.y;
     let array = []
     let n;
     for (let i = 0; i < this.sidesCords.length; i++) {
