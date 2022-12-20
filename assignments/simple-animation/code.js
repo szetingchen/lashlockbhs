@@ -128,7 +128,7 @@ const collisions = (shapes) => {
     for (let shapeNumCheck = 0; shapeNumCheck < shapes.length; shapeNumCheck++) {
 
       const currShapeBounds = shapes[shapeNum].getBoundOfObject()
-      const currShapeBoundsCheck = shapes[currShapeBounds].getBoundOfObject()
+      const currShapeBoundsCheck = shapes[shapeNumCheck].getBoundOfObject()
 
       for (let currShapeBoundsIndex = 0; currShapeBoundsIndex < currShapeBounds.length; currShapeBoundsIndex++) {
         for (let currShapeBoundsCheckIndex = 0; currShapeBoundsCheckIndex < currShapeBoundsCheck.length; currShapeBoundsCheckIndex++) {
