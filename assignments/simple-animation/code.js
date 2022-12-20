@@ -155,7 +155,9 @@ const drawFrame = (time) => {
     const squareObjectBound = square1.getBoundOfObject();
     const triangleObjectBound = triangle1.getBoundOfObject();
 
-    collisions([square1,triangle1])
+    if(collisions([square1,triangle1]).length>=1){
+      console.log("c")
+    }
 
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
