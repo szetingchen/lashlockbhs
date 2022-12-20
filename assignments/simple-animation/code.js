@@ -155,10 +155,12 @@ const drawFrame = (time) => {
     const squareObjectBound = square1.getBoundOfObject();
     const triangleObjectBound = triangle1.getBoundOfObject();
 
-
+    collisions([square1,triangle1])
 
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
+
+    
 
     square1.x = countFrame;
 
