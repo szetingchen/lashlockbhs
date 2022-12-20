@@ -87,9 +87,7 @@ class Shape {
     for (let i = 0; i < this.sidesCords.length; i++) {
       let cordSetStart = rotate(this.centerX, this.centerY, currX, currY, this.rotation)
       let cordSetEnd = rotate(this.centerX, this.centerY, currX + this.sidesCords[i].xAdd, currY + this.sidesCords[i].yAdd, this.rotation);
-      let numOfSidePixels = Math.round(Math.sqrt(((cordSetStart[0] - cordSetEnd[0]) ** 2) + ((cordSetStart[1] - cordSetEnd[1]) ** 2)));
-
-      //drawLine(cordSetStart[0], cordSetStart[1], cordSetEnd[0], cordSetEnd[1])
+      drawLine(cordSetStart[0], cordSetStart[1], cordSetEnd[0], cordSetEnd[1])
 
       let xAddPerPix = (cordSetEnd[0] - cordSetStart[0]) / numOfSidePixels
       let yAddPerPix = (cordSetEnd[1] - cordSetStart[1]) / numOfSidePixels
