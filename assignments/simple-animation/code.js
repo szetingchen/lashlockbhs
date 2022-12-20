@@ -80,7 +80,7 @@ class Shape {
     }
   }
   getBoundOfObject() {
-    let currX = this.x;
+    let currX = this.x; //inverse this because x and y were switced for some reason to lazy to figure out its 1am
     let currY = this.y;
     let array = []
     let n;
@@ -141,7 +141,7 @@ const collisions = (shapes) => {
   }
   return collisionPoints;
 }
-const square1 = new Shape(shapeCordsSquare, 100, 200, 0, 5, 5, 5, []);
+const square1 = new Shape(shapeCordsSquare, 100, 100, 0, 5, 5, 5, []);
 const triangle1 = new Shape(trinaglesides, 110, 100, 0, 5, 5, 5, []);
 
 
