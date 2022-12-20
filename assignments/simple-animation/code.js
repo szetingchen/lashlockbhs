@@ -1,15 +1,15 @@
 
 let shapeCordsSquare = [
-    { "xAdd": 0, "yAdd": 10 },
-    { "xAdd": 10, "yAdd": 0 },
-    { "xAdd": 0, "yAdd": -10 },
-    { "xAdd": -10, "yAdd": 0 },
+  { "xAdd": 0, "yAdd": 10 },
+  { "xAdd": 10, "yAdd": 0 },
+  { "xAdd": 0, "yAdd": -10 },
+  { "xAdd": -10, "yAdd": 0 },
 ]
 
 let trinaglesides = [
-    { "xAdd": 5, "yAdd": -10 },
-    { "xAdd": 5, "yAdd": 10 },
-    { "xAdd": -10, "yAdd": 0},
+  { "xAdd": 5, "yAdd": -10 },
+  { "xAdd": 5, "yAdd": 10 },
+  { "xAdd": -10, "yAdd": 0 },
 ]
 
 const rotate = (cx, cy, x, y, angle) => {
@@ -62,8 +62,8 @@ class Shape {
     this.x = x;
     this.y = y;
     this.rotation = rotation;
-    this.centerX = this.x+centerX; //offset from x
-    this.centerY = this.y+centerY; //offset from y
+    this.centerX = this.x + centerX; //offset from x
+    this.centerY = this.y + centerY; //offset from y
     //this.force = addNumVectors(actingForces);
   }
 
@@ -87,19 +87,19 @@ class Shape {
     for (let i = 0; i < this.sidesCords.length; i++) {
       let cordSetStart = rotate(this.centerX, this.centerY, currX, currY, this.rotation)
       let cordSetEnd = rotate(this.centerX, this.centerY, currX + this.sidesCords[i].xAdd, currY + this.sidesCords[i].yAdd, this.rotation);
-      let numOfSidePixels = Math.round(Math.sqrt(((cordSetStart[0]-cordSetEnd[0]) ** 2) + ((cordSetStart[1]-cordSetEnd[1]) ** 2)));
+      let numOfSidePixels = Math.round(Math.sqrt(((cordSetStart[0] - cordSetEnd[0]) ** 2) + ((cordSetStart[1] - cordSetEnd[1]) ** 2)));
 
       drawLine(cordSetStart[0], cordSetStart[1], cordSetEnd[0], cordSetEnd[1])
-      
-      let xAddPerPix = (cordSetEnd[0] - cordSetStart[0])/numOfSidePixels
-      let yAddPerPix = (cordSetEnd[1] - cordSetStart[1])/numOfSidePixels
 
-    
+      let xAddPerPix = (cordSetEnd[0] - cordSetStart[0]) / numOfSidePixels
+      let yAddPerPix = (cordSetEnd[1] - cordSetStart[1]) / numOfSidePixels
 
-      for(n = 0; n<numOfSidePixels; n++){
-        array.push({"x" : cordSetStart[0] + n*xAddPerPix, "y" : cordSetStart[1] + n*yAddPerPix})
+
+
+      for (n = 0; n < numOfSidePixels; n++) {
+        array.push({ "x": cordSetStart[0] + n * xAddPerPix, "y": cordSetStart[1] + n * yAddPerPix })
       }
-      
+
       currX = currX + this.sidesCords[i].xAdd;
       currY = currY + this.sidesCords[i].yAdd;
     }
@@ -116,11 +116,31 @@ const gravAttraction = (o1, o2) => {
 }
 
 const drawPoints = (array, color) => {
-    for (let i = 0; i < array.length; i++) {
-        drawLine(array[i].x, array[i].y, array[i].x+0.005, array[i].y+0.005, color, ctx)
-    }
+  for (let i = 0; i < array.length; i++) {
+    drawLine(array[i].x, array[i].y, array[i].x + 0.005, array[i].y + 0.005, color, ctx)
+  }
 }
 
+const collisions = (shapes) => {
+  const collisionPoints = []
+
+  for (let shapeNum = 0; shapeNum < shapes.length; shapeNum++) {
+    for (let shapeNumCheck = 0; shapeNumCheck < shapes.length; shapeNumCheck++) {
+
+      const currShapeBounds = shapes[shapeNum].getBoundOfObject()
+      const currShapeBoundsCheck = shapes[currShapeBounds].getBoundOfObject()
+
+      for (let currShapeBoundsIndex = 0; currShapeBoundsIndex < currShapeBounds.length; currShapeBoundsIndex++) {
+        for (let currShapeBoundsCheckIndex = 0; currShapeBoundsCheckIndex < currShapeBoundsCheck.length; currShapeBoundsCheckIndex++) {
+          if (JSON.stringify(currShapeBounds[currShapeBoundsIndex]) === JSON.stringify(currShapeBoundsCheck[currShapeBoundsCheckIndex])) {
+            collisionPoints.push({ "x": currShapeBounds[currShapeBoundsIndex].x, "y": currShapeBounds[currShapeBoundsIndex].y, "shape1": shapes[shapeNum], "shape2": shapes[shapeNumCheck] })
+          }
+        }
+      }
+    }
+  }
+  return collisionPoints;
+}
 const square1 = new Shape(shapeCordsSquare, 100, 100, 60, 5, 5, 5, []);
 const triangle1 = new Shape(trinaglesides, 100, 100, 1, 5, 5, 5, []);
 
@@ -135,7 +155,7 @@ const drawFrame = (time) => {
     const squareObjectBound = square1.getBoundOfObject();
     const triangleObjectBound = triangle1.getBoundOfObject();
     //console.log(squareobjectBound);
-    
+
 
     //drawpoint function takes array of points from objectbound function
     //draws each point
@@ -144,8 +164,8 @@ const drawFrame = (time) => {
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
 
-    square1.rotation = countFrame*2;
-    triangle1.rotation = countFrame*2;
+    square1.rotation = countFrame * 2;
+    triangle1.rotation = countFrame * 2;
 
     next += timetilupdate;
     countFrame++;
