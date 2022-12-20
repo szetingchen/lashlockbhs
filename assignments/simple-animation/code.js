@@ -161,7 +161,7 @@ const drawFrame = (time) => {
     //draws each point
 
     //drawpoint function is another way to draw shape but is less fast
-    square1.drawShape()
+    
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
 
