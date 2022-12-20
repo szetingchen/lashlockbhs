@@ -160,7 +160,7 @@ const drawFrame = (time) => {
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
 
-    square1.x = countFrame;
+    square1.x = countFrame*2;
 
 
     next += timetilupdate;
