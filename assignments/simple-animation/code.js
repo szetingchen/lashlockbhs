@@ -164,7 +164,10 @@ const drawFrame = (time) => {
 
     const collisionPoints = collisions([square1, triangle1])
     if (collisionPoints.length >= 1) {
-      console.log(collisionPoints[0].x + ", " + collisionPoints[0].y)
+      for(i = 0; i < collisionPoints.length; i++){
+        console.log(collisionPoints[i].x + ", " + collisionPoints[i].y)
+      }
+      console.log("----------")
     }
 
     drawPoints(squareObjectBound, "red")
