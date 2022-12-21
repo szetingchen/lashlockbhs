@@ -74,7 +74,7 @@ class Shape {
     for (let i = 0; i < this.sidesCords.length; i++) {
       let cordSetStart = rotate(this.centerX, this.centerY, currX, currY, this.rotation)
       let cordSetEnd = rotate(this.centerX, this.centerY, currX + this.sidesCords[i].xAdd, currY + this.sidesCords[i].yAdd, this.rotation)
-      drawLine(cordSetStart[0], cordSetStart[1], cordSetEnd[0], cordSetEnd[1], 'black', ctx);
+      //drawLine(cordSetStart[0], cordSetStart[1], cordSetEnd[0], cordSetEnd[1], 'black', ctx);
       currX = currX + this.sidesCords[i].xAdd;
       currY = currY + this.sidesCords[i].yAdd;
     }
