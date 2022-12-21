@@ -164,7 +164,7 @@ const drawFrame = (time) => {
 
     const collisionPoints = collisions([square1, triangle1])
     if (collisionPoints.length >= 1) {
-      for(i = 0; i < collisionPoints.length; i++){
+      for(let i = 0; i < collisionPoints.length; i++){
         console.log(collisionPoints[i].x + ", " + collisionPoints[i].y)
       }
       console.log("----------")
