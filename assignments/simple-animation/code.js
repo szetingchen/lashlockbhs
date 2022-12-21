@@ -152,6 +152,10 @@ const drawFrame = (time) => {
   if (time > next) {
 
     clear();
+
+    square1.x = countFrame;
+
+
     const squareObjectBound = square1.getBoundOfObject();
     const triangleObjectBound = triangle1.getBoundOfObject();
 
@@ -162,7 +166,6 @@ const drawFrame = (time) => {
 
     
 
-    square1.x = countFrame;
 
 
     next += timetilupdate;
