@@ -125,15 +125,18 @@ const collisions = (shapes) => {
   const collisionPoints = []
 
   for (let shapeNum = 0; shapeNum < shapes.length; shapeNum++) {
-    for (let shapeNumCheck = 0; shapeNumCheck < shapes.length; shapeNumCheck++) {
+    for (let shapeNumCheck = shapeNum; shapeNumCheck < shapes.length; shapeNumCheck++) {
+      if (shapeNum != shapeNumCheck) {
+        const currShapeBounds = shapes[shapeNum].getBoundOfObject()
+        const currShapeBoundsCheck = shapes[shapeNumCheck].getBoundOfObject()
 
-      const currShapeBounds = shapes[shapeNum].getBoundOfObject()
-      const currShapeBoundsCheck = shapes[shapeNumCheck].getBoundOfObject()
+        for (let currShapeBoundsIndex = 0; currShapeBoundsIndex < currShapeBounds.length; currShapeBoundsIndex++) {
+          for (let currShapeBoundsCheckIndex = 0; currShapeBoundsCheckIndex < currShapeBoundsCheck.length; currShapeBoundsCheckIndex++) {
 
-      for (let currShapeBoundsIndex = 0; currShapeBoundsIndex < currShapeBounds.length; currShapeBoundsIndex++) {
-        for (let currShapeBoundsCheckIndex = 0; currShapeBoundsCheckIndex < currShapeBoundsCheck.length; currShapeBoundsCheckIndex++) {
-          if (JSON.stringify(currShapeBounds[currShapeBoundsIndex]) === JSON.stringify(currShapeBoundsCheck[currShapeBoundsCheckIndex])) {
-            collisionPoints.push({ "x": currShapeBounds[currShapeBoundsIndex].x, "y": currShapeBounds[currShapeBoundsIndex].y, "shape1": shapes[shapeNum], "shape2": shapes[shapeNumCheck] })
+            if (JSON.stringify(currShapeBounds[currShapeBoundsIndex]) === JSON.stringify(currShapeBoundsCheck[currShapeBoundsCheckIndex])) {
+
+              collisionPoints.push({ "x": currShapeBounds[currShapeBoundsIndex].x, "y": currShapeBounds[currShapeBoundsIndex].y, "shape1": shapes[shapeNum], "shape2": shapes[shapeNumCheck] })
+            }
           }
         }
       }
@@ -159,12 +162,12 @@ const drawFrame = (time) => {
     const squareObjectBound = square1.getBoundOfObject();
     const triangleObjectBound = triangle1.getBoundOfObject();
 
-    console.log(collisions([square1, triangle1])[0].x  + ", " + collisions([square1, triangle1])[0].y)
+    console.log(collisions([square1, triangle1])[0].x + ", " + collisions([square1, triangle1])[0].y)
 
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
 
-    
+
 
 
 
