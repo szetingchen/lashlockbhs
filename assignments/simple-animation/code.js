@@ -1,7 +1,7 @@
 
 let shapeCordsSquare = [
   { "xAdd": 0, "yAdd": 50 },
-  { "xAdd": 40, "yAdd": 0 },
+  { "xAdd": 50, "yAdd": 0 },
   { "xAdd": 0, "yAdd": -50 },
   { "xAdd": -50, "yAdd": 0 },
 ]
