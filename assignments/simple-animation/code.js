@@ -133,7 +133,7 @@ const collisions = (shapes) => {
         for (let currShapeBoundsIndex = 0; currShapeBoundsIndex < currShapeBounds.length; currShapeBoundsIndex++) {
           for (let currShapeBoundsCheckIndex = 0; currShapeBoundsCheckIndex < currShapeBoundsCheck.length; currShapeBoundsCheckIndex++) {
 
-            if (Math.sqrt((currShapeBounds[currShapeBoundsIndex].x - currShapeBoundsCheck[currShapeBoundsCheckIndex].x)**2+(currShapeBounds[currShapeBoundsIndex].y - currShapeBoundsCheck[currShapeBoundsCheckIndex].y)**2)<=1) {
+            if (Math.sqrt((currShapeBounds[currShapeBoundsIndex].x - currShapeBoundsCheck[currShapeBoundsCheckIndex].x) ** 2 + (currShapeBounds[currShapeBoundsIndex].y - currShapeBoundsCheck[currShapeBoundsCheckIndex].y) ** 2) <= 1) {
 
               collisionPoints.push({ "x": currShapeBounds[currShapeBoundsIndex].x, "y": currShapeBounds[currShapeBoundsIndex].y, "shape1": shapes[shapeNum], "shape2": shapes[shapeNumCheck] })
             }
@@ -155,19 +155,22 @@ const drawFrame = (time) => {
   if (time > next) {
 
     clear();
-    
+
     const collisionPoints = collisions([square1, triangle1])
 
 
-    if(collisionPoints.length>=1){
+    if (collisionPoints.length >= 1) {
       console.log("collided")
+
+    }
+    else {
       square1.x += 1;
 
     }
 
     const squareObjectBound = square1.getBoundOfObject();
     const triangleObjectBound = triangle1.getBoundOfObject();
-    
+
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
 
