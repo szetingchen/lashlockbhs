@@ -117,7 +117,7 @@ const gravAttraction = (o1, o2) => {
 
 const drawPoints = (array, color) => {
   for (let i = 0; i < array.length; i++) {
-    drawLine(array[i].x, array[i].y, array[i].x + 1, array[i].y + 1, color, ctx)
+    drawLine(array[i].x, array[i].y, array[i].x + 0.5, array[i].y + 0.5, color, ctx)
   }
 }
 
