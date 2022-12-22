@@ -133,7 +133,7 @@ const collisions = (shapes) => {
         for (let currShapeBoundsIndex = 0; currShapeBoundsIndex < currShapeBounds.length; currShapeBoundsIndex++) {
           for (let currShapeBoundsCheckIndex = 0; currShapeBoundsCheckIndex < currShapeBoundsCheck.length; currShapeBoundsCheckIndex++) {
 
-            if (JSON.stringify(currShapeBounds[currShapeBoundsIndex]) === JSON.stringify(currShapeBoundsCheck[currShapeBoundsCheckIndex])) {
+            if (Math.sqrt((currShapeBounds[currShapeBoundsIndex].x - currShapeBoundsCheck[currShapeBoundsCheckIndex].x)**2+(currShapeBounds[currShapeBoundsIndex].y - currShapeBoundsCheck[currShapeBoundsCheckIndex].y)**2)<=1) {
 
               collisionPoints.push({ "x": currShapeBounds[currShapeBoundsIndex].x, "y": currShapeBounds[currShapeBoundsIndex].y, "shape1": shapes[shapeNum], "shape2": shapes[shapeNumCheck] })
             }
