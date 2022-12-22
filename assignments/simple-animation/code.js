@@ -150,7 +150,7 @@ const triangle1 = new Shape(trinaglesides, 140, 100, 0, 5, 5, 5, []);
 
 let next = 0;
 let countFrame = 0;
-let timetilupdate = 100 //10 milaseconds between each frame
+let timetilupdate = 2000 //milaseconds between each frame
 const drawFrame = (time) => {
   if (time > next) {
 
