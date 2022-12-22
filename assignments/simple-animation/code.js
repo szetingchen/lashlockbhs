@@ -144,6 +144,7 @@ const collisions = (shapes) => {
   }
   return collisionPoints;
 }
+
 const square1 = new Shape(shapeCordsSquare, 50, 88, 0, 5, 5, 5, []);
 const triangle1 = new Shape(trinaglesides, 300, 100, 0, 5, 5, 5, []);
 
@@ -158,7 +159,9 @@ const drawFrame = (time) => {
 
     const collisionPoints = collisions([square1, triangle1])
 
+    
 
+    //sample collison code
     if (collisionPoints.length >= 1) {
       console.log("collided")
 
