@@ -155,21 +155,19 @@ const drawFrame = (time) => {
   if (time > next) {
 
     clear();
+    
+    const collisionPoints = collisions([square1, triangle1])
 
-    square1.x += 1;
 
+    if(collisionPoints.length>=1){
+      console.log("collided")
+      square1.x += 1;
+
+    }
 
     const squareObjectBound = square1.getBoundOfObject();
     const triangleObjectBound = triangle1.getBoundOfObject();
-
-    const collisionPoints = collisions([square1, triangle1])
-    if (collisionPoints.length >= 1) {
-      for(let i = 0; i < collisionPoints.length; i++){
-        console.log(collisionPoints[i].x + ", " + collisionPoints[i].y)
-      }
-      console.log("----------")
-    }
-
+    
     drawPoints(squareObjectBound, "red")
     drawPoints(triangleObjectBound, "red")
 
