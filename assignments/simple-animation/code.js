@@ -7,9 +7,9 @@ let shapeCordsSquare = [
 ]
 
 let trinaglesides = [
-  { "xAdd": 5, "yAdd": -10 },
-  { "xAdd": 5, "yAdd": 10 },
-  { "xAdd": -10, "yAdd": 0 },
+  { "xAdd": 15, "yAdd": -30 },
+  { "xAdd": 15, "yAdd": 30 },
+  { "xAdd": -30, "yAdd": 0 },
 ]
 
 const rotate = (cx, cy, x, y, angle) => {
