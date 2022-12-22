@@ -165,7 +165,6 @@ const drawFrame = (time) => {
     }
     else {
       square1.x += 1;
-
     }
 
     const squareObjectBound = square1.getBoundOfObject();
