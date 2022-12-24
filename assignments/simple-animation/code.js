@@ -146,7 +146,7 @@ const collisions = (shapes) => {
 }
 
 const square1 = new Shape(shapeCordsSquare, 50, 88, 0, 5, 5, 5, []);
-const triangle1 = new Shape(trinaglesides, 300, 100, 29, 5, 5, 5, []);
+const triangle1 = new Shape(trinaglesides, 300, 100, 25, 5, 5, 5, []);
 
 
 let next = 0;
