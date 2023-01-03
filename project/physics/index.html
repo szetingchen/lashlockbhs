@@ -5,17 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>nerdshit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <canvas id="canvas" width="200" height="100"></canvas>
+  <canvas id="canvas" width="200" height="200"></canvas>
   <script>
-    const c = document.getElementById("canvas")
-    const ctx = c.getContext("2d")
-    
-    c.width = window.innerWidth
-    c.height = window.innerHeight
+    const c = document.getElementById("canvas");
+    const ctx = c.getContext("2d");
+    c.width = window.innerWidth;
+    c.height = window.innerHeight;
+    const width = c.width;
+    const height = c.height;
+
 
     const animate = (drawFrame) => {
       let running = true;
@@ -59,9 +60,9 @@
       drawLine(x1, y1 + height, x1, y1, color, ctx);
     }
 
-    const drawFilledRect = (x1, y1, side1, side2, color, ctx) => {
+    const drawFilledRect = (x1, y1, x2, y2, color, ctx) => {
       ctx.fillStyle = color;
-      ctx.fillRect(x1, y1, side1, side2, ctx);
+      ctx.fillRect(x1, y1, x2, y2, ctx);
     }
 
     const drawTriangle = (x1, y1, x2, y2, x3, y3, color, ctx) => {
@@ -82,7 +83,7 @@
       ctx.fillText(text, x, y, size, ctx);
     }
 
-    
+
     const clear = (ctx, canvas) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
     }
@@ -111,55 +112,8 @@
     }
 
   </script>
-  <script>
-    //code physics here    
-    //use draw and helper funtions
-    let next = 0;
-    let countFrame = 0
-    let shapeCordsSquare = [{"xAdd" : 0, "yAdd" : 10}, {"xAdd" : 10, "yAdd" : 0}, {"xAdd" : 0, "yAdd" : -10}, {"xAdd" : -10, "yAdd" : 0}]
+  <script src="physicscode.js" defer></script>
 
-    const shape = (sidesCords, x, y, rotation) =>{
-      return {"x" : x, "y" : y, "sidesCords" : sidesCords, "rotation" : rotation}
-    }
-
-    const drawShape = (shape) =>{
-      let rotaionalPercent = shape.rotation;
-      let currX = shape.x;
-      let currY = shape.y;
-      for(let i = 0; i<shape.sidesCords.length; i++){
-        drawLine(currX, currY, currX+shape.sidesCords[i].xAdd, currY+shape.sidesCords[i].yAdd, 'black', ctx);
-        currX += shape.sidesCords[i].xAdd;
-        currY += shape.sidesCords[i].yAdd;
-      }
-    }
-    const collisons = (objects) =>{
-      for(let objectIndex = 0; objectIndex < objects.length; objectIndex++){
-        for(let checkIndex = 0; checkIndex < objects.length; checkIndex++){
-          
-        }
-      }
-    }
-
-    const getBoundOfObject = (shape) =>{
-
-    }
-
-
-    const drawFrame = (time) =>{
-      if(time>next){
-        countFrame++
-        //clear();
-        //drawFilledCircle(10, 1*countFrame,10, "blue", ctx)
-        next+=10
-      }
-    }
-
-
-    const square1 = shape(shapeCordsSquare, 100, 100, 0)
-    drawShape(square1)
-
-    animate(drawFrame)
-  </script>
 
 </body>
 
