@@ -163,7 +163,6 @@ const drawFrame = (time) => {
 
     //sample collison code
     if (collisionPoints.length >= 1) {
-      console.log("collided")
 
     }
     else {
