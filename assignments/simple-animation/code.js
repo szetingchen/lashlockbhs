@@ -53,6 +53,22 @@ const addNumVectors = (a, mode) => {
   }
 }
 
+const sigma = (start, end, funct) => {
+  let sum = 0
+  for (let n = start; n <= end; n++) {
+    sum += funct(n)
+  }
+  return sum
+}
+
+const findCentroid = (points) => {
+  const pts = points.concat(points[0])
+  const area = (sigma(0, pts.length - 2, i => (pts[i].x * pts[i + 1].y) - (pts[i + 1].x * pts[i].y))) / 2
+  const x = (sigma(0, pts.length - 2, i => (pts[i].x + pts[i + 1].x) * ((pts[i].x * pts[i + 1].y) - (pts[i + 1].x * pts[i].y)))) / (6 * area)
+  const y = (sigma(0, pts.length - 2, i => (pts[i].y + pts[i + 1].y) * ((pts[i].x * pts[i + 1].y) - (pts[i + 1].x * pts[i].y)))) / (6 * area)
+  return ({x, y})
+}
+
 const EARTH_GRAVITY = 9.8
 const G = 6.6743e-11
 class Shape {
